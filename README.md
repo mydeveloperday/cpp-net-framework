@@ -13,5 +13,7 @@ To build the example programmes
 mkdir build
 cd build
 cmake -G "Visual Studio 12 2013" ../src
+devenv cpp-net-framework.sln
 ```
+
 

@@ -25,6 +25,10 @@ namespace System
         std::string str() const{
             return m_str;
         }
+
+        size_t Length() const {
+            return m_str.size();
+        }
     };
 }
 

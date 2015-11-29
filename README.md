@@ -9,7 +9,9 @@ cpp-net-framework is a C++ implementation of the .NET Framework, its purpose is 
 
 To build the example programmes
 
+```
 mkdir build
 cd build
 cmake -G "Visual Studio 12 2013" ../src
+```
 

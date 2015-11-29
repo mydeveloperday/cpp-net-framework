@@ -16,4 +16,8 @@ cmake -G "Visual Studio 12 2013" ../src
 devenv cpp-net-framework.sln
 ```
 
+## About MyDeveloper Day
 
+Follow the development story at our blog
+
+https://mydeveloperday.wordpress.com/

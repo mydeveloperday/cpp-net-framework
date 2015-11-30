@@ -10,18 +10,19 @@
 
 namespace System
 {
-    class string
+    class String
     {
         std::string m_str;
 
         public:
-        string()
+        String()
         {}
 
-        string(const char *str):
+        String(const char *str):
             m_str(str)
         {}
 
+        // NOT .NET call
         std::string str() const{
             return m_str;
         }
@@ -29,8 +30,22 @@ namespace System
         size_t Length() const {
             return m_str.size();
         }
+
+        const char operator[](int pos)
+        {
+            return m_str[pos];
+        }
     };
+
+    inline String operator + (const String &a, const String &b)
+    {
+        std::string m_res = a.str();
+        m_res += b.str();
+        return String(m_res.c_str());
+    }
 }
+
+typedef System::String string;
 
 
 using namespace System;

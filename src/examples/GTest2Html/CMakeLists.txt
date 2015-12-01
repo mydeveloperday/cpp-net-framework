@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.8.11)
+cmake_minimum_required (VERSION 2.8)
 
 #get_cmake_property(_variableNames VARIABLES)
 #foreach (_variableName ${_variableNames})

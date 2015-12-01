@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.8.11)
+cmake_minimum_required (VERSION 2.8.7)
 
 SET(CMAKE_EXE_LINKER_FLAGS /NODEFAULTLIB:\"msvcprtd.lib;MSVCRTD.lib\")
 

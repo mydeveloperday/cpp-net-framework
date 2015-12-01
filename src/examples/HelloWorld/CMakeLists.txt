@@ -4,5 +4,5 @@ include_directories(../../framework)
 
 add_executable(HelloWorld main.cxx driver.cxx)
 
-target_include_directories (cpp-net-framework PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+# target_include_directories (cpp-net-framework PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries (cpp-net-framework)

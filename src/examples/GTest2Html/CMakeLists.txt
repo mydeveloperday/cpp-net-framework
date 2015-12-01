@@ -17,5 +17,5 @@ set (DEST ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE_INIT})
 			  
 file(COPY gtest_out.txt DESTINATION ${DEST})
 
-target_include_directories (cpp-net-framework PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+# target_include_directories (cpp-net-framework PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries (cpp-net-framework)

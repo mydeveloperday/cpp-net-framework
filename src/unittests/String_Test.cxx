@@ -21,5 +21,8 @@ TEST(StringTest, Creation)
     EXPECT_EQ("HelloWorld",res.str());
 
     EXPECT_EQ("Hello/World", resb.str());
+
+    EXPECT_EQ("HELLOWORLD", res.ToUpper().str());
+    EXPECT_EQ("helloworld", res.ToLower().str());
 }
 

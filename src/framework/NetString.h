@@ -35,7 +35,7 @@ namespace System
         }
 
         // NOT .NET call
-        const std::string& operator()(std::string&) const
+        const std::string operator()(std::string&) const
         {
             return str();
         }
@@ -70,8 +70,9 @@ namespace System
         String ToUpper() const
         {
             String s;
-            for (auto c : m_str) {
-                s += toupper(c);
+            for(size_t i=0;i<m_str.size();i++)
+            {
+                s += toupper(m_str[i]);
             }
             return s;
         }
@@ -79,8 +80,9 @@ namespace System
         String ToLower() const
         {
             String s;
-            for (auto c : m_str) {
-                s += tolower(c);
+            for(size_t i=0;i<m_str.size();i++)
+            {
+                s += tolower(m_str[i]);
             }
             return s;
         }

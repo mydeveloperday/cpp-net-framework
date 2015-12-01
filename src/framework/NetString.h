@@ -154,6 +154,13 @@ namespace System
         return String(m_res.c_str());
     }
 
+    inline String Concat(const String &a, const String &b)
+    {
+        std::string m_res = a.str();
+        m_res += b.str();
+        return String(m_res.c_str());
+    }
+
     inline bool operator == (const String &a, const String &b)
     {
         return (a.str() == b.str());

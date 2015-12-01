@@ -44,5 +44,7 @@ TEST(StringTest, Creation)
 
     EXPECT_EQ("World", res.Substring(5));
     EXPECT_EQ("Wo", res.Substring(5,2));
+
+    EXPECT_EQ("HelloWorld", Concat("Hello","World"));
 }
 

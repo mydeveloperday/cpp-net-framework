@@ -34,7 +34,42 @@ namespace System
         bool Exists() const
         {
             struct stat statStruct;
-            return (stat (m_path.str().c_str(), &statStruct) == 0);
+            bool fileExists= (stat (m_path.str().c_str(), &statStruct) == 0);
+            return fileExists;
+        }
+
+        String Extension() const
+        {
+            int dotPos = m_path.LastIndexOf('.');
+            if (dotPos == -1) {
+                return String("");
+            }
+            // Extension include the "."
+            String ext=m_path.Substring(dotPos);
+            return ext;
+        }
+
+        String Name() const
+        {
+            // from the end of the path back up to the last / or \\ to strip to the filename
+            int lastForwardSlash = m_path.LastIndexOf('/');
+            int lastBackwardSlash = m_path.LastIndexOf('\\');
+
+            if (lastForwardSlash == -1 && lastBackwardSlash == -1) {
+                return m_path;
+            }
+
+            if (lastForwardSlash == -1) {
+                return m_path.Substring(lastBackwardSlash+1);
+            }
+            if (lastBackwardSlash == -1) {
+                return m_path.Substring(lastForwardSlash+1);
+            }
+            return m_path;
+        }
+
+        DateTime CreationTime()
+        {
         }
     };
 

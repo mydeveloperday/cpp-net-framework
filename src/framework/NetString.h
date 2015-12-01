@@ -9,6 +9,8 @@
 #pragma warning(disable: 4100)
 #pragma warning(disable: 4505)
 
+typedef char Char;
+
 namespace System
 {
     class String
@@ -19,8 +21,12 @@ namespace System
         String()
         {}
 
-        String(const char *str):
-            m_str(str)
+        String(const char *strIn):
+            m_str(strIn)
+        {}
+
+        String(const std::string &strIn) :
+            m_str(strIn)
         {}
 
         // NOT .NET call
@@ -40,16 +46,21 @@ namespace System
             return str().c_str();
         }
 
+        // NOT .NET call
+        bool Empty() const {
+            return (Length() == 0);
+        }
+
         size_t Length() const {
             return m_str.size();
         }
 
-        const char operator[](int pos)
+        const Char operator[](int pos)
         {
             return m_str[pos];
         }
 
-        String& operator+=(char c)
+        String& operator+=(Char c)
         {
             std::string newstring = (*this).str() + c;
             m_str = newstring;
@@ -73,6 +84,67 @@ namespace System
             }
             return s;
         }
+
+        bool Contains(String s) const
+        {
+            if (str().find(s.str())!=std::string::npos) {
+                return true;
+            }
+            return false;
+        }
+
+        bool Equals(String s) const
+        {
+            return (str() == s.str());
+        }
+
+        String Substring(int start) const
+        {
+            std::string newstring = str().substr(start);
+            return String(newstring.c_str());
+        }
+
+        String Substring(int start,int length) const
+        {
+            std::string newstring = str().substr(start,length);
+            return String(newstring.c_str());
+        }
+
+        int LastIndexOf(char c) const
+        {
+            size_t pos = str().rfind(c);
+            if (pos == std::string::npos) {
+                return -1;
+            }
+            return static_cast<int>(pos);
+        }
+
+        int LastIndexOf(const String &s) const
+        {
+            size_t pos = str().rfind(s.str());
+            if (pos == std::string::npos) {
+                return -1;
+            }
+            return static_cast<int>(pos);
+        }
+
+        int IndexOf(char c) const
+        {
+            size_t pos = str().find(c);
+            if (pos == std::string::npos) {
+                return -1;
+            }
+            return static_cast<int>(pos);
+        }
+
+        int IndexOf(const String &s) const
+        {
+            size_t pos = str().find(s.str());
+            if (pos == std::string::npos) {
+                return -1;
+            }
+            return static_cast<int>(pos);
+        }
     };
 
     inline String operator + (const String &a, const String &b)
@@ -80,6 +152,16 @@ namespace System
         std::string m_res = a.str();
         m_res += b.str();
         return String(m_res.c_str());
+    }
+
+    inline bool operator == (const String &a, const String &b)
+    {
+        return (a.str() == b.str());
+    }
+
+    inline bool operator != (const String &a, const String &b)
+    {
+        return (a.str() != b.str());
     }
 }
 

@@ -13,8 +13,12 @@ ENDFOREACH(flag_var)
 include_directories(../)
 include_directories(../googletest/include)
 
-add_executable(String_Test String_Test.cxx )
+add_executable(System_Test 
+               String_Test.cxx
+               FileInfo_Test.cxx
+               DateTime_Test.cxx
+              )
 
-target_link_libraries (String_Test cpp-net-framework gtest gtest_main)
+target_link_libraries (System_Test cpp-net-framework gtest gtest_main)
 
-add_test( String_Test String_Test )
+add_test( System_Test System_Test )

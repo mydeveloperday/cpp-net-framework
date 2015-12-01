@@ -24,5 +24,25 @@ TEST(StringTest, Creation)
 
     EXPECT_EQ("HELLOWORLD", res.ToUpper().str());
     EXPECT_EQ("helloworld", res.ToLower().str());
+
+    EXPECT_TRUE(res.Contains("Hello"));
+    EXPECT_TRUE(res.Contains("World"));
+    EXPECT_FALSE(res.Contains("Apples"));
+
+    EXPECT_TRUE(res == "HelloWorld");
+    EXPECT_FALSE(res == "Apples");
+    EXPECT_FALSE(res != "HelloWorld");
+    EXPECT_TRUE(res != "Applies");
+
+
+    EXPECT_EQ(6,String("HelloWorld").LastIndexOf('o'));
+    EXPECT_EQ(6, String("HelloWorld").LastIndexOf("or"));
+
+    EXPECT_EQ(4, String("HelloWorld").IndexOf('o'));
+    EXPECT_EQ(6, String("HelloWorld").IndexOf("or"));
+
+
+    EXPECT_EQ("World", res.Substring(5));
+    EXPECT_EQ("Wo", res.Substring(5,2));
 }
 

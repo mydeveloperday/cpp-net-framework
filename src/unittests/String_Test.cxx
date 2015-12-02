@@ -23,12 +23,18 @@ TEST(StringTest, Creation)
 
 TEST(StringTest, Case)
 {
+    String a = "Hello";
+    String b = "World";
+    String res = a + b;
     EXPECT_EQ("HELLOWORLD", res.ToUpper().str());
     EXPECT_EQ("helloworld", res.ToLower().str());
 }
 
 TEST(StringTest, Contains)
 {
+    String a = "Hello";
+    String b = "World";
+    String res = a + b;
     EXPECT_TRUE(res.Contains("Hello"));
     EXPECT_TRUE(res.Contains("World"));
     EXPECT_FALSE(res.Contains("Apples"));
@@ -36,6 +42,9 @@ TEST(StringTest, Contains)
 
 TEST(StringTest, Operands)
 {
+    String a = "Hello";
+    String b = "World";
+    String res = a + b;
     EXPECT_TRUE(res == "HelloWorld");
     EXPECT_FALSE(res == "Apples");
     EXPECT_FALSE(res != "HelloWorld");
@@ -53,6 +62,9 @@ TEST(StringTest, Index)
 
 TEST(StringTest, SubString)
 {
+    String a = "Hello";
+    String b = "World";
+    String res = a + b;
     EXPECT_EQ("World", res.Substring(5));
     EXPECT_EQ("Wo", res.Substring(5, 2));
 }

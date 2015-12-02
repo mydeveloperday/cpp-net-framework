@@ -222,7 +222,7 @@ namespace System
 
         static bool IsNullOrEmpty(const String &s)
         {
-           retunr (s.Length()==0);
+           return (s.Length()==0);
         }
     };
 

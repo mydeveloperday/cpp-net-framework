@@ -136,3 +136,9 @@ TEST(StringTest, Trim)
     EXPECT_EQ(String("Hello"),String("Hello").TrimEnd());
     EXPECT_EQ(String("   Hello"),String("   Hello   ").TrimEnd());
 }
+
+TEST(StringTest, NullOrEmpty)
+{
+    EXPECT_FALSE(String::IsStringNullOrEmpty(String("Hello")));
+    EXPECT_TRUE(String::IsStringNullOrEmpty(String("")));
+}

@@ -127,11 +127,11 @@ TEST(StringTest, Trim)
     EXPECT_EQ(String("Hello"),String("   Hello   ").Trim());
 
     EXPECT_EQ(String("Hello"),String("  Hello").TrimStart());
-    EXPECT_EQ(String("Hello   "),String("Hello  ").TrimStart());
+    EXPECT_EQ(String("Hello  "),String("Hello  ").TrimStart());
     EXPECT_EQ(String("Hello"),String("Hello").TrimStart());
     EXPECT_EQ(String("Hello   "),String("   Hello   ").TrimStart());
 
-    EXPECT_EQ(String("   Hello"),String("  Hello").TrimEnd());
+    EXPECT_EQ(String("  Hello"),String("  Hello").TrimEnd());
     EXPECT_EQ(String("Hello"),String("Hello  ").TrimEnd());
     EXPECT_EQ(String("Hello"),String("Hello").TrimEnd());
     EXPECT_EQ(String("   Hello"),String("   Hello   ").TrimEnd());

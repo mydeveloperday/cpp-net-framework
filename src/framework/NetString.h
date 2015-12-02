@@ -160,70 +160,70 @@ namespace System
 
         bool StartsWith(const String& s) const
         {
-            if (String::IsNullOrEmpty(s)){
+            if (String::IsNullOrEmpty(s)) {
                 return false;
             }
-            return (IndexOf(s)==0);
+            return (IndexOf(s) == 0);
         }
 
         bool EndsWith(const String& s) const
         {
-            if (String::IsNullOrEmpty(s)){
+            if (String::IsNullOrEmpty(s)) {
                 return false;
             }
-            return (IndexOf(s)==Length()-s.Length());
+            return (IndexOf(s) == Length() - s.Length());
         }
 
         String Replace(const String& from, const String& with)
         {
-            int pos=IndexOf(from);
-            if (pos==-1){
+            int pos = IndexOf(from);
+            if (pos == -1) {
                 return (*this);
             }
 
-            String newstring=(*this);
-           
-            int maxCount=10; 
-            while (pos!=-1 && maxCount--){
-               newstring.m_str.replace(pos,pos+from.Length(),with.str());
-            
-               int lastpos = pos;
-               pos=newstring.IndexOf(from);
+            String newstring = (*this);
 
-               // try to prevent it going infinite
-               if (pos < lastpos){
-                    break;
-               }
-            }
+            //int maxCount=10; 
+            //while (pos!=-1 && maxCount--){
+            newstring.m_str.replace(pos, pos + from.Length(), with.str());
+
+            //int lastpos = pos;
+            //pos=newstring.IndexOf(from);
+
+            // try to prevent it going infinite
+            //if (pos < lastpos){
+            //     break;
+            //}
+         //}
 
             return newstring;
         }
 
         String Trim() const
         {
-           String s=(*this);
-           s=s.TrimEnd(); 
-           s=s.TrimStart(); 
-           return s;
+            String s = (*this);
+            s = s.TrimEnd();
+            s = s.TrimStart();
+            return s;
         }
 
         String TrimEnd() const
         {
-           String s=(*this);
-           s.m_str.erase(s.m_str.find_last_not_of(" \n\r\t")+1); 
-           return s;
+            String s = (*this);
+            s.m_str.erase(s.m_str.find_last_not_of(" \n\r\t") + 1);
+            return s;
         }
 
         String TrimStart() const
         {
-           String s=(*this);
-           s.m_str.erase(s.m_str.find_first_not_of(" \n\r\t")+1); 
-           return s;
+            String s = (*this);
+            s = s.Substring(s.m_str.find_first_not_of(" \n\r\t"));
+            return s;
         }
 
         static bool IsNullOrEmpty(const String &s)
         {
-           return (s.Length()==0);
+            return (s.Length() == 0);
         }
     };
 
@@ -250,6 +250,8 @@ namespace System
     {
         return (a.str() != b.str());
     }
+
+    // void PrintTo(const System::String& str, ::std::ostream* os);
 }
 
 typedef System::String string;

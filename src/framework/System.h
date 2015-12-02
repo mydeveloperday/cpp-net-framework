@@ -18,48 +18,53 @@ namespace System
 {
     namespace Console
     {
-        static void WriteLine(const char *str)
+        static void WriteLine(const char* str)
         {
             std::cout << str << std::endl;
         }
 
-        static void WriteLine(const System::String &str)
+        static void WriteLine(const System::String& str)
         {
             std::cout << str.str() << std::endl;
         }
     };
 
-    template <class T>
-    class List
+    template <class T> class List
     {
         std::vector<T> m_vec;
+
     public:
         List()
         {
         }
 
-        int Count() const {
+        int Count() const
+        {
             return static_cast<int>(m_vec.size());
         }
 
-        const T& operator[](int index) const {
+        const T& operator[](int index) const
+        {
             return m_vec[index];
         }
     };
 
-    template <class T>
-    class Array
+    template <class T> class Array
     {
         std::vector<T> m_vec;
+
     public:
         Array()
-        {}
+        {
+        }
 
-        int Length() const {
+        int Length() const
+        {
             return static_cast<int>(m_vec.size());
         }
 
-        const T& operator[](int index) const {
+        const T& operator[](int index) const
+        {
             return m_vec[index];
         }
 
@@ -79,7 +84,6 @@ namespace System
             return res;
         }
     };
-    
 }
 
 using namespace System;

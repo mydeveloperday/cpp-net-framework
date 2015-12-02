@@ -19,16 +19,18 @@ namespace System
 
     public:
         Exception()
-        {}
+        {
+        }
 
         virtual const char* what() const throw()
         {
             return m_msg.str().c_str();
         }
 
-        Exception(String msg) :
-            m_msg(msg)
-        {}
+        Exception(String msg)
+            : m_msg(msg)
+        {
+        }
 
         String Message()
         {
@@ -40,24 +42,27 @@ namespace System
     {
     public:
         SystemException()
-        {}
+        {
+        }
 
-        SystemException(String msg) :
-            Exception(msg)
-        {}
+        SystemException(String msg)
+            : Exception(msg)
+        {
+        }
     };
 
     class NotImplementedException : SystemException
     {
     public:
         NotImplementedException()
-        {}
+        {
+        }
 
-        NotImplementedException(String msg):
-            SystemException(msg)
-        {}
+        NotImplementedException(String msg)
+            : SystemException(msg)
+        {
+        }
     };
-
 }
 
 using namespace System;

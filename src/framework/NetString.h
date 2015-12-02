@@ -6,8 +6,8 @@
 #include <vector>
 #include <ctype.h>
 
-#pragma warning(disable: 4100)
-#pragma warning(disable: 4505)
+#pragma warning(disable : 4100)
+#pragma warning(disable : 4505)
 
 typedef char Char;
 
@@ -17,20 +17,24 @@ namespace System
     {
         std::string m_str;
 
-        public:
+    public:
         String()
-        {}
+        {
+        }
 
-        String(const char *strIn):
-            m_str(strIn)
-        {}
+        String(const char* strIn)
+            : m_str(strIn)
+        {
+        }
 
-        String(const std::string &strIn) :
-            m_str(strIn)
-        {}
+        String(const std::string& strIn)
+            : m_str(strIn)
+        {
+        }
 
         // NOT .NET call
-        std::string str() const{
+        std::string str() const
+        {
             return m_str;
         }
 
@@ -41,17 +45,19 @@ namespace System
         }
 
         // NOT .NET call
-        const char* operator()(const char *) const
+        const char* operator()(const char*) const
         {
             return str().c_str();
         }
 
         // NOT .NET call
-        bool Empty() const {
+        bool Empty() const
+        {
             return (Length() == 0);
         }
 
-        size_t Length() const {
+        size_t Length() const
+        {
             return m_str.size();
         }
 
@@ -70,8 +76,7 @@ namespace System
         String ToUpper() const
         {
             String s;
-            for(size_t i=0;i<m_str.size();i++)
-            {
+            for (size_t i = 0; i < m_str.size(); i++) {
                 s += toupper(m_str[i]);
             }
             return s;
@@ -80,8 +85,7 @@ namespace System
         String ToLower() const
         {
             String s;
-            for(size_t i=0;i<m_str.size();i++)
-            {
+            for (size_t i = 0; i < m_str.size(); i++) {
                 s += tolower(m_str[i]);
             }
             return s;
@@ -89,7 +93,7 @@ namespace System
 
         bool Contains(String s) const
         {
-            if (str().find(s.str())!=std::string::npos) {
+            if (str().find(s.str()) != std::string::npos) {
                 return true;
             }
             return false;
@@ -106,9 +110,9 @@ namespace System
             return String(newstring.c_str());
         }
 
-        String Substring(int start,int length) const
+        String Substring(int start, int length) const
         {
-            std::string newstring = str().substr(start,length);
+            std::string newstring = str().substr(start, length);
             return String(newstring.c_str());
         }
 
@@ -121,7 +125,7 @@ namespace System
             return static_cast<int>(pos);
         }
 
-        int LastIndexOf(const String &s) const
+        int LastIndexOf(const String& s) const
         {
             size_t pos = str().rfind(s.str());
             if (pos == std::string::npos) {
@@ -139,7 +143,7 @@ namespace System
             return static_cast<int>(pos);
         }
 
-        int IndexOf(const String &s) const
+        int IndexOf(const String& s) const
         {
             size_t pos = str().find(s.str());
             if (pos == std::string::npos) {
@@ -149,33 +153,32 @@ namespace System
         }
     };
 
-    inline String operator + (const String &a, const String &b)
+    inline String operator+(const String& a, const String& b)
     {
         std::string m_res = a.str();
         m_res += b.str();
         return String(m_res.c_str());
     }
 
-    inline String Concat(const String &a, const String &b)
+    inline String Concat(const String& a, const String& b)
     {
         std::string m_res = a.str();
         m_res += b.str();
         return String(m_res.c_str());
     }
 
-    inline bool operator == (const String &a, const String &b)
+    inline bool operator==(const String& a, const String& b)
     {
         return (a.str() == b.str());
     }
 
-    inline bool operator != (const String &a, const String &b)
+    inline bool operator!=(const String& a, const String& b)
     {
         return (a.str() != b.str());
     }
 }
 
 typedef System::String string;
-
 
 using namespace System;
 

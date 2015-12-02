@@ -5,27 +5,24 @@ namespace ConsoleApplication1
 {
     class Program
     {
-        public:
+    public:
         static void Main(string* args)
         {
             FileInfo info = FileInfo("test.txt");
 
-            if (!info.Exists()){ 
+            if (!info.Exists()) {
                 System::Console::WriteLine("Does not exist");
             }
 
             {
 
-               StreamWriter sr("test.txt");
-               sr.WriteLine("This is just a test");
+                StreamWriter sr("test.txt");
+                sr.WriteLine("This is just a test");
             }
 
-            if (info.Exists()){ 
+            if (info.Exists()) {
                 System::Console::WriteLine("exist!");
             }
         }
     };
 }
-
-
-

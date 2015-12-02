@@ -5,13 +5,10 @@ namespace ConsoleApplication1
 {
     class Program
     {
-        public:
+    public:
         static void Main(string* args)
         {
             System::Console::WriteLine("Hello World");
         }
     };
 }
-
-
-

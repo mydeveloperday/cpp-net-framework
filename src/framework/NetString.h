@@ -192,7 +192,7 @@ namespace System
             return from;
         }
 
-        String Trim()
+        String Trim() const
         {
            String s=(*this);
            s=s.TrimEnd(); 
@@ -200,13 +200,13 @@ namespace System
            return s;
         }
 
-        String TrimEnd()
+        String TrimEnd() const
         {
            m_str.erase(m_str.find_last_not_of(" \n\r\t")+1); 
            return (*this);
         }
 
-        String TrimStart()
+        String TrimStart() const
         {
            m_str.erase(m_str.find_first_not_of(" \n\r\t")+1); 
            return (*this);

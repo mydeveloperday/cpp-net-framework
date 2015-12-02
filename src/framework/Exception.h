@@ -22,6 +22,10 @@ namespace System
         {
         }
 
+        virtual ~Exception() throw()
+        {
+        }
+
         virtual const char* what() const throw()
         {
             return m_msg.str().c_str();

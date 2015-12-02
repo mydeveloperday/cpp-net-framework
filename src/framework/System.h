@@ -8,6 +8,7 @@
 
 #include "NetString.h"
 #include "OS.h"
+#include "Exception.h"
 
 #pragma warning(disable: 4100)
 #pragma warning(disable: 4505)
@@ -70,44 +71,6 @@ namespace System
         {
             m_vec.push_back(item);
         }
-    };
-
-    class Exception : std::exception
-    {
-    public:
-        Exception()
-        {}
-
-        Exception(String msg) :
-            std::exception(msg.str().c_str())
-        {}
-
-        String Message()
-        {
-            return what();
-        }
-    };
-
-    class SystemException : Exception
-    {
-    public:
-        SystemException()
-        {}
-
-        SystemException(String msg) :
-            Exception(msg)
-        {}
-    };
-
-    class NotImplementedException : SystemException
-    {
-    public:
-        NotImplementedException()
-        {}
-
-        NotImplementedException(String msg):
-            SystemException(msg)
-        {}
     };
 
     class DateTime

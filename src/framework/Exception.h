@@ -20,12 +20,18 @@ namespace System
 {
     class Exception : std::exception
     {
+        String m_msg;
     public:
         Exception()
         {}
 
+        virtual const char* what() const OVERRIDE
+        {
+            return m_msg.str();
+        }
+
         Exception(String msg) :
-            std::exception(msg.str().c_str())
+            m_msg(msg)
         {}
 
         String Message()

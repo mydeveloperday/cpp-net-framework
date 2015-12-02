@@ -114,7 +114,7 @@ namespace System
             void WriteLine(const System::String& s)
             {
                 (*m_fd) << s.str() << "\n";
-            }l
+            }
 
             void Dispose()
             {

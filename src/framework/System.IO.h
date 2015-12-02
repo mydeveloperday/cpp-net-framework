@@ -5,9 +5,9 @@
 #include <memory>
 
 #include "System.h"
+#include "Path.h"
 
 #include "OS.h"
-
 
 namespace System
 {
@@ -26,7 +26,7 @@ namespace System
                 : m_path(s)
             {
                 String cwd = Environment::CurrentDirectory();
-                m_path = Path::Combine(cwd, s);
+                m_path = System::Path::Combine(cwd, s);
             }
 
             System::String FullName() const

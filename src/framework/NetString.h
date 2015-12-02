@@ -157,6 +157,60 @@ namespace System
             }
             return static_cast<int>(pos);
         }
+
+        bool StartsWith(const String& s) const
+        {
+            return (IndexOf(s)==0);
+        }
+
+        bool EndsWith(const String& s) const
+        {
+            return (IndexOf(s)==Length()-s.Length());
+        }
+
+        String Replace(const String& from, const String& with)
+        {
+            int pos=IndexOf(from);
+            if (pos==-1){
+                return from;
+            }
+
+            String newstring=(*this);
+            
+            while (pos!=-1){
+               newstring.str().replace(pos,pos+from.Length(),with.str());
+            
+               int lastpos = pos;
+               pos=newstring.IndexOf(from);
+
+               // try to prevent it going infinite
+               if (pos < lastpos){
+                  pos==-1;
+               }
+            }
+
+            return from;
+        }
+
+        String Trim()
+        {
+           String s=(*this);
+           s=s.TrimEnd(); 
+           s=s.TrimStart(); 
+           return s;
+        }
+
+        String TrimEnd()
+        {
+           m_str.erase(s.find_last_not_of(" \n\r\t")+1); 
+           return (*this);
+        }
+
+        String TrimStart()
+        {
+           m_str.erase(s.find_not_of(" \n\r\t")+1); 
+           return (*this);
+        }
     };
 
     inline String operator+(const String& a, const String& b)

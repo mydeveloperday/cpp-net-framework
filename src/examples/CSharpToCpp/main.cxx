@@ -92,7 +92,7 @@ namespace ConsoleApplication1
             if (s.Contains("internal class")){
                   ns = ns.Replace("internal class","class"); 
             }
-            if (s.Trim().StartWith("foreach(var ")){
+            if (s.Trim().StartsWith("foreach(var ")){
                   ns = ns.Replace("foreach(var ","for(auto "); 
                   ns = ns.Replace("in "," : "); 
             }

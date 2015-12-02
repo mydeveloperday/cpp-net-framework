@@ -27,7 +27,7 @@ namespace System
         {
             std::cout << str.str() << std::endl;
         }
-    };
+    }
 
     template <class T> class List
     {

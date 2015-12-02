@@ -6,8 +6,7 @@
 #include <vector>
 #include <ctype.h>
 
-#pragma warning(disable : 4100)
-#pragma warning(disable : 4505)
+#include "pragmas.h"
 
 typedef char Char;
 

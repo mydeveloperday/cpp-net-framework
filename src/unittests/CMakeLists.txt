@@ -1,5 +1,6 @@
 cmake_minimum_required (VERSION 2.8.7)
 
+IF(WIN32)
 SET(CMAKE_EXE_LINKER_FLAGS /NODEFAULTLIB:\"msvcprtd.lib;MSVCRTD.lib\")
 
 FOREACH(flag_var
@@ -9,6 +10,7 @@ FOREACH(flag_var
         string(REGEX REPLACE "/MD" "/MT" ${flag_var} "${${flag_var}}")
     endif(${flag_var} MATCHES "/MD")
 ENDFOREACH(flag_var)
+ENDIF()
 
 include_directories(../)
 include_directories(../googletest/include)

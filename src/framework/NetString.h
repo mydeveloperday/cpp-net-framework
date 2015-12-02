@@ -184,18 +184,18 @@ namespace System
             String newstring=(*this);
             
             while (pos!=-1){
-               newstring.str().replace(pos,pos+from.Length(),with.str());
+               newstring.m_str.replace(pos,pos+from.Length(),with.str());
             
                int lastpos = pos;
                pos=newstring.IndexOf(from);
 
                // try to prevent it going infinite
                if (pos < lastpos){
-                  pos=-1;
+                    break;
                }
             }
 
-            return from;
+            return newstring;
         }
 
         String Trim() const

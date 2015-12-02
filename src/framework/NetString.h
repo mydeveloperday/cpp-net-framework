@@ -185,7 +185,7 @@ namespace System
 
                // try to prevent it going infinite
                if (pos < lastpos){
-                  pos==-1;
+                  pos=-1;
                }
             }
 
@@ -202,13 +202,13 @@ namespace System
 
         String TrimEnd()
         {
-           m_str.erase(s.find_last_not_of(" \n\r\t")+1); 
+           m_str.erase(m_str.find_last_not_of(" \n\r\t")+1); 
            return (*this);
         }
 
         String TrimStart()
         {
-           m_str.erase(s.find_not_of(" \n\r\t")+1); 
+           m_str.erase(m_str.find_not_of(" \n\r\t")+1); 
            return (*this);
         }
     };

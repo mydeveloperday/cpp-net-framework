@@ -87,7 +87,11 @@ namespace System
         class StreamWriter
         {
             System::String m_file;
+#if defined (SUPPORTS_CPLUSPLUS_11)
             std::shared_ptr<std::ofstream> m_fd;
+#else
+            std::ofstream* m_fd;
+#endif
             bool m_disposed;
 
         public:
@@ -95,7 +99,11 @@ namespace System
                 : m_file(file)
                 , m_disposed(false)
             {
+#if defined (SUPPORTS_CPLUSPLUS_11)
                 m_fd = std::shared_ptr<std::ofstream>(new std::ofstream(file.str().c_str()));
+#else
+                m_fd = new std::ofstream(file.str().c_str());
+#endif
             }
 
             ~StreamWriter()
@@ -112,6 +120,9 @@ namespace System
             {
                 if (!m_disposed) {
                     (*m_fd).close();
+#if !defined (SUPPORTS_CPLUSPLUS_11)
+                    delete m_fd;
+#endif
                     m_disposed = true;
                 }
             }
@@ -128,7 +139,12 @@ namespace System
         class StreamReader
         {
             System::String m_file;
+            // TODO C++ 11 (Travis-CI is prevent me from turning this on)
+#if defined (SUPPORTS_CPLUSPLUS_11)
             std::shared_ptr<std::ifstream> m_fd;
+#else
+            std::ifstream *m_fd;
+#endif
             bool m_disposed;
 
         public:
@@ -143,7 +159,11 @@ namespace System
 
                 std::string path = info.FullName().str();
 
-                m_fd = std::shared_ptr<std::ifstream>(new std::ifstream(path.c_str()));
+#if defined (SUPPORTS_CPLUSPLUS_11)
+                //m_fd = std::shared_ptr<std::ifstream>(new std::ifstream(path.c_str()));
+#else
+                m_fd = new std::ifstream(path.c_str());
+#endif
             }
 
             ~StreamReader()
@@ -164,6 +184,9 @@ namespace System
             {
                 if (!m_disposed) {
                     (*m_fd).close();
+#if !defined (SUPPORTS_CPLUSPLUS_11)
+                    delete m_fd;
+#endif
                     m_disposed = true;
                 }
             }

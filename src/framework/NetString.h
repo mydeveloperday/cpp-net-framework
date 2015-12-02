@@ -55,7 +55,7 @@ namespace System
             return (Length() == 0);
         }
 
-        size_t Length() const
+        int Length() const
         {
             return m_str.size();
         }

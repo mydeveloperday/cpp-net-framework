@@ -139,6 +139,6 @@ TEST(StringTest, Trim)
 
 TEST(StringTest, NullOrEmpty)
 {
-    EXPECT_FALSE(String::IsStringNullOrEmpty(String("Hello")));
-    EXPECT_TRUE(String::IsStringNullOrEmpty(String("")));
+    EXPECT_FALSE(String::IsNullOrEmpty(String("Hello")));
+    EXPECT_TRUE(String::IsNullOrEmpty(String("")));
 }

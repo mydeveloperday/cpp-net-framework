@@ -73,6 +73,13 @@ namespace System
             return (*this);
         }
 
+        String& operator+=(const String& s)
+        {
+            std::string newstring = (*this).str() + s.str();
+            m_str = newstring;
+            return (*this);
+        }
+
         String ToUpper() const
         {
             String s;

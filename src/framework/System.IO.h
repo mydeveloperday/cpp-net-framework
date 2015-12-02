@@ -1,11 +1,13 @@
 #ifndef _INCLUDED_SYSTEM_IO_H_
 #define _INCLUDED_SYSTEM_IO_H_
 
+#include <fstream>
+#include <memory>
+
 #include "System.h"
 
 #include "OS.h"
 
-#include <fstream>
 
 namespace System
 {
@@ -71,15 +73,21 @@ namespace System
                 return m_path;
             }
 
+            virtual void Delete()
+            {
+                std::remove(FullName().str().c_str());
+            }
+
             DateTime CreationTime()
             {
+                throw System::NotImplementedException("FileInfo::Creation time not implemented");
             }
         };
 
         class StreamWriter
         {
             System::String m_file;
-            std::ofstream m_fd;
+            std::shared_ptr<std::ofstream> m_fd;
             bool m_disposed;
 
         public:
@@ -87,7 +95,7 @@ namespace System
                 : m_file(file)
                 , m_disposed(false)
             {
-                m_fd = std::ofstream(file.str().c_str());
+                m_fd = std::shared_ptr<std::ofstream>(new std::ofstream(file.str().c_str()));
             }
 
             ~StreamWriter()
@@ -97,13 +105,13 @@ namespace System
 
             void WriteLine(const System::String& s)
             {
-                m_fd << s.str() << "\n";
+                (*m_fd) << s.str() << "\n";
             }
 
             void Dispose()
             {
                 if (!m_disposed) {
-                    m_fd.close();
+                    (*m_fd).close();
                     m_disposed = true;
                 }
             }
@@ -120,7 +128,7 @@ namespace System
         class StreamReader
         {
             System::String m_file;
-            std::ifstream m_fd;
+            std::shared_ptr<std::ifstream> m_fd;
             bool m_disposed;
 
         public:
@@ -135,18 +143,18 @@ namespace System
 
                 std::string path = info.FullName().str();
 
-                m_fd = std::ifstream(path.c_str());
+                m_fd = std::shared_ptr<std::ifstream>(new std::ifstream(path.c_str()));
             }
 
             ~StreamReader()
             {
-                m_fd.close();
+                Dispose();
             }
 
             System::String ReadLine()
             {
                 std::string strIn;
-                std::getline(m_fd, strIn);
+                std::getline((*m_fd), strIn);
 
                 System::String strOut(strIn.c_str());
                 return strOut;
@@ -155,14 +163,14 @@ namespace System
             void Dispose()
             {
                 if (!m_disposed) {
-                    m_fd.close();
+                    (*m_fd).close();
                     m_disposed = true;
                 }
             }
 
             bool EndOfStream()
             {
-                return !m_fd || m_fd.eof();
+                return !(*m_fd) || (*m_fd).eof();
             }
         };
     }

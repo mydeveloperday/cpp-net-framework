@@ -17,6 +17,7 @@ add_executable(System_Test
                String_Test.cxx
                FileInfo_Test.cxx
                DateTime_Test.cxx
+               Stream_Test.cxx
               )
 
 target_link_libraries (System_Test cpp-net-framework gtest gtest_main)

@@ -14,7 +14,7 @@ TEST(FileInfoTest, BasicFileOperations)
 
     EXPECT_TRUE(info.FullName().Contains("myfile.txt"));
 
-    EXPECT_EQ(info.Name(), String("myfile.txt"));
+    EXPECT_EQ(info.Name().str().c_str(), "myfile.txt");
     EXPECT_TRUE(info.Name().Equals("myfile.txt"));
 
     EXPECT_TRUE(info.Extension().Equals(".txt"));

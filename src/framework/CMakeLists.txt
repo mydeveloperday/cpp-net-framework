@@ -10,6 +10,11 @@ SET(HEADERS
   OS.h
   System.IO.h
   System.h
+  DateTime.h
+  Environment.h
+  Exception.h
+  NullPtr.h
+  pragmas.h
 )
 
 add_library(cpp-net-framework ${SOURCE} ${HEADERS})

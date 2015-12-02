@@ -80,7 +80,7 @@ namespace System
     public:
         static System::String Combine(System::String a, System::String b)
         {
-            String res = a + "\\" + b;
+            String res = a + PATH_SEPARATOR + b;
             return res;
         }
     };

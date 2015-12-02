@@ -9,13 +9,9 @@
 #include "NetString.h"
 #include "OS.h"
 #include "Exception.h"
+#include "DateTime.h"
 
-#pragma warning(disable: 4100)
-#pragma warning(disable: 4505)
-
-// localtime TODO replace with secure call
-#pragma warning(push)
-#pragma warning(disable: 4996)
+#include "pragmas.h"
 
 namespace System
 {
@@ -73,57 +69,12 @@ namespace System
         }
     };
 
-    class DateTime
-    {
-        std::time_t m_time;
-
-    public:
-        DateTime(int year,int month,int day)
-        {
-            struct tm timeinfo;
-            memset(&timeinfo, 0, sizeof(tm));
-            timeinfo.tm_year = year - 1900;
-            timeinfo.tm_mon = month -1;
-            timeinfo.tm_mday = day;
-
-            m_time = mktime(&timeinfo);
-        }
-
-        /// NOT a .NET Call
-        DateTime(const std::time_t &t):
-            m_time(t)
-        {
-        }
-
-        int Day() const {
-            struct tm *rawtime;
-            rawtime = localtime(&m_time);
-            return rawtime->tm_mday;
-        }
-
-        int Month() const {
-            struct tm *rawtime;
-            rawtime = localtime(&m_time);
-            return rawtime->tm_mon+1;
-        }
-
-        int Year() const {
-            struct tm *rawtime;
-            rawtime =localtime(&m_time);
-            return rawtime->tm_year+1900;
-        }
-
-        static DateTime Now()
-        {
-            return DateTime(time(nullptr));
-        }
-    };
-
     class Environment
     {
     public:
         static System::String CurrentDirectory()
         {
+            // TODO move this centrally
             char buffer[1024];
 
             // TODO this should be made platform independent
@@ -147,7 +98,5 @@ namespace System
 }
 
 using namespace System;
-
-#pragma warning(pop)
 
 #endif

@@ -112,7 +112,6 @@ namespace System
             FileNotFoundException()
             {}
      };
-    
 
     class StreamReader
     {

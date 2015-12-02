@@ -1,5 +1,5 @@
-#ifndef _INCLUDED_SYSTEM_H_
-#define _INCLUDED_SYSTEM_H_
+#ifndef _INCLUDED_SYSTEM_EXCEPTION_H_
+#define _INCLUDED_SYSTEM_EXCEPTION_H_
 
 #include <iostream>
 #include <string>
@@ -9,25 +9,21 @@
 #include "NetString.h"
 #include "OS.h"
 
-#pragma warning(disable: 4100)
-#pragma warning(disable: 4505)
-
-// localtime TODO replace with secure call
-#pragma warning(push)
-#pragma warning(disable: 4996)
+#include "pragmas.h"
 
 namespace System
 {
     class Exception : std::exception
     {
         String m_msg;
+
     public:
         Exception()
         {}
 
-        virtual const char* what() const OVERRIDE
+        virtual const char* what() const
         {
-            return m_msg.str();
+            return m_msg.str().c_str();
         }
 
         Exception(String msg) :
@@ -65,7 +61,5 @@ namespace System
 }
 
 using namespace System;
-
-#pragma warning(pop)
 
 #endif

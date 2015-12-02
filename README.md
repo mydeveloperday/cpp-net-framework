@@ -3,6 +3,11 @@ An experimental .NET Framework for C++
 
 [![Build Status](https://travis-ci.org/mydeveloperday/cpp-net-framework.svg?branch=master)](https://travis-ci.org/mydeveloperday/cpp-net-framework)
 
+<a href="https://scan.coverity.com/projects/mydeveloperday-cpp-net-framework">
+  <img alt="Coverity Scan Build Status"
+       src="https://scan.coverity.com/projects/7174/badge.svg"/>
+</a>
+
 ## Introduction
 
 cpp-net-framework is an experimental C++ implementation of the .NET Framework, its purpose is to bring the power of the .NET Framework for use within C++ applications. 

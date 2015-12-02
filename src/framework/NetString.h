@@ -178,12 +178,13 @@ namespace System
         {
             int pos=IndexOf(from);
             if (pos==-1){
-                return from;
+                return (*this);
             }
 
             String newstring=(*this);
-            
-            while (pos!=-1){
+           
+            int maxCount=10; 
+            while (pos!=-1 && maxCount--){
                newstring.m_str.replace(pos,pos+from.Length(),with.str());
             
                int lastpos = pos;

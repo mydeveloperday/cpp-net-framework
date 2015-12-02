@@ -1,0 +1,16 @@
+cpp-net-framework
+================================
+
+This directory and its subdirectories contain source code for cpp-net-framework,
+a library for the construction of C++ applications using a C++ .NET Framework
+
+cpp-net-framework is open source software. You may freely distribute it under the terms of
+the license agreement found in LICENSE.txt.
+
+Goals and Tasks
+================================
+
+Flush out C++ classes to provide as much of the .NET Framework API as possible
+Add documentation explaining how to use cpp-net-framework
+
+

@@ -87,7 +87,7 @@ namespace System
                 : m_file(file)
                 , m_disposed(false)
             {
-                m_fd = std::ofstream(file.str());
+                m_fd = std::ofstream(file.str().c_str());
             }
 
             ~StreamWriter()
@@ -135,7 +135,7 @@ namespace System
 
                 std::string path = info.FullName().str();
 
-                m_fd = std::ifstream(path);
+                m_fd = std::ifstream(path.c_str());
             }
 
             ~StreamReader()

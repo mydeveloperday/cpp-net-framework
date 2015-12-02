@@ -28,7 +28,7 @@ namespace ConsoleApplication1
 
             StreamWriter sw(args[1]);
             {
-                for(int i=0;i<lines.Count;i++)
+                for(int i=0;i<lines.Count();i++)
                 {
                     sw.WriteLine(lines[i]);
                 }
@@ -36,7 +36,7 @@ namespace ConsoleApplication1
             }
         }
 
-        static String TransformLine(String s)
+        static String TransformLine(const String& s)
         {
             String ns=s;
             if (s.Contains("System.Console.Write")){

@@ -10,6 +10,7 @@
 #include "OS.h"
 #include "Exception.h"
 #include "DateTime.h"
+#include "Environment.h"
 
 #include "pragmas.h"
 
@@ -66,22 +67,6 @@ namespace System
         void Add(const T& item)
         {
             m_vec.push_back(item);
-        }
-    };
-
-    class Environment
-    {
-    public:
-        static System::String CurrentDirectory()
-        {
-            // TODO move this centrally
-            char buffer[1024];
-
-            // TODO this should be made platform independent
-            if (_getcwd(buffer, sizeof(buffer))) {
-                return System::String(buffer);
-            }
-            return System::String("");
         }
     };
 

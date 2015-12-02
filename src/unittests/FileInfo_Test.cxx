@@ -18,5 +18,11 @@ TEST(FileInfoTest, BasicFileOperations)
     EXPECT_TRUE(info.Name().Equals("myfile.txt"));
 
     EXPECT_TRUE(info.Extension().Equals(".txt"));
+
+}
+
+TEST(EnvironmentTests, BasicEnvironmentOperations)
+{
+    EXPECT_TRUE(Environment::CurrentDirectory().Contains("unittests"));
 }
 

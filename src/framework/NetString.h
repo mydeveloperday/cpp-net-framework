@@ -160,11 +160,17 @@ namespace System
 
         bool StartsWith(const String& s) const
         {
+            if (String::IsNullOrEmpty(s)){
+                return false;
+            }
             return (IndexOf(s)==0);
         }
 
         bool EndsWith(const String& s) const
         {
+            if (String::IsNullOrEmpty(s)){
+                return false;
+            }
             return (IndexOf(s)==Length()-s.Length());
         }
 
@@ -212,6 +218,11 @@ namespace System
            String s=(*this);
            s.m_str.erase(s.m_str.find_first_not_of(" \n\r\t")+1); 
            return s;
+        }
+
+        static bool IsNullOrEmpty(const String &s)
+        {
+           retunr (s.Length()==0);
         }
     };
 

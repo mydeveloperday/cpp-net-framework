@@ -83,8 +83,8 @@ namespace System
         String ToUpper() const
         {
             String s;
-            for (size_t i = 0; i < m_str.size(); i++) {
-                s += toupper(m_str[i]);
+            for (size_t i = 0; i < m_str.size(); ++i) {
+                s += static_cast<char>(toupper(m_str[i]));
             }
             return s;
         }
@@ -92,8 +92,8 @@ namespace System
         String ToLower() const
         {
             String s;
-            for (size_t i = 0; i < m_str.size(); i++) {
-                s += tolower(m_str[i]);
+            for (size_t i = 0; i < m_str.size(); ++i) {
+                s += static_cast<char>(tolower(m_str[i]));
             }
             return s;
         }

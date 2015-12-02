@@ -13,7 +13,7 @@
 
 namespace System
 {
-    class Exception : std::exception
+    class Exception : public std::exception
     {
         String m_msg;
 
@@ -42,7 +42,7 @@ namespace System
         }
     };
 
-    class SystemException : Exception
+    class SystemException : public Exception
     {
     public:
         SystemException()
@@ -55,7 +55,7 @@ namespace System
         }
     };
 
-    class NotImplementedException : SystemException
+    class NotImplementedException : public SystemException
     {
     public:
         NotImplementedException()

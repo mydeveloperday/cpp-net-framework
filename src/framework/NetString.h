@@ -202,14 +202,16 @@ namespace System
 
         String TrimEnd() const
         {
-           m_str.erase(m_str.find_last_not_of(" \n\r\t")+1); 
-           return (*this);
+           String s=(*this);
+           s.m_str.erase(s.m_str.find_last_not_of(" \n\r\t")+1); 
+           return s;
         }
 
         String TrimStart() const
         {
-           m_str.erase(m_str.find_first_not_of(" \n\r\t")+1); 
-           return (*this);
+           String s=(*this);
+           s.m_str.erase(s.m_str.find_first_not_of(" \n\r\t")+1); 
+           return s;
         }
     };
 

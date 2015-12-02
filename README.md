@@ -1,5 +1,5 @@
 # cpp-net-framework
-An experimental .NET Framework for C++
+An experimental .NET Framework for C++ (Coverity Scan)
 
 [![Build Status](https://travis-ci.org/mydeveloperday/cpp-net-framework.svg?branch=master)](https://travis-ci.org/mydeveloperday/cpp-net-framework)
 

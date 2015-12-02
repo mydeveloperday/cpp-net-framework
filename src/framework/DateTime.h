@@ -6,6 +6,7 @@
 #include <ctime>
 #include <cstring>
 
+#include "OS.h"
 #include "NetString.h"
 #include "Exception.h"
 

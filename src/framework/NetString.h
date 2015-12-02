@@ -208,7 +208,7 @@ namespace System
 
         String TrimStart()
         {
-           m_str.erase(m_str.find_not_of(" \n\r\t")+1); 
+           m_str.erase(m_str.find_first_not_of(" \n\r\t")+1); 
            return (*this);
         }
     };

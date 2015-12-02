@@ -1,5 +1,7 @@
 cmake_minimum_required (VERSION 2.8.7)
 
+include( CTest )
+
 IF(WIN32)
 SET(CMAKE_EXE_LINKER_FLAGS /NODEFAULTLIB:\"msvcprtd.lib;MSVCRTD.lib\")
 
@@ -14,6 +16,8 @@ ENDIF()
 
 include_directories(../)
 include_directories(../googletest/include)
+
+enable_testing()
 
 add_executable(System_Test 
                String_Test.cxx

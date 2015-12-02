@@ -1,5 +1,6 @@
 #include "System.h"
 #include "System.IO.h"
+#include "System.Collections.Generic.h"
 
 namespace ConsoleApplication1
 {

@@ -76,39 +76,39 @@ TEST(StringTest, Concat)
 
 TEST(StringTest, StartsWith)
 {
-    EXPECT_TRUE(String("HelloWorld").StartsWith("Hello");
-    EXPECT_FALSE(String("HelloWorld").StartsWith("ello");
-    EXPECT_FALSE(String("HelloWorld").StartsWith("ello");
-    EXPECT_TRUE(String("HelloWorld").StartsWith("Hell");
-    EXPECT_TRUE(String("HelloWorld").StartsWith("Hell");
-    EXPECT_TRUE(String("HelloWorld").StartsWith("Hel");
-    EXPECT_TRUE(String("HelloWorld").StartsWith("He");
-    EXPECT_TRUE(String("HelloWorld").StartsWith("H");
-    EXPECT_FALSE(String("HelloWorld").StartsWith("");
-    EXPECT_TRUE(String("HelloWorld").StartsWith("Hello");
-    EXPECT_TRUE(String("HelloWorld").StartsWith("HelloW");
-    EXPECT_TRUE(String("HelloWorld").StartsWith("HelloWo");
-    EXPECT_TRUE(String("HelloWorld").StartsWith("HelloWor");
-    EXPECT_TRUE(String("HelloWorld").StartsWith("HelloWorl");
-    EXPECT_TRUE(String("HelloWorld").StartsWith("HelloWorld");
-    EXPECT_FALSE(String("HelloWorld").StartsWith("HelloWorldApples");
+    EXPECT_TRUE(String("HelloWorld").StartsWith("Hello"));
+    EXPECT_FALSE(String("HelloWorld").StartsWith("ello"));
+    EXPECT_FALSE(String("HelloWorld").StartsWith("ello"));
+    EXPECT_TRUE(String("HelloWorld").StartsWith("Hell"));
+    EXPECT_TRUE(String("HelloWorld").StartsWith("Hell"));
+    EXPECT_TRUE(String("HelloWorld").StartsWith("Hel"));
+    EXPECT_TRUE(String("HelloWorld").StartsWith("He"));
+    EXPECT_TRUE(String("HelloWorld").StartsWith("H"));
+    EXPECT_FALSE(String("HelloWorld").StartsWith(""));
+    EXPECT_TRUE(String("HelloWorld").StartsWith("Hello"));
+    EXPECT_TRUE(String("HelloWorld").StartsWith("HelloW"));
+    EXPECT_TRUE(String("HelloWorld").StartsWith("HelloWo"));
+    EXPECT_TRUE(String("HelloWorld").StartsWith("HelloWor"));
+    EXPECT_TRUE(String("HelloWorld").StartsWith("HelloWorl"));
+    EXPECT_TRUE(String("HelloWorld").StartsWith("HelloWorld"));
+    EXPECT_FALSE(String("HelloWorld").StartsWith("HelloWorldApples"));
 }
 
 TEST(StringTest, EndsWith)
 {
-    EXPECT_TRUE(String("HelloWorld").EndsWith("HelloWorld");
-    EXPECT_TRUE(String("HelloWorld").EndsWith("elloWorld");
-    EXPECT_TRUE(String("HelloWorld").EndsWith("lloWorld");
-    EXPECT_TRUE(String("HelloWorld").EndsWith("loWorld");
-    EXPECT_TRUE(String("HelloWorld").EndsWith("oWorld");
-    EXPECT_TRUE(String("HelloWorld").EndsWith("World");
-    EXPECT_TRUE(String("HelloWorld").EndsWith("orld");
-    EXPECT_TRUE(String("HelloWorld").EndsWith("rld");
-    EXPECT_TRUE(String("HelloWorld").EndsWith("ld");
-    EXPECT_TRUE(String("HelloWorld").EndsWith("d");
-    EXPECT_FALSE(String("HelloWorld").EndsWith("");
+    EXPECT_TRUE(String("HelloWorld").EndsWith("HelloWorld"));
+    EXPECT_TRUE(String("HelloWorld").EndsWith("elloWorld"));
+    EXPECT_TRUE(String("HelloWorld").EndsWith("lloWorld"));
+    EXPECT_TRUE(String("HelloWorld").EndsWith("loWorld"));
+    EXPECT_TRUE(String("HelloWorld").EndsWith("oWorld"));
+    EXPECT_TRUE(String("HelloWorld").EndsWith("World"));
+    EXPECT_TRUE(String("HelloWorld").EndsWith("orld"));
+    EXPECT_TRUE(String("HelloWorld").EndsWith("rld"));
+    EXPECT_TRUE(String("HelloWorld").EndsWith("ld"));
+    EXPECT_TRUE(String("HelloWorld").EndsWith("d"));
+    EXPECT_FALSE(String("HelloWorld").EndsWith(""));
 
-    EXPECT_FALSE(String("HelloWorld").EndsWith("ApplesHelloWorld");
+    EXPECT_FALSE(String("HelloWorld").EndsWith("ApplesHelloWorld"));
 }
 
 TEST(StringTest, Replace)

@@ -1,0 +1,12 @@
+install:
+  - mkdir build
+  - cd build
+  - cmake ..
+  
+platform:
+  - x86
+  - x64
+  
+configuration:
+  - Debug
+  - Release

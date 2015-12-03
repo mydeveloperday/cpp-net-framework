@@ -1,4 +1,0 @@
-install:
-  - mkdir build
-  - cd build
-  - cmake ..

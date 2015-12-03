@@ -75,7 +75,13 @@ namespace System
 
             virtual void Delete()
             {
-                std::remove(FullName().str().c_str());
+                int errVal = std::remove(FullName().str().c_str());
+                if (errVal) {
+                    // an error occurred TODO perhaps it should throw if not found)
+                    // throw if a directory
+                    static_cast<void>(errVal);
+                }
+                return;
             }
 
             DateTime CreationTime()

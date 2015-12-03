@@ -14,23 +14,29 @@ namespace ConsoleApplication1
                     "Usage: GTest2Html <intput.txt> <output.html>");
                 return;
             }
-            StreamWriter sw(args[1]);
-            {
-                sw.WriteLine("<html>");
-                sw.WriteLine("<body>");
-                StreamReader sr(args[0]);
+            try {
+                StreamWriter sw(args[1]);
                 {
-                    while (!sr.EndOfStream()) {
-                        String s = sr.ReadLine();
-                        System::Console::WriteLine(s);
-                        sw.WriteLine(s);
-                        sw.WriteLine("<br>");
+                    sw.WriteLine("<html>");
+                    sw.WriteLine("<body>");
+                    StreamReader sr(args[0]);
+                    {
+                        while (!sr.EndOfStream()) {
+                            String s = sr.ReadLine();
+                            System::Console::WriteLine(s);
+                            sw.WriteLine(s);
+                            sw.WriteLine("<br>");
+                        }
+                        sr.Dispose();
                     }
-                    sr.Dispose();
+                    sw.WriteLine("</body>");
+                    sw.WriteLine("</html>");
+                    sw.Dispose();
                 }
-                sw.WriteLine("</body>");
-                sw.WriteLine("</html>");
-                sw.Dispose();
+            }
+            catch (const System::Exception &e)
+            {
+                System::Console::WriteLine(e.Message);
             }
         }
     };

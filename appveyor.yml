@@ -5,12 +5,10 @@ install:
   - dir
   
 platform:
-  - x86
-  - x64
+  - win32
   
 configuration:
   - Debug
-  - Release
   
 build:
   project: C:/projects/cpp-net-framework/build/cpp-net-framework.sln

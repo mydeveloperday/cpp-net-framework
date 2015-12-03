@@ -10,3 +10,6 @@ platform:
 configuration:
   - Debug
   - Release
+  
+build:
+  - project: cpp-net-framework.sln

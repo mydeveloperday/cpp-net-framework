@@ -12,4 +12,4 @@ configuration:
   - Release
   
 build:
-  - project: cpp-net-framework.sln
+  project: cpp-net-framework.sln

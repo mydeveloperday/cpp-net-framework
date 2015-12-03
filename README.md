@@ -1,12 +1,17 @@
 # cpp-net-framework
 An experimental .NET Framework for C++
 
-[![Build Status](https://travis-ci.org/mydeveloperday/cpp-net-framework.svg?branch=master)](https://travis-ci.org/mydeveloperday/cpp-net-framework)
-
+[![Build Status](https://travis-ci.org/mydeveloperday/cpp-net-framework.svg?branch=master)](https://travis-ci.org/mydeveloperday/cpp-net-framework) 
+<a href="https://ci.appveyor.com/project/mydeveloperday/cpp-net-framework">
+  <img alt="AppVeyor Scan Build Status"
+       src="https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true"/>
+</a>
 <a href="https://scan.coverity.com/projects/mydeveloperday-cpp-net-framework">
   <img alt="Coverity Scan Build Status"
        src="https://scan.coverity.com/projects/7174/badge.svg"/>
 </a>
+
+
 
 ## Introduction
 

@@ -52,6 +52,9 @@ limit the external dependencies (for now) purely from the aspect of being able t
 
 The library will use STL underneath. Platform specifics should be pushed down to an OS layer (to be implemented), to keep #ifdef in the main code at a minimum
 
+See what needs to be done 
+file:///C:/Users/phoad107185/Desktop/NET_35_Namespaces_Poster_JAN08.pdf
+
 
 ## Follow the discussion
 

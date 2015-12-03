@@ -1,4 +1,5 @@
 # cpp-net-framework
+
 An experimental .NET Framework for C++
 
 [![Build Status](https://travis-ci.org/mydeveloperday/cpp-net-framework.svg?branch=master)](https://travis-ci.org/mydeveloperday/cpp-net-framework) 
@@ -53,7 +54,7 @@ limit the external dependencies (for now) purely from the aspect of being able t
 The library will use STL underneath. Platform specifics should be pushed down to an OS layer (to be implemented), to keep #ifdef in the main code at a minimum
 
 See what needs to be done 
-file:///C:/Users/phoad107185/Desktop/NET_35_Namespaces_Poster_JAN08.pdf
+http://www.microsoft.com/en-IE/download/details.aspx?id=19341
 
 
 ## Follow the discussion
@@ -62,6 +63,11 @@ This idea for a c++ .net framework came out from my blog
 
 https://mydeveloperday.wordpress.com/2015/11/27/making-a-c-net-framework-part-1/
 https://mydeveloperday.wordpress.com/2015/11/30/making-a-c-net-framework-part-2/
+
+Talk about this repository
+
+[![Join the chat at https://gitter.im/mydeveloperday/cpp-net-framework](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mydeveloperday/cpp-net-framework?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 
 ## About MyDeveloper Day
 

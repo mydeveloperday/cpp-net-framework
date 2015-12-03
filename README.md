@@ -63,6 +63,10 @@ This idea for a c++ .net framework came out from my blog
 https://mydeveloperday.wordpress.com/2015/11/27/making-a-c-net-framework-part-1/
 https://mydeveloperday.wordpress.com/2015/11/30/making-a-c-net-framework-part-2/
 
+Talk about this repository
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mydeveloperday/cpp-net-framework?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 ## About MyDeveloper Day
 
 Follow the my development stories at our blog

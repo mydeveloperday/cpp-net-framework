@@ -14,3 +14,8 @@ configuration:
   
 build:
   project: cpp-net-framework.sln
+  verbosity: detailed
+  
+test_script:
+  - echo "Running Tests"
+  - ctest -VV

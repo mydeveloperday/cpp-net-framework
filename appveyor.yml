@@ -1,0 +1,19 @@
+install:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - dir
+  
+platform:
+  - win32
+  
+configuration:
+  - Debug
+  
+build:
+  project: C:/projects/cpp-net-framework/build/cpp-net-framework.sln
+  verbosity: minimal
+  
+test_script:
+  - echo "Running Tests"
+  - ctest -VV

@@ -1,12 +1,17 @@
 # cpp-net-framework
 An experimental .NET Framework for C++
 
-[![Build Status](https://travis-ci.org/mydeveloperday/cpp-net-framework.svg?branch=master)](https://travis-ci.org/mydeveloperday/cpp-net-framework)
-
+[![Build Status](https://travis-ci.org/mydeveloperday/cpp-net-framework.svg?branch=master)](https://travis-ci.org/mydeveloperday/cpp-net-framework) 
+<a href="https://ci.appveyor.com/project/mydeveloperday/cpp-net-framework">
+  <img alt="AppVeyor Scan Build Status"
+       src="https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true"/>
+</a>
 <a href="https://scan.coverity.com/projects/mydeveloperday-cpp-net-framework">
   <img alt="Coverity Scan Build Status"
        src="https://scan.coverity.com/projects/7174/badge.svg"/>
 </a>
+
+
 
 ## Introduction
 
@@ -46,6 +51,9 @@ Additional libraries should be kept to a minimum, the source tree contains googl
 limit the external dependencies (for now) purely from the aspect of being able to easily build on multiple platforms. 
 
 The library will use STL underneath. Platform specifics should be pushed down to an OS layer (to be implemented), to keep #ifdef in the main code at a minimum
+
+See what needs to be done 
+file:///C:/Users/phoad107185/Desktop/NET_35_Namespaces_Poster_JAN08.pdf
 
 
 ## Follow the discussion

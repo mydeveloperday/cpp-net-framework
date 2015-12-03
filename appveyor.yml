@@ -12,7 +12,7 @@ configuration:
   
 build:
   project: C:/projects/cpp-net-framework/build/cpp-net-framework.sln
-  verbosity: detailed
+  verbosity: minimal
   
 test_script:
   - echo "Running Tests"

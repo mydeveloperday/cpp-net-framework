@@ -2,6 +2,7 @@ install:
   - mkdir build
   - cd build
   - cmake ..
+  - dir
   
 platform:
   - x86

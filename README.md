@@ -1,6 +1,5 @@
 # cpp-net-framework
 
-[![Join the chat at https://gitter.im/mydeveloperday/cpp-net-framework](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mydeveloperday/cpp-net-framework?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 An experimental .NET Framework for C++
 
 [![Build Status](https://travis-ci.org/mydeveloperday/cpp-net-framework.svg?branch=master)](https://travis-ci.org/mydeveloperday/cpp-net-framework) 
@@ -67,7 +66,8 @@ https://mydeveloperday.wordpress.com/2015/11/30/making-a-c-net-framework-part-2/
 
 Talk about this repository
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mydeveloperday/cpp-net-framework?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Join the chat at https://gitter.im/mydeveloperday/cpp-net-framework](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mydeveloperday/cpp-net-framework?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 
 ## About MyDeveloper Day
 

@@ -21,6 +21,7 @@ ENABLE_TESTING()
 INCLUDE(CTest)
 
 add_subdirectory(src)
+add_subdirectory(scripts)
 
 set(CTEST_TARGET_SYSTEM "Linux-Ubuntu-14.04-x64")
 set(CTEST_MODEL         "Performance")

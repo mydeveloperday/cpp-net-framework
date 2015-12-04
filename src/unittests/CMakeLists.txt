@@ -14,7 +14,7 @@ FOREACH(flag_var
 ENDFOREACH(flag_var)
 ENDIF()
 
-include_directories(../)
+include_directories(../framework)
 include_directories(../googletest/include)
 
 enable_testing()

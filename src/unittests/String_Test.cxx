@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 
-#include "framework/System.h"
+#include "System.h"
 
 using namespace System;
 

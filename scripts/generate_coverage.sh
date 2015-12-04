@@ -1,19 +1,6 @@
 #!/bin/sh
 basepath=`pwd`
 
-function print_help {
-  echo "#######################################################################"
-  echo "###               Generation of Test Coverage Report                ###"
-  echo "#                                                                     #"
-  echo "# First (and only) parameter must be the name of the build directory  #"
-  echo "#                                                                     #"
-  echo "# Example:                                                            #"
-  echo "#   ./generate_coverage.sh build_gcc                                  #"
-  echo "#                                                                     #"
-  echo "#######################################################################"
-  return 0
-}
-
 if [[ $# -ne 1 ]]
 then
   print_help

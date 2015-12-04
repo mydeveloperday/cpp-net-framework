@@ -2,11 +2,13 @@
 An experimental .NET Framework for C++ (Coverity Scan)
 
 [![Build Status](https://travis-ci.org/mydeveloperday/cpp-net-framework.svg?branch=master)](https://travis-ci.org/mydeveloperday/cpp-net-framework)
-
 <a href="https://scan.coverity.com/projects/mydeveloperday-cpp-net-framework">
   <img alt="Coverity Scan Build Status"
        src="https://scan.coverity.com/projects/7174/badge.svg"/>
 </a>
+<img src="https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true">
+<img src="https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_100.png">
+
 
 ## Introduction
 

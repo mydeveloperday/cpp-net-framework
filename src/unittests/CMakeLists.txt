@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 2.8.7)
 
 include( CTest )
 
-IF(WIN32)
+IF(MSVC)
 SET(CMAKE_EXE_LINKER_FLAGS /NODEFAULTLIB:\"msvcprtd.lib;MSVCRTD.lib\")
 
 FOREACH(flag_var
@@ -12,6 +12,12 @@ FOREACH(flag_var
         string(REGEX REPLACE "/MD" "/MT" ${flag_var} "${${flag_var}}")
     endif(${flag_var} MATCHES "/MD")
 ENDFOREACH(flag_var)
+ENDIF()
+
+IF(GNU)
+SET(CMAKE_CXX_FLAGS "-g -O0 -W -fprofile-arcs -ftest-coverage")
+SET(CMAKE_C_FLAGS "-g -O0 -W -fprofile-arcs -ftest-coverage")
+SET(CMAKE_EXE_LINKER_FLAGS "-fprofile-arcs -ftest-coverage")
 ENDIF()
 
 include_directories(../framework)
@@ -26,6 +32,10 @@ add_executable(System_Test
                Stream_Test.cxx
               )
 
+IF(GNU)
+target_link_libraries (System_Test cpp-net-framework gtest gtest_main gcov)
+ELSE()
 target_link_libraries (System_Test cpp-net-framework gtest gtest_main)
+ENDIF()
 
 add_test( System_Test System_Test )

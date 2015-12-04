@@ -13,6 +13,12 @@ elseif(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-long-long -pedantic -Wno-unused-function -Wno-variadic-macros -Werror")
 endif()
 
+if(${CMAKE_COMPILER_ID} MATCHES GNU AND $cpp-netframework)
+    set_target_properties(StringTest
+        PROPERTIES COMPILE_FLAGS "${CMAKE_CXX_FLAGS} -gp -fprofile-coverage -fprofile-args
+                   LINK_FLAGS "-fprofile-arcs")
+endif()
+
 ENABLE_TESTING()
 INCLUDE(CTest)
 

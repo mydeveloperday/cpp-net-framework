@@ -15,6 +15,7 @@ SET(HEADERS
   System/DateTime.h
   System/Environment.h
   System/Exception.h
+  System/Math.h
 )
 
 add_library(cpp-net-framework ${SOURCE} ${HEADERS})

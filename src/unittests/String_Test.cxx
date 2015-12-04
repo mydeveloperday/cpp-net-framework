@@ -55,9 +55,11 @@ TEST(StringTest, Index)
 {
     EXPECT_EQ(6, String("HelloWorld").LastIndexOf('o'));
     EXPECT_EQ(6, String("HelloWorld").LastIndexOf("or"));
+    EXPECT_EQ(-1, String("HelloWorld").LastIndexOf("Ap"));
 
     EXPECT_EQ(4, String("HelloWorld").IndexOf('o'));
     EXPECT_EQ(6, String("HelloWorld").IndexOf("or"));
+    EXPECT_EQ(-1, String("HelloWorld").IndexOf("Ap"));
 }
 
 TEST(StringTest, SubString)

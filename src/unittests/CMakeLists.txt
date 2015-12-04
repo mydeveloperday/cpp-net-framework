@@ -31,6 +31,7 @@ add_executable(System_Test
                FileInfo_Test.cxx
                DateTime_Test.cxx
                Stream_Test.cxx
+               Math_Test.cxx
               )
 
 IF(CMAKE_COMPILER_IS_GNUCC)

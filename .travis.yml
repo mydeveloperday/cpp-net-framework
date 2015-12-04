@@ -16,5 +16,6 @@ before_script:
 script: 
   - make
   - ctest -VV
-  - ./scripts/generate_coverage.sh ../build
+  - chmod a+rx ./scripts/generate_coverage.sh
+  - ./scripts/generate_coverage.sh ..
 

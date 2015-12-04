@@ -17,5 +17,4 @@ script:
   - make
   - ctest -VV
   - chmod a+rx ./scripts/generate_coverage.sh
-  - ./scripts/generate_coverage.sh ..
 

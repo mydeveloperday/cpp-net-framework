@@ -6,11 +6,11 @@
 #include <vector>
 #include <ctime>
 
-#include "NetString.h"
+#include "System/String.h"
 #include "OS.h"
-#include "Exception.h"
-#include "DateTime.h"
-#include "Environment.h"
+#include "System/Exception.h"
+#include "System/DateTime.h"
+#include "System/Environment.h"
 
 #include "pragmas.h"
 

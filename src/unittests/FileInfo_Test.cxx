@@ -1,8 +1,8 @@
 
 #include "gtest/gtest.h"
 
-#include "framework/System.h"
-#include "framework/System.IO.h"
+#include "System.h"
+#include "System/IO.h"
 
 using namespace System;
 

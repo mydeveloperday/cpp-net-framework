@@ -1,12 +1,7 @@
 #ifndef _INCLUDED_SYSTEM_EXCEPTION_H_
 #define _INCLUDED_SYSTEM_EXCEPTION_H_
 
-#include <iostream>
-#include <string>
-#include <vector>
-#include <ctime>
-
-#include "NetString.h"
+#include "System/String.h"
 #include "OS.h"
 
 #include "pragmas.h"

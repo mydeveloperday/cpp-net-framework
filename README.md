@@ -7,7 +7,7 @@ An experimental .NET Framework for C++ (Coverity Scan)
        src="https://scan.coverity.com/projects/7174/badge.svg"/>
 </a>
 <img src="https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true">
-<img src="https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_100.png">
+[![Coverage Status](https://coveralls.io/repos/mydeveloperday/cpp-net-framework/badge.svg?branch=master&service=github)](https://coveralls.io/github/mydeveloperday/cpp-net-framework?branch=master)
 
 
 ## Introduction

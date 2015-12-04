@@ -16,4 +16,5 @@ before_script:
 script: 
   - make
   - ctest -VV
+  - ./generate_coverage.sh ../build
 

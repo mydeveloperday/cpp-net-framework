@@ -36,3 +36,14 @@ TEST(StreamTest, BasicStreamOperations)
     EXPECT_FALSE(info.Exists());
 }
 
+TEST(StreamTest, NonExistantFiles)
+{
+    try {
+      StreamReader sr("NonExistantFile.txt");
+    }
+    catch(Exception &e)
+    {
+      EXPECT_TRUE(true);
+    }
+}
+

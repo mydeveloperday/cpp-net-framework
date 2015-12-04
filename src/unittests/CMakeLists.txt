@@ -33,7 +33,7 @@ add_executable(System_Test
                Stream_Test.cxx
               )
 
-IF(GNU)
+IF(CMAKE_COMPILER_IS_GNUCC)
 target_link_libraries (System_Test cpp-net-framework gtest gtest_main gcov)
 ELSE()
 target_link_libraries (System_Test cpp-net-framework gtest gtest_main)

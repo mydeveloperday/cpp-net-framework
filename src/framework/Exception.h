@@ -38,7 +38,7 @@ namespace System
         {
         }
 
-        String Message()
+        String Message() const
         {
             return what();
         }

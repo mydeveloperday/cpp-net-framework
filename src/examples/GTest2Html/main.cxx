@@ -36,7 +36,7 @@ namespace ConsoleApplication1
             }
             catch (const System::Exception &e)
             {
-                System::Console::WriteLine(e.Message);
+                System::Console::WriteLine(e.Message());
             }
         }
     };

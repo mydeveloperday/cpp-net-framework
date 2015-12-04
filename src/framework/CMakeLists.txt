@@ -19,3 +19,5 @@ SET(HEADERS
 
 add_library(cpp-net-framework ${SOURCE} ${HEADERS})
 
+include_directories(../framework)
+

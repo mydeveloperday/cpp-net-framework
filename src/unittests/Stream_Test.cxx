@@ -43,7 +43,17 @@ TEST(StreamTest, NonExistantFiles)
     }
     catch(Exception &e)
     {
+      EXPECT_FALSE(String::IsNullOrEmpty(e.Message()));
       EXPECT_TRUE(true);
+    }
+
+    try {
+        StreamReader sr("");
+    }
+    catch (Exception &e)
+    {
+        EXPECT_FALSE(String::IsNullOrEmpty(e.Message()));
+        EXPECT_TRUE(true);
     }
 }
 

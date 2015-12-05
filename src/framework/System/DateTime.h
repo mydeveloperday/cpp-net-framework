@@ -1,8 +1,6 @@
 #ifndef _INCLUDED_SYSTEM_DATETIME_H_
 #define _INCLUDED_SYSTEM_DATETIME_H_
 
-#include <iostream>
-#include <string>
 #include <ctime>
 #include <cstring>
 

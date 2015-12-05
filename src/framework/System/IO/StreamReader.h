@@ -32,8 +32,11 @@ namespace System
                 , m_disposed(false)
             {
                 FileInfo info(file);
-                if (!info.Exists()) {
+                if (string::IsNullOrEmpty(info.Name())) {
                     throw System::IO::FileNotFoundException();
+                }
+                if (!info.Exists()) {
+                    throw System::IO::FileNotFoundException("File Not Found:"+info.Name());
                 }
 
                 std::string path = info.FullName().str();

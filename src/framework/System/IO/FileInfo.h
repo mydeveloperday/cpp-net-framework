@@ -6,6 +6,7 @@
 
 #include "System.h"
 #include "Path.h"
+#include "System/Math.h"
 
 #include "OS.h"
 
@@ -65,12 +66,16 @@ namespace System
                 }
 
                 if (lastForwardSlash == -1) {
-                    return m_path.Substring(lastBackwardSlash + 1);
+                    String part = m_path.Substring(lastBackwardSlash + 1);
+                    return part;
                 }
                 if (lastBackwardSlash == -1) {
-                    return m_path.Substring(lastForwardSlash + 1);
+                    String part = m_path.Substring(lastForwardSlash + 1);
+                    return part;
                 }
-                return m_path;
+
+                String part = m_path.Substring(Math::Max(lastForwardSlash,lastBackwardSlash) + 1);
+                return part;
             }
 
             virtual void Delete()

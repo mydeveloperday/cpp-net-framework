@@ -60,7 +60,7 @@ namespace System
             return m_str.size();
         }
 
-        const Char operator[](int pos)
+        Char operator[](int pos) const
         {
             return m_str[pos];
         }

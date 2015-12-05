@@ -25,3 +25,23 @@ TEST(EnvironmentTests, BasicEnvironmentOperations)
 {
     EXPECT_TRUE(Environment::CurrentDirectory().Contains("unittests"));
 }
+
+TEST(EnvironmentTests, Extensions)
+{
+    EXPECT_EQ(FileInfo("myfile.txt").Extension(),".txt");
+    EXPECT_EQ(FileInfo("myfile.xlsx").Extension(),".xlsx");
+    EXPECT_EQ(FileInfo("myfile").Extension(),"");
+}
+
+TEST(EnvironmentTests, Name)
+{
+    EXPECT_EQ(FileInfo("myfile.txt").Name(),"myfile.txt");
+    EXPECT_EQ(FileInfo("abc/myfile.txt").Name(),"myfile.txt");
+    EXPECT_EQ(FileInfo("abc\\myfile.txt").Name(),"myfile.txt");
+}
+
+TEST(EnvironmentTests, Console)
+{
+    System::Console::WriteLine("Hello");
+    System::Console::WriteLine(String("Hello"));
+}

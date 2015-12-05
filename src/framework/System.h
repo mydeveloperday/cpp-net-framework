@@ -9,6 +9,7 @@
 #include "System/Environment.h"
 #include "System/Console.h"
 #include "System/Array.h"
+#include "System/Math.h"
 
 #include "pragmas.h"
 

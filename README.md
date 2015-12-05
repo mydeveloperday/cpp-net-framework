@@ -2,11 +2,13 @@
 An experimental .NET Framework for C++ (Coverity Scan)
 
 [![Build Status](https://travis-ci.org/mydeveloperday/cpp-net-framework.svg?branch=master)](https://travis-ci.org/mydeveloperday/cpp-net-framework)
-
 <a href="https://scan.coverity.com/projects/mydeveloperday-cpp-net-framework">
   <img alt="Coverity Scan Build Status"
        src="https://scan.coverity.com/projects/7174/badge.svg"/>
 </a>
+<img src="https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true">
+[![Coverage Status](https://coveralls.io/repos/mydeveloperday/cpp-net-framework/badge.svg?branch=master&service=github)](https://coveralls.io/github/mydeveloperday/cpp-net-framework?branch=master)
+
 
 ## Introduction
 
@@ -47,6 +49,12 @@ limit the external dependencies (for now) purely from the aspect of being able t
 
 The library will use STL underneath. Platform specifics should be pushed down to an OS layer (to be implemented), to keep #ifdef in the main code at a minimum
 
+See what needs to be done 
+http://www.microsoft.com/en-IE/download/details.aspx?id=19341
+
+## Follow the discussion
+
+
 
 ## Follow the discussion
 
@@ -54,6 +62,11 @@ This idea for a c++ .net framework came out from my blog
 
 https://mydeveloperday.wordpress.com/2015/11/27/making-a-c-net-framework-part-1/
 https://mydeveloperday.wordpress.com/2015/11/30/making-a-c-net-framework-part-2/
+
+## Talk about this repository
+
+[![Join the chat at https://gitter.im/mydeveloperday/cpp-net-framework](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mydeveloperday/cpp-net-framework?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 
 ## About MyDeveloper Day
 

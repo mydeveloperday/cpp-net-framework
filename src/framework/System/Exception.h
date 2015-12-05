@@ -10,8 +10,7 @@ namespace System
 {
     class Exception : public std::exception
     {
-        String m_msg;
-
+        std::string m_reason;
     public:
         Exception()
         {
@@ -21,21 +20,18 @@ namespace System
         {
         }
 
-        /*
-        virtual const char* what() const throw()
+        Exception(const String& msg)
         {
-            return m_msg.str().c_str();
+            m_reason = msg.str();
         }
-        */
 
-        Exception(String msg)
-            : m_msg(msg)
-        {
+        virtual const char* what() const throw() {
+            return m_reason.c_str();
         }
 
         String Message() const
         {
-            return what();
+            return m_reason;
         }
     };
 

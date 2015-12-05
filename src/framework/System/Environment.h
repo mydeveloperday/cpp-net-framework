@@ -1,13 +1,8 @@
 #ifndef _INCLUDED_SYSTEM_ENVIRONMENT_H_
 #define _INCLUDED_SYSTEM_ENVIRONMENT_H_
 
-#include <iostream>
-#include <string>
-
 #include "System/String.h"
 #include "OS.h"
-#include "System/Exception.h"
-#include "System/DateTime.h"
 
 #include "pragmas.h"
 

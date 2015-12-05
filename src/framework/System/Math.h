@@ -1,13 +1,6 @@
 #ifndef _INCLUDED_SYSTEM_MATH_H_
 #define _INCLUDED_SYSTEM_MATH_H_
 
-#include "System/String.h"
-#include "OS.h"
-
-#include "System/Exception.h"
-#include "System/DateTime.h"
-#include "System/Environment.h"
-
 #include "pragmas.h"
 
 namespace System

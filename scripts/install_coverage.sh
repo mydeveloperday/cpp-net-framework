@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Installing Coverage Tools"
 set -ev
 cd ${TRAVIS_BUILD_DIR}
 wget http://ftp.de.debian.org/debian/pool/main/l/lcov/lcov_1.11.orig.tar.gz

@@ -33,6 +33,8 @@ before_install:
   - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo apt-add-repository 'deb http://llvm.org/apt/precise/ llvm-toolchain-precise main' --yes ; fi
   - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo apt-add-repository 'deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu precise main'  --yes; fi
   - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo apt-get update ; fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo update-alternatives --install /usr/bin/clang  clang  /usr/bin/clang-3.7  90;fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo update-alternatives --install /usr/bin/clang++  clang++  /usr/bin/clang++-3.7  90;fi
   - clang --version
 #  - sudo apt-get install libclang1-3.7 libclang-common-3.7-dev  --yes --force-yes
 # - sudo ln -v -s /usr/lib/x86_64-linux-gnu/libclang-3.7.so.1 /usr/lib/x86_64-linux-gnu/libclang.so

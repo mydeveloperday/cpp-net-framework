@@ -2,7 +2,9 @@ language: cpp
 
 os:
   - linux
+    env: OS=LINUX
   - osx
+    env: OS=MAC
 
 compiler:
   - gcc

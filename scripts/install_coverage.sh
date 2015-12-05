@@ -2,8 +2,6 @@
 
 echo "Running Install Coverage on " ${TRAVIS_OS_NAME}
 
-if [[ ${TRAVIS_OK_NAME} = "linux" ]]
-then
    echo "Installing Coverage Tools"
    set -ev
    cd ${TRAVIS_BUILD_DIR}
@@ -14,6 +12,3 @@ then
    lcov --version
    g++ --version
    lcov --directory . --zerocounters
-else
-   echo "Ignoring Coverage On Mac"
-fi

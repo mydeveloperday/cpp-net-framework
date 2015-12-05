@@ -8,7 +8,7 @@ os:
 
 compiler:
   - gcc
-#  - clang
+  - clang
   
 before_install:
   - pip install --user cpp-coveralls

@@ -13,6 +13,7 @@ before_install:
 
 install:
     - cd ${TRAVIS_BUILD_DIR}
+    - pwd
     - ./scripts/install_coverage.sh
 
 before_script:
@@ -25,5 +26,7 @@ script:
     - ctest --verbose
 
 after_success:
+    - cd ${TRAVIS_BUILD_DIR}
+    - pwd
     - ./scripts/finish_coverage.sh
 

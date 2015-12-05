@@ -31,7 +31,7 @@ install:
     - cmake .
     - pwd
     - chmod a+x ./scripts/*.sh
-    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then ./scripts/install_coverage.sh; fi
+    - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ]; then ./scripts/install_coverage.sh; fi
 
 before_script:
     - cd ${TRAVIS_BUILD_DIR}
@@ -44,5 +44,5 @@ script:
 after_success:
     - cd ${TRAVIS_BUILD_DIR}
     - pwd
-    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then ./scripts/finish_coverage.sh; fi
+    - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ]; then ./scripts/finish_coverage.sh; fi
 

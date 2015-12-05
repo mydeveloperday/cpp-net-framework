@@ -24,8 +24,8 @@ install:
   - tar xvfz lcov-1.11.tar.gz 
   - sudo make -C lcov-1.11 install 
   - gem install coveralls-lcov
-  - rm -rf lcov-1.11.tar.gz lcov-1.11 
-  - sudo cp -v `which gcov-4.8` `which gcov`;    
+#  - rm -rf lcov-1.11.tar.gz lcov-1.11 
+# - sudo cp -v `which gcov-4.8` `which gcov`;    
 
 before_script:
 - cd ${TRAVIS_BUILD_DIR}

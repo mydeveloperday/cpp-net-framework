@@ -2,7 +2,7 @@ language: cpp
 
 os:
   - linux
-#  - osx
+  - osx
 
 compiler:
   - gcc
@@ -13,13 +13,19 @@ before_install:
 
 install:
 # install latest LCOV (1.9 was failing)
-- cd ${TRAVIS_BUILD_DIR}
-- wget http://ftp.de.debian.org/debian/pool/main/l/lcov/lcov_1.11.orig.tar.gz
-- tar xf lcov_1.11.orig.tar.gz
-- sudo make -C lcov-1.11/ install
-- gem install coveralls-lcov
-- lcov --version
-- g++ --version
+  - cd ${TRAVIS_BUILD_DIR}
+#- wget http://ftp.de.debian.org/debian/pool/main/l/lcov/lcov_1.11.orig.tar.gz
+#- tar xf lcov_1.11.orig.tar.gz
+#- sudo make -C lcov-1.11/ install
+#- gem install coveralls-lcov
+#- lcov --version
+#- g++ --version
+  - wget http://downloads.sourceforge.net/ltp/lcov-1.11.tar.gz 
+  - tar xvfz lcov-1.11.tar.gz 
+  - sudo make -C lcov-1.11 install 
+  - gem install coveralls-lcov
+  - rm -rf lcov-1.11.tar.gz lcov-1.11 
+  - sudo cp -v `which gcov-4.8` `which gcov`;    
 
 before_script:
 - cd ${TRAVIS_BUILD_DIR}

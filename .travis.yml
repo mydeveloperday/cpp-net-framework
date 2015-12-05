@@ -15,6 +15,7 @@ install:
     - cd ${TRAVIS_BUILD_DIR}
     - cmake .
     - pwd
+    - chmod a+x ./scripts/*.sh
     - ls -al ./scripts/install_coverage.sh
     - ./scripts/install_coverage.sh
 

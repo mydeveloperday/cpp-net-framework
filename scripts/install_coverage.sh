@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Running Install Coverage on " ${TRAVIS_OS_NAME}
+
 echo "Installing Coverage Tools"
 set -ev
 cd ${TRAVIS_BUILD_DIR}

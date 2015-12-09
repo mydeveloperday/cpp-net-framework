@@ -83,9 +83,10 @@ after_success:
     - pwd
     - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ]; then ./scripts/finish_coverage.sh; fi
     - rm -rf clang-tidy-warnings.txt
-    - clang-tidy-3.8 -checks='*,-google-*,-misc-macro-parentheses,-readability-braces-around-statements,-readability-named-parameter,-llvm-namespace-comment' -header-filter='framework/[^/]*.hpp' -- -DNDEBUG -std=c++11 -I. -Iframework > clang-tidy-warnings.txt
+    - clang-tidy -checks='*,-google-*,-misc-macro-parentheses,-readability-braces-around-statements,-readability-named-parameter,-llvm-namespace-comment' -header-filter='framework/[^/]*.h' -- -DNDEBUG -std=c++11 -I. -Iframework > clang-tidy-warnings.txt
     - cat clang-tidy-warnings.txt
     - if [ -s clang-tidy-warnings.txt ]; then exit 1; fi
+    - ls /usr/share/clang
 #    - /usr/share/clang/scan-build-3.8/scan-build --use-analyzer=/usr/bin/clang-3.8 -o "$REPORTS" ./b2 toolset=gcc-4.8 libs/afio/test -a --test=test_all.cpp --link-test
 
 env:

@@ -22,15 +22,15 @@ matrix:
         - llvm-toolchain-precise
   - os: osx
     osx_image: xcode6.1
-    env: BS=bjam TOOLSET=clang CXX=clang++
+    env: TOOLSET=clang CXX=clang++
   
 notifications:
   email:
     on_success: never
 
-compiler:
-  - gcc
-  - clang
+#compiler:
+#  - gcc
+#  - clang
   
 before_install:
 # upgrade clang
@@ -47,7 +47,7 @@ before_install:
 #  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo update-alternatives --install /usr/bin/clang++  clang++  /usr/bin/clang++-3.7  90;fi
 #  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then a=$(sudo find / -name llvm-cov | grep 3.7 | head -1);sudo ln -s ${a} /usr/bin/llvm-cov;fi
 #  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then a=$(sudo find / -name llvm-cov | grep 3.4 | head -1);sudo mv ${a} ${a}.old;fi
-  
+#
 #  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo apt-add-repository 'deb http://llvm.org/apt/precise/ llvm-toolchain-precise main' --yes ; fi
 #  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo apt-add-repository 'deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu precise main'  --yes; fi
 #  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo apt-get update ; fi
@@ -82,6 +82,11 @@ after_success:
     - cd ${TRAVIS_BUILD_DIR}
     - pwd
     - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ]; then ./scripts/finish_coverage.sh; fi
+    - rm -rf clang-tidy-warnings.txt
+    - clang-tidy-3.8 -checks='*,-google-*,-misc-macro-parentheses,-readability-braces-around-statements,-readability-named-parameter,-llvm-namespace-comment' -header-filter='framework/[^/]*.hpp' -- -DNDEBUG -std=c++11 -I. -Iframework > clang-tidy-warnings.txt
+    - cat clang-tidy-warnings.txt
+    - if [ -s clang-tidy-warnings.txt ]; then exit 1; fi
+#    - /usr/share/clang/scan-build-3.8/scan-build --use-analyzer=/usr/bin/clang-3.8 -o "$REPORTS" ./b2 toolset=gcc-4.8 libs/afio/test -a --test=test_all.cpp --link-test
 
 env:
   global:

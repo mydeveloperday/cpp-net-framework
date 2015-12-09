@@ -6,13 +6,21 @@ matrix:
   fast_finish: true
   include:
   - os: linux
-    env: BS=bjam DOCUMENTATION=ON
+    compiler: gcc
+    env: DOCUMENTATION=ON
+    addons:
+      apt:
+        packages:
+        - xsltproc
+ - os: linux
+    compiler: clang
+    env: TOOLSET=clang CXX=clang++
     addons:
       apt:
         packages:
         - xsltproc
   - os: linux
-    env: CHECK=ON CLANG_FORMAT=clang-format-3.8 CLANG_TIDY=clang-tidy-3.8
+    env: CLANG_FORMAT=clang-format-3.8 CLANG_TIDY=clang-tidy-3.8
     addons:
       apt:
         packages:
@@ -86,7 +94,7 @@ after_success:
     - clang-tidy -checks='*,-google-*,-misc-macro-parentheses,-readability-braces-around-statements,-readability-named-parameter,-llvm-namespace-comment' -header-filter='framework/[^/]*.h' -- -DNDEBUG -std=c++11 -I. -Iframework > clang-tidy-warnings.txt
     - cat clang-tidy-warnings.txt
     - if [ -s clang-tidy-warnings.txt ]; then exit 1; fi
-    - ls /usr/share/clang
+    - ls /usr/local
 #    - /usr/share/clang/scan-build-3.8/scan-build --use-analyzer=/usr/bin/clang-3.8 -o "$REPORTS" ./b2 toolset=gcc-4.8 libs/afio/test -a --test=test_all.cpp --link-test
 
 env:

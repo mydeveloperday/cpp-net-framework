@@ -26,7 +26,7 @@ matrix:
         sources:
         - ubuntu-toolchain-r-test
         - llvm-toolchain-precise
-  os: linux
+  - os: linux
     env: TOOLSET=clang MEMCHECK=VALGRIND BENCHMARK=QUICK CXX=clang++-3.7
     addons:
       apt:

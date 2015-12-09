@@ -6,14 +6,12 @@ matrix:
   fast_finish: true
   include:
   - os: linux
-    compiler: gcc
     env: DOCUMENTATION=ON
     addons:
       apt:
         packages:
         - xsltproc
- - os: linux
-    compiler: clang
+  - os: linux
     env: TOOLSET=clang CXX=clang++
     addons:
       apt:

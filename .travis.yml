@@ -26,6 +26,19 @@ matrix:
         sources:
         - ubuntu-toolchain-r-test
         - llvm-toolchain-precise
+  os: linux
+    env: TOOLSET=clang MEMCHECK=VALGRIND BENCHMARK=QUICK CXX=clang++-3.7
+    addons:
+      apt:
+        packages:
+        - clang-3.7
+        - libstdc++-5-dev
+        - valgrind
+        - gdb
+        - bc
+        sources:
+        - ubuntu-toolchain-r-test
+        - llvm-toolchain-precise-3.7
   - os: osx
     osx_image: xcode6.1
     env: TOOLSET=clang CXX=clang++

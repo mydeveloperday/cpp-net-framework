@@ -2,9 +2,27 @@ language: cpp
 
 sudo: required
 
-os:
-  - linux
-  - osx
+matrix:
+  fast_finish: true
+  include:
+  - os: linux
+    env: BS=bjam DOCUMENTATION=ON
+    addons:
+      apt:
+        packages:
+        - xsltproc
+  - os: linux
+    env: CHECK=ON CLANG_FORMAT=clang-format-3.8 CLANG_TIDY=clang-tidy-3.8
+    addons:
+      apt:
+        packages:
+        - clang-3.8
+        sources:
+        - ubuntu-toolchain-r-test
+        - llvm-toolchain-precise
+  - os: osx
+    osx_image: xcode6.1
+    env: BS=bjam TOOLSET=clang CXX=clang++
   
 notifications:
   email:

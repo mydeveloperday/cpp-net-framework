@@ -1,5 +1,4 @@
 language: cpp
-
 sudo: required
 
 matrix:
@@ -12,12 +11,12 @@ matrix:
         apt:
           sources: ['llvm-toolchain-precise-3.5', 'ubuntu-toolchain-r-test']
           packages: ['clang-3.5']
-      env: COMPILER='ccache clang++-3.5' BUILD_TYPE='Release'
+      env: COMPILER='clang++-3.5' BUILD_TYPE='Release'
 
     - os: linux
       compiler: clang
       addons: *clang35
-      env: COMPILER='ccache clang++-3.5' BUILD_TYPE='Debug'
+      env: COMPILER='clang++-3.5' BUILD_TYPE='Debug'
 
 
     - os: linux
@@ -26,12 +25,12 @@ matrix:
         apt:
           sources: ['llvm-toolchain-precise-3.6', 'ubuntu-toolchain-r-test']
           packages: ['clang-3.6']
-      env: COMPILER='ccache clang++-3.6' BUILD_TYPE='Release'
+      env: COMPILER='clang++-3.6' BUILD_TYPE='Release'
 
     - os: linux
       compiler: clang
       addons: *clang36
-      env: COMPILER='ccache clang++-3.6' BUILD_TYPE='Debug'
+      env: COMPILER='clang++-3.6' BUILD_TYPE='Debug'
 
 
     - os: linux
@@ -40,12 +39,12 @@ matrix:
         apt:
           sources: ['llvm-toolchain-precise-3.7', 'ubuntu-toolchain-r-test']
           packages: ['clang-3.7']
-      env: COMPILER='ccache clang++-3.7' BUILD_TYPE='Release'
+      env: COMPILER='clang++-3.7' BUILD_TYPE='Release'
 
     - os: linux
       compiler: clang
       addons: *clang37
-      env: COMPILER='ccache clang++-3.7' BUILD_TYPE='Debug'
+      env: COMPILER='clang++-3.7' BUILD_TYPE='Debug'
 
 
     - os: linux
@@ -54,12 +53,12 @@ matrix:
         apt:
           sources: ['llvm-toolchain-precise', 'ubuntu-toolchain-r-test']
           packages: ['clang-3.8']
-      env: COMPILER='ccache clang++-3.8' BUILD_TYPE='Release'
+      env: COMPILER='clang++-3.8' BUILD_TYPE='Release'
 
     - os: linux
       compiler: clang
       addons: *clang38
-      env: COMPILER='ccache clang++-3.8' BUILD_TYPE='Debug'
+      env: COMPILER='clang++-3.8' BUILD_TYPE='Debug'
 
 
     # 2/ Linux GCC Builds
@@ -69,12 +68,12 @@ matrix:
         apt:
          sources: ['ubuntu-toolchain-r-test']
          packages: ['g++-4.8']
-      env: COMPILER='ccache g++-4.8' BUILD_TYPE='Release'
+      env: COMPILER='g++-4.8' BUILD_TYPE='Release'
 
     - os: linux
       compiler: gcc
       addons: *gcc48
-      env: COMPILER='ccache g++-4.8' BUILD_TYPE='Debug'
+      env: COMPILER='g++-4.8' BUILD_TYPE='Debug'
 
 
     - os: linux
@@ -83,12 +82,12 @@ matrix:
         apt:
           sources: ['ubuntu-toolchain-r-test']
           packages: ['g++-4.9']
-      env: COMPILER='ccache g++-4.9' BUILD_TYPE='Release'
+      env: COMPILER='g++-4.9' BUILD_TYPE='Release'
 
     - os: linux
       compiler: gcc
       addons: *gcc49
-      env: COMPILER='ccache g++-4.9' BUILD_TYPE='Debug'
+      env: COMPILER='g++-4.9' BUILD_TYPE='Debug'
 
 
     - os: linux
@@ -97,43 +96,40 @@ matrix:
         apt:
           sources: ['ubuntu-toolchain-r-test']
           packages: ['g++-5']
-      env: COMPILER='ccache g++-5' BUILD_TYPE='Release'
+      env: COMPILER='g++-5' BUILD_TYPE='Release'
 
     - os: linux
       compiler: gcc
       addons: *gcc5
-      env: COMPILER='ccache g++-5' BUILD_TYPE='Debug'
+      env: COMPILER='g++-5' BUILD_TYPE='Debug'
 
 
     # 3/ OSX Clang Builds
     - os: osx
       osx_image: xcode6.4
       compiler: clang
-      env: COMPILER='ccache clang++' BUILD_TYPE='Debug'
+      env: COMPILER='clang++' BUILD_TYPE='Debug'
 
     - os: osx
       osx_image: xcode6.4
       compiler: clang
-      env: COMPILER='ccache clang++' BUILD_TYPE='Release'
+      env: COMPILER='clang++' BUILD_TYPE='Release'
 
 
     - os: osx
       osx_image: xcode7
       compiler: clang
-      env: COMPILER='ccache clang++' BUILD_TYPE='Debug'
+      env: COMPILER='clang++' BUILD_TYPE='Debug'
 
     - os: osx
       osx_image: xcode7
       compiler: clang
-      env: COMPILER='ccache clang++' BUILD_TYPE='Release'
+      env: COMPILER='clang++' BUILD_TYPE='Release'
   
 notifications:
   email:
     on_success: never
 
-before_install:
-  - clang --version
-  
 # c++ coveralls install
   - pip install --user cpp-coveralls
   
@@ -145,7 +141,9 @@ install:
     - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ]; then ./scripts/install_coverage.sh; fi
 
 before_script:
-    - cd ${TRAVIS_BUILD_DIR}
+  - export CXX=${COMPILER}
+  - cd ${TRAVIS_BUILD_DIR}
+  - $(CCX) -version
 
 script:
     - cd ${TRAVIS_BUILD_DIR}

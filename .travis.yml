@@ -141,7 +141,7 @@ matrix:
 
 before_install:
 # c++ coveralls install
-  - pip install --user cpp-coveralls
+  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ]; then pip install --user cpp-coveralls; fi
 
   
 install:

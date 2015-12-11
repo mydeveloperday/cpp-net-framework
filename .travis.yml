@@ -3,83 +3,136 @@ language: cpp
 sudo: required
 
 matrix:
-  fast_finish: true
   include:
-  - os: linux
-    env: DOCUMENTATION=ON
-    addons:
-      apt:
-        packages:
-        - xsltproc
-  - os: linux
-    env: TOOLSET=clang CXX=clang++
-    addons:
-      apt:
-        packages:
-        - xsltproc
-  - os: linux
-    env: CLANG_FORMAT=clang-format-3.8 CLANG_TIDY=clang-tidy-3.8
-    addons:
-      apt:
-        packages:
-        - clang-3.8
-        sources:
-        - ubuntu-toolchain-r-test
-        - llvm-toolchain-precise
-  - os: linux
-    env: TOOLSET=clang MEMCHECK=VALGRIND BENCHMARK=QUICK CXX=clang++-3.7
-    addons:
-      apt:
-        packages:
-        - clang-3.7
-        - libstdc++-5-dev
-        - valgrind
-        - gdb
-        - bc
-        sources:
-        - ubuntu-toolchain-r-test
-        - llvm-toolchain-precise-3.7
-  - os: osx
-    osx_image: xcode6.1
-    env: TOOLSET=clang CXX=clang++
+
+    # 1/ Linux Clang Builds
+    - os: linux
+      compiler: clang
+      addons: &clang35
+        apt:
+          sources: ['llvm-toolchain-precise-3.5', 'ubuntu-toolchain-r-test']
+          packages: ['clang-3.5']
+      env: COMPILER='ccache clang++-3.5' BUILD_TYPE='Release'
+
+    - os: linux
+      compiler: clang
+      addons: *clang35
+      env: COMPILER='ccache clang++-3.5' BUILD_TYPE='Debug'
+
+
+    - os: linux
+      compiler: clang
+      addons: &clang36
+        apt:
+          sources: ['llvm-toolchain-precise-3.6', 'ubuntu-toolchain-r-test']
+          packages: ['clang-3.6']
+      env: COMPILER='ccache clang++-3.6' BUILD_TYPE='Release'
+
+    - os: linux
+      compiler: clang
+      addons: *clang36
+      env: COMPILER='ccache clang++-3.6' BUILD_TYPE='Debug'
+
+
+    - os: linux
+      compiler: clang
+      addons: &clang37
+        apt:
+          sources: ['llvm-toolchain-precise-3.7', 'ubuntu-toolchain-r-test']
+          packages: ['clang-3.7']
+      env: COMPILER='ccache clang++-3.7' BUILD_TYPE='Release'
+
+    - os: linux
+      compiler: clang
+      addons: *clang37
+      env: COMPILER='ccache clang++-3.7' BUILD_TYPE='Debug'
+
+
+    - os: linux
+      compiler: clang
+      addons: &clang38
+        apt:
+          sources: ['llvm-toolchain-precise', 'ubuntu-toolchain-r-test']
+          packages: ['clang-3.8']
+      env: COMPILER='ccache clang++-3.8' BUILD_TYPE='Release'
+
+    - os: linux
+      compiler: clang
+      addons: *clang38
+      env: COMPILER='ccache clang++-3.8' BUILD_TYPE='Debug'
+
+
+    # 2/ Linux GCC Builds
+    - os: linux
+      compiler: gcc
+      addons: &gcc48
+        apt:
+         sources: ['ubuntu-toolchain-r-test']
+         packages: ['g++-4.8']
+      env: COMPILER='ccache g++-4.8' BUILD_TYPE='Release'
+
+    - os: linux
+      compiler: gcc
+      addons: *gcc48
+      env: COMPILER='ccache g++-4.8' BUILD_TYPE='Debug'
+
+
+    - os: linux
+      compiler: gcc
+      addons: &gcc49
+        apt:
+          sources: ['ubuntu-toolchain-r-test']
+          packages: ['g++-4.9']
+      env: COMPILER='ccache g++-4.9' BUILD_TYPE='Release'
+
+    - os: linux
+      compiler: gcc
+      addons: *gcc49
+      env: COMPILER='ccache g++-4.9' BUILD_TYPE='Debug'
+
+
+    - os: linux
+      compiler: gcc
+      addons: &gcc5
+        apt:
+          sources: ['ubuntu-toolchain-r-test']
+          packages: ['g++-5']
+      env: COMPILER='ccache g++-5' BUILD_TYPE='Release'
+
+    - os: linux
+      compiler: gcc
+      addons: *gcc5
+      env: COMPILER='ccache g++-5' BUILD_TYPE='Debug'
+
+
+    # 3/ OSX Clang Builds
+    - os: osx
+      osx_image: xcode6.4
+      compiler: clang
+      env: COMPILER='ccache clang++' BUILD_TYPE='Debug'
+
+    - os: osx
+      osx_image: xcode6.4
+      compiler: clang
+      env: COMPILER='ccache clang++' BUILD_TYPE='Release'
+
+
+    - os: osx
+      osx_image: xcode7
+      compiler: clang
+      env: COMPILER='ccache clang++' BUILD_TYPE='Debug'
+
+    - os: osx
+      osx_image: xcode7
+      compiler: clang
+      env: COMPILER='ccache clang++' BUILD_TYPE='Release'
   
 notifications:
   email:
     on_success: never
 
-#compiler:
-#  - gcc
-#  - clang
-  
 before_install:
-# upgrade clang
-  - if [ "$TRAVIS_OS_NAME" == "linux" ];                        then sudo add-apt-repository 'ppa:ubuntu-toolchain-r/test' -y;fi
- # - if [ "$TRAVIS_OS_NAME" == "linux" ];                        then sudo add-apt-repository 'ppa:llvm-toolchain-precise main' -y;fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++3.7" ]; then sudo add-apt-repository 'deb http://llvm.org/apt/precise/ llvm-toolchain-precise-3.7 main' -y ;fi
-#  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -;fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" ];                        then sudo apt-get update;fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" ];                        then sudo apt-get install -qq g++-4.9;fi
-#  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ];     then sudo update-alternatives --install /usr/bin/gcc  gcc  /usr/bin/gcc-4.9  90;fi
-#  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ];     then sudo update-alternatives --install /usr/bin/g++  g++  /usr/bin/g++-4.9  90;fi
-#  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ];     then sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-4.9 90;fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo apt-get install clang-3.7;fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo update-alternatives --install /usr/bin/clang  clang  /usr/bin/clang-3.7  90;fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo update-alternatives --install /usr/bin/clang++  clang++  /usr/bin/clang++-3.7  90;fi
-#  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then a=$(sudo find / -name llvm-cov | grep 3.7 | head -1);sudo ln -s ${a} /usr/bin/llvm-cov;fi
-#  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then a=$(sudo find / -name llvm-cov | grep 3.4 | head -1);sudo mv ${a} ${a}.old;fi
-#
   - clang --version
-  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo apt-add-repository 'deb http://llvm.org/apt/precise/ llvm-toolchain-precise main' --yes ; fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo apt-add-repository 'deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu precise main'  --yes; fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo apt-get update ; fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo update-alternatives --install /usr/bin/clang  clang  /usr/bin/clang-3.7  90;fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo update-alternatives --install /usr/bin/clang++  clang++  /usr/bin/clang++-3.7  90;fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then sudo apt-get install -qq clang-3.7; fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "clang++" ]; then export CXX="clang-3.7" CC="clang-3.7"; fi
-  - clang --version
-#  - sudo apt-get install libclang1-3.7 libclang-common-3.7-dev  --yes --force-yes
-# - sudo ln -v -s /usr/lib/x86_64-linux-gnu/libclang-3.7.so.1 /usr/lib/x86_64-linux-gnu/libclang.so
-# - sudo ldconfig  
   
 # c++ coveralls install
   - pip install --user cpp-coveralls

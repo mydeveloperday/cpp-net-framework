@@ -150,6 +150,9 @@ install:
     - pwd
     - chmod a+x ./scripts/*.sh
     - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ]; then ./scripts/install_coverage.sh; fi
+    - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then
+         brew install cmake ccache
+      fi
 
 
 before_script:

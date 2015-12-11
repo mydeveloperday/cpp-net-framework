@@ -139,6 +139,7 @@ matrix:
       env: COMPILER='clang++' BUILD_TYPE='Release'
 
 
+before_install:
 # c++ coveralls install
   - pip install --user cpp-coveralls
 

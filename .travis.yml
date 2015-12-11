@@ -154,7 +154,7 @@ install:
 before_script:
   - export CXX=${COMPILER}
   - cd ${TRAVIS_BUILD_DIR}
-  - $(CCX) -version
+  - ${CCX} -version
 
 
 script:

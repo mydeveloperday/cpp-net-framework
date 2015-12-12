@@ -7,6 +7,7 @@
 #include "OS.h"
 #include "System/String.h"
 #include "System/Exception.h"
+#include "TimeSpan.h"
 
 #include "pragmas.h"
 
@@ -24,6 +25,19 @@ namespace System
             timeinfo.tm_year = year - 1900;
             timeinfo.tm_mon = month - 1;
             timeinfo.tm_mday = day;
+
+            m_time = mktime(&timeinfo);
+        }
+
+        DateTime(int year, int month, int day, int hours, int minutes)
+        {
+            struct tm timeinfo;
+            std::memset(&timeinfo, 0, sizeof(tm));
+            timeinfo.tm_year = year - 1900;
+            timeinfo.tm_mon = month - 1;
+            timeinfo.tm_mday = day;
+            timeinfo.tm_hour = hours;
+            timeinfo.tm_min = minutes;
 
             m_time = mktime(&timeinfo);
         }
@@ -59,7 +73,20 @@ namespace System
         {
             return DateTime(time(nullptr));
         }
+
+        long Ticks() const{
+            return static_cast<long>(m_time);
+        }
+
     };
+
+    inline TimeSpan operator-(const DateTime& a, const DateTime& b)
+    {
+        int ticks = a.Ticks() - b.Ticks();
+
+        TimeSpan ts(ticks);
+        return ts;
+    }
 }
 
 using namespace System;

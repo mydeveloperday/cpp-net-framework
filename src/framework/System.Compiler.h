@@ -25,6 +25,6 @@ namespace System
     }
 }
 
-using namespace System::IO;
+using namespace System::Compiler;
 
 #endif

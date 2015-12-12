@@ -4,6 +4,7 @@
 #include "System/String.h"
 #include "OS.h"
 #include "Path.h"
+#include "TimeSpan.h"
 #include "System/DateTime.h"
 #include "System/Exception.h"
 #include "System/Environment.h"

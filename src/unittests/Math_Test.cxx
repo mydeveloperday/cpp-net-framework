@@ -29,4 +29,8 @@ TEST(MathTest, MaxMin)
 
     EXPECT_EQ(0.0, Math::Max(0.0,0.0));
     EXPECT_EQ(1.0, Math::Max(1.0,1.0));
+
+    EXPECT_EQ(123, Math::Floor(123.4));
+    EXPECT_EQ(123, Math::Floor(123.5));
+    EXPECT_EQ(123, Math::Floor(123.6));
 }

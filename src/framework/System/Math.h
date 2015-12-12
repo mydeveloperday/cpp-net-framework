@@ -38,6 +38,11 @@ namespace System
             }
             return a;
         }
+
+        static double Floor(double a)
+        {
+            return static_cast<double>(static_cast<int>(a));
+        }
     };
 }
 

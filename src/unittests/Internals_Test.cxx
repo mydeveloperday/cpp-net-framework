@@ -2,6 +2,7 @@
 #include "gtest/gtest.h"
 
 #include "System.h"
+#include "System.Compiler.h"
 
 
 using namespace System;

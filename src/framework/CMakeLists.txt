@@ -16,7 +16,7 @@ SET(HEADERS
   System/Environment.h
   System/Exception.h
   System/Math.h
-  System/TimeSpan.h
+  TimeSpan.h
 )
 
 add_library(cpp-net-framework ${SOURCE} ${HEADERS})

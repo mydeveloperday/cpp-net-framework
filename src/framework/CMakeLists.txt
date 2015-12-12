@@ -15,6 +15,7 @@ SET(HEADERS
   Exception.h
   NullPtr.h
   pragmas.h
+  TimeSpan.h
 )
 
 add_library(cpp-net-framework ${SOURCE} ${HEADERS})

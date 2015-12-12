@@ -13,7 +13,13 @@ namespace System
         public:
             static String CompilerName()
             {
+#ifdef _MSVC
+                return "msvc";
+#elif defined(__clang__)
+                return "clang";
+#else
                 return "gcc";
+#endif
             }
         };
     }

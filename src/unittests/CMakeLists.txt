@@ -42,6 +42,7 @@ add_executable(System_Test
                Stream_Test.cxx
                Math_Test.cxx
                Exception_Test.cxx
+               Internals_Test.cxx
               )
 
 # alter the link line of gcc to include coverage library

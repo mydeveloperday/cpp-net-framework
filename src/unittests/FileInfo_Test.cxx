@@ -22,6 +22,7 @@ TEST(FileInfoTest, BasicFileOperations)
 
 TEST(EnvironmentTests, BasicEnvironmentOperations)
 {
+    System::Console::WriteLine(Environment::CurrentDirectory());
     EXPECT_TRUE(Environment::CurrentDirectory().Contains("unittests"));
 }
 

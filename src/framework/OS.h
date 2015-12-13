@@ -21,3 +21,5 @@
 
 #endif
 
+#include <stdint.h>
+

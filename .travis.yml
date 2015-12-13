@@ -12,10 +12,6 @@ env:
     - CCACHE_COMPRESS=1
     - CCACHE_MAXSIZE=200M
     - CCACHE_CPP2=1
-   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
-   #   via the "travis encrypt" command using the project repo's public key
-   - secure: "Nn/0vOtTfb5ETN6uN8hA6MiKYAYCIGJ6WJwKL+5inRp8jMe9VjeZqHHgQPGB4IM/ryBEJtGJF8grykkjx2WPFI4vTkVWiAVQD8Hk4iVcdDHffk+Z5SNGE+y8ex8WCzHKdsa36y1m2FTCtnYtH2Wl37E5gXlCL2kMrEz3F9FA+icHsMDt+U1TodXtApd1kW5OyLxlrbTqGy7bx61vgnxU86a+QDpfaycnfX1H564M00nlLOPq2rIkYIxVgxoZ72ruTW/pJ+dOaHvIdJ5OMaR0uxIE7rT0utgWXMfOkG0EN8lDrRptvxpRktTRVHbU9h3JqKCCU0hQF2NgAJR8fKfHxxuinuuGHADOSoMruTI6UUT6U+mVwGlccH562rYFfEGI60882OSvttBIW4P0zvx7eZAWPKtesmwuXIlMeYmJwI4iNnSJsa6qokfm+f9OGyeU4PjZBK1Q60BYxTFQPSqwlmUmN2VspGaK26RI3fVapOOOA6LgprqyHpt7iVW+mrI/d2PJ9IYPqUT17N1qTP5e6o3g6sgzOXTpKonsVbTZMn9eYkASZ8YQ1ZdOgowCVmwcbAivbcYatascGMRyypa03cuNCY8L8AYtl05e+y69KkTl9sPHM7kckvqh2s+8xLaSlUBNF2HIqa6yqZ8uRehTCblQlBlZXRWnpTIrjfoTSVE="
-
 
 matrix:
   include:
@@ -29,10 +25,10 @@ matrix:
           packages: ['clang-3.5']
       env: COMPILER='clang++-3.5' BUILD_TYPE='Release'
 
-    - os: linux
-      compiler: clang
-      addons: *clang35
-      env: COMPILER='clang++-3.5' BUILD_TYPE='Debug'
+    #- os: linux
+    #  compiler: clang
+    #  addons: *clang35
+    #  env: COMPILER='clang++-3.5' BUILD_TYPE='Debug'
 
 
     - os: linux
@@ -43,10 +39,10 @@ matrix:
           packages: ['clang-3.6']
       env: COMPILER='clang++-3.6' BUILD_TYPE='Release'
 
-    - os: linux
-      compiler: clang
-      addons: *clang36
-      env: COMPILER='clang++-3.6' BUILD_TYPE='Debug'
+    #- os: linux
+    #  compiler: clang
+    #  addons: *clang36
+    #  env: COMPILER='clang++-3.6' BUILD_TYPE='Debug'
 
 
     - os: linux
@@ -57,10 +53,10 @@ matrix:
           packages: ['clang-3.7']
       env: COMPILER='clang++-3.7' BUILD_TYPE='Release'
 
-    - os: linux
-      compiler: clang
-      addons: *clang37
-      env: COMPILER='clang++-3.7' BUILD_TYPE='Debug'
+    #- os: linux
+    #  compiler: clang
+    #  addons: *clang37
+    #  env: COMPILER='clang++-3.7' BUILD_TYPE='Debug'
 
     - os: linux
       compiler: clang
@@ -70,11 +66,11 @@ matrix:
           packages: ['clang-3.8']
       env: COMPILER='clang++-3.8' BUILD_TYPE='Release'
 
-    - os: linux
-      compiler: clang
-      addons: *clang38
-      env: COMPILER='clang++-3.8' BUILD_TYPE='Debug'
-      branch_pattern: master
+    #- os: linux
+    #  compiler: clang
+    #  addons: *clang38
+    #  env: COMPILER='clang++-3.8' BUILD_TYPE='Debug'
+    #  branch_pattern: master
 
 
     # 2/ Linux GCC Builds
@@ -87,11 +83,11 @@ matrix:
       env: COMPILER='g++-4.8' BUILD_TYPE='Release'
       branch_pattern: master
 
-    - os: linux
-      compiler: gcc
-      addons: *gcc48
-      env: COMPILER='g++-4.8' BUILD_TYPE='Debug'
-      branch_pattern: master
+    #- os: linux
+    #  compiler: gcc
+    #  addons: *gcc48
+    #  env: COMPILER='g++-4.8' BUILD_TYPE='Debug'
+    #  branch_pattern: master
 
 
     - os: linux
@@ -103,11 +99,11 @@ matrix:
       env: COMPILER='g++-4.9' BUILD_TYPE='Release' COVERAGE='ON'
       branch_pattern: master
 
-    - os: linux
-      compiler: gcc
-      addons: *gcc49
-      env: COMPILER='g++-4.9' BUILD_TYPE='Debug'
-      branch_pattern: master
+    #- os: linux
+    #  compiler: gcc
+    #  addons: *gcc49
+    #  env: COMPILER='g++-4.9' BUILD_TYPE='Debug'
+    #  branch_pattern: master
 
 
     - os: linux
@@ -119,11 +115,11 @@ matrix:
       env: COMPILER='g++-5' BUILD_TYPE='Release'
       branch_pattern: master
 
-    - os: linux
-      compiler: gcc
-      addons: *gcc5
-      env: COMPILER='g++-5' BUILD_TYPE='Debug'
-      branch_pattern: master
+    #- os: linux
+    #  compiler: gcc
+    #  addons: *gcc5
+    #  env: COMPILER='g++-5' BUILD_TYPE='Debug'
+    #  branch_pattern: master
 
 
     # 3/ OSX Clang Builds
@@ -133,18 +129,18 @@ matrix:
       env: COMPILER='clang++' BUILD_TYPE='Debug'
       branch_pattern: master
 
-    - os: osx
-      osx_image: xcode6.4
-      compiler: clang
-      env: COMPILER='clang++' BUILD_TYPE='Release'
-      branch_pattern: master
+    #- os: osx
+    #  osx_image: xcode6.4
+    #  compiler: clang
+    #  env: COMPILER='clang++' BUILD_TYPE='Release'
+    #  branch_pattern: master
 
 
-    - os: osx
-      osx_image: xcode7
-      compiler: clang
-      env: COMPILER='clang++' BUILD_TYPE='Debug'
-      branch_pattern: master
+    #- os: osx
+    #  osx_image: xcode7
+    #  compiler: clang
+    #  env: COMPILER='clang++' BUILD_TYPE='Debug'
+    #  branch_pattern: master
 
     - os: osx
       osx_image: xcode7
@@ -155,6 +151,7 @@ matrix:
 
 before_install:
     # c++ coveralls install
+    # - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ]; then pip install --user cpp-coveralls; fi
     - if [ "$COVERAGE" == "ON" ]; then pip install --user cpp-coveralls; fi
 
     # cmake is not on osx by default
@@ -192,6 +189,13 @@ after_success:
     - ls /usr/local
     - ls /usr/bin/cl*
 #    - /usr/share/clang/scan-build-3.8/scan-build --use-analyzer=/usr/bin/clang-3.8 -o "$REPORTS" ./b2 toolset=gcc-4.8 libs/afio/test -a --test=test_all.cpp --link-test
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "Nn/0vOtTfb5ETN6uN8hA6MiKYAYCIGJ6WJwKL+5inRp8jMe9VjeZqHHgQPGB4IM/ryBEJtGJF8grykkjx2WPFI4vTkVWiAVQD8Hk4iVcdDHffk+Z5SNGE+y8ex8WCzHKdsa36y1m2FTCtnYtH2Wl37E5gXlCL2kMrEz3F9FA+icHsMDt+U1TodXtApd1kW5OyLxlrbTqGy7bx61vgnxU86a+QDpfaycnfX1H564M00nlLOPq2rIkYIxVgxoZ72ruTW/pJ+dOaHvIdJ5OMaR0uxIE7rT0utgWXMfOkG0EN8lDrRptvxpRktTRVHbU9h3JqKCCU0hQF2NgAJR8fKfHxxuinuuGHADOSoMruTI6UUT6U+mVwGlccH562rYFfEGI60882OSvttBIW4P0zvx7eZAWPKtesmwuXIlMeYmJwI4iNnSJsa6qokfm+f9OGyeU4PjZBK1Q60BYxTFQPSqwlmUmN2VspGaK26RI3fVapOOOA6LgprqyHpt7iVW+mrI/d2PJ9IYPqUT17N1qTP5e6o3g6sgzOXTpKonsVbTZMn9eYkASZ8YQ1ZdOgowCVmwcbAivbcYatascGMRyypa03cuNCY8L8AYtl05e+y69KkTl9sPHM7kckvqh2s+8xLaSlUBNF2HIqa6yqZ8uRehTCblQlBlZXRWnpTIrjfoTSVE="
+
 
 addons:
   coverity_scan:

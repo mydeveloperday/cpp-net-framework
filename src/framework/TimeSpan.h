@@ -7,7 +7,7 @@
 #include <cstring>
 
 #include "OS.h"
-#include "String.h"
+#include "System/String.h"
 #include "System/Exception.h"
 #include "System/Math.h"
 

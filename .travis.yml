@@ -140,8 +140,10 @@ matrix:
 
 
 before_install:
-# c++ coveralls install
-  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ]; then pip install --user cpp-coveralls; fi
+    # c++ coveralls install
+    - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ]; then pip install --user cpp-coveralls; fi
+    # cmake is not on osx by default
+    - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install cmake ccache; fi
 
   
 install:
@@ -150,7 +152,6 @@ install:
     - pwd
     - chmod a+x ./scripts/*.sh
     - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ]; then ./scripts/install_coverage.sh; fi
-    - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install cmake ccache; fi
     
 
 before_script:

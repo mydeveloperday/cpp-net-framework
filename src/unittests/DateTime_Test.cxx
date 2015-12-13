@@ -36,10 +36,10 @@ TEST(DateTimeTest, Ticks)
     DateTime centuryBegin(2001, 1, 1);
     DateTime currentDate(2007, 12, 14, 15, 23);
 
-    long elapsedTicks = currentDate.Ticks() - centuryBegin.Ticks();
+    int64_t elapsedTicks = currentDate.Ticks() - centuryBegin.Ticks();
     TimeSpan elapsedSpan(elapsedTicks);
 
-    //EXPECT_EQ(2193385800000000, elapsedTicks);
+    EXPECT_EQ(2193385800000000, elapsedTicks);
 
     /*
     Console::WriteLine("Elapsed from the beginning of the century to {0:f}:",

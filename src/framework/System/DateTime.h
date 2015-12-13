@@ -17,6 +17,8 @@ namespace System
     {
         std::time_t m_time;
 
+        
+
     public:
         DateTime(int year, int month, int day)
         {
@@ -74,15 +76,16 @@ namespace System
             return DateTime(time(nullptr));
         }
 
-        long Ticks() const{
-            return static_cast<long>(m_time);
+        int64_t Ticks() const{
+            int64_t tick = static_cast<int64_t>(m_time) * static_cast<int64_t>(TIME_SCALE);
+            return tick;
         }
 
     };
 
     inline TimeSpan operator-(const DateTime& a, const DateTime& b)
     {
-        int ticks = a.Ticks() - b.Ticks();
+        int64_t ticks = a.Ticks() - b.Ticks();
 
         TimeSpan ts(ticks);
         return ts;

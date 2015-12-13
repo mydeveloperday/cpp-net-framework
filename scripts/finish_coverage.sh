@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Uploading coverage information"
 set -ev
 cd ${TRAVIS_BUILD_DIR}
 lcov --directory . --capture --output-file coverage.info

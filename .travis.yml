@@ -169,9 +169,9 @@ script:
 after_success:
     - cd ${TRAVIS_BUILD_DIR}
     - pwd
-    - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ]; then ./scripts/finish_coverage.sh; fi
+    - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++4.9" ]; then ./scripts/finish_coverage.sh; fi
     - rm -rf clang-tidy-warnings.txt
-    - clang-tidy -checks='*,-google-*,-misc-macro-parentheses,-readability-braces-around-statements,-readability-named-parameter,-llvm-namespace-comment' -header-filter='framework/[^/]*.h' -- -DNDEBUG -std=c++11 -I. -Iframework > clang-tidy-warnings.txt
+    - clang-tidy-3.8 -checks='*,-google-*,-misc-macro-parentheses,-readability-braces-around-statements,-readability-named-parameter,-llvm-namespace-comment' -header-filter='framework/[^/]*.h' -- -DNDEBUG -std=c++11 -I. -Iframework > clang-tidy-warnings.txt
     - cat clang-tidy-warnings.txt
     - if [ -s clang-tidy-warnings.txt ]; then exit 1; fi
     - ls /usr/local

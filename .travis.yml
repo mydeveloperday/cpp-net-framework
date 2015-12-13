@@ -17,7 +17,6 @@ env:
    - secure: "Nn/0vOtTfb5ETN6uN8hA6MiKYAYCIGJ6WJwKL+5inRp8jMe9VjeZqHHgQPGB4IM/ryBEJtGJF8grykkjx2WPFI4vTkVWiAVQD8Hk4iVcdDHffk+Z5SNGE+y8ex8WCzHKdsa36y1m2FTCtnYtH2Wl37E5gXlCL2kMrEz3F9FA+icHsMDt+U1TodXtApd1kW5OyLxlrbTqGy7bx61vgnxU86a+QDpfaycnfX1H564M00nlLOPq2rIkYIxVgxoZ72ruTW/pJ+dOaHvIdJ5OMaR0uxIE7rT0utgWXMfOkG0EN8lDrRptvxpRktTRVHbU9h3JqKCCU0hQF2NgAJR8fKfHxxuinuuGHADOSoMruTI6UUT6U+mVwGlccH562rYFfEGI60882OSvttBIW4P0zvx7eZAWPKtesmwuXIlMeYmJwI4iNnSJsa6qokfm+f9OGyeU4PjZBK1Q60BYxTFQPSqwlmUmN2VspGaK26RI3fVapOOOA6LgprqyHpt7iVW+mrI/d2PJ9IYPqUT17N1qTP5e6o3g6sgzOXTpKonsVbTZMn9eYkASZ8YQ1ZdOgowCVmwcbAivbcYatascGMRyypa03cuNCY8L8AYtl05e+y69KkTl9sPHM7kckvqh2s+8xLaSlUBNF2HIqa6yqZ8uRehTCblQlBlZXRWnpTIrjfoTSVE="
 
 
-
 matrix:
   include:
 
@@ -63,7 +62,6 @@ matrix:
       addons: *clang37
       env: COMPILER='clang++-3.7' BUILD_TYPE='Debug'
 
-
     - os: linux
       compiler: clang
       addons: &clang38
@@ -76,6 +74,7 @@ matrix:
       compiler: clang
       addons: *clang38
       env: COMPILER='clang++-3.8' BUILD_TYPE='Debug'
+      branch_pattern: master
 
 
     # 2/ Linux GCC Builds
@@ -86,11 +85,13 @@ matrix:
          sources: ['ubuntu-toolchain-r-test']
          packages: ['g++-4.8']
       env: COMPILER='g++-4.8' BUILD_TYPE='Release'
+      branch_pattern: master
 
     - os: linux
       compiler: gcc
       addons: *gcc48
       env: COMPILER='g++-4.8' BUILD_TYPE='Debug'
+      branch_pattern: master
 
 
     - os: linux
@@ -100,11 +101,13 @@ matrix:
           sources: ['ubuntu-toolchain-r-test']
           packages: ['g++-4.9']
       env: COMPILER='g++-4.9' BUILD_TYPE='Release' COVERAGE='ON'
+      branch_pattern: master
 
     - os: linux
       compiler: gcc
       addons: *gcc49
       env: COMPILER='g++-4.9' BUILD_TYPE='Debug'
+      branch_pattern: master
 
 
     - os: linux
@@ -114,11 +117,13 @@ matrix:
           sources: ['ubuntu-toolchain-r-test']
           packages: ['g++-5']
       env: COMPILER='g++-5' BUILD_TYPE='Release'
+      branch_pattern: master
 
     - os: linux
       compiler: gcc
       addons: *gcc5
       env: COMPILER='g++-5' BUILD_TYPE='Debug'
+      branch_pattern: master
 
 
     # 3/ OSX Clang Builds
@@ -126,22 +131,26 @@ matrix:
       osx_image: xcode6.4
       compiler: clang
       env: COMPILER='clang++' BUILD_TYPE='Debug'
+      branch_pattern: master
 
     - os: osx
       osx_image: xcode6.4
       compiler: clang
       env: COMPILER='clang++' BUILD_TYPE='Release'
+      branch_pattern: master
 
 
     - os: osx
       osx_image: xcode7
       compiler: clang
       env: COMPILER='clang++' BUILD_TYPE='Debug'
+      branch_pattern: master
 
     - os: osx
       osx_image: xcode7
       compiler: clang
       env: COMPILER='clang++' BUILD_TYPE='Release'
+      branch_pattern: master
 
 
 before_install:

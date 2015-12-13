@@ -20,3 +20,6 @@
 #define PATH_SEPARATOR "/"
 
 #endif
+
+#include <stdint.h>
+

@@ -1,8 +1,7 @@
-
 #include "gtest/gtest.h"
 
-#include "framework/System.h"
-#include "framework/System.IO.h"
+#include "System.h"
+#include "System/IO.h"
 
 using namespace System;
 
@@ -23,5 +22,26 @@ TEST(FileInfoTest, BasicFileOperations)
 
 TEST(EnvironmentTests, BasicEnvironmentOperations)
 {
+    System::Console::WriteLine(Environment::CurrentDirectory());
     EXPECT_TRUE(Environment::CurrentDirectory().Contains("unittests"));
+}
+
+TEST(EnvironmentTests, Extensions)
+{
+    EXPECT_EQ(FileInfo("myfile.txt").Extension(),".txt");
+    EXPECT_EQ(FileInfo("myfile.xlsx").Extension(),".xlsx");
+    EXPECT_EQ(FileInfo("myfile").Extension(),"");
+}
+
+TEST(EnvironmentTests, Name)
+{
+    EXPECT_EQ(FileInfo("myfile.txt").Name(),"myfile.txt");
+    EXPECT_EQ(FileInfo("abc/myfile.txt").Name(),"myfile.txt");
+    EXPECT_EQ(FileInfo("abc\\myfile.txt").Name(),"myfile.txt");
+}
+
+TEST(EnvironmentTests, Console)
+{
+    System::Console::WriteLine("Hello");
+    System::Console::WriteLine(String("Hello"));
 }

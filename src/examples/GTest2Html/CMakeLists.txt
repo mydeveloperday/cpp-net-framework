@@ -1,5 +1,6 @@
 cmake_minimum_required (VERSION 2.8)
 
+include_directories(../..)
 include_directories(../../framework)
 
 add_executable(GTest2Html 

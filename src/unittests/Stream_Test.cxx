@@ -1,8 +1,7 @@
-
 #include "gtest/gtest.h"
 
-#include "framework/System.h"
-#include "framework/System.IO.h"
+#include "System.h"
+#include "System/IO.h"
 
 using namespace System;
 
@@ -36,3 +35,23 @@ TEST(StreamTest, BasicStreamOperations)
     EXPECT_FALSE(info.Exists());
 }
 
+TEST(StreamTest, NonExistantFiles)
+{
+    try {
+      StreamReader sr("NonExistantFile.txt");
+    }
+    catch(Exception &e)
+    {
+      EXPECT_FALSE(String::IsNullOrEmpty(e.Message()));
+      EXPECT_TRUE(true);
+    }
+
+    try {
+        StreamReader sr("");
+    }
+    catch (Exception &e)
+    {
+        EXPECT_FALSE(String::IsNullOrEmpty(e.Message()));
+        EXPECT_TRUE(true);
+    }
+}

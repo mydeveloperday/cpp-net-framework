@@ -58,6 +58,19 @@ matrix:
       addons: *clang37
       env: COMPILER='clang++-3.7' BUILD_TYPE='Debug'
 
+    - os: linux
+      compiler: gcc
+      env: COMPILER='gcc' BUILD_TYPE='Debug'
+      addons:
+        coverity_scan:
+        project:
+        name: "mydeveloperday/cpp-net-framework"
+        description: "Build submitted via Travis CI"
+        notification_email: mydeveloperday@gmail.com
+        build_command_prepend: "make clean"
+        build_command:   "make -j 4"
+        branch_pattern: coverity_scan
+
 
     - os: linux
       compiler: clang

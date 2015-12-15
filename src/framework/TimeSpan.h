@@ -28,6 +28,26 @@ namespace System
             m_duration = static_cast<double>(ticks);
         }
 
+        TimeSpan(int hours,int minutes,int seconds)
+        {
+            double t= 0.0;
+
+            int ts = seconds + (60 * minutes) + (3600 * hours);
+
+            double dts = static_cast<double>(ts);
+            m_duration = (dts + t)*TIME_SCALE;
+        }
+
+        TimeSpan(int days,int hours,int minutes,int seconds)
+        {
+            double t= 0.0;
+
+            int ts = seconds + (60 * minutes) + (3600 * hours) + (24 * 3600)*days;
+
+            double dts = static_cast<double>(ts);
+            m_duration = (dts + t)*TIME_SCALE;
+        }
+
         TimeSpan(int days,int hours,int minutes,int seconds,int milliseconds)
         {
             double t= ((static_cast<double>(milliseconds)) / 1000.0);
@@ -66,6 +86,16 @@ namespace System
         int Milliseconds()
         {
             return static_cast<int>(static_cast<double>(toSeconds(m_duration) - (Math::Floor(toSeconds(m_duration))))*1000.0);
+        }
+
+        uint64_t Ticks()
+        {
+            return m_duration;
+        }
+
+        double TotalDays()
+        {
+            return static_cast<double>(toSeconds(m_duration)/(3600.0 * 24.0));
         }
     };
 }

@@ -58,10 +58,6 @@ namespace System
             m_duration = (dts + t)*TIME_SCALE;
         }
 
-        double toSeconds(double d)
-        {
-            return d / TIME_SCALE;
-        }
 
         int Days()
         {
@@ -101,6 +97,37 @@ namespace System
         double TotalMinutes()
         {
             return static_cast<double>(toSeconds(m_duration) / (60.0));
+        }
+
+        double TotalSeconds()
+        {
+            return static_cast<double>(toSeconds(m_duration));
+        }
+
+        double TotalMilliseconds()
+        {
+            return static_cast<double>(toMilliseconds(m_duration));
+        }
+
+        static TimeSpan FromDays(double d)
+        {
+            TimeSpan t1(fromSeconds(d*24.0*3600.0));
+            return t1;
+        }
+
+        static double toSeconds(double d)
+        {
+            return d / TIME_SCALE;
+        }
+
+        static double fromSeconds(double d)
+        {
+            return d * TIME_SCALE;
+        }
+
+        static double toMilliseconds(double d)
+        {
+            return (1000.0*d) / TIME_SCALE;
         }
     };
 }

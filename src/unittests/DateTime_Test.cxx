@@ -44,24 +44,16 @@ TEST(DateTimeTest, Ticks)
     EXPECT_NEAR(2193385800000000.0, elapsedSpan.Ticks(),0.1);
     EXPECT_NEAR(2538.64, elapsedSpan.TotalDays(),0.1);
     EXPECT_NEAR(3655643.0, elapsedSpan.TotalMinutes(),0.1);
+    EXPECT_NEAR(219338580.0, elapsedSpan.TotalSeconds(),0.1);
+}
 
-    /*
-    Console::WriteLine("Elapsed from the beginning of the century to {0:f}:",
-        currentDate);
-    Console::WriteLine("   {0:N0} nanoseconds", elapsedTicks * 100);
-    Console::WriteLine("   {0:N0} ticks", elapsedTicks);
-    Console::WriteLine("   {0:N2} seconds", elapsedSpan.TotalSeconds);
-    Console::WriteLine("   {0:N2} minutes", elapsedSpan.TotalMinutes);
-    Console::WriteLine("   {0:N0} days, {1} hours, {2} minutes, {3} seconds",
-        elapsedSpan.Days(), elapsedSpan.Hours(),
-        elapsedSpan.Minutes(), elapsedSpan.Seconds*();
-    */
-    // If run on December 14, 2007, at 15:23, this example displays the
-    // following output to the console:
-    //    Elapsed from the beginning of the century to Friday, December 14, 2007 3:23 PM:
-    //          219,338,580,000,000,000 nanoseconds
-    //          2,193,385,800,000,000 ticks
-    //          219,338,580.00 seconds
-    //          3,655,643.00 minutes
-    //          2,538 days, 15 hours, 23 minutes, 0 seconds
+TEST(TimeSpanTests, TimeSpan)
+{
+    TimeSpan baseTimeSpan(1,12,15,16);
+
+    EXPECT_EQ(12,baseTimeSpan.Hours());
+
+    TimeSpan span1 = TimeSpan::FromDays(1.5);
+
+    EXPECT_NEAR(1.5, span1.TotalDays(),0.1);
 }

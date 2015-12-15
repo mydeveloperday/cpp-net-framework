@@ -97,6 +97,11 @@ namespace System
         {
             return static_cast<double>(toSeconds(m_duration)/(3600.0 * 24.0));
         }
+
+        double TotalMinutes()
+        {
+            return static_cast<double>(toSeconds(m_duration) / (60.0));
+        }
     };
 }
 

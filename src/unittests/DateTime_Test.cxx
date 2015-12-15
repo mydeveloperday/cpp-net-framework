@@ -43,6 +43,7 @@ TEST(DateTimeTest, Ticks)
 
     EXPECT_NEAR(2193385800000000.0, elapsedSpan.Ticks(),0.1);
     EXPECT_NEAR(2538.64, elapsedSpan.TotalDays(),0.1);
+    EXPECT_NEAR(3655643.0, elapsedSpan.TotalMinutes(),0.1);
 
     /*
     Console::WriteLine("Elapsed from the beginning of the century to {0:f}:",

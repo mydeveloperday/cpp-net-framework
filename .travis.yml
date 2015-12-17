@@ -12,6 +12,8 @@ env:
     - CCACHE_COMPRESS=1
     - CCACHE_MAXSIZE=200M
     - CCACHE_CPP2=1
+    - GTEST_COLOR=1
+    - CTEST_OUTPUT_ON_FAILURE=1
 
 matrix:
   include:

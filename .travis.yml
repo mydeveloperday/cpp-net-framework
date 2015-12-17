@@ -204,7 +204,7 @@ script:
     - cd ${TRAVIS_BUILD_DIR}
     - make
     - ctest --verbose
-    - if [ "$DOC" == "ON"]; then 
+    - if [ "$DOC" == "ON" ]; then 
           make doc;
       fi
 

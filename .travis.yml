@@ -26,6 +26,8 @@ matrix:
           sources: ['llvm-toolchain-precise-3.5', 'ubuntu-toolchain-r-test']
           packages: ['clang-3.5']
       env: COMPILER='clang++-3.5' BUILD_TYPE='Release'
+        - GTEST_COLOR=1
+        - CTEST_OUTPUT_ON_FAILURE=1
 
     #- os: linux
     #  compiler: clang
@@ -158,6 +160,12 @@ before_install:
 
     # cmake is not on osx by default
     - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install cmake ccache; fi
+
+    # install the packages needed for doxygen
+    - sudo apt-get install python-software-properties 
+    - sudo apt-add-repository -y ppa:libreoffice/libreoffice-4-2
+    - sudo apt-get update
+    - sudo apt-get install doxygen
 
   
 install:

@@ -8,6 +8,7 @@
 
 namespace System
 {
+    /// Base exception class System::Exception
     class Exception : public std::exception
     {
         std::string m_reason;
@@ -48,6 +49,7 @@ namespace System
         }
     };
 
+    /// Not implemented exception
     class NotImplementedException : public SystemException
     {
     public:

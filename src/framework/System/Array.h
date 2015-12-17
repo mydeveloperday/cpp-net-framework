@@ -13,6 +13,7 @@
 
 namespace System
 {
+    /// Array class
     template <class T> class Array
     {
         std::vector<T> m_vec;

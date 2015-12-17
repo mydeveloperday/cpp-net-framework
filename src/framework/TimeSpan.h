@@ -17,12 +17,14 @@
 
 namespace System
 {
+    /// TimeSpan slass
     class TimeSpan
     {
         // seconds
         double m_duration;
 
     public:
+        /// Constructor
         TimeSpan(int64_t ticks)
         {
             m_duration = static_cast<double>(ticks);

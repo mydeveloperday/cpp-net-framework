@@ -25,7 +25,7 @@ matrix:
         apt:
           sources: ['llvm-toolchain-precise-3.5', 'ubuntu-toolchain-r-test']
           packages: ['clang-3.5']
-      env: COMPILER='clang++-3.5' BUILD_TYPE='Release'
+      env: COMPILER='clang++-3.5' BUILD_TYPE='Release' DOC='ON'
         - GTEST_COLOR=1
         - CTEST_OUTPUT_ON_FAILURE=1
 
@@ -204,6 +204,9 @@ script:
     - cd ${TRAVIS_BUILD_DIR}
     - make
     - ctest --verbose
+    - if [ "$DOC" == "ON"]; then 
+          make doc;
+      fi
 
 
 after_success:

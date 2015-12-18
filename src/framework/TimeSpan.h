@@ -30,6 +30,11 @@ namespace System
             m_duration = static_cast<double>(ticks);
         }
 
+        TimeSpan(double duration)
+        {
+            m_duration = duration;
+        }
+
         TimeSpan(int hours,int minutes,int seconds)
         {
             double t= 0.0;
@@ -88,7 +93,7 @@ namespace System
 
         uint64_t Ticks()
         {
-            return m_duration;
+            return static_cast<uint64_t>(m_duration);
         }
 
         double TotalDays()

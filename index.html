@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cpp-net-framework by mydeveloperday</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Cpp-net-framework</h1>
+      <h2 class="project-tagline">An experimental .NET Framework for C++</h2>
+      <a href="https://github.com/mydeveloperday/cpp-net-framework" class="btn">View on GitHub</a>
+      <a href="https://github.com/mydeveloperday/cpp-net-framework/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/mydeveloperday/cpp-net-framework/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="cpp-net-framework" class="anchor" href="#cpp-net-framework" aria-hidden="true"><span class="octicon octicon-link"></span></a>cpp-net-framework</h1>
+
+<p>An experimental .NET Framework for C++</p>
+
+<p><a href="https://travis-ci.org/mydeveloperday/cpp-net-framework"><img src="https://travis-ci.org/mydeveloperday/cpp-net-framework.svg?branch=master" alt="Build Status"></a> 
+<a href="https://ci.appveyor.com/project/mydeveloperday/cpp-net-framework">
+  <img alt="AppVeyor Scan Build Status" src="https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true">
+</a>
+<a href="https://scan.coverity.com/projects/mydeveloperday-cpp-net-framework">
+  <img alt="Coverity Scan Build Status" src="https://scan.coverity.com/projects/7174/badge.svg">
+</a></p>
+
+<h2>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>cpp-net-framework is an experimental C++ implementation of the .NET Framework, its purpose is to bring the power of the .NET Framework for use within C++ applications. </p>
+
+<h2>
+<a id="build-instructions" class="anchor" href="#build-instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build instructions</h2>
+
+<p>To build the example programmes</p>
+
+<pre><code>mkdir build
+cd build
+cmake -G "Visual Studio 12 2013" ../cpp-net-framework
+devenv cpp-net-framework.sln
+</code></pre>
+
+<h2>
+<a id="initial-goals-of-cpp-net-framework" class="anchor" href="#initial-goals-of-cpp-net-framework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initial Goals of cpp-net-framework</h2>
+
+<p>Here is a rough list of initial goals</p>
+
+<p>1) To develop a library that would allow the speed and efficiency of development that comes from the use of the .NET Framework<br>
+2) To mimic where possible the .NET Framework API<br>
+3) To allow .NET framework and STL to interop directly<br>
+4) It should be functional first before fast (do what is needed to get the API worry about speed later)<br>
+5) Be cross platform<br>
+6) Be compilable on a number of different build platforms<br>
+7) Be test driven  </p>
+
+<h2>
+<a id="what-it-is-not" class="anchor" href="#what-it-is-not" aria-hidden="true"><span class="octicon octicon-link"></span></a>What it is not</h2>
+
+<p>1) Not to mimic C# as a language<br>
+2) Its not managed C++  </p>
+
+<h2>
+<a id="how-well-implement-these-goals" class="anchor" href="#how-well-implement-these-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>How we'll implement these goals</h2>
+
+<p>Additional libraries should be kept to a minimum, the source tree contains googletest to encourage test driven development and if possible we should 
+limit the external dependencies (for now) purely from the aspect of being able to easily build on multiple platforms. </p>
+
+<p>The library will use STL underneath. Platform specifics should be pushed down to an OS layer (to be implemented), to keep #ifdef in the main code at a minimum</p>
+
+<p>See what needs to be done 
+<a href="http://www.microsoft.com/en-IE/download/details.aspx?id=19341">http://www.microsoft.com/en-IE/download/details.aspx?id=19341</a></p>
+
+<h2>
+<a id="follow-the-discussion" class="anchor" href="#follow-the-discussion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Follow the discussion</h2>
+
+<p>This idea for a c++ .net framework came out from my blog</p>
+
+<p><a href="https://mydeveloperday.wordpress.com/2015/11/27/making-a-c-net-framework-part-1/">https://mydeveloperday.wordpress.com/2015/11/27/making-a-c-net-framework-part-1/</a>
+<a href="https://mydeveloperday.wordpress.com/2015/11/30/making-a-c-net-framework-part-2/">https://mydeveloperday.wordpress.com/2015/11/30/making-a-c-net-framework-part-2/</a></p>
+
+<p>Talk about this repository</p>
+
+<p><a href="https://gitter.im/mydeveloperday/cpp-net-framework?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/mydeveloperday/cpp-net-framework"></a></p>
+
+<h2>
+<a id="about-mydeveloper-day" class="anchor" href="#about-mydeveloper-day" aria-hidden="true"><span class="octicon octicon-link"></span></a>About MyDeveloper Day</h2>
+
+<p>Follow the my development stories at our blog</p>
+
+<p><a href="https://mydeveloperday.wordpress.com/">https://mydeveloperday.wordpress.com/</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/mydeveloperday/cpp-net-framework">Cpp-net-framework</a> is maintained by <a href="https://github.com/mydeveloperday">mydeveloperday</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>

@@ -203,7 +203,7 @@ before_script:
 script:
     - cd ${TRAVIS_BUILD_DIR}
     - make
-    - ctest --verbose
+    - ctest --verbose -D Experimental
     - if [ "$DOC" == "ON" ]; then 
           make doc ;
       fi

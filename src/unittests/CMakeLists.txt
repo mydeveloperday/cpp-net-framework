@@ -43,11 +43,16 @@ add_executable(System_Test
                Math_Test.cxx
                Exception_Test.cxx
                Internals_Test.cxx
+               WebClient_Test.cxx
               )
 
 # alter the link line of gcc to include coverage library
 if(CMAKE_COMPILER_IS_GNUCC)
     target_link_libraries (System_Test cpp-net-framework gtest gtest_main gcov)
 else()
-    target_link_libraries (System_Test cpp-net-framework gtest gtest_main)
+if(MSVC)
+    target_link_libraries (System_Test cpp-net-framework gtest gtest_main ws2_32.lib)
+else()
+    target_link_libraries (System_Test cpp-net-framework gtest gtest_main )
+endif()
 endif()

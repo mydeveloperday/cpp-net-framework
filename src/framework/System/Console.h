@@ -19,18 +19,30 @@ namespace System
     /// Console class
     namespace Console
     {
-        /// function fro writing a single stirng to the terminal 
+        /// function fro writing a single stirng to the terminal
         /// followed by a new line
         static void WriteLine(const char* str)
         {
-            std::cout << str << std::endl;
+            std::cout << str << "\n";
         }
 
-        /// function fro writing a single stirng to the terminal 
+        /// function fro writing a single stirng to the terminal
         /// followed by a new line
         static void WriteLine(const System::String& str)
         {
-            std::cout << str.str() << std::endl;
+            WriteLine(str.str().c_str());
+        }
+
+        /// write function which does not print a new line
+        static void Write(const char* str)
+        {
+            std::cout << str;
+        }
+
+        /// write function which does not print a new line
+        static void Write(const System::String& str)
+        {
+            Write(str.str());
         }
     }
 }

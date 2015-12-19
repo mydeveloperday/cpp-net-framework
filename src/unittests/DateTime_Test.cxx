@@ -41,7 +41,7 @@ TEST(DateTimeTest, Ticks)
 
     EXPECT_EQ(2193385800000000, elapsedTicks);
 
-    EXPECT_NEAR(2193385800000000.0, elapsedSpan.Ticks(),0.1);
+    EXPECT_EQ(2193385800000000U, elapsedSpan.Ticks());
     EXPECT_NEAR(2538.64, elapsedSpan.TotalDays(),0.1);
     EXPECT_NEAR(3655643.0, elapsedSpan.TotalMinutes(),0.1);
     EXPECT_NEAR(219338580.0, elapsedSpan.TotalSeconds(),0.1);

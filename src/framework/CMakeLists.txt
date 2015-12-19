@@ -16,6 +16,8 @@ SET(HEADERS
   System/Environment.h
   System/Exception.h
   System/Math.h
+  System/Net.h
+  System/Net/WebClient.h
   TimeSpan.h
 )
 

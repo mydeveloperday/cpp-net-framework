@@ -17,9 +17,8 @@ namespace System
     {
         std::time_t m_time;
 
-        
-
     public:
+        /// Constructor for DateTime
         DateTime(int year, int month, int day)
         {
             struct tm timeinfo;
@@ -31,6 +30,7 @@ namespace System
             m_time = mktime(&timeinfo);
         }
 
+        /// Constructor for DateTime
         DateTime(int year, int month, int day, int hours, int minutes)
         {
             struct tm timeinfo;
@@ -50,6 +50,7 @@ namespace System
         {
         }
 
+        /// get the day portion from a DateTime
         int Day() const
         {
             struct tm* rawtime;

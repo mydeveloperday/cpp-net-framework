@@ -28,12 +28,7 @@ matrix:
       env: COMPILER='clang++-3.5' BUILD_TYPE='Release' DOC='ON'
         - GTEST_COLOR=1
         - CTEST_OUTPUT_ON_FAILURE=1
-
-    #- os: linux
-    #  compiler: clang
-    #  addons: *clang35
-    #  env: COMPILER='clang++-3.5' BUILD_TYPE='Debug'
-
+        - CLANGV=3.5
 
     - os: linux
       compiler: clang
@@ -44,12 +39,7 @@ matrix:
       env: COMPILER='clang++-3.6' BUILD_TYPE='Release'
         - GTEST_COLOR=1
         - CTEST_OUTPUT_ON_FAILURE=1
-
-    #- os: linux
-    #  compiler: clang
-    #  addons: *clang36
-    #  env: COMPILER='clang++-3.6' BUILD_TYPE='Debug'
-
+        - CLANGV=3.6
 
     - os: linux
       compiler: clang
@@ -61,11 +51,7 @@ matrix:
         - GTEST_COLOR=1
         - CTEST_OUTPUT_ON_FAILURE=1
         - TIDY='ON'
-
-    #- os: linux
-    #  compiler: clang
-    #  addons: *clang37
-    #  env: COMPILER='clang++-3.7' BUILD_TYPE='Debug'
+        - CLANGV=3.7
 
     - os: linux
       compiler: clang
@@ -76,12 +62,7 @@ matrix:
       env: COMPILER='clang++-3.8' BUILD_TYPE='Release'
         - GTEST_COLOR=1
         - CTEST_OUTPUT_ON_FAILURE=1
-
-    #- os: linux
-    #  compiler: clang
-    #  addons: *clang38
-    #  env: COMPILER='clang++-3.8' BUILD_TYPE='Debug'
-    #  branch_pattern: master
+        - CLANGV=3.8
 
 
     # 2/ Linux GCC Builds
@@ -94,14 +75,8 @@ matrix:
       env: COMPILER='g++-4.8' BUILD_TYPE='Release'
         - GTEST_COLOR=1
         - CTEST_OUTPUT_ON_FAILURE=1
+        - CLANGV=3.5
       branch_pattern: master
-
-    #- os: linux
-    #  compiler: gcc
-    #  addons: *gcc48
-    #  env: COMPILER='g++-4.8' BUILD_TYPE='Debug'
-    #  branch_pattern: master
-
 
     - os: linux
       compiler: gcc
@@ -112,14 +87,8 @@ matrix:
       env: COMPILER='g++-4.9' BUILD_TYPE='Release' COVERAGE='ON'
         - GTEST_COLOR=1
         - CTEST_OUTPUT_ON_FAILURE=1
+        - CLANGV=3.5
       branch_pattern: master
-
-    #- os: linux
-    #  compiler: gcc
-    #  addons: *gcc49
-    #  env: COMPILER='g++-4.9' BUILD_TYPE='Debug'
-    #  branch_pattern: master
-
 
     - os: linux
       compiler: gcc
@@ -130,14 +99,8 @@ matrix:
       env: COMPILER='g++-5' BUILD_TYPE='Release'
         - GTEST_COLOR=1
         - CTEST_OUTPUT_ON_FAILURE=1
+        - CLANGV=3.5
       branch_pattern: master
-
-    #- os: linux
-    #  compiler: gcc
-    #  addons: *gcc5
-    #  env: COMPILER='g++-5' BUILD_TYPE='Debug'
-    #  branch_pattern: master
-
 
     # 3/ OSX Clang Builds
     - os: osx
@@ -146,20 +109,8 @@ matrix:
       env: COMPILER='clang++' BUILD_TYPE='Debug'
         - GTEST_COLOR=1
         - CTEST_OUTPUT_ON_FAILURE=1
+        - CLANGV=3.5
       branch_pattern: master
-
-    #- os: osx
-    #  osx_image: xcode6.4
-    #  compiler: clang
-    #  env: COMPILER='clang++' BUILD_TYPE='Release'
-    #  branch_pattern: master
-
-
-    #- os: osx
-    #  osx_image: xcode7
-    #  compiler: clang
-    #  env: COMPILER='clang++' BUILD_TYPE='Debug'
-    #  branch_pattern: master
 
     - os: osx
       osx_image: xcode7
@@ -167,6 +118,7 @@ matrix:
       env: COMPILER='clang++' BUILD_TYPE='Release'
         - GTEST_COLOR=1
         - CTEST_OUTPUT_ON_FAILURE=1
+        - CLANGV=3.5
       branch_pattern: master
 
 
@@ -196,9 +148,9 @@ install:
     
 
 before_script:
-  - export CXX=${COMPILER}
-  - cd ${TRAVIS_BUILD_DIR}
-  - ${CXX} --version
+    - export CXX=${COMPILER}
+    - cd ${TRAVIS_BUILD_DIR}
+    - ${CXX} --version
 
 
 script:
@@ -219,7 +171,8 @@ after_success:
     - rm -rf clang-tidy-warnings.txt
     - which ${CXX}
     - ls -al /usr/bin/clang*
-    - /usr/bin/clang-tidy-3.8 -checks='*,-google-*,-misc-macro-parentheses,-readability-braces-around-statements,-readability-named-parameter,-llvm-namespace-comment' -header-filter='framework/[^/]*.h' -- -DNDEBUG -std=c++11 -I. -Iframework > clang-tidy-warnings.txt
+    - ls -al /usr/lib/llvm-${CLANGV}/bin/*
+    - /usr/bin/clang-tidy-${CLANGV} -checks='*,-google-*,-misc-macro-parentheses,-readability-braces-around-statements,-readability-named-parameter,-llvm-namespace-comment' -header-filter='framework/[^/]*.h' -- -DNDEBUG -std=c++11 -I. -Iframework > clang-tidy-warnings.txt
     - cat clang-tidy-warnings.txt
     - if [ -s clang-tidy-warnings.txt ]; then exit 1; fi
     - ls /usr/local

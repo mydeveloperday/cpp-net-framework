@@ -44,4 +44,6 @@ TEST(EnvironmentTests, Console)
 {
     System::Console::WriteLine("Hello");
     System::Console::WriteLine(String("Hello"));
+    System::Console::Write("Hello");
+    System::Console::Write(String("Hello"));
 }

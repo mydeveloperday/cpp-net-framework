@@ -205,6 +205,8 @@ script:
     - cd ${TRAVIS_BUILD_DIR}
     - make
     - ctest --verbose -D Experimental
+    - pwd
+    - ls -al
     - if [ "$DOC" == "ON" ]; then 
           make doc ;
       fi

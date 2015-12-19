@@ -60,6 +60,7 @@ matrix:
       env: COMPILER='clang++-3.7' BUILD_TYPE='Release'
         - GTEST_COLOR=1
         - CTEST_OUTPUT_ON_FAILURE=1
+        - TIDY='ON'
 
     #- os: linux
     #  compiler: clang
@@ -214,6 +215,7 @@ after_success:
     - pwd
     - if [ "$COVERAGE" == "ON" ]; then ./scripts/finish_coverage.sh; fi
     - rm -rf clang-tidy-warnings.txt
+    - which ${CXX}
     - clang-tidy-3.8 -checks='*,-google-*,-misc-macro-parentheses,-readability-braces-around-statements,-readability-named-parameter,-llvm-namespace-comment' -header-filter='framework/[^/]*.h' -- -DNDEBUG -std=c++11 -I. -Iframework > clang-tidy-warnings.txt
     - cat clang-tidy-warnings.txt
     - if [ -s clang-tidy-warnings.txt ]; then exit 1; fi

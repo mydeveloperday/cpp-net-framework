@@ -33,4 +33,12 @@ TEST(MathTest, MaxMin)
     EXPECT_EQ(123, Math::Floor(123.4));
     EXPECT_EQ(123, Math::Floor(123.5));
     EXPECT_EQ(123, Math::Floor(123.6));
+
+    EXPECT_EQ(123, Math::Abs(-123));
+    EXPECT_EQ(123.6, Math::Abs(-123.6));
+    EXPECT_EQ(123, Math::Abs(123));
+    EXPECT_EQ(123.6, Math::Abs(123.6));
+
+    EXPECT_EQ(124, Math::Round(123.6));
+    EXPECT_EQ(123, Math::Round(123.4));
 }

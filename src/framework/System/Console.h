@@ -42,7 +42,7 @@ namespace System
         /// write function which does not print a new line
         static void Write(const System::String& str)
         {
-            Write(str.str());
+            Write(str.str().c_str());
         }
     }
 }

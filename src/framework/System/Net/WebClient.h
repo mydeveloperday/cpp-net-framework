@@ -100,7 +100,7 @@ namespace System
 
 #ifdef _WIN32
             char data[4096];
-            while (recv(socketNum, &data, 4096, 0)) {
+            while (recv(socketNum, (char*)&data, 4096, 0)) {
                 httpResponse += data;
             }
             closesocket(socketNum);

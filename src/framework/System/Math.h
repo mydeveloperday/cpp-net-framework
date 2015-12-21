@@ -41,7 +41,18 @@ namespace System
 
         static double Floor(double a)
         {
-            return static_cast<double>(static_cast<int>(a));
+            if (a > 0) {
+                return static_cast<double>(static_cast<int>(a));
+            }
+            return static_cast<int>(static_cast<int>(a-1.0));
+        }
+
+        static int Ceiling(double a)
+        {
+            if (a>0){
+                return static_cast<int>(static_cast<int>(a+1.0));
+            }
+            return static_cast<int>(static_cast<int>(a));
         }
 
         static int Abs(int abs){
@@ -81,6 +92,11 @@ namespace System
         static double Round(double val) 
         {
             return static_cast<double>(static_cast<int>(val+0.5));
+        }
+
+        static int Truncate(double val) 
+        {
+            return static_cast<int>(val);
         }
     };
 }

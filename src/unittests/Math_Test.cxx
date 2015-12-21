@@ -52,6 +52,9 @@ TEST(MathTest, Sign)
 
     EXPECT_EQ(1, Math::Sign(123));
     EXPECT_EQ(1, Math::Sign(123.4));
+
+    EXPECT_EQ(0, Math::Sign(0.0));
+    EXPECT_EQ(0, Math::Sign(0));
 }
 
 TEST(MathTest, Truncate)

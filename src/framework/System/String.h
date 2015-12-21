@@ -8,11 +8,13 @@
 
 #include "pragmas.h"
 
+#include "System/Object.h"
+
 typedef char Char;
 
 namespace System
 {
-    class String
+    class String : public Object
     {
         std::string m_str;
 

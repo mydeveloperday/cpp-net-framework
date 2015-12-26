@@ -16,4 +16,6 @@ TEST(DictionaryTests, Basic)
     
     EXPECT_TRUE(myDict.ContainsKey(String("Hello")));
     EXPECT_FALSE(myDict.ContainsKey(String("Work")));
+
+    EXPECT_EQ(1,myDict.Count());
 }

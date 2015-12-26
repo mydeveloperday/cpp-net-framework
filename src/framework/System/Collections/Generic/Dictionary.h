@@ -14,6 +14,7 @@ namespace System
             template <class K,class V> class Dictionary
             {
                 std::map<K,V> m_map;
+                typedef typename std::map<K,V>::const_iterator it_type;
 
             public:
                 Dictionary()
@@ -35,10 +36,33 @@ namespace System
 					m_map[key]=value;
 				}
 
-				bool ContainsKey(const K& key)
+				bool ContainsKey(const K& key) const
 				{
 					return m_map.find(key)!=m_map.end();
 				}
+                
+                bool ContainsValue(const V& value) const
+				{
+                    
+					for(it_type iter = m_map.begin();
+                        iter!=m_map.end();iter++)
+                    {
+                        if (iter->second==value){
+                            return true;
+                        } 
+                    }
+                    return false;
+				}
+                
+                void Clear()
+                {
+                    m_map.clear();
+                }
+                
+                void Remove(const K& key)
+                {
+                    m_map.erase(key);
+                }
             };
         }
     }

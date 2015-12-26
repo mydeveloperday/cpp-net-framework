@@ -185,18 +185,7 @@ namespace System
 
             String newstring = (*this);
 
-            //int maxCount=10; 
-            //while (pos!=-1 && maxCount--){
             newstring.m_str.replace(pos, pos + from.Length(), with.str());
-
-            //int lastpos = pos;
-            //pos=newstring.IndexOf(from);
-
-            // try to prevent it going infinite
-            //if (pos < lastpos){
-            //     break;
-            //}
-         //}
 
             return newstring;
         }
@@ -255,7 +244,7 @@ namespace System
     
     inline bool operator< (const String& a, const String& b)
     {
-        return strcmp(a.str().c_str(),b.str().c_str());
+        return (a.str() < b.str());
     }
 
     // void PrintTo(const System::String& str, ::std::ostream* os);

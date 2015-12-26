@@ -40,6 +40,11 @@ namespace System
                 {
                     m_vec.push_back(t);
                 }
+                
+                void Clear()
+                {
+                    m_vec.clear();
+                }
             };
         }
     }

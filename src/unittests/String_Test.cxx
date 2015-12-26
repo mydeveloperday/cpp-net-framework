@@ -141,6 +141,7 @@ TEST(StringTest, Trim)
     EXPECT_EQ(String("Hello"),String("Hello  ").TrimEnd());
     EXPECT_EQ(String("Hello"),String("Hello").TrimEnd());
     EXPECT_EQ(String("   Hello"),String("   Hello   ").TrimEnd());
+    EXPECT_EQ(String(""),String("").Trim());
 }
 
 TEST(StringTest, NullOrEmpty)

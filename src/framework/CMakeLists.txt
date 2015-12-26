@@ -22,6 +22,9 @@ SET(HEADERS
   System/Object.h
   System/Net.h
   System/Net/WebClient.h
+  System/Collections/Generic/Dictionary.h
+  System/Collections/Generic/List.h
+  System/Collections/Generic/HashSet.h
   TimeSpan.h
 )
 

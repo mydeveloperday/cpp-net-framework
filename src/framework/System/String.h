@@ -194,6 +194,9 @@ namespace System
         String Trim() const
         {
             String s = (*this);
+			if (String::IsNullOrEmpty(s)){
+				return s;
+			}
             s = s.TrimEnd();
             s = s.TrimStart();
             return s;
@@ -202,6 +205,9 @@ namespace System
         String TrimEnd() const
         {
             String s = (*this);
+			if (String::IsNullOrEmpty(s)){
+				return s;
+			}
             s.m_str.erase(s.m_str.find_last_not_of(" \n\r\t") + 1);
             return s;
         }
@@ -209,6 +215,9 @@ namespace System
         String TrimStart() const
         {
             String s = (*this);
+			if (String::IsNullOrEmpty(s)){
+				return s;
+			}
             s = s.Substring(s.m_str.find_first_not_of(" \n\r\t"));
             return s;
         }

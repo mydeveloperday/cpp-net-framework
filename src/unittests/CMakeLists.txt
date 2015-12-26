@@ -45,6 +45,7 @@ add_executable(System_Test
                Internals_Test.cxx
                WebClient_Test.cxx
                ArrayList_Test.cxx
+			   Dictionary_Test.cxx
               )
 
 # alter the link line of gcc to include coverage library

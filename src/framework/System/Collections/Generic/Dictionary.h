@@ -25,10 +25,20 @@ namespace System
                     return static_cast<int>(m_map.size());
                 }
 
-                const V& operator[](K key) const
+                const V& operator[](const K & key)
                 {
                     return m_map[key];
                 }
+
+				void Add(const K& key,const V & value)
+				{
+					m_map[key]=value;
+				}
+
+				bool ContainsKey(const K& key)
+				{
+					return m_map.find(key)!=m_map.end();
+				}
             };
         }
     }

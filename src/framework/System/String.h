@@ -252,6 +252,11 @@ namespace System
     {
         return (a.str() != b.str());
     }
+    
+    inline bool operator< (const String& a, const String& b)
+    {
+        return strcmp(a.str().c_str(),b.str().c_str());
+    }
 
     // void PrintTo(const System::String& str, ::std::ostream* os);
 }

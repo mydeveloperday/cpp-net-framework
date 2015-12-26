@@ -12,6 +12,7 @@ namespace System
     class Environment
     {
     public:
+        /// get the current working directory
         static System::String CurrentDirectory()
         {
             // TODO move this centrally

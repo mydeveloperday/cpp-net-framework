@@ -59,6 +59,7 @@ namespace System
             return rawtime->tm_mday;
         }
 
+        /// get the month portion from a DateTime
         int Month() const
         {
             struct tm* rawtime;
@@ -66,6 +67,7 @@ namespace System
             return rawtime->tm_mon + 1;
         }
 
+        /// get the year portion of the DateTime
         int Year() const
         {
             struct tm* rawtime;
@@ -73,11 +75,13 @@ namespace System
             return rawtime->tm_year + 1900;
         }
 
+        /// get the current time
         static DateTime Now()
         {
             return DateTime(time(nullptr));
         }
 
+        /// get the number of ticks this time represents
         int64_t Ticks() const{
             int64_t tick = static_cast<int64_t>(m_time) * static_cast<int64_t>(TIME_SCALE);
             return tick;

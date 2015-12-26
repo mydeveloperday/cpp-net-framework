@@ -13,6 +13,7 @@
 
 namespace System
 {
+	/// DateTime class for handling dates and times
     class DateTime
     {
         std::time_t m_time;

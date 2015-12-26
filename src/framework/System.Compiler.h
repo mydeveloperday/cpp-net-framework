@@ -8,6 +8,7 @@ namespace System
 {
     namespace Compiler
     {
+		/// a class for helping the build system determine the compiler type
         class Internals
         {
         public:

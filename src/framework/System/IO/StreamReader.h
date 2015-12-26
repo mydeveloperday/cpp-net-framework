@@ -15,6 +15,7 @@ namespace System
 {
     namespace IO
     {
+		/// a class for reading a file
         class StreamReader
         {
             System::String m_file;

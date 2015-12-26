@@ -36,6 +36,7 @@ namespace System
         }
     };
 
+	/// A system exception for OS related failures
     class SystemException : public Exception
     {
     public:

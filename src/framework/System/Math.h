@@ -5,6 +5,7 @@
 
 namespace System
 {
+	/// A class for maths functions
     class Math
     {
     public:

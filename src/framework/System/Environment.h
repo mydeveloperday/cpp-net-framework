@@ -8,6 +8,7 @@
 
 namespace System
 {
+	/// a class for holding information about the OS environment
     class Environment
     {
     public:

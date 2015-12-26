@@ -34,4 +34,14 @@ TEST(DictionaryTests, Basic)
     
     EXPECT_TRUE(myDict.ContainsKey(String("My")));
     EXPECT_FALSE(myDict.ContainsKey(String("You")));
+    
+    myDict.Add(String("You"),String("Apple"));
+    
+    String myval;
+    
+    EXPECT_FALSE(myDict.TryGetValue(String("Me"),myval));
+    
+    EXPECT_TRUE(myDict.TryGetValue("You",myval));
+    
+    EXPECT_EQ(String("Apple"),myval);
 }

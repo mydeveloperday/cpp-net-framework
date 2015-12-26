@@ -14,6 +14,7 @@ namespace System
 {
     namespace IO
     {
+		/// A file information class
         class FileInfo
         {
             System::String m_path;

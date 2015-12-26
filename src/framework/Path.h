@@ -12,6 +12,7 @@
 
 namespace System
 {
+	/// a utility class for path based operations
     class Path
     {
     public:

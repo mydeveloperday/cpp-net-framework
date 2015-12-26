@@ -17,30 +17,36 @@ namespace System
     {
         namespace Generic
         {
+            /// a generalized list class
             template <class T> class List
             {
                 std::vector<T> m_vec;
 
             public:
+                /// the constuctor
                 List()
                 {
                 }
 
+                /// the number of elements in the list
                 int Count() const
                 {
                     return static_cast<int>(m_vec.size());
                 }
 
+                /// the index operator lookup
                 const T& operator[](int index) const
                 {
                     return m_vec[index];
                 }
 
+                /// add an element to the list
                 void Add(const T& t)
                 {
                     m_vec.push_back(t);
                 }
                 
+                /// clear the contents of the list
                 void Clear()
                 {
                     m_vec.clear();

@@ -13,6 +13,7 @@ namespace System
 {
     namespace IO
     {
+		/// a class for writing out to a file
         class StreamWriter
         {
             System::String m_file;

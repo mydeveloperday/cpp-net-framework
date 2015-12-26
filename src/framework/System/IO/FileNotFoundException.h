@@ -13,6 +13,7 @@ namespace System
 {
     namespace IO
     {
+		/// A exception throw when a file cannot be found
         class FileNotFoundException : public System::Exception
         {
         public:

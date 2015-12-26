@@ -14,6 +14,7 @@ typedef char Char;
 
 namespace System
 {
+	/// A generalized string class
     class String : public Object
     {
         std::string m_str;
@@ -247,7 +248,7 @@ namespace System
         return (a.str() < b.str());
     }
 
-    // void PrintTo(const System::String& str, ::std::ostream* os);
+    void PrintTo(const System::String& str, ::std::ostream* os);
 }
 
 typedef System::String string;

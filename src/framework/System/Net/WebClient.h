@@ -23,6 +23,7 @@
 
 namespace System
 {
+	/// a utility class for initializing WINSOCK
     class InitNet
     {
     public:
@@ -37,7 +38,7 @@ namespace System
 
     InitNet g_initNet;
 
-
+	/// a web client class for downloading web pages via HTTP
     class WebClient
     {
     public:
@@ -85,7 +86,6 @@ namespace System
             httpRequest += "HTTP/1.1\r\n";
             httpRequest += "Host: ";
             httpRequest += address;
-            httpRequest += "\r\n";
             httpRequest += "\r\n\r\n";
 
             int httpRequestSize=httpRequest.Length();
@@ -105,8 +105,8 @@ namespace System
             }
             closesocket(socketNum);
 #else
-            char data; 
-            while ( read(socketNum, &data, 1) > 0 ) {
+            char data[4096];
+            while ( read(socketNum, &data, 4096) > 0 ) {
                 httpResponse+=data;
             }
             close(socketNum);

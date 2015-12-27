@@ -5,6 +5,7 @@ sudo: required
 env:
   global:
   - secure: Nn/0vOtTfb5ETN6uN8hA6MiKYAYCIGJ6WJwKL+5inRp8jMe9VjeZqHHgQPGB4IM/ryBEJtGJF8grykkjx2WPFI4vTkVWiAVQD8Hk4iVcdDHffk+Z5SNGE+y8ex8WCzHKdsa36y1m2FTCtnYtH2Wl37E5gXlCL2kMrEz3F9FA+icHsMDt+U1TodXtApd1kW5OyLxlrbTqGy7bx61vgnxU86a+QDpfaycnfX1H564M00nlLOPq2rIkYIxVgxoZ72ruTW/pJ+dOaHvIdJ5OMaR0uxIE7rT0utgWXMfOkG0EN8lDrRptvxpRktTRVHbU9h3JqKCCU0hQF2NgAJR8fKfHxxuinuuGHADOSoMruTI6UUT6U+mVwGlccH562rYFfEGI60882OSvttBIW4P0zvx7eZAWPKtesmwuXIlMeYmJwI4iNnSJsa6qokfm+f9OGyeU4PjZBK1Q60BYxTFQPSqwlmUmN2VspGaK26RI3fVapOOOA6LgprqyHpt7iVW+mrI/d2PJ9IYPqUT17N1qTP5e6o3g6sgzOXTpKonsVbTZMn9eYkASZ8YQ1ZdOgowCVmwcbAivbcYatascGMRyypa03cuNCY8L8AYtl05e+y69KkTl9sPHM7kckvqh2s+8xLaSlUBNF2HIqa6yqZ8uRehTCblQlBlZXRWnpTIrjfoTSVE=
+  - secure: "DhPuyHTVRyQecW2aE/Y9ttU0kdvBELViD064T7yU66sNxoAfT6HhTf1XZxYl/A+u4RPl5bOlD17m00aRmZgNCx6AZqM4t+vM1PICJffF2XiM+WIp0MXlld9w7hkCau5yBydX/4jiA6SCErm4kg7ywASf4zWYB+SBrzBSFloFENHEnkZKcN+HSyaVcXTnvKvPHLkWvfseoFxZlUUh1KRWqy4Wi3a8DyeOu6r0Nr3Z121HS5tmo+TLLTgP7YS0kHHZDvn9GBzyrjphI1ICNbD28DEyvrvVfIHCBOFEOVA3HyZ66dkc+SN1PEwAMs9kQQwVI6tlgwbiGGrVVrDXsuBD1d5pUVzAq82pQw16Lk8WE5k0RG3ML21gUSAsS+E7r8xHj8YW5W2VhCdWCivVQ49N8CWCd3gMnietv1SuTX9ZVEmV4dTb2qi4HtkZQiAbMTmWUzzdhmlsgp3wSLl7daOMGXf7LJpDfA1a0VDMJfuiA9FwpEn1PJstuaMyMXHCiVqjH8EcUlypc8pesnXRfk8xLhKRp71icr/BegUCbSbhDGGm889JQrIIJwNJIDcbCBaDaVi+nwuoS8l2J0EdpuR28hwGu4IYY80AW3cjgg4G5IhwWLVxklIDsD+URSWGmRTaJI1jjv29lmbK1UKdlUcJe2nt3ONioAa22EjvOJKTnVA="
 
 matrix:
   include:
@@ -119,23 +120,23 @@ before_install:
     - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get install python-software-properties; sudo apt-add-repository -y ppa:libreoffice/libreoffice-4-2; sudo apt-get update;  sudo apt-get install --yes doxygen graphviz; fi
 
 install:
-- cd ${TRAVIS_BUILD_DIR}
-- cmake .
-- pwd
-- chmod a+x ./scripts/*.sh
-- if [ "$COVERAGE" == "ON" ]; then ./scripts/install_coverage.sh; fi
+    - cd ${TRAVIS_BUILD_DIR}
+    - cmake .
+    - pwd
+    - chmod a+x ./scripts/*.sh
+    - if [ "$COVERAGE" == "ON" ]; then ./scripts/install_coverage.sh; fi
 
 before_script:
-- export CXX=${COMPILER}
-- cd ${TRAVIS_BUILD_DIR}
-- ${CXX} --version
-script:
-- cd ${TRAVIS_BUILD_DIR}
-- make
-- ctest --verbose -D Experimental
-- pwd
-- ls -al
-- if [ "$DOC" == "ON" ]; then make doc ; fi
+    - export CXX=${COMPILER}
+    - cd ${TRAVIS_BUILD_DIR}
+    - ${CXX} --version
+    script:
+    - cd ${TRAVIS_BUILD_DIR}
+    - make
+    - ctest --verbose -D Experimental
+    - pwd
+    - ls -al
+    - if [ "$DOC" == "ON" ]; then make doc ; fi
 
 after_success:
     - cd ${TRAVIS_BUILD_DIR}
@@ -151,9 +152,10 @@ after_success:
     - if [ -s clang-tidy-warnings.txt ]; then exit 1; fi
     - ls /usr/local
     - ls /usr/bin/cl*
-    # - if [ "$DOC" == "ON" ]; then ./scripts/publish_doxygen.sh ; fi
+# - if [ "$DOC" == "ON" ]; then ./scripts/publish_doxygen.sh ; fi
     - cd ${TRAVIS_BUILD_DIR}
     - pwd
+    - ls -al
     - if [ "$DOC" == "ON" ]; then ./scripts/push_doxygen.sh ; fi
 
 addons:

@@ -101,6 +101,12 @@ matrix:
     env: COMPILER='clang++' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
       - CLANGV=3.5
 
+  - os: osx
+    osx_image: xcode7.2
+    compiler: clang
+    env: COMPILER='clang++' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
+      - CLANGV=3.5
+
 before_install:
     - openssl aes-256-cbc -K $encrypted_b7784909063c_key
          -iv $encrypted_b7784909063c_iv
@@ -132,21 +138,23 @@ script:
 - if [ "$DOC" == "ON" ]; then make doc ; fi
 
 after_success:
-- cd ${TRAVIS_BUILD_DIR}
-- pwd
-- if [ "$COVERAGE" == "ON" ]; then ./scripts/finish_coverage.sh; fi
-- rm -rf clang-tidy-warnings.txt
-- which ${CXX}
-- ls -al /usr/bin/clang*
-- ls -al /usr/lib/llvm-${CLANGV}/bin/*
-- /usr/bin/clang-tidy-${CLANGV} -checks='*,-google-*,-misc-macro-parentheses,-readability-braces-around-statements,-readability-named-parameter,-llvm-namespace-comment'
-  -header-filter='framework/[^/]*.h' -- -DNDEBUG -std=c++11 -I. -Iframework > clang-tidy-warnings.txt
-- cat clang-tidy-warnings.txt
-- if [ -s clang-tidy-warnings.txt ]; then exit 1; fi
-- ls /usr/local
-- ls /usr/bin/cl*
-# - if [ "$DOC" == "ON" ]; then ./scripts/publish_doxygen.sh ; fi
-- if [ "$DOC" == "ON" ]; then ./scripts/push_doxygen.sh ; fi
+    - cd ${TRAVIS_BUILD_DIR}
+    - pwd
+    - if [ "$COVERAGE" == "ON" ]; then ./scripts/finish_coverage.sh; fi
+    - rm -rf clang-tidy-warnings.txt
+    - which ${CXX}
+    - ls -al /usr/bin/clang*
+    - ls -al /usr/lib/llvm-${CLANGV}/bin/*
+    - /usr/bin/clang-tidy-${CLANGV} -checks='*,-google-*,-misc-macro-parentheses,-readability-braces-around-statements,-readability-named-parameter,-llvm-namespace-comment'
+      -header-filter='framework/[^/]*.h' -- -DNDEBUG -std=c++11 -I. -Iframework > clang-tidy-warnings.txt
+    - cat clang-tidy-warnings.txt
+    - if [ -s clang-tidy-warnings.txt ]; then exit 1; fi
+    - ls /usr/local
+    - ls /usr/bin/cl*
+    # - if [ "$DOC" == "ON" ]; then ./scripts/publish_doxygen.sh ; fi
+    - cd ${TRAVIS_BUILD_DIR}
+    - pwd
+    - if [ "$DOC" == "ON" ]; then ./scripts/push_doxygen.sh ; fi
 
 addons:
   coverity_scan:

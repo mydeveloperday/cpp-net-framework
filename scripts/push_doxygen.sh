@@ -13,8 +13,8 @@ if [ "$TRAVIS_REPO_SLUG" == "mydeveloperday/cpp-net-framework" ] &&
     cp -R doc $HOME/doc-latest
 
     cd $HOME
-    git config --global user.email "travis@travis-ci.org"
-    git config --global user.name "travis-ci"
+    git config --global user.email "mydeveloperday@gmail.com"
+    git config --global user.name "mydeveloperday@gmail.com"
     git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/mydeveloperday/cpp-net-framework gh-pages > /dev/null
 
     cd gh-pages

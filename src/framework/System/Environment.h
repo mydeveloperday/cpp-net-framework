@@ -8,9 +8,11 @@
 
 namespace System
 {
+	/// a class for holding information about the OS environment
     class Environment
     {
     public:
+        /// get the current working directory
         static System::String CurrentDirectory()
         {
             // TODO move this centrally

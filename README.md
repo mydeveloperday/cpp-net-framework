@@ -38,8 +38,8 @@ Here is a rough list of initial goals
 3) To allow .NET framework and STL to interop directly  
 4) It should be functional first before fast (do what is needed to get the API worry about speed later)  
 5) Be cross platform  
-6) Be compilable on a number of different build platforms  
-7) Be test driven  
+6) Be test driven  
+7) To use open source software services to build good stable code
 
 ## What it is not
 
@@ -74,3 +74,7 @@ Talk about this repository
 Follow the my development stories at our blog
 
 https://mydeveloperday.wordpress.com/
+
+This or link back to here
+http://http://mydeveloperday.github.io/cpp-net-framework/
+http://http://mydeveloperday.github.io/cpp-net-framework/doc/html/index.html

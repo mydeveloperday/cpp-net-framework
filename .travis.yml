@@ -1,210 +1,170 @@
+
 language: cpp
 sudo: required
 
-cache:
-  ccache: true
-  directories:
-    - $HOME/.ccache
-
 env:
   global:
-    - USE_CCACHE=1
-    - CCACHE_COMPRESS=1
-    - CCACHE_MAXSIZE=200M
-    - CCACHE_CPP2=1
+  - secure: Nn/0vOtTfb5ETN6uN8hA6MiKYAYCIGJ6WJwKL+5inRp8jMe9VjeZqHHgQPGB4IM/ryBEJtGJF8grykkjx2WPFI4vTkVWiAVQD8Hk4iVcdDHffk+Z5SNGE+y8ex8WCzHKdsa36y1m2FTCtnYtH2Wl37E5gXlCL2kMrEz3F9FA+icHsMDt+U1TodXtApd1kW5OyLxlrbTqGy7bx61vgnxU86a+QDpfaycnfX1H564M00nlLOPq2rIkYIxVgxoZ72ruTW/pJ+dOaHvIdJ5OMaR0uxIE7rT0utgWXMfOkG0EN8lDrRptvxpRktTRVHbU9h3JqKCCU0hQF2NgAJR8fKfHxxuinuuGHADOSoMruTI6UUT6U+mVwGlccH562rYFfEGI60882OSvttBIW4P0zvx7eZAWPKtesmwuXIlMeYmJwI4iNnSJsa6qokfm+f9OGyeU4PjZBK1Q60BYxTFQPSqwlmUmN2VspGaK26RI3fVapOOOA6LgprqyHpt7iVW+mrI/d2PJ9IYPqUT17N1qTP5e6o3g6sgzOXTpKonsVbTZMn9eYkASZ8YQ1ZdOgowCVmwcbAivbcYatascGMRyypa03cuNCY8L8AYtl05e+y69KkTl9sPHM7kckvqh2s+8xLaSlUBNF2HIqa6yqZ8uRehTCblQlBlZXRWnpTIrjfoTSVE=
+  - secure: "DhPuyHTVRyQecW2aE/Y9ttU0kdvBELViD064T7yU66sNxoAfT6HhTf1XZxYl/A+u4RPl5bOlD17m00aRmZgNCx6AZqM4t+vM1PICJffF2XiM+WIp0MXlld9w7hkCau5yBydX/4jiA6SCErm4kg7ywASf4zWYB+SBrzBSFloFENHEnkZKcN+HSyaVcXTnvKvPHLkWvfseoFxZlUUh1KRWqy4Wi3a8DyeOu6r0Nr3Z121HS5tmo+TLLTgP7YS0kHHZDvn9GBzyrjphI1ICNbD28DEyvrvVfIHCBOFEOVA3HyZ66dkc+SN1PEwAMs9kQQwVI6tlgwbiGGrVVrDXsuBD1d5pUVzAq82pQw16Lk8WE5k0RG3ML21gUSAsS+E7r8xHj8YW5W2VhCdWCivVQ49N8CWCd3gMnietv1SuTX9ZVEmV4dTb2qi4HtkZQiAbMTmWUzzdhmlsgp3wSLl7daOMGXf7LJpDfA1a0VDMJfuiA9FwpEn1PJstuaMyMXHCiVqjH8EcUlypc8pesnXRfk8xLhKRp71icr/BegUCbSbhDGGm889JQrIIJwNJIDcbCBaDaVi+nwuoS8l2J0EdpuR28hwGu4IYY80AW3cjgg4G5IhwWLVxklIDsD+URSWGmRTaJI1jjv29lmbK1UKdlUcJe2nt3ONioAa22EjvOJKTnVA="
 
 matrix:
   include:
+  - os: linux
+    compiler: clang
+    addons:
+      apt:
+        sources:
+        - llvm-toolchain-precise-3.5
+        - ubuntu-toolchain-r-test
+        packages:
+        - clang-3.5
+    env: COMPILER='clang++-3.5' BUILD_TYPE='Release' DOC='ON' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
+      - CLANGV=3.5
 
-    # 1/ Linux Clang Builds
-    - os: linux
-      compiler: clang
-      addons: &clang35
-        apt:
-          sources: ['llvm-toolchain-precise-3.5', 'ubuntu-toolchain-r-test']
-          packages: ['clang-3.5']
-      env: COMPILER='clang++-3.5' BUILD_TYPE='Release'
+  - os: linux
+    compiler: clang
+    addons:
+      apt:
+        sources:
+        - llvm-toolchain-precise-3.6
+        - ubuntu-toolchain-r-test
+        packages:
+        - clang-3.6
+    env: COMPILER='clang++-3.6' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
+      - CLANGV=3.6
 
-    #- os: linux
-    #  compiler: clang
-    #  addons: *clang35
-    #  env: COMPILER='clang++-3.5' BUILD_TYPE='Debug'
+  - os: linux
+    compiler: clang
+    addons:
+      apt:
+        sources:
+        - llvm-toolchain-precise-3.7
+        - ubuntu-toolchain-r-test
+        packages:
+        - clang-3.7
+    env: COMPILER='clang++-3.7' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
+      - TIDY='ON' - CLANGV=3.7
 
+  - os: linux
+    compiler: clang
+    addons:
+      apt:
+        sources:
+        - llvm-toolchain-precise
+        - ubuntu-toolchain-r-test
+        packages:
+        - clang-3.8
+    env: COMPILER='clang++-3.8' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
+      - CLANGV=3.8
 
-    - os: linux
-      compiler: clang
-      addons: &clang36
-        apt:
-          sources: ['llvm-toolchain-precise-3.6', 'ubuntu-toolchain-r-test']
-          packages: ['clang-3.6']
-      env: COMPILER='clang++-3.6' BUILD_TYPE='Release'
+  - os: linux
+    compiler: gcc
+    addons:
+      apt:
+        sources:
+        - ubuntu-toolchain-r-test
+        packages:
+        - g++-4.8
+    env: COMPILER='g++-4.8' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
+      - CLANGV=3.5
 
-    #- os: linux
-    #  compiler: clang
-    #  addons: *clang36
-    #  env: COMPILER='clang++-3.6' BUILD_TYPE='Debug'
+  - os: linux
+    compiler: gcc
+    addons:
+      apt:
+        sources:
+        - ubuntu-toolchain-r-test
+        packages:
+        - g++-4.9
+    env: COMPILER='g++-4.9' BUILD_TYPE='Release' COVERAGE='ON' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
+      - CLANGV=3.5
 
+  - os: linux
+    compiler: gcc
+    addons:
+      apt:
+        sources:
+        - ubuntu-toolchain-r-test
+        packages:
+        - g++-5
+    env: COMPILER='g++-5' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
+      - CLANGV=3.5
 
-    - os: linux
-      compiler: clang
-      addons: &clang37
-        apt:
-          sources: ['llvm-toolchain-precise-3.7', 'ubuntu-toolchain-r-test']
-          packages: ['clang-3.7']
-      env: COMPILER='clang++-3.7' BUILD_TYPE='Release'
+  - os: osx
+    osx_image: xcode6.4
+    compiler: clang
+    env: COMPILER='clang++' BUILD_TYPE='Debug' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
+      - CLANGV=3.5
 
-    #- os: linux
-    #  compiler: clang
-    #  addons: *clang37
-    #  env: COMPILER='clang++-3.7' BUILD_TYPE='Debug'
+  - os: osx
+    osx_image: xcode7
+    compiler: clang
+    env: COMPILER='clang++' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
+      - CLANGV=3.5
 
-    - os: linux
-      compiler: clang
-      addons: &clang38
-        apt:
-          sources: ['llvm-toolchain-precise', 'ubuntu-toolchain-r-test']
-          packages: ['clang-3.8']
-      env: COMPILER='clang++-3.8' BUILD_TYPE='Release'
-
-    #- os: linux
-    #  compiler: clang
-    #  addons: *clang38
-    #  env: COMPILER='clang++-3.8' BUILD_TYPE='Debug'
-    #  branch_pattern: master
-
-
-    # 2/ Linux GCC Builds
-    - os: linux
-      compiler: gcc
-      addons: &gcc48
-        apt:
-         sources: ['ubuntu-toolchain-r-test']
-         packages: ['g++-4.8']
-      env: COMPILER='g++-4.8' BUILD_TYPE='Release'
-      branch_pattern: master
-
-    #- os: linux
-    #  compiler: gcc
-    #  addons: *gcc48
-    #  env: COMPILER='g++-4.8' BUILD_TYPE='Debug'
-    #  branch_pattern: master
-
-
-    - os: linux
-      compiler: gcc
-      addons: &gcc49
-        apt:
-          sources: ['ubuntu-toolchain-r-test']
-          packages: ['g++-4.9']
-      env: COMPILER='g++-4.9' BUILD_TYPE='Release' COVERAGE='ON'
-      branch_pattern: master
-
-    #- os: linux
-    #  compiler: gcc
-    #  addons: *gcc49
-    #  env: COMPILER='g++-4.9' BUILD_TYPE='Debug'
-    #  branch_pattern: master
-
-
-    - os: linux
-      compiler: gcc
-      addons: &gcc5
-        apt:
-          sources: ['ubuntu-toolchain-r-test']
-          packages: ['g++-5']
-      env: COMPILER='g++-5' BUILD_TYPE='Release'
-      branch_pattern: master
-
-    #- os: linux
-    #  compiler: gcc
-    #  addons: *gcc5
-    #  env: COMPILER='g++-5' BUILD_TYPE='Debug'
-    #  branch_pattern: master
-
-
-    # 3/ OSX Clang Builds
-    - os: osx
-      osx_image: xcode6.4
-      compiler: clang
-      env: COMPILER='clang++' BUILD_TYPE='Debug'
-      branch_pattern: master
-
-    #- os: osx
-    #  osx_image: xcode6.4
-    #  compiler: clang
-    #  env: COMPILER='clang++' BUILD_TYPE='Release'
-    #  branch_pattern: master
-
-
-    #- os: osx
-    #  osx_image: xcode7
-    #  compiler: clang
-    #  env: COMPILER='clang++' BUILD_TYPE='Debug'
-    #  branch_pattern: master
-
-    - os: osx
-      osx_image: xcode7
-      compiler: clang
-      env: COMPILER='clang++' BUILD_TYPE='Release'
-      branch_pattern: master
-
+  - os: osx
+    osx_image: xcode7.2
+    compiler: clang
+    env: COMPILER='clang++' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
+      - CLANGV=3.5
 
 before_install:
-    # c++ coveralls install
-    # - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CXX" == "g++" ]; then pip install --user cpp-coveralls; fi
+    - openssl aes-256-cbc -K $encrypted_b7784909063c_key
+         -iv $encrypted_b7784909063c_iv
+         -in config/travisci_rsa.enc
+         -out config/travisci_rsa -d
+    - chmod 0600 config/travisci_rsa
+    - cp config/travisci_rsa ~/.ssh/id_rsa
     - if [ "$COVERAGE" == "ON" ]; then pip install --user cpp-coveralls; fi
-
-    # cmake is not on osx by default
     - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install cmake ccache; fi
+    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get install python-software-properties; sudo apt-add-repository -y ppa:libreoffice/libreoffice-4-2; sudo apt-get update;  sudo apt-get install --yes doxygen graphviz; fi
 
-  
 install:
     - cd ${TRAVIS_BUILD_DIR}
     - cmake .
     - pwd
     - chmod a+x ./scripts/*.sh
     - if [ "$COVERAGE" == "ON" ]; then ./scripts/install_coverage.sh; fi
-    
 
 before_script:
-  - export CXX=${COMPILER}
-  - cd ${TRAVIS_BUILD_DIR}
-  - ${CXX} --version
-
+    - export CXX=${COMPILER}
+    - cd ${TRAVIS_BUILD_DIR}
+    - ${CXX} --version
 
 script:
     - cd ${TRAVIS_BUILD_DIR}
     - make
-    - ctest --verbose
-
+    - ctest --verbose -D Experimental
+    - pwd
+    - ls -al
+    - if [ "$DOC" == "ON" ]; then make doc ; fi
 
 after_success:
     - cd ${TRAVIS_BUILD_DIR}
     - pwd
     - if [ "$COVERAGE" == "ON" ]; then ./scripts/finish_coverage.sh; fi
     - rm -rf clang-tidy-warnings.txt
-    - clang-tidy-3.8 -checks='*,-google-*,-misc-macro-parentheses,-readability-braces-around-statements,-readability-named-parameter,-llvm-namespace-comment' -header-filter='framework/[^/]*.h' -- -DNDEBUG -std=c++11 -I. -Iframework > clang-tidy-warnings.txt
+    - which ${CXX}
+    - ls -al /usr/bin/clang*
+    - ls -al /usr/lib/llvm-${CLANGV}/bin/*
+    - /usr/bin/clang-tidy-${CLANGV} -checks='*,-google-*,-misc-macro-parentheses,-readability-braces-around-statements,-readability-named-parameter,-llvm-namespace-comment'
+      -header-filter='framework/[^/]*.h' -- -DNDEBUG -std=c++11 -I. -Iframework > clang-tidy-warnings.txt
     - cat clang-tidy-warnings.txt
     - if [ -s clang-tidy-warnings.txt ]; then exit 1; fi
     - ls /usr/local
     - ls /usr/bin/cl*
-#    - /usr/share/clang/scan-build-3.8/scan-build --use-analyzer=/usr/bin/clang-3.8 -o "$REPORTS" ./b2 toolset=gcc-4.8 libs/afio/test -a --test=test_all.cpp --link-test
-
-env:
-  global:
-   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
-   #   via the "travis encrypt" command using the project repo's public key
-   - secure: "Nn/0vOtTfb5ETN6uN8hA6MiKYAYCIGJ6WJwKL+5inRp8jMe9VjeZqHHgQPGB4IM/ryBEJtGJF8grykkjx2WPFI4vTkVWiAVQD8Hk4iVcdDHffk+Z5SNGE+y8ex8WCzHKdsa36y1m2FTCtnYtH2Wl37E5gXlCL2kMrEz3F9FA+icHsMDt+U1TodXtApd1kW5OyLxlrbTqGy7bx61vgnxU86a+QDpfaycnfX1H564M00nlLOPq2rIkYIxVgxoZ72ruTW/pJ+dOaHvIdJ5OMaR0uxIE7rT0utgWXMfOkG0EN8lDrRptvxpRktTRVHbU9h3JqKCCU0hQF2NgAJR8fKfHxxuinuuGHADOSoMruTI6UUT6U+mVwGlccH562rYFfEGI60882OSvttBIW4P0zvx7eZAWPKtesmwuXIlMeYmJwI4iNnSJsa6qokfm+f9OGyeU4PjZBK1Q60BYxTFQPSqwlmUmN2VspGaK26RI3fVapOOOA6LgprqyHpt7iVW+mrI/d2PJ9IYPqUT17N1qTP5e6o3g6sgzOXTpKonsVbTZMn9eYkASZ8YQ1ZdOgowCVmwcbAivbcYatascGMRyypa03cuNCY8L8AYtl05e+y69KkTl9sPHM7kckvqh2s+8xLaSlUBNF2HIqa6yqZ8uRehTCblQlBlZXRWnpTIrjfoTSVE="
-
+# - if [ "$DOC" == "ON" ]; then ./scripts/publish_doxygen.sh ; fi
+    - cd ${TRAVIS_BUILD_DIR}
+    - pwd
+    - ls -al
+    - if [ "$DOC" == "ON" ]; then ./scripts/push_doxygen.sh ; fi
 
 addons:
   coverity_scan:
     project:
-      name: "mydeveloperday/cpp-net-framework"
-      description: "Build submitted via Travis CI"
+      name: mydeveloperday/cpp-net-framework
+      description: Build submitted via Travis CI
     notification_email: mydeveloperday@gmail.com
-    build_command_prepend: "make clean"
-    build_command:   "make -j 4"
+    build_command_prepend: make clean
+    build_command: make -j 4
     branch_pattern: coverity_scan
-
-

@@ -5,11 +5,13 @@
 #include "OS.h"
 #include "Path.h"
 #include "TimeSpan.h"
+#include "System/StringBuilder.h"
 #include "System/DateTime.h"
 #include "System/Exception.h"
 #include "System/Environment.h"
 #include "System/Console.h"
 #include "System/Array.h"
+#include "System/ArrayList.h"
 #include "System/Math.h"
 
 #include "pragmas.h"

@@ -8,63 +8,75 @@
 
 #include "pragmas.h"
 
+#include "System/Object.h"
+
 typedef char Char;
 
 namespace System
 {
-    class String
+    /// string comparison enumeration
+	enum StringComparison { OrdinalIgnoreCase }; 
+
+	/// A generalized string class
+    class String : public Object
     {
         std::string m_str;
 
     public:
+        /// constructor
         String()
         {
         }
 
+        /// constructors from literal string
         String(const char* strIn)
             : m_str(strIn)
         {
         }
 
+        /// constructor from std::string (NOT .NET API)
         String(const std::string& strIn)
             : m_str(strIn)
         {
         }
 
-        // NOT .NET call
+        /// get the std::string from the String (NOT .NET call)
         std::string str() const
         {
             return m_str;
         }
 
-        // NOT .NET call
+        /// an std::string casting converter (NOT .NET call)
         const std::string operator()(std::string&) const
         {
             return str();
         }
 
-        // NOT .NET call
+        /// an const char* casting converter (NOT .NET call)
         const char* operator()(const char*) const
         {
             return str().c_str();
         }
 
-        // NOT .NET call
+        /// a function to determine if the string is empty (NOT .NET call)
         bool Empty() const
         {
             return (Length() == 0);
         }
 
+		/// the size of the string
         int Length() const
         {
             return m_str.size();
         }
 
+		/// the indexing function
         Char operator[](int pos) const
         {
             return m_str[pos];
         }
 
+		/// string character += operator
         String& operator+=(Char c)
         {
             std::string newstring = (*this).str() + c;
@@ -72,6 +84,7 @@ namespace System
             return (*this);
         }
 
+		/// string += operator
         String& operator+=(const String& s)
         {
             std::string newstring = (*this).str() + s.str();
@@ -79,6 +92,7 @@ namespace System
             return (*this);
         }
 
+		/// make an upper case version of the string
         String ToUpper() const
         {
             String s;
@@ -88,6 +102,7 @@ namespace System
             return s;
         }
 
+		/// make a lower case version of the string
         String ToLower() const
         {
             String s;
@@ -97,6 +112,7 @@ namespace System
             return s;
         }
 
+		/// does the string contain the specified string
         bool Contains(String s) const
         {
             if (str().find(s.str()) != std::string::npos) {
@@ -105,23 +121,33 @@ namespace System
             return false;
         }
 
+		/// an equals operator
         bool Equals(String s) const
         {
             return (str() == s.str());
         }
 
+        /// an equals operator using string comparison options
+        bool Equals(String s,StringComparison) const
+        {
+            return (str() == s.str());
+        }
+
+        /// return a substring of this string start at a given index
         String Substring(int start) const
         {
             std::string newstring = str().substr(start);
             return String(newstring.c_str());
         }
 
+        /// return a substring of this string starting at the given index and of size length
         String Substring(int start, int length) const
         {
             std::string newstring = str().substr(start, length);
             return String(newstring.c_str());
         }
 
+        /// the last index of this character
         int LastIndexOf(char c) const
         {
             size_t pos = str().rfind(c);
@@ -131,6 +157,7 @@ namespace System
             return static_cast<int>(pos);
         }
 
+        /// find the last index of the string
         int LastIndexOf(const String& s) const
         {
             size_t pos = str().rfind(s.str());
@@ -140,6 +167,7 @@ namespace System
             return static_cast<int>(pos);
         }
 
+        /// find the index of the character
         int IndexOf(char c) const
         {
             size_t pos = str().find(c);
@@ -149,6 +177,7 @@ namespace System
             return static_cast<int>(pos);
         }
 
+        /// find the index of the substring
         int IndexOf(const String& s) const
         {
             size_t pos = str().find(s.str());
@@ -158,6 +187,7 @@ namespace System
             return static_cast<int>(pos);
         }
 
+        /// does the string start with the specified string
         bool StartsWith(const String& s) const
         {
             if (String::IsNullOrEmpty(s)) {
@@ -166,6 +196,7 @@ namespace System
             return (IndexOf(s) == 0);
         }
 
+        /// does the string end with the specified string 
         bool EndsWith(const String& s) const
         {
             if (String::IsNullOrEmpty(s)) {
@@ -173,60 +204,76 @@ namespace System
             }
             return (IndexOf(s) == Length() - s.Length());
         }
-
+    
+        /// replace one string with another
         String Replace(const String& from, const String& with)
         {
-            int pos = IndexOf(from);
-            if (pos == -1) {
-                return (*this);
+            if(from.Empty()){
+               return (*this);
             }
+               
+            std::string to=with.str(); 
+            std::string str=(*this).str();
 
-            String newstring = (*this);
-
-            //int maxCount=10; 
-            //while (pos!=-1 && maxCount--){
-            newstring.m_str.replace(pos, pos + from.Length(), with.str());
-
-            //int lastpos = pos;
-            //pos=newstring.IndexOf(from);
-
-            // try to prevent it going infinite
-            //if (pos < lastpos){
-            //     break;
-            //}
-         //}
-
+            size_t start_pos = 0;
+            while((start_pos = str.find(from.str(), start_pos)) 
+                    != std::string::npos) 
+            {
+                str.replace(start_pos, from.str().length(), to);
+                start_pos += to.length(); 
+            }
+            String newstring = str;
             return newstring;
         }
 
+        /// remove leading and trailing spaces
         String Trim() const
         {
             String s = (*this);
+			if (String::IsNullOrEmpty(s)){
+				return s;
+			}
             s = s.TrimEnd();
             s = s.TrimStart();
             return s;
         }
 
+        /// remove trailing spaces
         String TrimEnd() const
         {
             String s = (*this);
+			if (String::IsNullOrEmpty(s)){
+				return s;
+			}
             s.m_str.erase(s.m_str.find_last_not_of(" \n\r\t") + 1);
             return s;
         }
 
+        /// remove leading spaces
         String TrimStart() const
         {
             String s = (*this);
+			if (String::IsNullOrEmpty(s)){
+				return s;
+			}
             s = s.Substring(s.m_str.find_first_not_of(" \n\r\t"));
             return s;
         }
 
+        /// is the string null or empty
         static bool IsNullOrEmpty(const String &s)
         {
             return (s.Length() == 0);
         }
+
+        /// turn the string into a string
+		virtual String ToString()
+		{
+			return (*this);
+		}
     };
 
+    /// the plus operator for two strings
     inline String operator+(const String& a, const String& b)
     {
         std::string m_res = a.str();
@@ -234,6 +281,7 @@ namespace System
         return String(m_res.c_str());
     }
 
+    /// concat two strings together
     inline String Concat(const String& a, const String& b)
     {
         std::string m_res = a.str();
@@ -241,17 +289,26 @@ namespace System
         return String(m_res.c_str());
     }
 
+    /// are the two strings equal
     inline bool operator==(const String& a, const String& b)
     {
         return (a.str() == b.str());
     }
 
+    /// are the two strings not equal
     inline bool operator!=(const String& a, const String& b)
     {
         return (a.str() != b.str());
     }
+   
+    /// is one string less than the other 
+    inline bool operator< (const String& a, const String& b)
+    {
+        return (a.str() < b.str());
+    }
 
-    // void PrintTo(const System::String& str, ::std::ostream* os);
+    /// gtest output
+    void PrintTo(const System::String& str, ::std::ostream* os);
 }
 
 typedef System::String string;

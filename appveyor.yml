@@ -16,4 +16,4 @@ build:
   
 test_script:
   - echo "Running Tests"
-  - ctest -VV
+  - ctest -VV -D Experimental

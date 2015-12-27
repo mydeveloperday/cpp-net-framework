@@ -13,13 +13,13 @@
 
 namespace System
 {
+	/// DateTime class for handling dates and times
     class DateTime
     {
         std::time_t m_time;
 
-        
-
     public:
+        /// Constructor for DateTime
         DateTime(int year, int month, int day)
         {
             struct tm timeinfo;
@@ -31,6 +31,7 @@ namespace System
             m_time = mktime(&timeinfo);
         }
 
+        /// Constructor for DateTime
         DateTime(int year, int month, int day, int hours, int minutes)
         {
             struct tm timeinfo;
@@ -50,6 +51,7 @@ namespace System
         {
         }
 
+        /// get the day portion from a DateTime
         int Day() const
         {
             struct tm* rawtime;
@@ -57,6 +59,7 @@ namespace System
             return rawtime->tm_mday;
         }
 
+        /// get the month portion from a DateTime
         int Month() const
         {
             struct tm* rawtime;
@@ -64,6 +67,7 @@ namespace System
             return rawtime->tm_mon + 1;
         }
 
+        /// get the year portion of the DateTime
         int Year() const
         {
             struct tm* rawtime;
@@ -71,11 +75,13 @@ namespace System
             return rawtime->tm_year + 1900;
         }
 
+        /// get the current time
         static DateTime Now()
         {
             return DateTime(time(nullptr));
         }
 
+        /// get the number of ticks this time represents
         int64_t Ticks() const{
             int64_t tick = static_cast<int64_t>(m_time) * static_cast<int64_t>(TIME_SCALE);
             return tick;
@@ -83,6 +89,7 @@ namespace System
 
     };
 
+    /// minus operator for creating a duration from the delta between 2 datetimes
     inline TimeSpan operator-(const DateTime& a, const DateTime& b)
     {
         int64_t ticks = a.Ticks() - b.Ticks();

@@ -100,7 +100,7 @@ before_install:
           -in config/travisci_rsa.enc 
           -out config/travisci_rsa -d
     - chmod 0600 config/travisci_rsa
-    - cp config/travisci_ras ~/.ssh/id_rsa
+    - cp config/travisci_rsa ~/.ssh/id_rsa
     - if [ "$COVERAGE" == "ON" ]; then pip install --user cpp-coveralls; fi
     - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install cmake ccache; fi
     - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get install python-software-properties; sudo apt-add-repository -y ppa:libreoffice/libreoffice-4-2; sudo apt-get update;  sudo apt-get install --yes doxygen graphviz; fi

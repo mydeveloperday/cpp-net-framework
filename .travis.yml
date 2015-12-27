@@ -138,7 +138,7 @@ after_success:
     - if [ -s clang-tidy-warnings.txt ]; then exit 1; fi
     - ls /usr/local
     - ls /usr/bin/cl*
-    - if [ "$DOC" == "ON" ]; then ./scripts/publish-doxygen.sh ; fi
+    - if [ "$DOC" == "ON" ]; then ./scripts/publish_doxygen.sh ; fi
 
 addons:
   coverity_scan:

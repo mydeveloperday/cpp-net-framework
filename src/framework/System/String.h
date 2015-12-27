@@ -126,24 +126,27 @@ namespace System
             return (str() == s.str());
         }
 
-
+        /// an equals operator using string comparison options
         bool Equals(String s,StringComparison) const
         {
             return (str() == s.str());
         }
 
+        /// return a substring of this string start at a given index
         String Substring(int start) const
         {
             std::string newstring = str().substr(start);
             return String(newstring.c_str());
         }
 
+        /// return a substring of this string starting at the given index and of size length
         String Substring(int start, int length) const
         {
             std::string newstring = str().substr(start, length);
             return String(newstring.c_str());
         }
 
+        /// the last index of this character
         int LastIndexOf(char c) const
         {
             size_t pos = str().rfind(c);

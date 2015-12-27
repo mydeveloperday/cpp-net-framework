@@ -28,6 +28,7 @@ namespace System
             bool m_disposed;
 
         public:
+            /// constructor
             StreamReader(const System::String& file)
                 : m_file(file)
                 , m_disposed(false)
@@ -49,11 +50,13 @@ namespace System
 #endif
             }
 
+            /// destructor
             ~StreamReader()
             {
                 Dispose();
             }
 
+            /// read a line from the file
             System::String ReadLine()
             {
                 std::string strIn;
@@ -63,6 +66,7 @@ namespace System
                 return strOut;
             }
 
+            /// dispose method for closing the file
             void Dispose()
             {
                 if (!m_disposed) {
@@ -74,6 +78,7 @@ namespace System
                 }
             }
 
+            /// is the stream at the end
             bool EndOfStream()
             {
                 return !(*m_fd) || (*m_fd).eof();

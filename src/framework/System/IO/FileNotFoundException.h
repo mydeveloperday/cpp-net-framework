@@ -17,11 +17,13 @@ namespace System
         class FileNotFoundException : public System::Exception
         {
         public:
+            /// constructor
             FileNotFoundException():
                 System::Exception("File not Found:")
             {
             }
 
+            /// constrcutor with reason
             FileNotFoundException(const String &msg):
                  System::Exception(msg)
             {

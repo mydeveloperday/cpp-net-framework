@@ -39,40 +39,43 @@ namespace System
         {
         }
 
-        // get the std::string from the String (NOT .NET call)
+        /// get the std::string from the String (NOT .NET call)
         std::string str() const
         {
             return m_str;
         }
 
-        // NOT .NET call
+        // an std::string casting converter (NOT .NET call)
         const std::string operator()(std::string&) const
         {
             return str();
         }
 
-        // NOT .NET call
+        // an const char* casting converter (NOT .NET call)
         const char* operator()(const char*) const
         {
             return str().c_str();
         }
 
-        // NOT .NET call
+        /// a function to determine if the string is empty (NOT .NET call)
         bool Empty() const
         {
             return (Length() == 0);
         }
 
+		/// the size of the string
         int Length() const
         {
             return m_str.size();
         }
 
+		/// the indexing function
         Char operator[](int pos) const
         {
             return m_str[pos];
         }
 
+		/// string character += operator
         String& operator+=(Char c)
         {
             std::string newstring = (*this).str() + c;
@@ -80,6 +83,7 @@ namespace System
             return (*this);
         }
 
+		/// string += operator
         String& operator+=(const String& s)
         {
             std::string newstring = (*this).str() + s.str();
@@ -87,6 +91,7 @@ namespace System
             return (*this);
         }
 
+		/// make an upper case version of the string
         String ToUpper() const
         {
             String s;
@@ -96,6 +101,7 @@ namespace System
             return s;
         }
 
+		/// make a lower case version of the string
         String ToLower() const
         {
             String s;
@@ -105,6 +111,7 @@ namespace System
             return s;
         }
 
+		/// does the string contain the specified string
         bool Contains(String s) const
         {
             if (str().find(s.str()) != std::string::npos) {
@@ -113,6 +120,7 @@ namespace System
             return false;
         }
 
+		/// an equals operator
         bool Equals(String s) const
         {
             return (str() == s.str());

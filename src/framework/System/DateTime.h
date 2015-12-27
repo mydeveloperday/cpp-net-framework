@@ -89,6 +89,7 @@ namespace System
 
     };
 
+    /// minus operator for creating a duration from the delta between 2 datetimes
     inline TimeSpan operator-(const DateTime& a, const DateTime& b)
     {
         int64_t ticks = a.Ticks() - b.Ticks();

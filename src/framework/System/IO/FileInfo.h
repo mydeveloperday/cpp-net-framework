@@ -20,10 +20,12 @@ namespace System
             System::String m_path;
 
         public:
+            /// constructor
             FileInfo()
             {
             }
 
+            /// constructor within the current directory
             FileInfo(const System::String& s)
                 : m_path(s)
             {
@@ -31,11 +33,13 @@ namespace System
                 m_path = System::Path::Combine(cwd, s);
             }
 
+            /// the full name of the file
             System::String FullName() const
             {
                 return m_path;
             }
 
+            /// does the file exist
             bool Exists() const
             {
                 struct stat statStruct;
@@ -44,6 +48,7 @@ namespace System
                 return fileExists;
             }
 
+            /// the files extension
             String Extension() const
             {
                 int dotPos = m_path.LastIndexOf('.');
@@ -55,6 +60,7 @@ namespace System
                 return ext;
             }
 
+            /// the name of the file
             String Name() const
             {
                 // from the end of the path back up to the last / or \\ to strip
@@ -79,6 +85,7 @@ namespace System
                 return part;
             }
 
+            /// delete the file
             virtual void Delete()
             {
                 int errVal = std::remove(FullName().str().c_str());
@@ -90,6 +97,7 @@ namespace System
                 return;
             }
 
+            /// get the creation date of the file
             DateTime CreationTime()
             {
                 throw System::NotImplementedException("FileInfo::Creation time not implemented");

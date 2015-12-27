@@ -16,6 +16,7 @@ namespace System
     class Path
     {
     public:
+		/// join 2 directory/files together with a path seperator / 
         static System::String Combine(System::String a, System::String b)
         {
             String res = a + PATH_SEPARATOR + b;

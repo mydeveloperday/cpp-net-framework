@@ -25,6 +25,7 @@ namespace System
             bool m_disposed;
 
         public:
+            /// constructor
             StreamWriter(const System::String& file)
                 : m_file(file)
                 , m_disposed(false)
@@ -36,16 +37,19 @@ namespace System
 #endif
             }
 
-            ~StreamWriter()
+            /// destructor
+            virtual ~StreamWriter()
             {
                 Dispose();
             }
 
+            /// write a line to the file
             void WriteLine(const System::String& s)
             {
                 (*m_fd) << s.str() << "\n";
             }
 
+            /// call the dispose method
             void Dispose()
             {
                 if (!m_disposed) {

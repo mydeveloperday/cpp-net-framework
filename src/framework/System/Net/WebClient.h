@@ -36,6 +36,7 @@ namespace System
         }
     };
 
+    /// global initialization of winsock
     InitNet g_initNet;
 
 	/// a web client class for downloading web pages via HTTP

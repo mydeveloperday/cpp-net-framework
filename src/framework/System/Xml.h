@@ -3,11 +3,11 @@
 #include "System/String.h"
 #include "System/IO.h"
 
-/// xml document class
 namespace System
 {
 namespace Xml
 {
+/// xml document class
 class XmlDocument
 {
     public:

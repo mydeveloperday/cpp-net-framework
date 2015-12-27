@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['xmldocument',['XmlDocument',['../d1/de4/class_xml_document.html',1,'XmlDocument'],['../d1/de4/class_xml_document.html#a21a5ddc4258283d437983851ab96c5bd',1,'XmlDocument::XmlDocument()']]]
+  ['xmldocument',['XmlDocument',['../d1/d48/class_system_1_1_xml_1_1_xml_document.html',1,'System::Xml']]],
+  ['xmldocument',['XmlDocument',['../d1/d48/class_system_1_1_xml_1_1_xml_document.html#a21a5ddc4258283d437983851ab96c5bd',1,'System::Xml::XmlDocument']]]
 ];

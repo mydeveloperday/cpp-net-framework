@@ -29,5 +29,5 @@ var hierarchy =
     [ "StreamWriter", "d7/d47/class_system_1_1_i_o_1_1_stream_writer.html", null ],
     [ "TimeSpan", "d7/de9/class_system_1_1_time_span.html", null ],
     [ "WebClient", "d5/d8c/class_system_1_1_web_client.html", null ],
-    [ "XmlDocument", "d1/de4/class_xml_document.html", null ]
+    [ "XmlDocument", "d1/d48/class_system_1_1_xml_1_1_xml_document.html", null ]
 ];

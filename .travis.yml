@@ -19,6 +19,7 @@ matrix:
         - clang-3.5
     env: COMPILER='clang++-3.5' BUILD_TYPE='Release' DOC='ON' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
       - CLANGV=3.5
+
   - os: linux
     compiler: clang
     addons:
@@ -30,6 +31,7 @@ matrix:
         - clang-3.6
     env: COMPILER='clang++-3.6' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
       - CLANGV=3.6
+
   - os: linux
     compiler: clang
     addons:
@@ -41,6 +43,7 @@ matrix:
         - clang-3.7
     env: COMPILER='clang++-3.7' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
       - TIDY='ON' - CLANGV=3.7
+
   - os: linux
     compiler: clang
     addons:
@@ -52,6 +55,7 @@ matrix:
         - clang-3.8
     env: COMPILER='clang++-3.8' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
       - CLANGV=3.8
+
   - os: linux
     compiler: gcc
     addons:
@@ -62,6 +66,7 @@ matrix:
         - g++-4.8
     env: COMPILER='g++-4.8' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
       - CLANGV=3.5
+
   - os: linux
     compiler: gcc
     addons:
@@ -72,6 +77,7 @@ matrix:
         - g++-4.9
     env: COMPILER='g++-4.9' BUILD_TYPE='Release' COVERAGE='ON' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
       - CLANGV=3.5
+
   - os: linux
     compiler: gcc
     addons:
@@ -82,11 +88,13 @@ matrix:
         - g++-5
     env: COMPILER='g++-5' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
       - CLANGV=3.5
+
   - os: osx
     osx_image: xcode6.4
     compiler: clang
     env: COMPILER='clang++' BUILD_TYPE='Debug' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
       - CLANGV=3.5
+
   - os: osx
     osx_image: xcode7
     compiler: clang
@@ -137,7 +145,7 @@ after_success:
 - if [ -s clang-tidy-warnings.txt ]; then exit 1; fi
 - ls /usr/local
 - ls /usr/bin/cl*
-- if [ "$DOC" == "ON" ]; then ./scripts/publish_doxygen.sh ; fi
+# - if [ "$DOC" == "ON" ]; then ./scripts/publish_doxygen.sh ; fi
 
 addons:
   coverity_scan:

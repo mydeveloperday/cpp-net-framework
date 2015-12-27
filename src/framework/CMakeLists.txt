@@ -11,6 +11,7 @@ SET(HEADERS
   NullPtr.h
   pragmas.h
   System/String.h
+  System/StringBuilder.h
   System/IO.h
   System.h
   System/DateTime.h

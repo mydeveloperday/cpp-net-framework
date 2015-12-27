@@ -4,6 +4,9 @@
 #include "System.h"
 #include "OS.h"
 
+// when C++ 11 override this with 'override'
+#define OVERRIDE 
+
 namespace System
 {
     namespace Compiler

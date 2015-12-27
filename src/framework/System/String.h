@@ -14,27 +14,32 @@ typedef char Char;
 
 namespace System
 {
+	enum StringComparison { OrdinalIgnoreCase }; 
+
 	/// A generalized string class
     class String : public Object
     {
         std::string m_str;
 
     public:
+        /// constructor
         String()
         {
         }
 
+        /// constructors from literal string
         String(const char* strIn)
             : m_str(strIn)
         {
         }
 
+        /// constructor from std::string (NOT .NET API)
         String(const std::string& strIn)
             : m_str(strIn)
         {
         }
 
-        // NOT .NET call
+        // get the std::string from the String (NOT .NET call)
         std::string str() const
         {
             return m_str;
@@ -109,6 +114,12 @@ namespace System
         }
 
         bool Equals(String s) const
+        {
+            return (str() == s.str());
+        }
+
+
+        bool Equals(String s,StringComparison) const
         {
             return (str() == s.str());
         }
@@ -226,6 +237,11 @@ namespace System
         {
             return (s.Length() == 0);
         }
+
+		virtual String ToString()
+		{
+			return (*this);
+		}
     };
 
     inline String operator+(const String& a, const String& b)

@@ -1,8 +1,11 @@
+
 language: cpp
 sudo: required
+
 env:
   global:
   - secure: Nn/0vOtTfb5ETN6uN8hA6MiKYAYCIGJ6WJwKL+5inRp8jMe9VjeZqHHgQPGB4IM/ryBEJtGJF8grykkjx2WPFI4vTkVWiAVQD8Hk4iVcdDHffk+Z5SNGE+y8ex8WCzHKdsa36y1m2FTCtnYtH2Wl37E5gXlCL2kMrEz3F9FA+icHsMDt+U1TodXtApd1kW5OyLxlrbTqGy7bx61vgnxU86a+QDpfaycnfX1H564M00nlLOPq2rIkYIxVgxoZ72ruTW/pJ+dOaHvIdJ5OMaR0uxIE7rT0utgWXMfOkG0EN8lDrRptvxpRktTRVHbU9h3JqKCCU0hQF2NgAJR8fKfHxxuinuuGHADOSoMruTI6UUT6U+mVwGlccH562rYFfEGI60882OSvttBIW4P0zvx7eZAWPKtesmwuXIlMeYmJwI4iNnSJsa6qokfm+f9OGyeU4PjZBK1Q60BYxTFQPSqwlmUmN2VspGaK26RI3fVapOOOA6LgprqyHpt7iVW+mrI/d2PJ9IYPqUT17N1qTP5e6o3g6sgzOXTpKonsVbTZMn9eYkASZ8YQ1ZdOgowCVmwcbAivbcYatascGMRyypa03cuNCY8L8AYtl05e+y69KkTl9sPHM7kckvqh2s+8xLaSlUBNF2HIqa6yqZ8uRehTCblQlBlZXRWnpTIrjfoTSVE=
+
 matrix:
   include:
   - os: linux
@@ -89,23 +92,25 @@ matrix:
     compiler: clang
     env: COMPILER='clang++' BUILD_TYPE='Release' - GTEST_COLOR=1 - CTEST_OUTPUT_ON_FAILURE=1
       - CLANGV=3.5
+
 before_install:
-    - openssl aes-256-cbc -K $encrypted_b7784909063c_key -iv $encrypted_b7784909063c_iv
-    -in config/travisci_rsa.enc -out config/travisci_rsa -d
-    - openssl aes-256-cbc -K $encrypted_b7784909063c_key -iv $encrypted_b7784909063c_iv -in config/travisci_rsa.enc -out config/travisci_rsa -d
+    - openssl aes-256-cbc -K $encrypted_b7784909063c_key
+         -iv $encrypted_b7784909063c_iv
+         -in config/travisci_rsa.enc
+         -out config/travisci_rsa -d
     - chmod 0600 config/travisci_rsa
     - cp config/travisci_rsa ~/.ssh/id_rsa
     - if [ "$COVERAGE" == "ON" ]; then pip install --user cpp-coveralls; fi
     - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install cmake ccache; fi
-    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get install python-software-properties;
-  sudo apt-add-repository -y ppa:libreoffice/libreoffice-4-2; sudo apt-get update;  sudo
-  apt-get install --yes doxygen graphviz; fi
+    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get install python-software-properties; sudo apt-add-repository -y ppa:libreoffice/libreoffice-4-2; sudo apt-get update;  sudo apt-get install --yes doxygen graphviz; fi
+
 install:
 - cd ${TRAVIS_BUILD_DIR}
 - cmake .
 - pwd
 - chmod a+x ./scripts/*.sh
 - if [ "$COVERAGE" == "ON" ]; then ./scripts/install_coverage.sh; fi
+
 before_script:
 - export CXX=${COMPILER}
 - cd ${TRAVIS_BUILD_DIR}
@@ -117,6 +122,7 @@ script:
 - pwd
 - ls -al
 - if [ "$DOC" == "ON" ]; then make doc ; fi
+
 after_success:
 - cd ${TRAVIS_BUILD_DIR}
 - pwd
@@ -132,6 +138,7 @@ after_success:
 - ls /usr/local
 - ls /usr/bin/cl*
 - if [ "$DOC" == "ON" ]; then ./scripts/publish_doxygen.sh ; fi
+
 addons:
   coverity_scan:
     project:

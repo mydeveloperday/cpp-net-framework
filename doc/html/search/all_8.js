@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['math',['Math',['../dd/d8b/class_system_1_1_math.html',1,'System']]],
-  ['max',['Max',['../dd/d8b/class_system_1_1_math.html#a4f810b796deffcdc635daa6f35e23def',1,'System::Math::Max(int a, int b)'],['../dd/d8b/class_system_1_1_math.html#a1d8bc00ccecd1689c5fd8075216ebec9',1,'System::Math::Max(double a, double b)']]],
-  ['message',['Message',['../d1/df8/class_system_1_1_exception.html#a8b807ff91d629c8ed39ec8c739a4f022',1,'System::Exception']]],
-  ['milliseconds',['Milliseconds',['../d7/de9/class_system_1_1_time_span.html#afd39574cfccb3a8fcc6c24b638c01b3a',1,'System::TimeSpan']]],
-  ['min',['Min',['../dd/d8b/class_system_1_1_math.html#a15844d65cac2a44ebaed3ed314996f7c',1,'System::Math::Min(int a, int b)'],['../dd/d8b/class_system_1_1_math.html#a02e19fa3c2abb42473978cf6d94e2e1d',1,'System::Math::Min(double a, double b)']]],
-  ['minutes',['Minutes',['../d7/de9/class_system_1_1_time_span.html#ab597d11badcb94fe7bdbcca253528166',1,'System::TimeSpan']]],
-  ['month',['Month',['../d8/dee/class_system_1_1_date_time.html#a1a414670e1428b5e9c3aad67e4eab295',1,'System::DateTime']]]
+  ['lastindexof',['LastIndexOf',['../db/d0b/class_system_1_1_string.html#aac0f0d4edf0458dc30fe99ecf51e7f19',1,'System::String::LastIndexOf(char c) const '],['../db/d0b/class_system_1_1_string.html#a50fb3429d6256a075c83fc36c402c7b6',1,'System::String::LastIndexOf(const String &amp;s) const ']]],
+  ['length',['Length',['../d1/d3e/class_system_1_1_array.html#a6e891964a37680c01e21dedac6ffe670',1,'System::Array::Length()'],['../d1/ded/class_system_1_1_array_list.html#a6e891964a37680c01e21dedac6ffe670',1,'System::ArrayList::Length()'],['../db/d0b/class_system_1_1_string.html#a6e891964a37680c01e21dedac6ffe670',1,'System::String::Length()']]],
+  ['list',['List',['../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html#a17e6c90f14225bdac5c65ed915b0a2f6',1,'System::Collections::Generic::List']]],
+  ['list',['List',['../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html',1,'System::Collections::Generic']]]
 ];

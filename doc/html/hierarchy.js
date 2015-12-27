@@ -13,6 +13,7 @@ var hierarchy =
         ] ]
       ] ]
     ] ],
+    [ "File", "de/df7/class_system_1_1_file.html", null ],
     [ "FileInfo", "dc/d0d/class_system_1_1_i_o_1_1_file_info.html", null ],
     [ "HashSet< K >", "d6/da9/class_system_1_1_collections_1_1_generic_1_1_hash_set.html", null ],
     [ "InitNet", "d6/d0c/class_system_1_1_init_net.html", null ],
@@ -27,5 +28,6 @@ var hierarchy =
     [ "StreamReader", "d9/dea/class_system_1_1_i_o_1_1_stream_reader.html", null ],
     [ "StreamWriter", "d7/d47/class_system_1_1_i_o_1_1_stream_writer.html", null ],
     [ "TimeSpan", "d7/de9/class_system_1_1_time_span.html", null ],
-    [ "WebClient", "d5/d8c/class_system_1_1_web_client.html", null ]
+    [ "WebClient", "d5/d8c/class_system_1_1_web_client.html", null ],
+    [ "XmlDocument", "d1/de4/class_xml_document.html", null ]
 ];

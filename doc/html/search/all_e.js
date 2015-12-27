@@ -1,16 +1,19 @@
 var searchData=
 [
-  ['ticks',['Ticks',['../d8/dee/class_system_1_1_date_time.html#a3d50a355a34cdc2b92e41b9b770aa31b',1,'System::DateTime::Ticks()'],['../d7/de9/class_system_1_1_time_span.html#a4b25bb103f4e00fab78f30540d415072',1,'System::TimeSpan::Ticks()']]],
-  ['timespan',['TimeSpan',['../d7/de9/class_system_1_1_time_span.html',1,'System']]],
-  ['timespan',['TimeSpan',['../d7/de9/class_system_1_1_time_span.html#ac63dd9b803f026e2de99880913d4c45c',1,'System::TimeSpan::TimeSpan(int64_t ticks)'],['../d7/de9/class_system_1_1_time_span.html#a1a0f7f7be10a0db293c51ca43c178a9f',1,'System::TimeSpan::TimeSpan(double duration)'],['../d7/de9/class_system_1_1_time_span.html#a5013142d95f23a8ae9c3c7d730cf3452',1,'System::TimeSpan::TimeSpan(int hours, int minutes, int seconds)'],['../d7/de9/class_system_1_1_time_span.html#a2958010ebb22b61897fd713a8e3457aa',1,'System::TimeSpan::TimeSpan(int days, int hours, int minutes, int seconds)'],['../d7/de9/class_system_1_1_time_span.html#ab420303dac400753c753fb1603a6d61a',1,'System::TimeSpan::TimeSpan(int days, int hours, int minutes, int seconds, int milliseconds)']]],
-  ['tolower',['ToLower',['../db/d0b/class_system_1_1_string.html#a8175432bbc796ad84f4bc996feb081d0',1,'System::String']]],
-  ['tomilliseconds',['toMilliseconds',['../d7/de9/class_system_1_1_time_span.html#a8a6c3bc3aafc1cde0cffc1ba9ae2970a',1,'System::TimeSpan']]],
-  ['toseconds',['toSeconds',['../d7/de9/class_system_1_1_time_span.html#a8e56704075648f344208eb8ac68758bf',1,'System::TimeSpan']]],
-  ['tostring',['ToString',['../d5/df0/class_system_1_1_object.html#a001d21b09a3d49654c46c18549f86f83',1,'System::Object::ToString()'],['../db/d0b/class_system_1_1_string.html#a502c333ec4f900fdfba43b8d0399b3c5',1,'System::String::ToString()'],['../dd/dec/class_system_1_1_string_builder.html#a502c333ec4f900fdfba43b8d0399b3c5',1,'System::StringBuilder::ToString()']]],
-  ['totalmilliseconds',['TotalMilliseconds',['../d7/de9/class_system_1_1_time_span.html#a485a3a5deff1189519eda9d959eba7a5',1,'System::TimeSpan']]],
-  ['totalminutes',['TotalMinutes',['../d7/de9/class_system_1_1_time_span.html#a3902b782d64eb0a05cb0cf6ca9ed0936',1,'System::TimeSpan']]],
-  ['totalseconds',['TotalSeconds',['../d7/de9/class_system_1_1_time_span.html#a92e37a2518306637db9ab33070fc750b',1,'System::TimeSpan']]],
-  ['toupper',['ToUpper',['../db/d0b/class_system_1_1_string.html#a6e0dfed4e43d55aa95ed6ab423ba4a07',1,'System::String']]],
-  ['truncate',['Truncate',['../dd/d8b/class_system_1_1_math.html#a657be887f9d7517cc163c40330cbca97',1,'System::Math']]],
-  ['trygetvalue',['TryGetValue',['../d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html#a3409c2d1ec38bb75dc7620769c8ccc30',1,'System::Collections::Generic::Dictionary']]]
+  ['console',['Console',['../d9/d4b/namespace_system_1_1_console.html',1,'System']]],
+  ['seconds',['Seconds',['../d7/de9/class_system_1_1_time_span.html#abdbc8acb6b2a40bee4ddc2c7df68757c',1,'System::TimeSpan']]],
+  ['sign',['Sign',['../dd/d8b/class_system_1_1_math.html#a6e58ff615fe6e8368a2a6e9153510543',1,'System::Math::Sign(int val)'],['../dd/d8b/class_system_1_1_math.html#a92df336806ba0d05e51f38798c0bc07f',1,'System::Math::Sign(double val)']]],
+  ['startswith',['StartsWith',['../db/d0b/class_system_1_1_string.html#ab30700f4c9496af0eeff113c1f28d6ef',1,'System::String']]],
+  ['str',['str',['../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4',1,'System::String']]],
+  ['streamreader',['StreamReader',['../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a2711dfe416913aeaafdfa87daef04d6f',1,'System::IO::StreamReader']]],
+  ['streamreader',['StreamReader',['../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html',1,'System::IO']]],
+  ['streamwriter',['StreamWriter',['../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html',1,'System::IO']]],
+  ['streamwriter',['StreamWriter',['../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a4b28e0ea65b07b6a37a6e11be813f908',1,'System::IO::StreamWriter']]],
+  ['string',['String',['../db/d0b/class_system_1_1_string.html',1,'System']]],
+  ['string',['String',['../db/d0b/class_system_1_1_string.html#a8db865e64c3c3f65ec6a0b6fd8c09a94',1,'System::String::String()'],['../db/d0b/class_system_1_1_string.html#a6930c651a3cab28c061a4dccf7e7cf69',1,'System::String::String(const char *strIn)'],['../db/d0b/class_system_1_1_string.html#a13d9ef0368b8270d120eea4d12de8ddf',1,'System::String::String(const std::string &amp;strIn)']]],
+  ['stringbuilder',['StringBuilder',['../dd/dec/class_system_1_1_string_builder.html',1,'System']]],
+  ['stringbuilder',['StringBuilder',['../dd/dec/class_system_1_1_string_builder.html#a2c6df5bf08a0b2a3212bea769a3d721a',1,'System::StringBuilder']]],
+  ['substring',['Substring',['../db/d0b/class_system_1_1_string.html#ab428f856b90251559b0563c8021f8f54',1,'System::String::Substring(int start) const '],['../db/d0b/class_system_1_1_string.html#a7165035b28b51ceadf18d32ff77d7b25',1,'System::String::Substring(int start, int length) const ']]],
+  ['systemexception',['SystemException',['../d6/d90/class_system_1_1_system_exception.html',1,'System']]],
+  ['systemexception',['SystemException',['../d6/d90/class_system_1_1_system_exception.html#a1180d1f8b7e1d4b2b926307b47cb4cb4',1,'System::SystemException::SystemException()'],['../d6/d90/class_system_1_1_system_exception.html#a58dda67b3247dc59de62470d51d51059',1,'System::SystemException::SystemException(String msg)']]]
 ];

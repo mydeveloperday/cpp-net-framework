@@ -245,145 +245,152 @@ $(document).ready(function(){initNavTree('db/db5/_string_8h_source.html','../../
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(pos);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html#aac0f0d4edf0458dc30fe99ecf51e7f19">LastIndexOf</a>(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; s)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordtype">size_t</span> pos = <a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>().rfind(s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>());</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">if</span> (pos == std::string::npos) {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(pos);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        }</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordtype">int</span> IndexOf(<span class="keywordtype">char</span> c)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keywordtype">size_t</span> pos = <a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>().find(c);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">if</span> (pos == std::string::npos) {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            }</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(pos);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        }</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordtype">int</span> IndexOf(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; s)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordtype">size_t</span> pos = <a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>().find(s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>());</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="keywordflow">if</span> (pos == std::string::npos) {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            }</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(pos);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        }</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordtype">bool</span> StartsWith(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; s)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">if</span> (String::IsNullOrEmpty(s)) {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            }</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">return</span> (IndexOf(s) == 0);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordtype">bool</span> EndsWith(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; s)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keywordflow">if</span> (String::IsNullOrEmpty(s)) {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            }</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">return</span> (IndexOf(s) == <a class="code" href="../../db/d0b/class_system_1_1_string.html#a6e891964a37680c01e21dedac6ffe670">Length</a>() - s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a6e891964a37680c01e21dedac6ffe670">Length</a>());</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> Replace(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; from, <span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; with)</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keywordtype">int</span> pos = IndexOf(from);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">if</span> (pos == -1) {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <span class="keywordflow">return</span> (*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> newstring = (*this);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            newstring.m_str.replace(pos, pos + from.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a6e891964a37680c01e21dedac6ffe670">Length</a>(), with.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>());</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordflow">return</span> newstring;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        }</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> Trim()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> s = (*this);</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                        <span class="keywordflow">if</span> (String::IsNullOrEmpty(s)){</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                                <span class="keywordflow">return</span> s;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                        }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            s = s.TrimEnd();</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            s = s.TrimStart();</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keywordflow">return</span> s;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        }</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> TrimEnd()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> s = (*this);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                        <span class="keywordflow">if</span> (String::IsNullOrEmpty(s)){</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                                <span class="keywordflow">return</span> s;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                        }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            s.m_str.erase(s.m_str.find_last_not_of(<span class="stringliteral">&quot; \n\r\t&quot;</span>) + 1);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordflow">return</span> s;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> TrimStart()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> s = (*this);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                        <span class="keywordflow">if</span> (String::IsNullOrEmpty(s)){</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                                <span class="keywordflow">return</span> s;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                        }</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            s = s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#ab428f856b90251559b0563c8021f8f54">Substring</a>(s.m_str.find_first_not_of(<span class="stringliteral">&quot; \n\r\t&quot;</span>));</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="keywordflow">return</span> s;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        }</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> IsNullOrEmpty(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> &amp;s)</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        {</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordflow">return</span> (s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a6e891964a37680c01e21dedac6ffe670">Length</a>() == 0);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        }</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="../../db/d0b/class_system_1_1_string.html#a502c333ec4f900fdfba43b8d0399b3c5">  252</a></span>&#160;                <span class="keyword">virtual</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> <a class="code" href="../../db/d0b/class_system_1_1_string.html#a502c333ec4f900fdfba43b8d0399b3c5">ToString</a>()</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                        <span class="keywordflow">return</span> (*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                }</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    };</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> operator+(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; a, <span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; b)</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        std::string m_res = a.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>();</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        m_res += b.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>();</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>(m_res.c_str());</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> Concat(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; a, <span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; b)</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    {</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        std::string m_res = a.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>();</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        m_res += b.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>();</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>(m_res.c_str());</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; a, <span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; b)</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    {</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">return</span> (a.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>() == b.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>());</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; a, <span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; b)</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    {</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">return</span> (a.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>() != b.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>());</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    }</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator&lt; (<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; a, <span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; b)</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    {</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">return</span> (a.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>() &lt; b.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>());</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordtype">void</span> PrintTo(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a>&amp; str, ::std::ostream* os);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;}</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="keyword">typedef</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a> <a class="code" href="../../db/d0b/class_system_1_1_string.html">string</a>;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="keyword">using namespace </span>System;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="../../db/d0b/class_system_1_1_string.html#a50fb3429d6256a075c83fc36c402c7b6">  160</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html#a50fb3429d6256a075c83fc36c402c7b6">LastIndexOf</a>(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; s)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordtype">size_t</span> pos = <a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>().rfind(s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>());</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">if</span> (pos == std::string::npos) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(pos);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="../../db/d0b/class_system_1_1_string.html#a2e22c8b1f35f1bde442684777fa0db36">  170</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html#a2e22c8b1f35f1bde442684777fa0db36">IndexOf</a>(<span class="keywordtype">char</span> c)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordtype">size_t</span> pos = <a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>().find(c);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">if</span> (pos == std::string::npos) {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(pos);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="../../db/d0b/class_system_1_1_string.html#a57b873f64fad4781ce182c8bff6af681">  180</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html#a57b873f64fad4781ce182c8bff6af681">IndexOf</a>(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; s)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordtype">size_t</span> pos = <a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>().find(s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>());</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordflow">if</span> (pos == std::string::npos) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(pos);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="../../db/d0b/class_system_1_1_string.html#ab30700f4c9496af0eeff113c1f28d6ef">  190</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html#ab30700f4c9496af0eeff113c1f28d6ef">StartsWith</a>(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; s)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../db/d0b/class_system_1_1_string.html#a44e200de626d914334da412b3899e77c">String::IsNullOrEmpty</a>(s)) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordflow">return</span> (<a class="code" href="../../db/d0b/class_system_1_1_string.html#a2e22c8b1f35f1bde442684777fa0db36">IndexOf</a>(s) == 0);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="../../db/d0b/class_system_1_1_string.html#ae589ec291b589f2530dae7ca37509838">  199</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html#ae589ec291b589f2530dae7ca37509838">EndsWith</a>(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; s)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../db/d0b/class_system_1_1_string.html#a44e200de626d914334da412b3899e77c">String::IsNullOrEmpty</a>(s)) {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keywordflow">return</span> (<a class="code" href="../../db/d0b/class_system_1_1_string.html#a2e22c8b1f35f1bde442684777fa0db36">IndexOf</a>(s) == <a class="code" href="../../db/d0b/class_system_1_1_string.html#a6e891964a37680c01e21dedac6ffe670">Length</a>() - s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a6e891964a37680c01e21dedac6ffe670">Length</a>());</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    </div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="../../db/d0b/class_system_1_1_string.html#a46497ad2ba5ded6e3665b23de628d294">  208</a></span>&#160;        <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> <a class="code" href="../../db/d0b/class_system_1_1_string.html#a46497ad2ba5ded6e3665b23de628d294">Replace</a>(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; from, <span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; with)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordflow">if</span>(from.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a6fcfd4a80bfd7dc324f815cd351bfbdf">Empty</a>()){</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;               <span class="keywordflow">return</span> (*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;               </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            std::string to=with.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>(); </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            std::string <a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>=(*this).str();</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordtype">size_t</span> start_pos = 0;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">while</span>((start_pos = str.find(from.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>(), start_pos)) </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    != std::string::npos) </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                str.replace(start_pos, from.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>().length(), to);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                start_pos += to.length(); </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> newstring = <a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">return</span> newstring;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="../../db/d0b/class_system_1_1_string.html#afe9a754d99917e6c752cc017bf4407aa">  229</a></span>&#160;        <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> <a class="code" href="../../db/d0b/class_system_1_1_string.html#afe9a754d99917e6c752cc017bf4407aa">Trim</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> s = (*this);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="../../db/d0b/class_system_1_1_string.html#a44e200de626d914334da412b3899e77c">String::IsNullOrEmpty</a>(s)){</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                                <span class="keywordflow">return</span> s;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                        }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            s = s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#aa63c21700c69f1f6f8fb22dfdcace635">TrimEnd</a>();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            s = s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#ae3f89704b1833838e0e8f5e1a0f753c6">TrimStart</a>();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="keywordflow">return</span> s;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="../../db/d0b/class_system_1_1_string.html#aa63c21700c69f1f6f8fb22dfdcace635">  241</a></span>&#160;        <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> <a class="code" href="../../db/d0b/class_system_1_1_string.html#aa63c21700c69f1f6f8fb22dfdcace635">TrimEnd</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> s = (*this);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="../../db/d0b/class_system_1_1_string.html#a44e200de626d914334da412b3899e77c">String::IsNullOrEmpty</a>(s)){</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                                <span class="keywordflow">return</span> s;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                        }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            s.m_str.erase(s.m_str.find_last_not_of(<span class="stringliteral">&quot; \n\r\t&quot;</span>) + 1);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">return</span> s;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="../../db/d0b/class_system_1_1_string.html#ae3f89704b1833838e0e8f5e1a0f753c6">  252</a></span>&#160;        <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> <a class="code" href="../../db/d0b/class_system_1_1_string.html#ae3f89704b1833838e0e8f5e1a0f753c6">TrimStart</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> s = (*this);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="../../db/d0b/class_system_1_1_string.html#a44e200de626d914334da412b3899e77c">String::IsNullOrEmpty</a>(s)){</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                                <span class="keywordflow">return</span> s;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                        }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            s = s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#ab428f856b90251559b0563c8021f8f54">Substring</a>(s.m_str.find_first_not_of(<span class="stringliteral">&quot; \n\r\t&quot;</span>));</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordflow">return</span> s;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="../../db/d0b/class_system_1_1_string.html#a44e200de626d914334da412b3899e77c">  263</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html#a44e200de626d914334da412b3899e77c">IsNullOrEmpty</a>(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> &amp;s)</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordflow">return</span> (s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a6e891964a37680c01e21dedac6ffe670">Length</a>() == 0);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="../../db/d0b/class_system_1_1_string.html#a502c333ec4f900fdfba43b8d0399b3c5">  269</a></span>&#160;                <span class="keyword">virtual</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> <a class="code" href="../../db/d0b/class_system_1_1_string.html#a502c333ec4f900fdfba43b8d0399b3c5">ToString</a>()</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                        <span class="keywordflow">return</span> (*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    };</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> operator+(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; a, <span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; b)</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        std::string m_res = a.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        m_res += b.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>();</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>(m_res.c_str());</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> Concat(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; a, <span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; b)</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        std::string m_res = a.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>();</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        m_res += b.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>();</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>(m_res.c_str());</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; a, <span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; b)</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">return</span> (a.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>() == b.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>());</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; a, <span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; b)</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">return</span> (a.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>() != b.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>());</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;   </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator&lt; (<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; a, <span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>&amp; b)</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    {</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">return</span> (a.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>() &lt; b.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>());</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordtype">void</span> PrintTo(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a>&amp; str, ::std::ostream* os);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="keyword">typedef</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a> <a class="code" href="../../db/d0b/class_system_1_1_string.html">string</a>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="keyword">using namespace </span>System;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_system_1_1_string_html_a1b9b8885b0880fc4ddf9a2c7d1ca3dc4"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">System::String::str</a></div><div class="ttdeci">std::string str() const </div><div class="ttdoc">get the std::string from the String (NOT .NET call) </div><div class="ttdef"><b>Definition:</b> String.h:43</div></div>
-<div class="ttc" id="class_system_1_1_string_html_a502c333ec4f900fdfba43b8d0399b3c5"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a502c333ec4f900fdfba43b8d0399b3c5">System::String::ToString</a></div><div class="ttdeci">virtual String ToString()</div><div class="ttdoc">function to print this object </div><div class="ttdef"><b>Definition:</b> String.h:252</div></div>
+<div class="ttc" id="class_system_1_1_string_html_a502c333ec4f900fdfba43b8d0399b3c5"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a502c333ec4f900fdfba43b8d0399b3c5">System::String::ToString</a></div><div class="ttdeci">virtual String ToString()</div><div class="ttdoc">turn the string into a string </div><div class="ttdef"><b>Definition:</b> String.h:269</div></div>
 <div class="ttc" id="class_system_1_1_string_html"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html">System::String</a></div><div class="ttdoc">A generalized string class. </div><div class="ttdef"><b>Definition:</b> String.h:20</div></div>
+<div class="ttc" id="class_system_1_1_string_html_a44e200de626d914334da412b3899e77c"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a44e200de626d914334da412b3899e77c">System::String::IsNullOrEmpty</a></div><div class="ttdeci">static bool IsNullOrEmpty(const String &amp;s)</div><div class="ttdoc">is the string null or empty </div><div class="ttdef"><b>Definition:</b> String.h:263</div></div>
 <div class="ttc" id="class_system_1_1_string_html_a6e0dfed4e43d55aa95ed6ab423ba4a07"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a6e0dfed4e43d55aa95ed6ab423ba4a07">System::String::ToUpper</a></div><div class="ttdeci">String ToUpper() const </div><div class="ttdoc">make an upper case version of the string </div><div class="ttdef"><b>Definition:</b> String.h:95</div></div>
 <div class="ttc" id="class_system_1_1_string_html_a8db865e64c3c3f65ec6a0b6fd8c09a94"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a8db865e64c3c3f65ec6a0b6fd8c09a94">System::String::String</a></div><div class="ttdeci">String()</div><div class="ttdoc">constructor </div><div class="ttdef"><b>Definition:</b> String.h:26</div></div>
 <div class="ttc" id="class_system_1_1_string_html_a6e891964a37680c01e21dedac6ffe670"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a6e891964a37680c01e21dedac6ffe670">System::String::Length</a></div><div class="ttdeci">int Length() const </div><div class="ttdoc">the size of the string </div><div class="ttdef"><b>Definition:</b> String.h:67</div></div>
@@ -392,14 +399,23 @@ $(document).ready(function(){initNavTree('db/db5/_string_8h_source.html','../../
 <div class="ttc" id="class_system_1_1_string_html_ab428f856b90251559b0563c8021f8f54"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#ab428f856b90251559b0563c8021f8f54">System::String::Substring</a></div><div class="ttdeci">String Substring(int start) const </div><div class="ttdoc">return a substring of this string start at a given index </div><div class="ttdef"><b>Definition:</b> String.h:136</div></div>
 <div class="ttc" id="class_system_1_1_string_html_a7165035b28b51ceadf18d32ff77d7b25"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a7165035b28b51ceadf18d32ff77d7b25">System::String::Substring</a></div><div class="ttdeci">String Substring(int start, int length) const </div><div class="ttdoc">return a substring of this string starting at the given index and of size length </div><div class="ttdef"><b>Definition:</b> String.h:143</div></div>
 <div class="ttc" id="class_system_1_1_string_html_a13d9ef0368b8270d120eea4d12de8ddf"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a13d9ef0368b8270d120eea4d12de8ddf">System::String::String</a></div><div class="ttdeci">String(const std::string &amp;strIn)</div><div class="ttdoc">constructor from std::string (NOT .NET API) </div><div class="ttdef"><b>Definition:</b> String.h:37</div></div>
+<div class="ttc" id="class_system_1_1_string_html_ab30700f4c9496af0eeff113c1f28d6ef"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#ab30700f4c9496af0eeff113c1f28d6ef">System::String::StartsWith</a></div><div class="ttdeci">bool StartsWith(const String &amp;s) const </div><div class="ttdoc">does the string start with the specified string </div><div class="ttdef"><b>Definition:</b> String.h:190</div></div>
+<div class="ttc" id="class_system_1_1_string_html_aa63c21700c69f1f6f8fb22dfdcace635"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#aa63c21700c69f1f6f8fb22dfdcace635">System::String::TrimEnd</a></div><div class="ttdeci">String TrimEnd() const </div><div class="ttdoc">remove trailing spaces </div><div class="ttdef"><b>Definition:</b> String.h:241</div></div>
+<div class="ttc" id="class_system_1_1_string_html_a2e22c8b1f35f1bde442684777fa0db36"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a2e22c8b1f35f1bde442684777fa0db36">System::String::IndexOf</a></div><div class="ttdeci">int IndexOf(char c) const </div><div class="ttdoc">find the index of the character </div><div class="ttdef"><b>Definition:</b> String.h:170</div></div>
+<div class="ttc" id="class_system_1_1_string_html_a57b873f64fad4781ce182c8bff6af681"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a57b873f64fad4781ce182c8bff6af681">System::String::IndexOf</a></div><div class="ttdeci">int IndexOf(const String &amp;s) const </div><div class="ttdoc">find the index of the substring </div><div class="ttdef"><b>Definition:</b> String.h:180</div></div>
+<div class="ttc" id="class_system_1_1_string_html_a50fb3429d6256a075c83fc36c402c7b6"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a50fb3429d6256a075c83fc36c402c7b6">System::String::LastIndexOf</a></div><div class="ttdeci">int LastIndexOf(const String &amp;s) const </div><div class="ttdoc">find the last index of the string </div><div class="ttdef"><b>Definition:</b> String.h:160</div></div>
 <div class="ttc" id="class_system_1_1_string_html_a902151b93cb9775c4a4d70a9087a3b95"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a902151b93cb9775c4a4d70a9087a3b95">System::String::operator[]</a></div><div class="ttdeci">Char operator[](int pos) const </div><div class="ttdoc">the indexing function </div><div class="ttdef"><b>Definition:</b> String.h:73</div></div>
 <div class="ttc" id="class_system_1_1_string_html_a1193a448373e2f4c415220c0e3fd3f02"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a1193a448373e2f4c415220c0e3fd3f02">System::String::Equals</a></div><div class="ttdeci">bool Equals(String s) const </div><div class="ttdoc">an equals operator </div><div class="ttdef"><b>Definition:</b> String.h:124</div></div>
 <div class="ttc" id="class_system_1_1_string_html_afacec43588cb2a9c2cc0bad59c7a2eea"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#afacec43588cb2a9c2cc0bad59c7a2eea">System::String::operator+=</a></div><div class="ttdeci">String &amp; operator+=(Char c)</div><div class="ttdoc">string character += operator </div><div class="ttdef"><b>Definition:</b> String.h:79</div></div>
 <div class="ttc" id="class_system_1_1_string_html_a6930c651a3cab28c061a4dccf7e7cf69"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a6930c651a3cab28c061a4dccf7e7cf69">System::String::String</a></div><div class="ttdeci">String(const char *strIn)</div><div class="ttdoc">constructors from literal string </div><div class="ttdef"><b>Definition:</b> String.h:31</div></div>
+<div class="ttc" id="class_system_1_1_string_html_ae589ec291b589f2530dae7ca37509838"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#ae589ec291b589f2530dae7ca37509838">System::String::EndsWith</a></div><div class="ttdeci">bool EndsWith(const String &amp;s) const </div><div class="ttdoc">does the string end with the specified string </div><div class="ttdef"><b>Definition:</b> String.h:199</div></div>
+<div class="ttc" id="class_system_1_1_string_html_ae3f89704b1833838e0e8f5e1a0f753c6"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#ae3f89704b1833838e0e8f5e1a0f753c6">System::String::TrimStart</a></div><div class="ttdeci">String TrimStart() const </div><div class="ttdoc">remove leading spaces </div><div class="ttdef"><b>Definition:</b> String.h:252</div></div>
 <div class="ttc" id="class_system_1_1_string_html_a6fcfd4a80bfd7dc324f815cd351bfbdf"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a6fcfd4a80bfd7dc324f815cd351bfbdf">System::String::Empty</a></div><div class="ttdeci">bool Empty() const </div><div class="ttdoc">a function to determine if the string is empty (NOT .NET call) </div><div class="ttdef"><b>Definition:</b> String.h:61</div></div>
 <div class="ttc" id="class_system_1_1_string_html_afca1429e46bd6b5b5c557da3a3314d32"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#afca1429e46bd6b5b5c557da3a3314d32">System::String::operator+=</a></div><div class="ttdeci">String &amp; operator+=(const String &amp;s)</div><div class="ttdoc">string += operator </div><div class="ttdef"><b>Definition:</b> String.h:87</div></div>
 <div class="ttc" id="class_system_1_1_string_html_a8175432bbc796ad84f4bc996feb081d0"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a8175432bbc796ad84f4bc996feb081d0">System::String::ToLower</a></div><div class="ttdeci">String ToLower() const </div><div class="ttdoc">make a lower case version of the string </div><div class="ttdef"><b>Definition:</b> String.h:105</div></div>
 <div class="ttc" id="class_system_1_1_string_html_aac0f0d4edf0458dc30fe99ecf51e7f19"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#aac0f0d4edf0458dc30fe99ecf51e7f19">System::String::LastIndexOf</a></div><div class="ttdeci">int LastIndexOf(char c) const </div><div class="ttdoc">the last index of this character </div><div class="ttdef"><b>Definition:</b> String.h:150</div></div>
+<div class="ttc" id="class_system_1_1_string_html_a46497ad2ba5ded6e3665b23de628d294"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a46497ad2ba5ded6e3665b23de628d294">System::String::Replace</a></div><div class="ttdeci">String Replace(const String &amp;from, const String &amp;with)</div><div class="ttdoc">replace one string with another </div><div class="ttdef"><b>Definition:</b> String.h:208</div></div>
+<div class="ttc" id="class_system_1_1_string_html_afe9a754d99917e6c752cc017bf4407aa"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#afe9a754d99917e6c752cc017bf4407aa">System::String::Trim</a></div><div class="ttdeci">String Trim() const </div><div class="ttdoc">remove leading and trailing spaces </div><div class="ttdef"><b>Definition:</b> String.h:229</div></div>
 <div class="ttc" id="class_system_1_1_string_html_a0b0b0a53aa6ff787f78f93a8780a163e"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a0b0b0a53aa6ff787f78f93a8780a163e">System::String::Contains</a></div><div class="ttdeci">bool Contains(String s) const </div><div class="ttdoc">does the string contain the specified string </div><div class="ttdef"><b>Definition:</b> String.h:115</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

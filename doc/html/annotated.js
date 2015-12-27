@@ -23,6 +23,7 @@ var annotated =
       [ "DateTime", "d8/dee/class_system_1_1_date_time.html", "d8/dee/class_system_1_1_date_time" ],
       [ "Environment", "d0/da4/class_system_1_1_environment.html", null ],
       [ "Exception", "d1/df8/class_system_1_1_exception.html", "d1/df8/class_system_1_1_exception" ],
+      [ "File", "de/df7/class_system_1_1_file.html", null ],
       [ "InitNet", "d6/d0c/class_system_1_1_init_net.html", "d6/d0c/class_system_1_1_init_net" ],
       [ "Math", "dd/d8b/class_system_1_1_math.html", null ],
       [ "NotImplementedException", "d8/d36/class_system_1_1_not_implemented_exception.html", "d8/d36/class_system_1_1_not_implemented_exception" ],
@@ -33,5 +34,6 @@ var annotated =
       [ "SystemException", "d6/d90/class_system_1_1_system_exception.html", "d6/d90/class_system_1_1_system_exception" ],
       [ "TimeSpan", "d7/de9/class_system_1_1_time_span.html", "d7/de9/class_system_1_1_time_span" ],
       [ "WebClient", "d5/d8c/class_system_1_1_web_client.html", "d5/d8c/class_system_1_1_web_client" ]
-    ] ]
+    ] ],
+    [ "XmlDocument", "d1/de4/class_xml_document.html", "d1/de4/class_xml_document" ]
 ];

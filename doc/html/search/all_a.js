@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['object',['Object',['../d5/df0/class_system_1_1_object.html',1,'System']]],
-  ['object',['Object',['../d5/df0/class_system_1_1_object.html#ad97170a7be4b1b9ec11551cb0f457903',1,'System::Object']]],
-  ['operator_2b_3d',['operator+=',['../db/d0b/class_system_1_1_string.html#afacec43588cb2a9c2cc0bad59c7a2eea',1,'System::String::operator+=(Char c)'],['../db/d0b/class_system_1_1_string.html#afca1429e46bd6b5b5c557da3a3314d32',1,'System::String::operator+=(const String &amp;s)']]],
-  ['operator_5b_5d',['operator[]',['../d1/d3e/class_system_1_1_array.html#a56e773dcafc33b12d2b27d2c7a174f3a',1,'System::Array::operator[]()'],['../d1/ded/class_system_1_1_array_list.html#ac83721e82b9eddd48166fc23a166d1b7',1,'System::ArrayList::operator[]()'],['../d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html#af008fa3d11dafa4aff288c6aa5433002',1,'System::Collections::Generic::Dictionary::operator[](const K &amp;key)'],['../d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html#a2557cab41a886581a3322ffc1cfb7782',1,'System::Collections::Generic::Dictionary::operator[](const K &amp;key) const '],['../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html#a56e773dcafc33b12d2b27d2c7a174f3a',1,'System::Collections::Generic::List::operator[]()'],['../db/d0b/class_system_1_1_string.html#a902151b93cb9775c4a4d70a9087a3b95',1,'System::String::operator[]()']]]
+  ['name',['Name',['../dc/d0d/class_system_1_1_i_o_1_1_file_info.html#a86dbb32617b61eaaec42798f7eb1702e',1,'System::IO::FileInfo']]],
+  ['notimplementedexception',['NotImplementedException',['../d8/d36/class_system_1_1_not_implemented_exception.html',1,'System']]],
+  ['notimplementedexception',['NotImplementedException',['../d8/d36/class_system_1_1_not_implemented_exception.html#a5ee8ceb2371f38a2b21c48f6b6d15521',1,'System::NotImplementedException::NotImplementedException()'],['../d8/d36/class_system_1_1_not_implemented_exception.html#aa40c32483f823347068819fe92f63731',1,'System::NotImplementedException::NotImplementedException(String msg)']]],
+  ['now',['Now',['../d8/dee/class_system_1_1_date_time.html#a6ee5860b195aae7230d461e16257fb6e',1,'System::DateTime']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['readline',['ReadLine',['../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a9dc027c3c756f0644d2277878fba7acc',1,'System::IO::StreamReader']]],
-  ['remove',['Remove',['../d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html#a560a6da72d7a2f4a981aad9481e0a491',1,'System::Collections::Generic::Dictionary::Remove()'],['../d6/da9/class_system_1_1_collections_1_1_generic_1_1_hash_set.html#a560a6da72d7a2f4a981aad9481e0a491',1,'System::Collections::Generic::HashSet::Remove()']]],
-  ['round',['Round',['../dd/d8b/class_system_1_1_math.html#ae3147799608e77171a0abcd82458c411',1,'System::Math']]]
+  ['name',['Name',['../dc/d0d/class_system_1_1_i_o_1_1_file_info.html#a86dbb32617b61eaaec42798f7eb1702e',1,'System::IO::FileInfo']]],
+  ['notimplementedexception',['NotImplementedException',['../d8/d36/class_system_1_1_not_implemented_exception.html#a5ee8ceb2371f38a2b21c48f6b6d15521',1,'System::NotImplementedException::NotImplementedException()'],['../d8/d36/class_system_1_1_not_implemented_exception.html#aa40c32483f823347068819fe92f63731',1,'System::NotImplementedException::NotImplementedException(String msg)']]],
+  ['now',['Now',['../d8/dee/class_system_1_1_date_time.html#a6ee5860b195aae7230d461e16257fb6e',1,'System::DateTime']]]
 ];

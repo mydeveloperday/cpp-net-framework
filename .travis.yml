@@ -146,6 +146,7 @@ after_success:
 - ls /usr/local
 - ls /usr/bin/cl*
 # - if [ "$DOC" == "ON" ]; then ./scripts/publish_doxygen.sh ; fi
+- if [ "$DOC" == "ON" ]; then ./scripts/push_doxygen.sh ; fi
 
 addons:
   coverity_scan:

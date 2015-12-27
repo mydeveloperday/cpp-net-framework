@@ -2,13 +2,7 @@
 #define _INCLUDED_SYSTEM_PATH_H_
 
 #include "System/String.h"
-#include "OS.h"
-
-#include "System/Exception.h"
-#include "System/DateTime.h"
-#include "System/Environment.h"
-
-#include "pragmas.h"
+#include "System/IO.h"
 
 namespace System
 {
@@ -17,11 +11,13 @@ namespace System
     {
     public:
 		/// join 2 directory/files together with a path seperator / 
-        static System::String Combine(System::String a, System::String b)
-        {
-            String res = a + PATH_SEPARATOR + b;
-            return res;
-        }
+        static System::String Combine(const System::String &a, 
+                                      const System::String &b);
+
+        /// get the filename for from the path
+        static System::String GetFileName(const System::String &a);
+
+        static System::String GetFullPath(const System::String &a);
     };
 }
 

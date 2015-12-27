@@ -3,6 +3,10 @@ cmake_minimum_required (VERSION 2.6)
 SET(SOURCE
   System.cxx
   System/Object.cxx
+  Path.cxx
+  System/IO/FileInfo.cxx
+  System/IO/StreamReader.cxx
+  System/IO/File.cxx
 )
 
 SET(HEADERS
@@ -13,6 +17,9 @@ SET(HEADERS
   System/String.h
   System/StringBuilder.h
   System/IO.h
+  System/IO/FileInfo.h
+  System/IO/StreamReader.h
+  System/IO/StreamWriter.h
   System.h
   System/DateTime.h
   System/Environment.h
@@ -27,6 +34,7 @@ SET(HEADERS
   System/Collections/Generic/List.h
   System/Collections/Generic/HashSet.h
   TimeSpan.h
+  Path.h
 )
 
 add_library(cpp-net-framework ${SOURCE} ${HEADERS})

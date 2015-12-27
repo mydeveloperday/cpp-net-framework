@@ -21,6 +21,7 @@ namespace ConsoleApplication1
                 {
                     while (!sr.EndOfStream()) {
                         String s = sr.ReadLine();
+                        s = s.Replace("\r\n","\n");
                         String ns = TransformLine(s);
                         lines.Add(ns);
                     }
@@ -44,7 +45,41 @@ namespace ConsoleApplication1
             String ns = s;
             if (s.Contains("System.Console.Write")) {
                 ns =
-                    ns.Replace("System.Console.Write", "System::Console.Write");
+                    ns.Replace("System.Console.Write", "System::Console::Write");
+            }
+            if (s.Contains("Console.Write")) {
+                ns =
+                    ns.Replace("Console.Write", "Console::Write");
+            }
+            if (s.Contains("string[]")){
+                ns = ns.Replace("string[]", "Array<String>");
+            }
+            if (s.StartsWith("using ")){
+                ns = ns.Replace("using ","#include \"");
+                ns = ns.Replace(".","/");
+                ns = ns.Replace(";",".h\"");
+            }
+            if (s.Contains(".Length")){
+                ns = ns.Replace(".Length",".Length()");
+            }
+            if (s.Contains(".Message")){
+                ns = ns.Replace(".Message",".Message()");
+            }
+            if (s.Contains("Path.")){
+                ns = ns.Replace("Path.","Path::");
+            }
+            if (s.Contains("Program.")){
+                ns = ns.Replace("Program.","Program::");
+            }
+            if (s.Contains("= new "))
+            {
+                ns = ns.Replace("= new ",";// = new ");
+            }
+            if (s.Contains("Environment.")){
+                ns = ns.Replace("Environment.","Environment::");
+            }
+            if (s.Contains("StringComparison.")){
+                ns = ns.Replace("StringComparison.","StringComparison::");
             }
             if (s.Contains("System.IO.")) {
                 ns = ns.Replace("System.IO.", "System::IO::");
@@ -68,11 +103,6 @@ namespace ConsoleApplication1
             if (s.Trim().StartsWith("namespace ")) {
                 if (s.Contains(".")) {
                     ns = ns.Replace(".", "_");
-                }
-            }
-            if (s.Trim().StartsWith("using System.")) {
-                if (s.Contains(".")) {
-                    ns = ns.Replace(".", "::");
                 }
             }
 

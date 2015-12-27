@@ -6,10 +6,9 @@
 
 #include "System.h"
 #include "Path.h"
-
-#include "OS.h"
-
+#include "System/IO/FileInfo.h"
 #include "System/IO/FileNotFoundException.h"
+#include "OS.h"
 
 namespace System
 {
@@ -29,26 +28,7 @@ namespace System
 
         public:
             /// constructor
-            StreamReader(const System::String& file)
-                : m_file(file)
-                , m_disposed(false)
-            {
-                FileInfo info(file);
-                if (string::IsNullOrEmpty(info.Name())) {
-                    throw System::IO::FileNotFoundException();
-                }
-                if (!info.Exists()) {
-                    throw System::IO::FileNotFoundException("File Not Found:"+info.Name());
-                }
-
-                std::string path = info.FullName().str();
-
-#if defined (SUPPORTS_CPLUSPLUS_11)
-                //m_fd = std::shared_ptr<std::ifstream>(new std::ifstream(path.c_str()));
-#else
-                m_fd = new std::ifstream(path.c_str());
-#endif
-            }
+            StreamReader(const System::String& file);
 
             /// destructor
             ~StreamReader()
@@ -62,7 +42,8 @@ namespace System
                 std::string strIn;
                 std::getline((*m_fd), strIn);
 
-                System::String strOut(strIn.c_str());
+                System::String sIn(strIn);
+                System::String strOut = sIn.Replace("\r","");
                 return strOut;
             }
 

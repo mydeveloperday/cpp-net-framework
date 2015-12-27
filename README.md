@@ -77,3 +77,4 @@ https://mydeveloperday.wordpress.com/
 
 This or link back to here
 http://http://mydeveloperday.github.io/cpp-net-framework/
+http://http://mydeveloperday.github.io/cpp-net-framework/doc/html/index.html

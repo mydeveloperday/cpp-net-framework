@@ -6,8 +6,7 @@
 
 #include "System.h"
 #include "Path.h"
-#include "System/Math.h"
-
+#include "System/DateTime.h"
 #include "OS.h"
 
 namespace System
@@ -26,12 +25,7 @@ namespace System
             }
 
             /// constructor within the current directory
-            FileInfo(const System::String& s)
-                : m_path(s)
-            {
-                String cwd = Environment::CurrentDirectory();
-                m_path = System::Path::Combine(cwd, s);
-            }
+            FileInfo(const System::String& s);
 
             /// the full name of the file
             System::String FullName() const

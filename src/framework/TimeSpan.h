@@ -17,7 +17,7 @@
 
 namespace System
 {
-    /// TimeSpan slass
+    /// The TimeSpan class used to present a duration
     class TimeSpan
     {
         // seconds
@@ -105,7 +105,7 @@ namespace System
             return static_cast<uint64_t>(m_duration);
         }
 
-        //// get the total number of fractional days
+        /// get the total number of fractional days
         double TotalDays()
         {
             return static_cast<double>(toSeconds(m_duration)/(3600.0 * 24.0));

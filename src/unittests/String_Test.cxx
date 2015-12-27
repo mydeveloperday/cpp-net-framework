@@ -123,6 +123,18 @@ TEST(StringTest, Replace)
     EXPECT_EQ(String("HelloHello"),String("HelloWorld").Replace("World","Hello"));
     EXPECT_EQ(String("HelloWorld"),String("HelloWorld").Replace("Apples","Oranges"));
     EXPECT_EQ(String("HelloCruelWorld"),String("HelloWorld").Replace("World","CruelWorld"));
+    EXPECT_EQ(String("HelliWirld"),String("HelloWorld").Replace("o","i"));
+
+    String ns = "using System.Collections.Generic;";
+    EXPECT_EQ("using System.Collections.Generic;",ns);
+
+    ns = ns.Replace("using ","#include \"");
+    EXPECT_EQ("#include \"System.Collections.Generic;",ns);
+
+    ns = ns.Replace(".","/");
+    ns = ns.Replace(";",".h\"");
+
+    EXPECT_EQ("#include \"System/Collections/Generic.h\"",ns);
 }
 
 TEST(StringTest, Trim)

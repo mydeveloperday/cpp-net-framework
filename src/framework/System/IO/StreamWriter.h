@@ -31,9 +31,9 @@ namespace System
                 , m_disposed(false)
             {
 #if defined (SUPPORTS_CPLUSPLUS_11)
-                m_fd = std::shared_ptr<std::ofstream>(new std::ofstream(file.str().c_str()));
+                m_fd = std::shared_ptr<std::ofstream>(new std::ofstream(file.str().c_str(),std::ios::binary));
 #else
-                m_fd = new std::ofstream(file.str().c_str());
+                m_fd = new std::ofstream(file.str().c_str(),std::ios::binary);
 #endif
             }
 

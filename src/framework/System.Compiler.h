@@ -15,6 +15,7 @@ namespace System
         class Internals
         {
         public:
+            /// get the name of the compiler
             static String CompilerName()
             {
 #ifdef _MSVC

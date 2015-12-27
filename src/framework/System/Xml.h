@@ -3,6 +3,11 @@
 #include "System/String.h"
 #include "System/IO.h"
 
+/// xml document class
+namespace System
+{
+namespace Xml
+{
 class XmlDocument
 {
     public:
@@ -11,8 +16,14 @@ class XmlDocument
     XmlDocument()
     {}
 
-    void LoadXml(const System::String &file)
+    /// load the xml from a string
+    void LoadXml(const System::String &str)
     {
-        static_cast<void>(file);
+        static_cast<void>(str);
     }
 };
+}
+}
+
+using namespace System::Xml;
+

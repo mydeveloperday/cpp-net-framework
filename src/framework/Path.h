@@ -17,6 +17,7 @@ namespace System
         /// get the filename for from the path
         static System::String GetFileName(const System::String &a);
 
+        /// get the fullpath from a filename
         static System::String GetFullPath(const System::String &a);
     };
 }

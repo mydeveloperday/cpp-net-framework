@@ -45,13 +45,13 @@ namespace System
             return m_str;
         }
 
-        // an std::string casting converter (NOT .NET call)
+        /// an std::string casting converter (NOT .NET call)
         const std::string operator()(std::string&) const
         {
             return str();
         }
 
-        // an const char* casting converter (NOT .NET call)
+        /// an const char* casting converter (NOT .NET call)
         const char* operator()(const char*) const
         {
             return str().c_str();

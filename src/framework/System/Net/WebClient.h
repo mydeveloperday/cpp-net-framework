@@ -101,12 +101,14 @@ namespace System
 
 #ifdef _WIN32
             char data[4096];
+            memset(data,0,4096*sizeof(char));
             while (recv(socketNum, (char*)&data, 4096, 0)) {
                 httpResponse += data;
             }
             closesocket(socketNum);
 #else
             char data[4096];
+            memset(data,0,4096*sizeof(char));
             while ( read(socketNum, &data, 4096) > 0 ) {
                 httpResponse+=data;
             }

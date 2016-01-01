@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['_7eexception',['~Exception',['../d1/df8/class_system_1_1_exception.html#ae55b5e05d3195ae27204e3a2395e54e7',1,'System::Exception']]],
-  ['_7eobject',['~Object',['../d5/df0/class_system_1_1_object.html#ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5',1,'System::Object']]],
-  ['_7estreamreader',['~StreamReader',['../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ac43e1b291ad94a3c9da68c82af0f7224',1,'System::IO::StreamReader']]],
-  ['_7estreamwriter',['~StreamWriter',['../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a67b0062ee3854b4e51ad999949140c5a',1,'System::IO::StreamWriter']]]
+  ['xmldocument',['XmlDocument',['../d1/d48/class_system_1_1_xml_1_1_xml_document.html#a21a5ddc4258283d437983851ab96c5bd',1,'System::Xml::XmlDocument']]],
+  ['xmlnode',['XmlNode',['../d7/d15/class_system_1_1_xml_1_1_xml_node.html#aaa80c3132343aca98d9ca4475c070e34',1,'System::Xml::XmlNode']]],
+  ['xmltoken',['XmlToken',['../df/d65/class_system_1_1_xml_1_1_xml_token.html#aae06ae541b6bbc888e1afc7023ed0a4f',1,'System::Xml::XmlToken::XmlToken()'],['../df/d65/class_system_1_1_xml_1_1_xml_token.html#a2fcc8a9334e65de49b895597025ed15e',1,'System::Xml::XmlToken::XmlToken(const String &amp;s, XmlDataType type)']]]
 ];

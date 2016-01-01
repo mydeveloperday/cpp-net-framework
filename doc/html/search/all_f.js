@@ -6,7 +6,7 @@ var searchData=
   ['tolower',['ToLower',['../db/d0b/class_system_1_1_string.html#a8175432bbc796ad84f4bc996feb081d0',1,'System::String']]],
   ['tomilliseconds',['toMilliseconds',['../d7/de9/class_system_1_1_time_span.html#a8a6c3bc3aafc1cde0cffc1ba9ae2970a',1,'System::TimeSpan']]],
   ['toseconds',['toSeconds',['../d7/de9/class_system_1_1_time_span.html#a8e56704075648f344208eb8ac68758bf',1,'System::TimeSpan']]],
-  ['tostring',['ToString',['../d5/df0/class_system_1_1_object.html#a001d21b09a3d49654c46c18549f86f83',1,'System::Object::ToString()'],['../db/d0b/class_system_1_1_string.html#a502c333ec4f900fdfba43b8d0399b3c5',1,'System::String::ToString()'],['../dd/dec/class_system_1_1_string_builder.html#a502c333ec4f900fdfba43b8d0399b3c5',1,'System::StringBuilder::ToString()']]],
+  ['tostring',['ToString',['../d5/df0/class_system_1_1_object.html#a001d21b09a3d49654c46c18549f86f83',1,'System::Object::ToString()'],['../db/d0b/class_system_1_1_string.html#a502c333ec4f900fdfba43b8d0399b3c5',1,'System::String::ToString()'],['../dd/dec/class_system_1_1_string_builder.html#a502c333ec4f900fdfba43b8d0399b3c5',1,'System::StringBuilder::ToString()'],['../df/d65/class_system_1_1_xml_1_1_xml_token.html#ab8ab5bc064f804e528c1ee7f28244148',1,'System::Xml::XmlToken::ToString(XmlDataType t) const '],['../df/d65/class_system_1_1_xml_1_1_xml_token.html#abf9cb98d5859802d6b90f01feda7b3ff',1,'System::Xml::XmlToken::ToString() const ']]],
   ['totaldays',['TotalDays',['../d7/de9/class_system_1_1_time_span.html#a4ccd8c99b06b9c31ce82cfb2c43610a0',1,'System::TimeSpan']]],
   ['totalmilliseconds',['TotalMilliseconds',['../d7/de9/class_system_1_1_time_span.html#a485a3a5deff1189519eda9d959eba7a5',1,'System::TimeSpan']]],
   ['totalminutes',['TotalMinutes',['../d7/de9/class_system_1_1_time_span.html#a3902b782d64eb0a05cb0cf6ca9ed0936',1,'System::TimeSpan']]],
@@ -16,5 +16,6 @@ var searchData=
   ['trimend',['TrimEnd',['../db/d0b/class_system_1_1_string.html#aa63c21700c69f1f6f8fb22dfdcace635',1,'System::String']]],
   ['trimstart',['TrimStart',['../db/d0b/class_system_1_1_string.html#ae3f89704b1833838e0e8f5e1a0f753c6',1,'System::String']]],
   ['truncate',['Truncate',['../dd/d8b/class_system_1_1_math.html#a657be887f9d7517cc163c40330cbca97',1,'System::Math']]],
-  ['trygetvalue',['TryGetValue',['../d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html#a3409c2d1ec38bb75dc7620769c8ccc30',1,'System::Collections::Generic::Dictionary']]]
+  ['trygetvalue',['TryGetValue',['../d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html#a3409c2d1ec38bb75dc7620769c8ccc30',1,'System::Collections::Generic::Dictionary']]],
+  ['type',['Type',['../df/d65/class_system_1_1_xml_1_1_xml_token.html#a5b34bb8c791c7c81813bb8aaca01f1b7',1,'System::Xml::XmlToken']]]
 ];

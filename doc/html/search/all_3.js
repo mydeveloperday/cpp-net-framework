@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['empty',['Empty',['../db/d0b/class_system_1_1_string.html#a6fcfd4a80bfd7dc324f815cd351bfbdf',1,'System::String']]],
+  ['empty',['Empty',['../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html#a6fcfd4a80bfd7dc324f815cd351bfbdf',1,'System::Collections::Generic::List::Empty()'],['../db/d0b/class_system_1_1_string.html#a6fcfd4a80bfd7dc324f815cd351bfbdf',1,'System::String::Empty()']]],
   ['endofstream',['EndOfStream',['../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ac4a73a8110c98fafb85639c98e9a3185',1,'System::IO::StreamReader']]],
   ['endswith',['EndsWith',['../db/d0b/class_system_1_1_string.html#ae589ec291b589f2530dae7ca37509838',1,'System::String']]],
   ['environment',['Environment',['../d0/da4/class_system_1_1_environment.html',1,'System']]],

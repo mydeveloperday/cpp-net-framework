@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['empty',['Empty',['../db/d0b/class_system_1_1_string.html#a6fcfd4a80bfd7dc324f815cd351bfbdf',1,'System::String']]],
+  ['empty',['Empty',['../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html#a6fcfd4a80bfd7dc324f815cd351bfbdf',1,'System::Collections::Generic::List::Empty()'],['../db/d0b/class_system_1_1_string.html#a6fcfd4a80bfd7dc324f815cd351bfbdf',1,'System::String::Empty()']]],
   ['endofstream',['EndOfStream',['../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ac4a73a8110c98fafb85639c98e9a3185',1,'System::IO::StreamReader']]],
   ['endswith',['EndsWith',['../db/d0b/class_system_1_1_string.html#ae589ec291b589f2530dae7ca37509838',1,'System::String']]],
   ['equals',['Equals',['../db/d0b/class_system_1_1_string.html#a1193a448373e2f4c415220c0e3fd3f02',1,'System::String::Equals(String s) const '],['../db/d0b/class_system_1_1_string.html#a1afa33d9f84633458bf4efc69913fc63',1,'System::String::Equals(String s, StringComparison) const ']]],

@@ -78,6 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
+      <li><a href="functions_vars.html"><span>Variables</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -94,9 +95,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
+      <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_v"><span>v</span></a></li>
       <li><a href="#index_w"><span>w</span></a></li>
       <li><a href="#index_x"><span>x</span></a></li>
       <li><a href="#index_y"><span>y</span></a></li>
@@ -123,7 +126,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -147,7 +150,10 @@ $(document).ready(function(){initNavTree('functions.html','');});
 , <a class="el" href="de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html#a4d729f6a3d40bc34f37255b398ba74db">List&lt; T &gt;</a>
 </li>
 <li>Append()
-: <a class="el" href="dd/dec/class_system_1_1_string_builder.html#a3cb5b764fed6b3a4e55af85552311fee">StringBuilder</a>
+: <a class="el" href="dd/dec/class_system_1_1_string_builder.html#a297dcdf57c6327687b567993a037c2f7">StringBuilder</a>
+</li>
+<li>AppendChild()
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#a9899c74362818f14b07c28aa38ed4c4a">XmlNode</a>
 </li>
 <li>Array()
 : <a class="el" href="d1/d3e/class_system_1_1_array.html#af9474cac29f3177edf5e8d72ea4a440c">Array&lt; T &gt;</a>
@@ -162,10 +168,15 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>Ceiling()
 : <a class="el" href="dd/d8b/class_system_1_1_math.html#a6bc45630d05f5a308f3a2325dff2220a">Math</a>
 </li>
+<li>ChildNodes()
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#aa116f8a5bc1d956ba57eadd337f76285">XmlNode</a>
+</li>
 <li>Clear()
 : <a class="el" href="d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html#aa71d36872f416feaa853788a7a7a7ef8">Dictionary&lt; K, V &gt;</a>
 , <a class="el" href="d6/da9/class_system_1_1_collections_1_1_generic_1_1_hash_set.html#aa71d36872f416feaa853788a7a7a7ef8">HashSet&lt; K &gt;</a>
 , <a class="el" href="de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html#aa71d36872f416feaa853788a7a7a7ef8">List&lt; T &gt;</a>
+, <a class="el" href="db/d0b/class_system_1_1_string.html#aa71d36872f416feaa853788a7a7a7ef8">String</a>
+, <a class="el" href="dd/dec/class_system_1_1_string_builder.html#aa71d36872f416feaa853788a7a7a7ef8">StringBuilder</a>
 </li>
 <li>Combine()
 : <a class="el" href="da/ded/class_system_1_1_path.html#a33ca5eca44b63801ebbd5bad2add801c">Path</a>
@@ -198,6 +209,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>Data()
+: <a class="el" href="df/d65/class_system_1_1_xml_1_1_xml_token.html#a54af9e6c7bddaaa17dbf54714c8ee226">XmlToken</a>
+</li>
 <li>DateTime()
 : <a class="el" href="d8/dee/class_system_1_1_date_time.html#af37fb6744cb008595cb6e384bcd59b31">DateTime</a>
 </li>
@@ -217,6 +231,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a6e2d745cdb7a7b983f861ed6a9a541a7">StreamReader</a>
 , <a class="el" href="d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a6e2d745cdb7a7b983f861ed6a9a541a7">StreamWriter</a>
 </li>
+<li>DocumentElement()
+: <a class="el" href="d1/d48/class_system_1_1_xml_1_1_xml_document.html#a688c2ba9ec9a4c481f06c7b47198286b">XmlDocument</a>
+</li>
 <li>DownloadString()
 : <a class="el" href="d5/d8c/class_system_1_1_web_client.html#abf0fb294d1cc128d24c2fe22bb269e25">WebClient</a>
 </li>
@@ -225,7 +242,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
 <li>Empty()
-: <a class="el" href="db/d0b/class_system_1_1_string.html#a6fcfd4a80bfd7dc324f815cd351bfbdf">String</a>
+: <a class="el" href="de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html#a6fcfd4a80bfd7dc324f815cd351bfbdf">List&lt; T &gt;</a>
+, <a class="el" href="db/d0b/class_system_1_1_string.html#a6fcfd4a80bfd7dc324f815cd351bfbdf">String</a>
 </li>
 <li>EndOfStream()
 : <a class="el" href="d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ac4a73a8110c98fafb85639c98e9a3185">StreamReader</a>
@@ -256,6 +274,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>FileNotFoundException()
 : <a class="el" href="d5/db2/class_system_1_1_i_o_1_1_file_not_found_exception.html#a1b53d5c914bd39da30e0fa20c67d800a">FileNotFoundException</a>
 </li>
+<li>FirstChild()
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#a2b2e2a70cad2b567103f1f6a4967aa1b">XmlNode</a>
+</li>
 <li>Floor()
 : <a class="el" href="dd/d8b/class_system_1_1_math.html#a954f1d716595f4fa813f559439fa7b7a">Math</a>
 </li>
@@ -282,6 +303,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>HasChildNodes()
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#a0865a01dd5e4f8f67587acbe03bf7f18">XmlNode</a>
+</li>
 <li>HashSet()
 : <a class="el" href="d6/da9/class_system_1_1_collections_1_1_generic_1_1_hash_set.html#aa4f0e7330b8f252895e4efe56ff777e9">HashSet&lt; K &gt;</a>
 </li>
@@ -302,6 +326,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>LastChild()
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#a5809631c015a0a0af13d95f610f45aba">XmlNode</a>
+</li>
 <li>LastIndexOf()
 : <a class="el" href="db/d0b/class_system_1_1_string.html#aac0f0d4edf0458dc30fe99ecf51e7f19">String</a>
 </li>
@@ -316,10 +343,28 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>LoadXml()
 : <a class="el" href="d1/d48/class_system_1_1_xml_1_1_xml_document.html#ab40d2855f06a1ed1e5174b4fc9160841">XmlDocument</a>
 </li>
+<li>LoadXmlParse()
+: <a class="el" href="d1/d48/class_system_1_1_xml_1_1_xml_document.html#a3303d94e3f6c2847c8303f5a52655969">XmlDocument</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>m_Children
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#a78d907981f0526769cb155913c91ede3">XmlNode</a>
+</li>
+<li>m_name
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#abcf1cd8e42c8d2c130ff1d20e3083fb8">XmlNode</a>
+</li>
+<li>m_next
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#aaeb4f08f2dee3e90985318dde751e3df">XmlNode</a>
+</li>
+<li>m_prev
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#acb09ccf5b3774a62dae9fc601746d4c3">XmlNode</a>
+</li>
+<li>m_value
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#a9142af8adfc48abaf6305666ca6c9874">XmlNode</a>
+</li>
 <li>Max()
 : <a class="el" href="dd/d8b/class_system_1_1_math.html#a4f810b796deffcdc635daa6f35e23def">Math</a>
 </li>
@@ -330,7 +375,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="d7/de9/class_system_1_1_time_span.html#afd39574cfccb3a8fcc6c24b638c01b3a">TimeSpan</a>
 </li>
 <li>Min()
-: <a class="el" href="dd/d8b/class_system_1_1_math.html#a15844d65cac2a44ebaed3ed314996f7c">Math</a>
+: <a class="el" href="dd/d8b/class_system_1_1_math.html#a02e19fa3c2abb42473978cf6d94e2e1d">Math</a>
 </li>
 <li>Minutes()
 : <a class="el" href="d7/de9/class_system_1_1_time_span.html#ab597d11badcb94fe7bdbcca253528166">TimeSpan</a>
@@ -344,6 +389,10 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
 <li>Name()
 : <a class="el" href="dc/d0d/class_system_1_1_i_o_1_1_file_info.html#a86dbb32617b61eaaec42798f7eb1702e">FileInfo</a>
+, <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#a7ec30b7db4c6d9c40561f9188a97b837">XmlNode</a>
+</li>
+<li>NextSibling()
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#a9d1c3351a2b6d7b4d95d1ca5b0602837">XmlNode</a>
 </li>
 <li>NotImplementedException()
 : <a class="el" href="d8/d36/class_system_1_1_not_implemented_exception.html#a5ee8ceb2371f38a2b21c48f6b6d15521">NotImplementedException</a>
@@ -370,6 +419,13 @@ $(document).ready(function(){initNavTree('functions.html','');});
 , <a class="el" href="d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html#a2557cab41a886581a3322ffc1cfb7782">Dictionary&lt; K, V &gt;</a>
 , <a class="el" href="de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html#a56e773dcafc33b12d2b27d2c7a174f3a">List&lt; T &gt;</a>
 , <a class="el" href="db/d0b/class_system_1_1_string.html#a902151b93cb9775c4a4d70a9087a3b95">String</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>PreviousSibling()
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#a0c1c1c272622a14f573ff26761a2a557">XmlNode</a>
 </li>
 </ul>
 
@@ -431,7 +487,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 , <a class="el" href="d7/de9/class_system_1_1_time_span.html#a4b25bb103f4e00fab78f30540d415072">TimeSpan</a>
 </li>
 <li>TimeSpan()
-: <a class="el" href="d7/de9/class_system_1_1_time_span.html#a1a0f7f7be10a0db293c51ca43c178a9f">TimeSpan</a>
+: <a class="el" href="d7/de9/class_system_1_1_time_span.html#ac63dd9b803f026e2de99880913d4c45c">TimeSpan</a>
 </li>
 <li>ToLower()
 : <a class="el" href="db/d0b/class_system_1_1_string.html#a8175432bbc796ad84f4bc996feb081d0">String</a>
@@ -446,6 +502,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="d5/df0/class_system_1_1_object.html#a001d21b09a3d49654c46c18549f86f83">Object</a>
 , <a class="el" href="db/d0b/class_system_1_1_string.html#a502c333ec4f900fdfba43b8d0399b3c5">String</a>
 , <a class="el" href="dd/dec/class_system_1_1_string_builder.html#a502c333ec4f900fdfba43b8d0399b3c5">StringBuilder</a>
+, <a class="el" href="df/d65/class_system_1_1_xml_1_1_xml_token.html#abf9cb98d5859802d6b90f01feda7b3ff">XmlToken</a>
 </li>
 <li>TotalDays()
 : <a class="el" href="d7/de9/class_system_1_1_time_span.html#a4ccd8c99b06b9c31ce82cfb2c43610a0">TimeSpan</a>
@@ -477,6 +534,16 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>TryGetValue()
 : <a class="el" href="d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html#a3409c2d1ec38bb75dc7620769c8ccc30">Dictionary&lt; K, V &gt;</a>
 </li>
+<li>Type()
+: <a class="el" href="df/d65/class_system_1_1_xml_1_1_xml_token.html#a5b34bb8c791c7c81813bb8aaca01f1b7">XmlToken</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
+<li>Value()
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#a54ac0040bd27bd078a8aee1a04a20a6a">XmlNode</a>
+</li>
 </ul>
 
 
@@ -496,6 +563,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a class="anchor" id="index_x"></a>- x -</h3><ul>
 <li>XmlDocument()
 : <a class="el" href="d1/d48/class_system_1_1_xml_1_1_xml_document.html#a21a5ddc4258283d437983851ab96c5bd">XmlDocument</a>
+</li>
+<li>XmlNode()
+: <a class="el" href="d7/d15/class_system_1_1_xml_1_1_xml_node.html#aaa80c3132343aca98d9ca4475c070e34">XmlNode</a>
+</li>
+<li>XmlToken()
+: <a class="el" href="df/d65/class_system_1_1_xml_1_1_xml_token.html#aae06ae541b6bbc888e1afc7023ed0a4f">XmlToken</a>
 </li>
 </ul>
 

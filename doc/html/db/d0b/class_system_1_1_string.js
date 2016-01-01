@@ -8,7 +8,7 @@ var class_system_1_1_string =
     [ "Empty", "db/d0b/class_system_1_1_string.html#a6fcfd4a80bfd7dc324f815cd351bfbdf", null ],
     [ "EndsWith", "db/d0b/class_system_1_1_string.html#ae589ec291b589f2530dae7ca37509838", null ],
     [ "Equals", "db/d0b/class_system_1_1_string.html#a1193a448373e2f4c415220c0e3fd3f02", null ],
-    [ "Equals", "db/d0b/class_system_1_1_string.html#a1afa33d9f84633458bf4efc69913fc63", null ],
+    [ "Equals", "db/d0b/class_system_1_1_string.html#afc3b35304dd14f02ff9733c9bb8f2b3b", null ],
     [ "IndexOf", "db/d0b/class_system_1_1_string.html#a2e22c8b1f35f1bde442684777fa0db36", null ],
     [ "IndexOf", "db/d0b/class_system_1_1_string.html#a57b873f64fad4781ce182c8bff6af681", null ],
     [ "LastIndexOf", "db/d0b/class_system_1_1_string.html#aac0f0d4edf0458dc30fe99ecf51e7f19", null ],

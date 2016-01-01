@@ -19,6 +19,7 @@ TEST(StringTest, Creation)
     EXPECT_EQ("HelloWorld", res.str());
 
     EXPECT_EQ("Hello/World", resb.str());
+    // EXPECT_EQ("Hello/World", static_cast<const char *>(resb));
 }
 
 TEST(StringTest, Case)
@@ -133,6 +134,7 @@ TEST(StringTest, Replace)
 
     ns = ns.Replace(".","/");
     ns = ns.Replace(";",".h\"");
+    ns = ns.Replace("",".h\"");
 
     EXPECT_EQ("#include \"System/Collections/Generic.h\"",ns);
 }
@@ -154,6 +156,8 @@ TEST(StringTest, Trim)
     EXPECT_EQ(String("Hello"),String("Hello").TrimEnd());
     EXPECT_EQ(String("   Hello"),String("   Hello   ").TrimEnd());
     EXPECT_EQ(String(""),String("").Trim());
+    EXPECT_EQ(String(""),String("").TrimEnd());
+    EXPECT_EQ(String(""),String("").TrimStart());
 }
 
 TEST(StringTest, NullOrEmpty)
@@ -167,4 +171,12 @@ TEST(StringTest, NullOrEmpty)
     myString.Clear();
     
     EXPECT_TRUE(String::IsNullOrEmpty(myString));
+}
+
+TEST(StringTest, Equals)
+{
+    EXPECT_TRUE(String("Hello").Equals("Hello"));
+    EXPECT_FALSE(String("Hello").Equals("hello"));
+    EXPECT_TRUE(String("Hello").Equals("Hello",OrdinalIgnoreCase));
+    EXPECT_TRUE(String("Hello").Equals("hello",OrdinalIgnoreCase));
 }

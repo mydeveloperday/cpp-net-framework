@@ -17,7 +17,7 @@ typedef char Char;
 namespace System
 {
     /// string comparison enumeration
-	enum StringComparison { OrdinalIgnoreCase }; 
+	typedef enum  { OrdinalIgnoreCase } StringComparison; 
 
 	/// A generalized string class
     class String : public Object
@@ -144,8 +144,13 @@ namespace System
         }
 
         /// an equals operator using string comparison options
-        bool Equals(String s,StringComparison) const
+        bool Equals(String s,StringComparison comparison) const
         {
+            if (comparison==OrdinalIgnoreCase){
+                String ns=s.ToLower();
+                String ts = (*this).ToLower();
+                return (ts.str() == ns.str());    
+            }
             return (str() == s.str());
         }
 

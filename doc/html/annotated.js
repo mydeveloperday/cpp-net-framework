@@ -19,7 +19,9 @@ var annotated =
         [ "StreamWriter", "d7/d47/class_system_1_1_i_o_1_1_stream_writer.html", "d7/d47/class_system_1_1_i_o_1_1_stream_writer" ]
       ] ],
       [ "Xml", null, [
-        [ "XmlDocument", "d1/d48/class_system_1_1_xml_1_1_xml_document.html", "d1/d48/class_system_1_1_xml_1_1_xml_document" ]
+        [ "XmlDocument", "d1/d48/class_system_1_1_xml_1_1_xml_document.html", "d1/d48/class_system_1_1_xml_1_1_xml_document" ],
+        [ "XmlNode", "d7/d15/class_system_1_1_xml_1_1_xml_node.html", "d7/d15/class_system_1_1_xml_1_1_xml_node" ],
+        [ "XmlToken", "df/d65/class_system_1_1_xml_1_1_xml_token.html", "df/d65/class_system_1_1_xml_1_1_xml_token" ]
       ] ],
       [ "Array", "d1/d3e/class_system_1_1_array.html", "d1/d3e/class_system_1_1_array" ],
       [ "ArrayList", "d1/ded/class_system_1_1_array_list.html", "d1/ded/class_system_1_1_array_list" ],

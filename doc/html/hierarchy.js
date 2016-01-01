@@ -19,6 +19,7 @@ var hierarchy =
     [ "InitNet", "d6/d0c/class_system_1_1_init_net.html", null ],
     [ "Internals", "d6/dd6/class_system_1_1_compiler_1_1_internals.html", null ],
     [ "List< T >", "de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html", null ],
+    [ "List< System::Xml::XmlNode >", "de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html", null ],
     [ "Math", "dd/d8b/class_system_1_1_math.html", null ],
     [ "Object", "d5/df0/class_system_1_1_object.html", [
       [ "String", "db/d0b/class_system_1_1_string.html", null ],
@@ -29,5 +30,8 @@ var hierarchy =
     [ "StreamWriter", "d7/d47/class_system_1_1_i_o_1_1_stream_writer.html", null ],
     [ "TimeSpan", "d7/de9/class_system_1_1_time_span.html", null ],
     [ "WebClient", "d5/d8c/class_system_1_1_web_client.html", null ],
-    [ "XmlDocument", "d1/d48/class_system_1_1_xml_1_1_xml_document.html", null ]
+    [ "XmlNode", "d7/d15/class_system_1_1_xml_1_1_xml_node.html", [
+      [ "XmlDocument", "d1/d48/class_system_1_1_xml_1_1_xml_document.html", null ]
+    ] ],
+    [ "XmlToken", "df/d65/class_system_1_1_xml_1_1_xml_token.html", null ]
 ];

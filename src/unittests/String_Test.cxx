@@ -179,4 +179,7 @@ TEST(StringTest, Equals)
     EXPECT_FALSE(String("Hello").Equals("hello"));
     EXPECT_TRUE(String("Hello").Equals("Hello",OrdinalIgnoreCase));
     EXPECT_TRUE(String("Hello").Equals("hello",OrdinalIgnoreCase));
+    
+    EXPECT_TRUE(String("Hello").Equals("Hello",Ordinal));
+    EXPECT_FALSE(String("Hello").Equals("hello",Ordinal));
 }

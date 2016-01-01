@@ -17,7 +17,7 @@ typedef char Char;
 namespace System
 {
     /// string comparison enumeration
-	typedef enum  { OrdinalIgnoreCase } StringComparison; 
+	typedef enum  { Ordinal, OrdinalIgnoreCase } StringComparison; 
 
 	/// A generalized string class
     class String : public Object

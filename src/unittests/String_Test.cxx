@@ -160,4 +160,11 @@ TEST(StringTest, NullOrEmpty)
 {
     EXPECT_FALSE(String::IsNullOrEmpty(String("Hello")));
     EXPECT_TRUE(String::IsNullOrEmpty(String("")));
+    
+    String myString="Hello";
+    EXPECT_FALSE(String::IsNullOrEmpty(myString));
+    
+    myString.Clear();
+    
+    EXPECT_TRUE(String::IsNullOrEmpty(myString));
 }

@@ -33,6 +33,11 @@ namespace System
                 {
                     return static_cast<int>(m_vec.size());
                 }
+                
+                bool Empty() const
+                {
+                    return (Count()==0);
+                }
 
                 /// the index operator lookup
                 const T& operator[](int index) const

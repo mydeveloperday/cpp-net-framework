@@ -34,12 +34,22 @@ namespace System
 		{
 			m_str+=s;
 		}
+        
+        void Append(char c)
+		{
+			m_str+=c;
+		}
 	
 		/// to .NET string override
 		virtual String ToString()
 		{
 			return m_str.ToString();
 		}
+        
+        void Clear()
+        {
+            m_str.Clear();
+        }
     };
 }
 

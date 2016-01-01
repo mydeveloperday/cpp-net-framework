@@ -1,7 +1,9 @@
 #ifndef _INCLUDED_SYSTEM_STRING_H_
 #define _INCLUDED_SYSTEM_STRING_H_
 
+#include <cstdlib>
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <vector>
 #include <ctype.h>
@@ -83,7 +85,20 @@ namespace System
             m_str = newstring;
             return (*this);
         }
-
+        
+        String& operator+=(int i)
+        {
+            std::string newstring = (*this).str();
+            
+            std::string s;
+            std::stringstream out;
+            out << i;
+            s = out.str();
+            newstring += s;
+            m_str = newstring;
+            return (*this);
+        }
+        
 		/// string += operator
         String& operator+=(const String& s)
         {
@@ -271,6 +286,11 @@ namespace System
 		{
 			return (*this);
 		}
+        
+        void Clear()
+        {
+            m_str.clear();
+        }
     };
 
     /// the plus operator for two strings

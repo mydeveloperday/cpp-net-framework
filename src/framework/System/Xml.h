@@ -170,7 +170,7 @@ class XmlDocument : public XmlNode
         
         XmlNode &currentNode=(*this);
         int depth=0;
-        for(size_t i=0;i<toks.Count();i++)
+        for(int i=0;i<toks.Count();i++)
         {
             if (toks[i].Type()==OpeningTag){
                 currentNode.Name(toks[i].Data());
@@ -204,7 +204,7 @@ class XmlDocument : public XmlNode
         XmlDataType   currentType=OpeningTag;
         
         char lastc = '\0';
-        for(size_t i=0;i<str.Length();i++)
+        for(int i=0;i<str.Length();i++)
         {
             char c = str[i];
             

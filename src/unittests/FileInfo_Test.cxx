@@ -18,6 +18,13 @@ TEST(FileInfoTest, BasicFileOperations)
     EXPECT_TRUE(info.Name().Equals("myfile.txt"));
 
     EXPECT_TRUE(info.Extension().Equals(".txt"));
+    
+    try {
+    StreamReader sr("nonexistant_file.txt");
+    sr.ReadLine();
+    }
+    catch(FileNotFoundException &)
+    {}
 }
 
 TEST(EnvironmentTests, BasicEnvironmentOperations)

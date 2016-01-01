@@ -86,6 +86,7 @@ namespace System
             return (*this);
         }
         
+        /// string integer += operator
         String& operator+=(int i)
         {
             std::string newstring = (*this).str();
@@ -287,6 +288,7 @@ namespace System
 			return (*this);
 		}
         
+        /// empty the string
         void Clear()
         {
             m_str.clear();

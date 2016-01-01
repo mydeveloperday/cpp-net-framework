@@ -34,6 +34,7 @@ namespace System
                     return static_cast<int>(m_vec.size());
                 }
                 
+                /// is the list empty
                 bool Empty() const
                 {
                     return (Count()==0);

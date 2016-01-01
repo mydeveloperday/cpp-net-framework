@@ -9,6 +9,7 @@ namespace System
 namespace Xml
 {
     
+/// internal enumberation used for XML parsing
 typedef enum { OpeningTag, ClosingTag, DataNode} XmlDataType;  
 
 /// internal class used for parsing XML
@@ -18,14 +19,17 @@ class XmlToken
     XmlDataType m_type;
     
     public:
+    /// the constructor
     XmlToken()
     {}
     
+    /// constructor based on data and type
     XmlToken(const String &s,XmlDataType type):
         m_data(s),
         m_type(type)
     {}
     
+    /// xmldatatype to string
     String ToString(XmlDataType t) const
     {
         switch(t){
@@ -36,14 +40,17 @@ class XmlToken
         return "Unknown Type";
     }
     
+    /// get the xml data type
     XmlDataType Type() const{
         return m_type;
     }
     
+    /// gets the data of the token
     String Data() const {
         return m_data;
     }
     
+    /// tostring converter
     String ToString() const {
         String s;
         
@@ -59,70 +66,89 @@ class XmlToken
 class XmlNode
 {
     protected:
+    /// the node sub children
     List<XmlNode> m_Children;
 
+    /// the previous sibling
     XmlNode *m_prev;
+    
+    /// the next sibling
     XmlNode *m_next;
 
+    /// the name of the node
     String m_name;
+    
+    /// the value of the node
     String m_value;
 
     public:
+    /// Constructor for XmlNode
     XmlNode():
         m_prev(nullptr),
         m_next(nullptr)
     {
     }
 
+    /// get the last child
     XmlNode LastChild()
     {
         return m_Children[m_Children.Count()-1];
     }
     
+    /// set the name of the node
     void Name(const String &name)
     {
         m_name =  name;
     }
     
+    /// get the name of the node
     String Name() const{
         return m_name;
     }
     
+    /// set the value of the node
     void Value(const String &value)
     {
         m_value =  value;
     }
     
+    /// get the value of the node
     String Value() const
     {
         return m_value;
     }
     
+    /// append a child to the node
     void AppendChild(XmlNode &node)
     {
         m_Children.Add(node);
     }
 
+    /// get the first child
     XmlNode FirstChild()
     {
         return m_Children[0];
     }
 
+    /// does the node have child nodes
     bool HasChildNodes()
     {
         return !m_Children.Empty();
     }
 
+    /// get the previous sibling
     XmlNode PreviousSibling()
     {
         return *m_prev;
     }
 
+    /// get the next sibling
     XmlNode NextSibling()
     {
         return *m_next;
     }
     
+    /// get the child nodes
     List<XmlNode> ChildNodes()
     {
         return m_Children;
@@ -167,6 +193,7 @@ class XmlDocument : public XmlNode
         System::Console::WriteLine(str1);
     }   
     
+    /// internal parse to XmlToken
     List<XmlToken> LoadXmlParse(const System::String &str)
     {
         List<XmlToken> dataElements;
@@ -220,6 +247,7 @@ class XmlDocument : public XmlNode
         return dataElements;
     }
 
+    /// the document element
     XmlNode DocumentElement()
     {
         return m_Children[0];

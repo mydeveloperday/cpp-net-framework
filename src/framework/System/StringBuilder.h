@@ -35,6 +35,7 @@ namespace System
 			m_str+=s;
 		}
         
+        /// add a character literal
         void Append(char c)
 		{
 			m_str+=c;
@@ -46,6 +47,7 @@ namespace System
 			return m_str.ToString();
 		}
         
+        /// empty the string
         void Clear()
         {
             m_str.Clear();

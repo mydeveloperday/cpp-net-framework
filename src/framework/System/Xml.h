@@ -198,8 +198,6 @@ class XmlDocument : public XmlNode
     {
         List<XmlToken> dataElements;
         
-        bool in_xml_tag=false;
-        
         StringBuilder currentData;
         XmlDataType   currentType=OpeningTag;
         
@@ -209,7 +207,6 @@ class XmlDocument : public XmlNode
             char c = str[i];
             
             if (c=='<'){
-                in_xml_tag=true;
                 if (!String::IsNullOrEmpty(currentData.ToString())){
                     dataElements.Add(XmlToken(currentData.ToString(),currentType));
                     currentData.Clear();
@@ -220,7 +217,6 @@ class XmlDocument : public XmlNode
             }
             
             if (c=='>'){
-                in_xml_tag=false;
                 dataElements.Add(XmlToken(currentData.ToString(),currentType));
                 currentData.Clear();
                 currentType=DataNode;

@@ -52,6 +52,27 @@ namespace System
         {
             m_str.Clear();
         }
+
+        /// the length of the buffer
+        int Length()
+        {
+            return m_str.Length();
+        }
+
+        int MaxCapacity()
+        {
+            // TODO there is no capacity at present
+            return (Length()*2);
+        }
+
+        int Capacity(){
+            return MaxCapacity();
+        }
+
+        char operator[](int index) const
+        {
+            return m_str[index];
+        }
     };
 }
 

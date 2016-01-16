@@ -13,4 +13,6 @@ TEST(StringBuilderTest, Creation)
 	sb.Append("Hello");
 
 	EXPECT_EQ("ABCWorldHello",sb.ToString());
+
+	EXPECT_EQ('C',sb[2]);
 }

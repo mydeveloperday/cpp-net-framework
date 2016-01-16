@@ -1,6 +1,7 @@
 var dir_727fbdeb91f3513b123941eceadbc9db =
 [
     [ "System", "dir_81526cd16b525fdf7f06bf9cdc423904.html", "dir_81526cd16b525fdf7f06bf9cdc423904" ],
+    [ "Char.h", "d5/de4/_char_8h_source.html", null ],
     [ "NullPtr.h", "df/dcf/_null_ptr_8h_source.html", null ],
     [ "OS.h", "dd/d43/_o_s_8h_source.html", null ],
     [ "Path.h", "db/d36/_path_8h_source.html", null ],

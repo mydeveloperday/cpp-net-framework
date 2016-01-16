@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>cpp-net-framework: src/framework/System.h Source File</title>
+<title>cpp-net-framework: Char Class Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -46,8 +46,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
-      <li><a href="../../annotated.html"><span>Data&#160;Structures</span></a></li>
-      <li class="current"><a href="../../files.html"><span>Files</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="../../files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -68,7 +68,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="../../files.html"><span>File&#160;List</span></a></li>
+      <li><a href="../../annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="../../classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
+      <li><a href="../../inherits.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="../../functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -83,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('df/d78/_system_8h_source.html','../../');});
+$(document).ready(function(){initNavTree('d1/de9/class_system_1_1_char.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -101,43 +104,47 @@ $(document).ready(function(){initNavTree('df/d78/_system_8h_source.html','../../
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">System.h</div>  </div>
+<div class="title">Char Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _INCLUDED_SYSTEM_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _INCLUDED_SYSTEM_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;System/String.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;OS.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Path.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Char.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;TimeSpan.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;System/StringBuilder.h&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;System/DateTime.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;System/Exception.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;System/Environment.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;System/Console.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;System/Array.h&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;System/ArrayList.h&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;System/Math.h&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;pragmas.h&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>System</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// all system should be in the header files</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using namespace </span>System;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p>a utility class for character based operations  
+ <a href="../../d1/de9/class_system_1_1_char.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d5/de4/_char_8h_source.html">Char.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aa46e32d258d5e14b76d0cae96e899974"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa46e32d258d5e14b76d0cae96e899974"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsDigit</b> (char ch)</td></tr>
+<tr class="separator:aa46e32d258d5e14b76d0cae96e899974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8188ac5c33206444b07de504f56dc0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8188ac5c33206444b07de504f56dc0f"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsLetter</b> (char ch)</td></tr>
+<tr class="separator:af8188ac5c33206444b07de504f56dc0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92c3498bf265ed0ae89d1f25e018a010"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92c3498bf265ed0ae89d1f25e018a010"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsLetterOrDigit</b> (char ch)</td></tr>
+<tr class="separator:a92c3498bf265ed0ae89d1f25e018a010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4923fa8f31133593a9fa5a66ed0792c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4923fa8f31133593a9fa5a66ed0792c7"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsPunctuation</b> (char ch)</td></tr>
+<tr class="separator:a4923fa8f31133593a9fa5a66ed0792c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0b1c48340dfddef2f553bc6b04aba89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0b1c48340dfddef2f553bc6b04aba89"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsWhiteSpace</b> (char ch)</td></tr>
+<tr class="separator:ad0b1c48340dfddef2f553bc6b04aba89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>a utility class for character based operations </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>src/framework/<a class="el" href="../../d5/de4/_char_8h_source.html">Char.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0219ab3ddb2b0bf25e0582a499228fd4.html">src</a></li><li class="navelem"><a class="el" href="../../dir_727fbdeb91f3513b123941eceadbc9db.html">framework</a></li><li class="navelem"><b>System.h</b></li>
+    <li class="navelem"><b>System</b></li><li class="navelem"><a class="el" href="../../d1/de9/class_system_1_1_char.html">Char</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>

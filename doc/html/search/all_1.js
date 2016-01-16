@@ -1,6 +1,7 @@
 var searchData=
 [
   ['ceiling',['Ceiling',['../dd/d8b/class_system_1_1_math.html#a6bc45630d05f5a308f3a2325dff2220a',1,'System::Math']]],
+  ['char',['Char',['../d1/de9/class_system_1_1_char.html',1,'System']]],
   ['childnodes',['ChildNodes',['../d7/d15/class_system_1_1_xml_1_1_xml_node.html#aa116f8a5bc1d956ba57eadd337f76285',1,'System::Xml::XmlNode']]],
   ['clear',['Clear',['../d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html#aa71d36872f416feaa853788a7a7a7ef8',1,'System::Collections::Generic::Dictionary::Clear()'],['../d6/da9/class_system_1_1_collections_1_1_generic_1_1_hash_set.html#aa71d36872f416feaa853788a7a7a7ef8',1,'System::Collections::Generic::HashSet::Clear()'],['../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html#aa71d36872f416feaa853788a7a7a7ef8',1,'System::Collections::Generic::List::Clear()'],['../db/d0b/class_system_1_1_string.html#aa71d36872f416feaa853788a7a7a7ef8',1,'System::String::Clear()'],['../dd/dec/class_system_1_1_string_builder.html#aa71d36872f416feaa853788a7a7a7ef8',1,'System::StringBuilder::Clear()']]],
   ['combine',['Combine',['../da/ded/class_system_1_1_path.html#a33ca5eca44b63801ebbd5bad2add801c',1,'System::Path']]],

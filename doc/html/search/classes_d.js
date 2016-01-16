@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['webclient',['WebClient',['../d5/d8c/class_system_1_1_web_client.html',1,'System']]]
+  ['timespan',['TimeSpan',['../d7/de9/class_system_1_1_time_span.html',1,'System']]]
 ];

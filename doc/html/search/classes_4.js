@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['hashset',['HashSet',['../d6/da9/class_system_1_1_collections_1_1_generic_1_1_hash_set.html',1,'System::Collections::Generic']]]
+  ['file',['File',['../de/df7/class_system_1_1_file.html',1,'System']]],
+  ['fileinfo',['FileInfo',['../dc/d0d/class_system_1_1_i_o_1_1_file_info.html',1,'System::IO']]],
+  ['filenotfoundexception',['FileNotFoundException',['../d5/db2/class_system_1_1_i_o_1_1_file_not_found_exception.html',1,'System::IO']]]
 ];

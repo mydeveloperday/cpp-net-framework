@@ -57,3 +57,10 @@ TEST(TimeSpanTests, TimeSpan)
 
     EXPECT_NEAR(1.5, span1.TotalDays(),0.1);
 }
+
+TEST(TimeSpanTests, TimeSpan2)
+{
+    TimeSpan baseTimeSpan(12,15,16);
+
+    EXPECT_EQ(12,baseTimeSpan.Hours());
+}

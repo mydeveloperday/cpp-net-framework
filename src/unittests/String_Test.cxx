@@ -50,6 +50,14 @@ TEST(StringTest, Operands)
     EXPECT_FALSE(res == "Apples");
     EXPECT_FALSE(res != "HelloWorld");
     EXPECT_TRUE(res != "Applies");
+
+    /*
+    std::string s1 = a;
+    EXPECT_EQ("Hello",s1);
+
+    const char *s2 = a;
+    EXPECT_EQ("Hello",s2);
+    */
 }
 
 TEST(StringTest, Index)

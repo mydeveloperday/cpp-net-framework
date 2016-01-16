@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['capacity',['Capacity',['../dd/dec/class_system_1_1_string_builder.html#a1d6db7bdf7da56cb3e4bcb16ac4c1e71',1,'System::StringBuilder']]],
   ['ceiling',['Ceiling',['../dd/d8b/class_system_1_1_math.html#a6bc45630d05f5a308f3a2325dff2220a',1,'System::Math']]],
   ['char',['Char',['../d1/de9/class_system_1_1_char.html',1,'System']]],
   ['childnodes',['ChildNodes',['../d7/d15/class_system_1_1_xml_1_1_xml_node.html#aa116f8a5bc1d956ba57eadd337f76285',1,'System::Xml::XmlNode']]],

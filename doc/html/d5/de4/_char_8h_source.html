@@ -116,28 +116,37 @@ $(document).ready(function(){initNavTree('d5/de4/_char_8h_source.html','../../')
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d1/de9/class_system_1_1_char.html">   10</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d1/de9/class_system_1_1_char.html">Char</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> IsLetter(<span class="keywordtype">char</span> ch){</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keywordflow">return</span> isalpha(ch);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        } </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> IsDigit(<span class="keywordtype">char</span> ch){</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">return</span> isdigit(ch);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        } </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> IsLetterOrDigit(<span class="keywordtype">char</span> ch){</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">return</span> IsLetter(ch) || IsDigit(ch);</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d1/de9/class_system_1_1_char.html#af8188ac5c33206444b07de504f56dc0f">   14</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/de9/class_system_1_1_char.html#af8188ac5c33206444b07de504f56dc0f">IsLetter</a>(<span class="keywordtype">char</span> ch){</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">return</span> isalpha(ch);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        } </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d1/de9/class_system_1_1_char.html#aa46e32d258d5e14b76d0cae96e899974">   19</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/de9/class_system_1_1_char.html#aa46e32d258d5e14b76d0cae96e899974">IsDigit</a>(<span class="keywordtype">char</span> ch){</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">return</span> isdigit(ch);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        } </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> IsWhiteSpace(<span class="keywordtype">char</span> ch){</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">return</span> isspace(ch);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        } </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> IsPunctuation(<span class="keywordtype">char</span> ch){</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">return</span> ispunct(ch);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        } </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    };</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using namespace </span>System;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d1/de9/class_system_1_1_char.html#a92c3498bf265ed0ae89d1f25e018a010">   24</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/de9/class_system_1_1_char.html#a92c3498bf265ed0ae89d1f25e018a010">IsLetterOrDigit</a>(<span class="keywordtype">char</span> ch){</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d1/de9/class_system_1_1_char.html#af8188ac5c33206444b07de504f56dc0f">IsLetter</a>(ch) || <a class="code" href="../../d1/de9/class_system_1_1_char.html#aa46e32d258d5e14b76d0cae96e899974">IsDigit</a>(ch);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        } </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d1/de9/class_system_1_1_char.html#ad0b1c48340dfddef2f553bc6b04aba89">   29</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/de9/class_system_1_1_char.html#ad0b1c48340dfddef2f553bc6b04aba89">IsWhiteSpace</a>(<span class="keywordtype">char</span> ch){</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">return</span> isspace(ch);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        } </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d1/de9/class_system_1_1_char.html#a4923fa8f31133593a9fa5a66ed0792c7">   34</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/de9/class_system_1_1_char.html#a4923fa8f31133593a9fa5a66ed0792c7">IsPunctuation</a>(<span class="keywordtype">char</span> ch){</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> ispunct(ch);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        } </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    };</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">using namespace </span>System;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_system_1_1_char_html_af8188ac5c33206444b07de504f56dc0f"><div class="ttname"><a href="../../d1/de9/class_system_1_1_char.html#af8188ac5c33206444b07de504f56dc0f">System::Char::IsLetter</a></div><div class="ttdeci">static bool IsLetter(char ch)</div><div class="ttdoc">is this character is a letter </div><div class="ttdef"><b>Definition:</b> Char.h:14</div></div>
+<div class="ttc" id="class_system_1_1_char_html_aa46e32d258d5e14b76d0cae96e899974"><div class="ttname"><a href="../../d1/de9/class_system_1_1_char.html#aa46e32d258d5e14b76d0cae96e899974">System::Char::IsDigit</a></div><div class="ttdeci">static bool IsDigit(char ch)</div><div class="ttdoc">is the character a digit </div><div class="ttdef"><b>Definition:</b> Char.h:19</div></div>
 <div class="ttc" id="class_system_1_1_char_html"><div class="ttname"><a href="../../d1/de9/class_system_1_1_char.html">System::Char</a></div><div class="ttdoc">a utility class for character based operations </div><div class="ttdef"><b>Definition:</b> Char.h:10</div></div>
+<div class="ttc" id="class_system_1_1_char_html_a4923fa8f31133593a9fa5a66ed0792c7"><div class="ttname"><a href="../../d1/de9/class_system_1_1_char.html#a4923fa8f31133593a9fa5a66ed0792c7">System::Char::IsPunctuation</a></div><div class="ttdeci">static bool IsPunctuation(char ch)</div><div class="ttdoc">is the character a punctuation character </div><div class="ttdef"><b>Definition:</b> Char.h:34</div></div>
+<div class="ttc" id="class_system_1_1_char_html_ad0b1c48340dfddef2f553bc6b04aba89"><div class="ttname"><a href="../../d1/de9/class_system_1_1_char.html#ad0b1c48340dfddef2f553bc6b04aba89">System::Char::IsWhiteSpace</a></div><div class="ttdeci">static bool IsWhiteSpace(char ch)</div><div class="ttdoc">is the the character a whitespace </div><div class="ttdef"><b>Definition:</b> Char.h:29</div></div>
+<div class="ttc" id="class_system_1_1_char_html_a92c3498bf265ed0ae89d1f25e018a010"><div class="ttname"><a href="../../d1/de9/class_system_1_1_char.html#a92c3498bf265ed0ae89d1f25e018a010">System::Char::IsLetterOrDigit</a></div><div class="ttdeci">static bool IsLetterOrDigit(char ch)</div><div class="ttdoc">is the character a digit or letter </div><div class="ttdef"><b>Definition:</b> Char.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

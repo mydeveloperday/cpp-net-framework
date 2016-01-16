@@ -158,26 +158,27 @@ $(document).ready(function(){initNavTree('d5/df1/_string_builder_8h_source.html'
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span> m_str.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a6e891964a37680c01e21dedac6ffe670">Length</a>();</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">int</span> MaxCapacity()</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="comment">// TODO there is no capacity at present</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> (<a class="code" href="../../dd/dec/class_system_1_1_string_builder.html#ad2cc1673d4ad954556c5356c3ad51550">Length</a>()*2);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">int</span> Capacity(){</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span> MaxCapacity();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">char</span> operator[](<span class="keywordtype">int</span> index)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">return</span> m_str[index];</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    };</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">using namespace </span>System;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// the maximum capacity</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">int</span> MaxCapacity()</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">// TODO there is no capacity at present</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> (<a class="code" href="../../dd/dec/class_system_1_1_string_builder.html#ad2cc1673d4ad954556c5356c3ad51550">Length</a>()*2);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../dd/dec/class_system_1_1_string_builder.html#a1d6db7bdf7da56cb3e4bcb16ac4c1e71">   70</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../dd/dec/class_system_1_1_string_builder.html#a1d6db7bdf7da56cb3e4bcb16ac4c1e71">Capacity</a>(){</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">return</span> MaxCapacity();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../dd/dec/class_system_1_1_string_builder.html#a426904e54b7de9bc8c979cffa34c270f">   75</a></span>&#160;        <span class="keywordtype">char</span> <a class="code" href="../../dd/dec/class_system_1_1_string_builder.html#a426904e54b7de9bc8c979cffa34c270f">operator[]</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">return</span> m_str[index];</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    };</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">using namespace </span>System;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_system_1_1_string_html_aa71d36872f416feaa853788a7a7a7ef8"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#aa71d36872f416feaa853788a7a7a7ef8">System::String::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdoc">empty the string </div><div class="ttdef"><b>Definition:</b> String.h:295</div></div>
 <div class="ttc" id="class_system_1_1_string_html_a502c333ec4f900fdfba43b8d0399b3c5"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a502c333ec4f900fdfba43b8d0399b3c5">System::String::ToString</a></div><div class="ttdeci">virtual String ToString()</div><div class="ttdoc">turn the string into a string </div><div class="ttdef"><b>Definition:</b> String.h:289</div></div>
 <div class="ttc" id="class_system_1_1_string_html"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html">System::String</a></div><div class="ttdoc">A generalized string class. </div><div class="ttdef"><b>Definition:</b> String.h:21</div></div>
@@ -186,10 +187,12 @@ $(document).ready(function(){initNavTree('d5/df1/_string_builder_8h_source.html'
 <div class="ttc" id="class_system_1_1_object_html"><div class="ttname"><a href="../../d5/df0/class_system_1_1_object.html">System::Object</a></div><div class="ttdoc">Object class. </div><div class="ttdef"><b>Definition:</b> Object.h:13</div></div>
 <div class="ttc" id="class_system_1_1_string_builder_html_a075c00b2768573fa23aeb2eb632013d6"><div class="ttname"><a href="../../dd/dec/class_system_1_1_string_builder.html#a075c00b2768573fa23aeb2eb632013d6">System::StringBuilder::Append</a></div><div class="ttdeci">void Append(char c)</div><div class="ttdoc">add a character literal </div><div class="ttdef"><b>Definition:</b> StringBuilder.h:39</div></div>
 <div class="ttc" id="class_system_1_1_string_builder_html"><div class="ttname"><a href="../../dd/dec/class_system_1_1_string_builder.html">System::StringBuilder</a></div><div class="ttdoc">A string builder class. </div><div class="ttdef"><b>Definition:</b> StringBuilder.h:16</div></div>
+<div class="ttc" id="class_system_1_1_string_builder_html_a426904e54b7de9bc8c979cffa34c270f"><div class="ttname"><a href="../../dd/dec/class_system_1_1_string_builder.html#a426904e54b7de9bc8c979cffa34c270f">System::StringBuilder::operator[]</a></div><div class="ttdeci">char operator[](int index) const </div><div class="ttdoc">the index operator </div><div class="ttdef"><b>Definition:</b> StringBuilder.h:75</div></div>
 <div class="ttc" id="class_system_1_1_string_builder_html_aa71d36872f416feaa853788a7a7a7ef8"><div class="ttname"><a href="../../dd/dec/class_system_1_1_string_builder.html#aa71d36872f416feaa853788a7a7a7ef8">System::StringBuilder::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdoc">empty the string </div><div class="ttdef"><b>Definition:</b> StringBuilder.h:51</div></div>
 <div class="ttc" id="class_system_1_1_string_builder_html_a297dcdf57c6327687b567993a037c2f7"><div class="ttname"><a href="../../dd/dec/class_system_1_1_string_builder.html#a297dcdf57c6327687b567993a037c2f7">System::StringBuilder::Append</a></div><div class="ttdeci">void Append(const String &amp;s)</div><div class="ttdoc">add a .net string </div><div class="ttdef"><b>Definition:</b> StringBuilder.h:27</div></div>
 <div class="ttc" id="class_system_1_1_string_builder_html_ad2cc1673d4ad954556c5356c3ad51550"><div class="ttname"><a href="../../dd/dec/class_system_1_1_string_builder.html#ad2cc1673d4ad954556c5356c3ad51550">System::StringBuilder::Length</a></div><div class="ttdeci">int Length()</div><div class="ttdoc">the length of the buffer </div><div class="ttdef"><b>Definition:</b> StringBuilder.h:57</div></div>
 <div class="ttc" id="class_system_1_1_string_builder_html_a2c6df5bf08a0b2a3212bea769a3d721a"><div class="ttname"><a href="../../dd/dec/class_system_1_1_string_builder.html#a2c6df5bf08a0b2a3212bea769a3d721a">System::StringBuilder::StringBuilder</a></div><div class="ttdeci">StringBuilder()</div><div class="ttdoc">constructor </div><div class="ttdef"><b>Definition:</b> StringBuilder.h:22</div></div>
+<div class="ttc" id="class_system_1_1_string_builder_html_a1d6db7bdf7da56cb3e4bcb16ac4c1e71"><div class="ttname"><a href="../../dd/dec/class_system_1_1_string_builder.html#a1d6db7bdf7da56cb3e4bcb16ac4c1e71">System::StringBuilder::Capacity</a></div><div class="ttdeci">int Capacity()</div><div class="ttdoc">the capacity of the string </div><div class="ttdef"><b>Definition:</b> StringBuilder.h:70</div></div>
 <div class="ttc" id="class_system_1_1_string_builder_html_a3cb5b764fed6b3a4e55af85552311fee"><div class="ttname"><a href="../../dd/dec/class_system_1_1_string_builder.html#a3cb5b764fed6b3a4e55af85552311fee">System::StringBuilder::Append</a></div><div class="ttdeci">void Append(const char *s)</div><div class="ttdoc">add a string literal </div><div class="ttdef"><b>Definition:</b> StringBuilder.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

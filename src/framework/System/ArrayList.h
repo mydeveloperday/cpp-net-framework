@@ -11,6 +11,9 @@
 
 namespace System
 {
+    namespace Collections
+    {
+
     /// Array class
     class ArrayList
     {
@@ -39,9 +42,28 @@ namespace System
         {
             m_vec.push_back(item);
         }
+
+        // Removes all elements from the ArrayList
+        void Clear()
+        {
+            m_vec.clear();
+        }
+
+        /// Creates a shallow copy of the ArrayList
+        ArrayList Clone()
+        {
+            ArrayList copy;
+            for(size_t i=0;i<m_vec.size();i++)
+            {
+                copy.Add(m_vec[i]);
+            }
+            return copy;
+        }
     };
+    }
 }
 
 using namespace System;
+using namespace System::Collections;
 
 #endif

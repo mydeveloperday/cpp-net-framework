@@ -1,7 +1,7 @@
 var hierarchy =
 [
     [ "Array< T >", "d1/d3e/class_system_1_1_array.html", null ],
-    [ "ArrayList", "d1/ded/class_system_1_1_array_list.html", null ],
+    [ "ArrayList", "da/dfc/class_system_1_1_collections_1_1_array_list.html", null ],
     [ "Char", "d1/de9/class_system_1_1_char.html", null ],
     [ "DateTime", "d8/dee/class_system_1_1_date_time.html", null ],
     [ "Dictionary< K, V >", "d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html", null ],

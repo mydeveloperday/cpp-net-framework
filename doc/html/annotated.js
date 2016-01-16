@@ -6,7 +6,8 @@ var annotated =
           [ "Dictionary", "d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html", "d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary" ],
           [ "HashSet", "d6/da9/class_system_1_1_collections_1_1_generic_1_1_hash_set.html", "d6/da9/class_system_1_1_collections_1_1_generic_1_1_hash_set" ],
           [ "List", "de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html", "de/d52/class_system_1_1_collections_1_1_generic_1_1_list" ]
-        ] ]
+        ] ],
+        [ "ArrayList", "da/dfc/class_system_1_1_collections_1_1_array_list.html", "da/dfc/class_system_1_1_collections_1_1_array_list" ]
       ] ],
       [ "Compiler", null, [
         [ "Internals", "d6/dd6/class_system_1_1_compiler_1_1_internals.html", null ]
@@ -24,7 +25,6 @@ var annotated =
         [ "XmlToken", "df/d65/class_system_1_1_xml_1_1_xml_token.html", "df/d65/class_system_1_1_xml_1_1_xml_token" ]
       ] ],
       [ "Array", "d1/d3e/class_system_1_1_array.html", "d1/d3e/class_system_1_1_array" ],
-      [ "ArrayList", "d1/ded/class_system_1_1_array_list.html", "d1/ded/class_system_1_1_array_list" ],
       [ "Char", "d1/de9/class_system_1_1_char.html", null ],
       [ "DateTime", "d8/dee/class_system_1_1_date_time.html", "d8/dee/class_system_1_1_date_time" ],
       [ "Environment", "d0/da4/class_system_1_1_environment.html", null ],

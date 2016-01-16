@@ -124,11 +124,11 @@ $(document).ready(function(){initNavTree('d9/d01/_stream_reader_8h_source.html',
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html">   18</a></span>&#160;        <span class="keyword">class </span><a class="code" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html">StreamReader</a></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a> m_file;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="comment">// TODO C++ 11 (Travis-CI is prevent me from turning this on)</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#if defined (SUPPORTS_CPLUSPLUS_11)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// TODO C++ 11 (Travis-CI is prevent me from turning this on)</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#if defined(SUPPORTS_CPLUSPLUS_11)</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"></span>            std::shared_ptr&lt;std::ifstream&gt; m_fd;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"></span>            std::ifstream *m_fd;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"></span>            std::ifstream* m_fd;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span>            <span class="keywordtype">bool</span> m_disposed;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
@@ -146,7 +146,7 @@ $(document).ready(function(){initNavTree('d9/d01/_stream_reader_8h_source.html',
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                std::getline((*m_fd), strIn);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a> sIn(strIn);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a> strOut = sIn.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a46497ad2ba5ded6e3665b23de628d294">Replace</a>(<span class="stringliteral">&quot;\r&quot;</span>,<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a> strOut = sIn.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a46497ad2ba5ded6e3665b23de628d294">Replace</a>(<span class="stringliteral">&quot;\r&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordflow">return</span> strOut;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('d9/d01/_stream_reader_8h_source.html',
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">if</span> (!m_disposed) {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    (*m_fd).close();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#if !defined (SUPPORTS_CPLUSPLUS_11)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#if !defined(SUPPORTS_CPLUSPLUS_11)</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor"></span>                    <span class="keyword">delete</span> m_fd;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor"></span>                    m_disposed = <span class="keyword">true</span>;</div>
@@ -179,7 +179,7 @@ $(document).ready(function(){initNavTree('d9/d01/_stream_reader_8h_source.html',
 <div class="ttc" id="class_system_1_1_i_o_1_1_stream_reader_html_a2711dfe416913aeaafdfa87daef04d6f"><div class="ttname"><a href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a2711dfe416913aeaafdfa87daef04d6f">System::IO::StreamReader::StreamReader</a></div><div class="ttdeci">StreamReader(const System::String &amp;file)</div><div class="ttdoc">constructor </div><div class="ttdef"><b>Definition:</b> StreamReader.cxx:10</div></div>
 <div class="ttc" id="class_system_1_1_i_o_1_1_stream_reader_html_a6e2d745cdb7a7b983f861ed6a9a541a7"><div class="ttname"><a href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a6e2d745cdb7a7b983f861ed6a9a541a7">System::IO::StreamReader::Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdoc">dispose method for closing the file </div><div class="ttdef"><b>Definition:</b> StreamReader.h:51</div></div>
 <div class="ttc" id="class_system_1_1_i_o_1_1_stream_reader_html_ac4a73a8110c98fafb85639c98e9a3185"><div class="ttname"><a href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ac4a73a8110c98fafb85639c98e9a3185">System::IO::StreamReader::EndOfStream</a></div><div class="ttdeci">bool EndOfStream()</div><div class="ttdoc">is the stream at the end </div><div class="ttdef"><b>Definition:</b> StreamReader.h:63</div></div>
-<div class="ttc" id="class_system_1_1_string_html_a46497ad2ba5ded6e3665b23de628d294"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a46497ad2ba5ded6e3665b23de628d294">System::String::Replace</a></div><div class="ttdeci">String Replace(const String &amp;from, const String &amp;with)</div><div class="ttdoc">replace one string with another </div><div class="ttdef"><b>Definition:</b> String.h:228</div></div>
+<div class="ttc" id="class_system_1_1_string_html_a46497ad2ba5ded6e3665b23de628d294"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a46497ad2ba5ded6e3665b23de628d294">System::String::Replace</a></div><div class="ttdeci">String Replace(const String &amp;from, const String &amp;with)</div><div class="ttdoc">replace one string with another </div><div class="ttdef"><b>Definition:</b> String.h:229</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

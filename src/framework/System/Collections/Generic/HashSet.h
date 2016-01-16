@@ -14,8 +14,8 @@ namespace System
             /// a generic hashset class
             template <class K> class HashSet
             {
-                std::map<K,bool> m_map;
-                typedef typename std::map<K,bool>::const_iterator it_type;
+                std::map<K, bool> m_map;
+                typedef typename std::map<K, bool>::const_iterator it_type;
 
             public:
                 /// constructor
@@ -30,23 +30,23 @@ namespace System
                 }
 
                 /// add a member to the hashset
-				void Add(const K & key)
-				{
-					m_map[key]=true;
-				}
+                void Add(const K& key)
+                {
+                    m_map[key] = true;
+                }
 
                 /// does the hashset contain a key
-				bool Contains(const K& key) const
-				{
-					return m_map.find(key)!=m_map.end();
-				}
-                
+                bool Contains(const K& key) const
+                {
+                    return m_map.find(key) != m_map.end();
+                }
+
                 /// clear the hashset
                 void Clear()
                 {
                     m_map.clear();
                 }
-                
+
                 /// remove an entry from the hashset
                 void Remove(const K& key)
                 {

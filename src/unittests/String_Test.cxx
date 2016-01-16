@@ -66,7 +66,6 @@ TEST(StringTest, Index)
     EXPECT_EQ(6, String("HelloWorld").LastIndexOf("or"));
     EXPECT_EQ(-1, String("HelloWorld").LastIndexOf("Ap"));
 
- 
     EXPECT_EQ(4, String("HelloWorld").IndexOf('o'));
     EXPECT_EQ(6, String("HelloWorld").IndexOf("or"));
     EXPECT_EQ(-1, String("HelloWorld").IndexOf("Ap"));
@@ -128,56 +127,60 @@ TEST(StringTest, EndsWith)
 
 TEST(StringTest, Replace)
 {
-    EXPECT_EQ(String("WorldWorld"),String("HelloWorld").Replace("Hello","World"));
-    EXPECT_EQ(String("HelloHello"),String("HelloWorld").Replace("World","Hello"));
-    EXPECT_EQ(String("HelloWorld"),String("HelloWorld").Replace("Apples","Oranges"));
-    EXPECT_EQ(String("HelloCruelWorld"),String("HelloWorld").Replace("World","CruelWorld"));
-    EXPECT_EQ(String("HelliWirld"),String("HelloWorld").Replace("o","i"));
+    EXPECT_EQ(
+        String("WorldWorld"), String("HelloWorld").Replace("Hello", "World"));
+    EXPECT_EQ(
+        String("HelloHello"), String("HelloWorld").Replace("World", "Hello"));
+    EXPECT_EQ(String("HelloWorld"),
+        String("HelloWorld").Replace("Apples", "Oranges"));
+    EXPECT_EQ(String("HelloCruelWorld"),
+        String("HelloWorld").Replace("World", "CruelWorld"));
+    EXPECT_EQ(String("HelliWirld"), String("HelloWorld").Replace("o", "i"));
 
     String ns = "using System.Collections.Generic;";
-    EXPECT_EQ("using System.Collections.Generic;",ns);
+    EXPECT_EQ("using System.Collections.Generic;", ns);
 
-    ns = ns.Replace("using ","#include \"");
-    EXPECT_EQ("#include \"System.Collections.Generic;",ns);
+    ns = ns.Replace("using ", "#include \"");
+    EXPECT_EQ("#include \"System.Collections.Generic;", ns);
 
-    ns = ns.Replace(".","/");
-    ns = ns.Replace(";",".h\"");
-    ns = ns.Replace("",".h\"");
+    ns = ns.Replace(".", "/");
+    ns = ns.Replace(";", ".h\"");
+    ns = ns.Replace("", ".h\"");
 
-    EXPECT_EQ("#include \"System/Collections/Generic.h\"",ns);
+    EXPECT_EQ("#include \"System/Collections/Generic.h\"", ns);
 }
 
 TEST(StringTest, Trim)
 {
-    EXPECT_EQ(String("Hello"),String("  Hello").Trim());
-    EXPECT_EQ(String("Hello"),String("Hello  ").Trim());
-    EXPECT_EQ(String("Hello"),String("Hello").Trim());
-    EXPECT_EQ(String("Hello"),String("   Hello   ").Trim());
+    EXPECT_EQ(String("Hello"), String("  Hello").Trim());
+    EXPECT_EQ(String("Hello"), String("Hello  ").Trim());
+    EXPECT_EQ(String("Hello"), String("Hello").Trim());
+    EXPECT_EQ(String("Hello"), String("   Hello   ").Trim());
 
-    EXPECT_EQ(String("Hello"),String("  Hello").TrimStart());
-    EXPECT_EQ(String("Hello  "),String("Hello  ").TrimStart());
-    EXPECT_EQ(String("Hello"),String("Hello").TrimStart());
-    EXPECT_EQ(String("Hello   "),String("   Hello   ").TrimStart());
+    EXPECT_EQ(String("Hello"), String("  Hello").TrimStart());
+    EXPECT_EQ(String("Hello  "), String("Hello  ").TrimStart());
+    EXPECT_EQ(String("Hello"), String("Hello").TrimStart());
+    EXPECT_EQ(String("Hello   "), String("   Hello   ").TrimStart());
 
-    EXPECT_EQ(String("  Hello"),String("  Hello").TrimEnd());
-    EXPECT_EQ(String("Hello"),String("Hello  ").TrimEnd());
-    EXPECT_EQ(String("Hello"),String("Hello").TrimEnd());
-    EXPECT_EQ(String("   Hello"),String("   Hello   ").TrimEnd());
-    EXPECT_EQ(String(""),String("").Trim());
-    EXPECT_EQ(String(""),String("").TrimEnd());
-    EXPECT_EQ(String(""),String("").TrimStart());
+    EXPECT_EQ(String("  Hello"), String("  Hello").TrimEnd());
+    EXPECT_EQ(String("Hello"), String("Hello  ").TrimEnd());
+    EXPECT_EQ(String("Hello"), String("Hello").TrimEnd());
+    EXPECT_EQ(String("   Hello"), String("   Hello   ").TrimEnd());
+    EXPECT_EQ(String(""), String("").Trim());
+    EXPECT_EQ(String(""), String("").TrimEnd());
+    EXPECT_EQ(String(""), String("").TrimStart());
 }
 
 TEST(StringTest, NullOrEmpty)
 {
     EXPECT_FALSE(String::IsNullOrEmpty(String("Hello")));
     EXPECT_TRUE(String::IsNullOrEmpty(String("")));
-    
-    String myString="Hello";
+
+    String myString = "Hello";
     EXPECT_FALSE(String::IsNullOrEmpty(myString));
-    
+
     myString.Clear();
-    
+
     EXPECT_TRUE(String::IsNullOrEmpty(myString));
 }
 
@@ -185,9 +188,9 @@ TEST(StringTest, Equals)
 {
     EXPECT_TRUE(String("Hello").Equals("Hello"));
     EXPECT_FALSE(String("Hello").Equals("hello"));
-    EXPECT_TRUE(String("Hello").Equals("Hello",OrdinalIgnoreCase));
-    EXPECT_TRUE(String("Hello").Equals("hello",OrdinalIgnoreCase));
-    
-    EXPECT_TRUE(String("Hello").Equals("Hello",Ordinal));
-    EXPECT_FALSE(String("Hello").Equals("hello",Ordinal));
+    EXPECT_TRUE(String("Hello").Equals("Hello", OrdinalIgnoreCase));
+    EXPECT_TRUE(String("Hello").Equals("hello", OrdinalIgnoreCase));
+
+    EXPECT_TRUE(String("Hello").Equals("Hello", Ordinal));
+    EXPECT_FALSE(String("Hello").Equals("hello", Ordinal));
 }

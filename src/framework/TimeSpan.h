@@ -37,66 +37,75 @@ namespace System
         }
 
         /// constrcutor from hours minutes and seconds
-        TimeSpan(int hours,int minutes,int seconds)
+        TimeSpan(int hours, int minutes, int seconds)
         {
-            double t= 0.0;
+            double t = 0.0;
 
             int ts = seconds + (60 * minutes) + (3600 * hours);
 
             double dts = static_cast<double>(ts);
-            m_duration = (dts + t)*TIME_SCALE;
+            m_duration = (dts + t) * TIME_SCALE;
         }
 
         /// constrcutor from days, hours minutes and seconds
-        TimeSpan(int days,int hours,int minutes,int seconds)
+        TimeSpan(int days, int hours, int minutes, int seconds)
         {
-            double t= 0.0;
+            double t = 0.0;
 
-            int ts = seconds + (60 * minutes) + (3600 * hours) + (24 * 3600)*days;
+            int ts =
+                seconds + (60 * minutes) + (3600 * hours) + (24 * 3600) * days;
 
             double dts = static_cast<double>(ts);
-            m_duration = (dts + t)*TIME_SCALE;
+            m_duration = (dts + t) * TIME_SCALE;
         }
 
         /// constrcutor from days, hours, minutes, seconds and milliseconds
-        TimeSpan(int days,int hours,int minutes,int seconds,int milliseconds)
+        TimeSpan(
+            int days, int hours, int minutes, int seconds, int milliseconds)
         {
-            double t= ((static_cast<double>(milliseconds)) / 1000.0);
+            double t = ((static_cast<double>(milliseconds)) / 1000.0);
 
-            int ts = seconds + (60 * minutes) + (3600 * hours) + (24 * 3600)*days;
+            int ts =
+                seconds + (60 * minutes) + (3600 * hours) + (24 * 3600) * days;
 
             double dts = static_cast<double>(ts);
-            m_duration = (dts + t)*TIME_SCALE;
+            m_duration = (dts + t) * TIME_SCALE;
         }
 
         /// get the number of days in the time span
         int Days()
         {
-            return static_cast<int>(toSeconds(m_duration)/(3600 * 24));
+            return static_cast<int>(toSeconds(m_duration) / (3600 * 24));
         }
 
         /// get the number of hours in the time span
         int Hours()
         {
-            return static_cast<int>(toSeconds(m_duration) / (3600)) - (Days()*24);
+            return static_cast<int>(toSeconds(m_duration) / (3600)) -
+                (Days() * 24);
         }
 
         /// get the number of minutes in the time span
         int Minutes()
         {
-            return static_cast<int>(toSeconds(m_duration) / (60)) - (Days() * 24 * 60) - (Hours() * 60);
+            return static_cast<int>(toSeconds(m_duration) / (60)) -
+                (Days() * 24 * 60) - (Hours() * 60);
         }
 
         /// get the number of seconds in the time span
         int Seconds()
         {
-            return static_cast<int>(toSeconds(m_duration)) - (Days() * 24 * 60 *60) - (Hours() * 60 *60) - (Minutes()*60);
+            return static_cast<int>(toSeconds(m_duration)) -
+                (Days() * 24 * 60 * 60) - (Hours() * 60 * 60) -
+                (Minutes() * 60);
         }
 
         /// get the number of milliseconds in the time span
         int Milliseconds()
         {
-            return static_cast<int>(static_cast<double>(toSeconds(m_duration) - (Math::Floor(toSeconds(m_duration))))*1000.0);
+            return static_cast<int>(static_cast<double>(toSeconds(m_duration) -
+                                        (Math::Floor(toSeconds(m_duration)))) *
+                1000.0);
         }
 
         /// get the total number of ticks
@@ -108,7 +117,7 @@ namespace System
         /// get the total number of fractional days
         double TotalDays()
         {
-            return static_cast<double>(toSeconds(m_duration)/(3600.0 * 24.0));
+            return static_cast<double>(toSeconds(m_duration) / (3600.0 * 24.0));
         }
 
         /// get the total number of fractional minutes
@@ -132,7 +141,7 @@ namespace System
         /// create a time span from fractional days
         static TimeSpan FromDays(double d)
         {
-            TimeSpan t1(fromSeconds(d*24.0*3600.0));
+            TimeSpan t1(fromSeconds(d * 24.0 * 3600.0));
             return t1;
         }
 
@@ -151,7 +160,7 @@ namespace System
         /// utility function to scale up and down seconds (NOT .NET Call)
         static double toMilliseconds(double d)
         {
-            return (1000.0*d) / TIME_SCALE;
+            return (1000.0 * d) / TIME_SCALE;
         }
     };
 }

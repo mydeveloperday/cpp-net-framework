@@ -18,12 +18,12 @@ namespace System
         {
         }
 
-		/// destructor
+        /// destructor
         virtual ~Object()
         {
         }
 
-		/// function to print this object
+        /// function to print this object
         virtual String ToString();
     };
 }

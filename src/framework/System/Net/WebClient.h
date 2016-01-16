@@ -23,7 +23,7 @@
 
 namespace System
 {
-	/// a utility class for initializing WINSOCK
+    /// a utility class for initializing WINSOCK
     class InitNet
     {
     public:
@@ -39,7 +39,7 @@ namespace System
     /// global initialization of winsock
     InitNet g_initNet;
 
-	/// a web client class for downloading web pages via HTTP
+    /// a web client class for downloading web pages via HTTP
     class WebClient
     {
     public:
@@ -51,17 +51,16 @@ namespace System
         /// Download the contents of this web request
         String DownloadString(String address)
         {
-            struct hostent * host = gethostbyname(address.str().c_str());
+            struct hostent* host = gethostbyname(address.str().c_str());
 
-            if ( (host == nullptr) || (host->h_addr == nullptr)) 
-            {
+            if ((host == nullptr) || (host->h_addr == nullptr)) {
                 throw System::SystemException("Cannot resolve address");
             }
 
             struct sockaddr_in client;
             memset(&client, 0, sizeof(client));
             client.sin_family = AF_INET;
-            client.sin_port = htons( 80 );
+            client.sin_port = htons(80);
             memcpy(&client.sin_addr, host->h_addr, host->h_length);
 
             int socketNum = socket(AF_INET, SOCK_STREAM, 0);
@@ -70,10 +69,8 @@ namespace System
                 throw System::SystemException("Cannot create socket address");
             }
 
-            if ( connect(socketNum, 
-                         (struct sockaddr *)&client, 
-                         sizeof(client)) < 0 ) 
-            {
+            if (connect(socketNum, (struct sockaddr*)&client, sizeof(client)) <
+                0) {
 #ifdef _WIN32
                 closesocket(socketNum);
 #else
@@ -83,17 +80,16 @@ namespace System
             }
 
             String httpRequest;
-            httpRequest= "GET / ";
+            httpRequest = "GET / ";
             httpRequest += "HTTP/1.1\r\n";
             httpRequest += "Host: ";
             httpRequest += address;
             httpRequest += "\r\n\r\n";
 
-            int httpRequestSize=httpRequest.Length();
+            int httpRequestSize = httpRequest.Length();
 
-            if (send(socketNum, httpRequest.str().c_str(), 
-                     httpRequestSize, 0) != httpRequestSize) 
-            {
+            if (send(socketNum, httpRequest.str().c_str(), httpRequestSize,
+                    0) != httpRequestSize) {
                 throw System::SystemException("Error sending request");
             }
 
@@ -101,21 +97,19 @@ namespace System
 
 #ifdef _WIN32
             char data[4096];
-            memset(data,0,4096*sizeof(char));
+            memset(data, 0, 4096 * sizeof(char));
             while (recv(socketNum, (char*)&data, 4096, 0)) {
                 httpResponse += data;
             }
             closesocket(socketNum);
 #else
             char data[4096];
-            memset(data,0,4096*sizeof(char));
-            while ( read(socketNum, &data, 4096) > 0 ) {
-                httpResponse+=data;
+            memset(data, 0, 4096 * sizeof(char));
+            while (read(socketNum, &data, 4096) > 0) {
+                httpResponse += data;
             }
             close(socketNum);
 #endif
-
-            
 
             return httpResponse;
         }

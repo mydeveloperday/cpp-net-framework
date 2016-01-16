@@ -12,8 +12,8 @@ TEST(StreamTest, BasicStreamOperations)
 
     StreamWriter sw(info.Name());
     {
-    sw.WriteLine("Hello World");
-    sw.Dispose();
+        sw.WriteLine("Hello World");
+        sw.Dispose();
     }
 
     EXPECT_TRUE(info.Exists());
@@ -21,14 +21,14 @@ TEST(StreamTest, BasicStreamOperations)
     String input;
     StreamReader sr(info.Name());
     {
-      while(!sr.EndOfStream()){
-        String s = sr.ReadLine();
-        input += s;
-      }
-      sr.Dispose();
+        while (!sr.EndOfStream()) {
+            String s = sr.ReadLine();
+            input += s;
+        }
+        sr.Dispose();
     }
 
-    EXPECT_EQ("Hello World",input);
+    EXPECT_EQ("Hello World", input);
 
     EXPECT_TRUE(info.Exists());
     info.Delete();
@@ -38,19 +38,17 @@ TEST(StreamTest, BasicStreamOperations)
 TEST(StreamTest, NonExistantFiles)
 {
     try {
-      StreamReader sr("NonExistantFile.txt");
+        StreamReader sr("NonExistantFile.txt");
     }
-    catch(Exception &e)
-    {
-      EXPECT_FALSE(String::IsNullOrEmpty(e.Message()));
-      EXPECT_TRUE(true);
+    catch (Exception& e) {
+        EXPECT_FALSE(String::IsNullOrEmpty(e.Message()));
+        EXPECT_TRUE(true);
     }
 
     try {
         StreamReader sr("");
     }
-    catch (Exception &e)
-    {
+    catch (Exception& e) {
         EXPECT_FALSE(String::IsNullOrEmpty(e.Message()));
         EXPECT_TRUE(true);
     }

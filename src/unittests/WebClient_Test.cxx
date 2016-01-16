@@ -9,36 +9,34 @@ using namespace System;
 TEST(WebClientTest, Download)
 {
     {
-    String address="my.cdash.org";
+        String address = "my.cdash.org";
 
-    WebClient client;
-    String reply = client.DownloadString (address);
+        WebClient client;
+        String reply = client.DownloadString(address);
 
-    EXPECT_TRUE(reply.Contains("html"));
+        EXPECT_TRUE(reply.Contains("html"));
     }
 
     {
-        String address="unknown.abc.def";
+        String address = "unknown.abc.def";
 
         WebClient client;
         try {
-            String reply = client.DownloadString (address);
+            String reply = client.DownloadString(address);
         }
-        catch(Exception )
-        {
+        catch (Exception) {
             EXPECT_TRUE(true);
         }
     }
 
     {
-        String address="github.com";
+        String address = "github.com";
 
         WebClient client;
         try {
-            String reply = client.DownloadString (address);
+            String reply = client.DownloadString(address);
         }
-        catch(Exception )
-        {
+        catch (Exception) {
             EXPECT_TRUE(true);
         }
     }

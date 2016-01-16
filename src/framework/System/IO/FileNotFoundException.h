@@ -13,19 +13,19 @@ namespace System
 {
     namespace IO
     {
-		/// A exception throw when a file cannot be found
+        /// A exception throw when a file cannot be found
         class FileNotFoundException : public System::Exception
         {
         public:
             /// constructor
-            FileNotFoundException():
-                System::Exception("File not Found:")
+            FileNotFoundException()
+                : System::Exception("File not Found:")
             {
             }
 
             /// constrcutor with reason
-            FileNotFoundException(const String &msg):
-                 System::Exception(msg)
+            FileNotFoundException(const String& msg)
+                : System::Exception(msg)
             {
             }
         };

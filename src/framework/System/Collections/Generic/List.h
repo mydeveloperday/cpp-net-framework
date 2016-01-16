@@ -33,11 +33,11 @@ namespace System
                 {
                     return static_cast<int>(m_vec.size());
                 }
-                
+
                 /// is the list empty
                 bool Empty() const
                 {
-                    return (Count()==0);
+                    return (Count() == 0);
                 }
 
                 /// the index operator lookup
@@ -51,7 +51,7 @@ namespace System
                 {
                     m_vec.push_back(t);
                 }
-                
+
                 /// clear the contents of the list
                 void Clear()
                 {

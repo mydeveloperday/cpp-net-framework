@@ -13,7 +13,7 @@ namespace System
 {
     namespace IO
     {
-		/// A file information class
+        /// A file information class
         class FileInfo
         {
             System::String m_path;
@@ -75,7 +75,8 @@ namespace System
                     return part;
                 }
 
-                String part = m_path.Substring(Math::Max(lastForwardSlash,lastBackwardSlash) + 1);
+                String part = m_path.Substring(
+                    Math::Max(lastForwardSlash, lastBackwardSlash) + 1);
                 return part;
             }
 
@@ -84,7 +85,8 @@ namespace System
             {
                 int errVal = std::remove(FullName().str().c_str());
                 if (errVal) {
-                    // an error occurred TODO perhaps it should throw if not found)
+                    // an error occurred TODO perhaps it should throw if not
+                    // found)
                     // throw if a directory
                     static_cast<void>(errVal);
                 }
@@ -94,7 +96,8 @@ namespace System
             /// get the creation date of the file
             DateTime CreationTime()
             {
-                throw System::NotImplementedException("FileInfo::Creation time not implemented");
+                throw System::NotImplementedException(
+                    "FileInfo::Creation time not implemented");
             }
         };
     }

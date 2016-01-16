@@ -12,8 +12,6 @@
 
 #include "System/Object.h"
 
-typedef char Char;
-
 namespace System
 {
     /// string comparison enumeration
@@ -73,13 +71,13 @@ namespace System
         }
 
 		/// the indexing function
-        Char operator[](int pos) const
+        char operator[](int pos) const
         {
             return m_str[pos];
         }
 
 		/// string character += operator
-        String& operator+=(Char c)
+        String& operator+=(char c)
         {
             std::string newstring = (*this).str() + c;
             m_str = newstring;

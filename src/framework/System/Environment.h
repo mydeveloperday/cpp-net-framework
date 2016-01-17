@@ -8,7 +8,7 @@
 
 namespace System
 {
-	/// a class for holding information about the OS environment
+    /// a class for holding information about the OS environment
     class Environment
     {
     public:
@@ -21,7 +21,7 @@ namespace System
             // TODO this should be made platform independent and more secure
             char* nbuff = getcwd(buffer, sizeof(buffer));
 
-            return System::String( nbuff ? buffer : "");
+            return System::String(nbuff ? buffer : "");
         }
     };
 }

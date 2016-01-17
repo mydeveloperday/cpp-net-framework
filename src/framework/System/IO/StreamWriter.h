@@ -13,11 +13,11 @@ namespace System
 {
     namespace IO
     {
-		/// a class for writing out to a file
+        /// a class for writing out to a file
         class StreamWriter
         {
             System::String m_file;
-#if defined (SUPPORTS_CPLUSPLUS_11)
+#if defined(SUPPORTS_CPLUSPLUS_11)
             std::shared_ptr<std::ofstream> m_fd;
 #else
             std::ofstream* m_fd;
@@ -30,10 +30,11 @@ namespace System
                 : m_file(file)
                 , m_disposed(false)
             {
-#if defined (SUPPORTS_CPLUSPLUS_11)
-                m_fd = std::shared_ptr<std::ofstream>(new std::ofstream(file.str().c_str(),std::ios::binary));
+#if defined(SUPPORTS_CPLUSPLUS_11)
+                m_fd = std::shared_ptr<std::ofstream>(
+                    new std::ofstream(file.str().c_str(), std::ios::binary));
 #else
-                m_fd = new std::ofstream(file.str().c_str(),std::ios::binary);
+                m_fd = new std::ofstream(file.str().c_str(), std::ios::binary);
 #endif
             }
 
@@ -54,7 +55,7 @@ namespace System
             {
                 if (!m_disposed) {
                     (*m_fd).close();
-#if !defined (SUPPORTS_CPLUSPLUS_11)
+#if !defined(SUPPORTS_CPLUSPLUS_11)
                     delete m_fd;
 #endif
                     m_disposed = true;

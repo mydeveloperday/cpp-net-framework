@@ -21,7 +21,7 @@ namespace ConsoleApplication1
                 {
                     while (!sr.EndOfStream()) {
                         String s = sr.ReadLine();
-                        s = s.Replace("\r\n","\n");
+                        s = s.Replace("\r\n", "\n");
                         String ns = TransformLine(s);
                         lines.Add(ns);
                     }
@@ -35,7 +35,8 @@ namespace ConsoleApplication1
                     }
                     sw.Dispose();
                 }
-            } catch (const Exception& e) {
+            }
+            catch (const Exception& e) {
                 System::Console::WriteLine(e.Message());
             }
         }
@@ -44,42 +45,40 @@ namespace ConsoleApplication1
         {
             String ns = s;
             if (s.Contains("System.Console.Write")) {
-                ns =
-                    ns.Replace("System.Console.Write", "System::Console::Write");
+                ns = ns.Replace(
+                    "System.Console.Write", "System::Console::Write");
             }
             if (s.Contains("Console.Write")) {
-                ns =
-                    ns.Replace("Console.Write", "Console::Write");
+                ns = ns.Replace("Console.Write", "Console::Write");
             }
-            if (s.Contains("string[]")){
+            if (s.Contains("string[]")) {
                 ns = ns.Replace("string[]", "Array<String>");
             }
-            if (s.StartsWith("using ")){
-                ns = ns.Replace("using ","#include \"");
-                ns = ns.Replace(".","/");
-                ns = ns.Replace(";",".h\"");
+            if (s.StartsWith("using ")) {
+                ns = ns.Replace("using ", "#include \"");
+                ns = ns.Replace(".", "/");
+                ns = ns.Replace(";", ".h\"");
             }
-            if (s.Contains(".Length")){
-                ns = ns.Replace(".Length",".Length()");
+            if (s.Contains(".Length")) {
+                ns = ns.Replace(".Length", ".Length()");
             }
-            if (s.Contains(".Message")){
-                ns = ns.Replace(".Message",".Message()");
+            if (s.Contains(".Message")) {
+                ns = ns.Replace(".Message", ".Message()");
             }
-            if (s.Contains("Path.")){
-                ns = ns.Replace("Path.","Path::");
+            if (s.Contains("Path.")) {
+                ns = ns.Replace("Path.", "Path::");
             }
-            if (s.Contains("Program.")){
-                ns = ns.Replace("Program.","Program::");
+            if (s.Contains("Program.")) {
+                ns = ns.Replace("Program.", "Program::");
             }
-            if (s.Contains("= new "))
-            {
-                ns = ns.Replace("= new ",";// = new ");
+            if (s.Contains("= new ")) {
+                ns = ns.Replace("= new ", ";// = new ");
             }
-            if (s.Contains("Environment.")){
-                ns = ns.Replace("Environment.","Environment::");
+            if (s.Contains("Environment.")) {
+                ns = ns.Replace("Environment.", "Environment::");
             }
-            if (s.Contains("StringComparison.")){
-                ns = ns.Replace("StringComparison.","StringComparison::");
+            if (s.Contains("StringComparison.")) {
+                ns = ns.Replace("StringComparison.", "StringComparison::");
             }
             if (s.Contains("System.IO.")) {
                 ns = ns.Replace("System.IO.", "System::IO::");

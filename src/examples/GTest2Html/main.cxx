@@ -34,8 +34,7 @@ namespace ConsoleApplication1
                     sw.Dispose();
                 }
             }
-            catch (const System::Exception &e)
-            {
+            catch (const System::Exception& e) {
                 System::Console::WriteLine(e.Message());
             }
         }

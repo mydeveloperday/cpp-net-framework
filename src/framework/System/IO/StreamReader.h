@@ -14,15 +14,15 @@ namespace System
 {
     namespace IO
     {
-		/// a class for reading a file
+        /// a class for reading a file
         class StreamReader
         {
             System::String m_file;
-            // TODO C++ 11 (Travis-CI is prevent me from turning this on)
-#if defined (SUPPORTS_CPLUSPLUS_11)
+// TODO C++ 11 (Travis-CI is prevent me from turning this on)
+#if defined(SUPPORTS_CPLUSPLUS_11)
             std::shared_ptr<std::ifstream> m_fd;
 #else
-            std::ifstream *m_fd;
+            std::ifstream* m_fd;
 #endif
             bool m_disposed;
 
@@ -43,7 +43,7 @@ namespace System
                 std::getline((*m_fd), strIn);
 
                 System::String sIn(strIn);
-                System::String strOut = sIn.Replace("\r","");
+                System::String strOut = sIn.Replace("\r", "");
                 return strOut;
             }
 
@@ -52,7 +52,7 @@ namespace System
             {
                 if (!m_disposed) {
                     (*m_fd).close();
-#if !defined (SUPPORTS_CPLUSPLUS_11)
+#if !defined(SUPPORTS_CPLUSPLUS_11)
                     delete m_fd;
 #endif
                     m_disposed = true;

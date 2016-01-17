@@ -31,7 +31,8 @@ namespace System
         }
 
         /// what is the cause of the exception with std::exception api
-        virtual const char* what() const throw() {
+        virtual const char* what() const throw()
+        {
             return m_reason.c_str();
         }
 
@@ -42,7 +43,7 @@ namespace System
         }
     };
 
-	/// A system exception for OS related failures
+    /// A system exception for OS related failures
     class SystemException : public Exception
     {
     public:

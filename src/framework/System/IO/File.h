@@ -6,12 +6,12 @@
 
 namespace System
 {
-	/// a utility class for path based operations
+    /// a utility class for path based operations
     class File
     {
     public:
-		/// determine if the file exists
-        static bool Exists(const System::String &file);
+        /// determine if the file exists
+        static bool Exists(const System::String& file);
     };
 }
 

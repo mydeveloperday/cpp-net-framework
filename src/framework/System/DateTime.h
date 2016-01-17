@@ -13,7 +13,7 @@
 
 namespace System
 {
-	/// DateTime class for handling dates and times
+    /// DateTime class for handling dates and times
     class DateTime
     {
         std::time_t m_time;
@@ -82,14 +82,16 @@ namespace System
         }
 
         /// get the number of ticks this time represents
-        int64_t Ticks() const{
-            int64_t tick = static_cast<int64_t>(m_time) * static_cast<int64_t>(TIME_SCALE);
+        int64_t Ticks() const
+        {
+            int64_t tick =
+                static_cast<int64_t>(m_time) * static_cast<int64_t>(TIME_SCALE);
             return tick;
         }
-
     };
 
-    /// minus operator for creating a duration from the delta between 2 datetimes
+    /// minus operator for creating a duration from the delta between 2
+    /// datetimes
     inline TimeSpan operator-(const DateTime& a, const DateTime& b)
     {
         int64_t ticks = a.Ticks() - b.Ticks();

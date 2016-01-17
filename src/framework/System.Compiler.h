@@ -5,13 +5,13 @@
 #include "OS.h"
 
 // when C++ 11 override this with 'override'
-#define OVERRIDE 
+#define OVERRIDE
 
 namespace System
 {
     namespace Compiler
     {
-		/// a class for helping the build system determine the compiler type
+        /// a class for helping the build system determine the compiler type
         class Internals
         {
         public:

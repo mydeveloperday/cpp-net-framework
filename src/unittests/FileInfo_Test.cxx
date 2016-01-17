@@ -18,6 +18,13 @@ TEST(FileInfoTest, BasicFileOperations)
     EXPECT_TRUE(info.Name().Equals("myfile.txt"));
 
     EXPECT_TRUE(info.Extension().Equals(".txt"));
+
+    try {
+        StreamReader sr("nonexistant_file.txt");
+        sr.ReadLine();
+    }
+    catch (FileNotFoundException&) {
+    }
 }
 
 TEST(EnvironmentTests, BasicEnvironmentOperations)
@@ -28,16 +35,16 @@ TEST(EnvironmentTests, BasicEnvironmentOperations)
 
 TEST(EnvironmentTests, Extensions)
 {
-    EXPECT_EQ(FileInfo("myfile.txt").Extension(),".txt");
-    EXPECT_EQ(FileInfo("myfile.xlsx").Extension(),".xlsx");
-    EXPECT_EQ(FileInfo("myfile").Extension(),"");
+    EXPECT_EQ(FileInfo("myfile.txt").Extension(), ".txt");
+    EXPECT_EQ(FileInfo("myfile.xlsx").Extension(), ".xlsx");
+    EXPECT_EQ(FileInfo("myfile").Extension(), "");
 }
 
 TEST(EnvironmentTests, Name)
 {
-    EXPECT_EQ(FileInfo("myfile.txt").Name(),"myfile.txt");
-    EXPECT_EQ(FileInfo("abc/myfile.txt").Name(),"myfile.txt");
-    EXPECT_EQ(FileInfo("abc\\myfile.txt").Name(),"myfile.txt");
+    EXPECT_EQ(FileInfo("myfile.txt").Name(), "myfile.txt");
+    EXPECT_EQ(FileInfo("abc/myfile.txt").Name(), "myfile.txt");
+    EXPECT_EQ(FileInfo("abc\\myfile.txt").Name(), "myfile.txt");
 }
 
 TEST(EnvironmentTests, Console)

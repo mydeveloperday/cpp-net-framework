@@ -109,7 +109,6 @@ matrix:
       - CLANGV=3.5
 
 before_install:
-    - sudo apt-get install codecov
     - openssl aes-256-cbc -K $encrypted_b7784909063c_key
          -iv $encrypted_b7784909063c_iv
          -in config/travisci_rsa.enc
@@ -159,7 +158,6 @@ after_success:
     - pwd
     - ls -al
     - if [ "$DOC" == "ON" ]; then ./scripts/push_doxygen.sh ; fi
-    - codecov
 
 addons:
   coverity_scan:

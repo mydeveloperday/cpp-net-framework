@@ -13,13 +13,13 @@ namespace System
         /// is this character is a letter
         static bool IsLetter(char ch)
         {
-            return isalpha(ch);
+            return isalpha(ch)?true:false;
         }
 
         /// is the character a digit
         static bool IsDigit(char ch)
         {
-            return isdigit(ch);
+            return isdigit(ch)?true:false;
         }
 
         /// is the character a digit or letter
@@ -31,13 +31,13 @@ namespace System
         /// is the the character a whitespace
         static bool IsWhiteSpace(char ch)
         {
-            return isspace(ch);
+            return isspace(ch)?true:false;
         }
 
         /// is the character a punctuation character
         static bool IsPunctuation(char ch)
         {
-            return ispunct(ch);
+            return ispunct(ch)?true:false;
         }
     };
 }

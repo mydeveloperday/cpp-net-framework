@@ -5,6 +5,7 @@
 
 #include "System/String.h"
 #include "System/Object.h"
+#include "System/Collections/Generic.h"
 #include "OS.h"
 
 #include "pragmas.h"
@@ -41,6 +42,22 @@ namespace System
         void Add(const Object& item)
         {
             m_vec.push_back(item);
+        }
+
+        /// add a range of objects into the array
+        void AddRange(List<Object> c)
+        {
+            for(int i=0;i<c.Count();i++){
+                Add(c[i]);
+            }
+        }
+
+        /// add a range of objects into the array
+        void AddRange(List<String> c)
+        {
+            for(int i=0;i<c.Count();i++){
+                Add(c[i]);
+            }
         }
 
         // Removes all elements from the ArrayList

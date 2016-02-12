@@ -16,7 +16,7 @@ namespace System
     {
 
     /// Array class
-    class ArrayList
+    class ArrayList : public ICollection
     {
         std::vector<Object> m_vec;
 
@@ -45,7 +45,7 @@ namespace System
         }
 
         /// add a range of objects into the array
-        void AddRange(List<Object> c)
+        void AddRange(const List<Object>& c)
         {
             for(int i=0;i<c.Count();i++){
                 Add(c[i]);
@@ -53,7 +53,7 @@ namespace System
         }
 
         /// add a range of objects into the array
-        void AddRange(List<String> c)
+        void AddRange(const List<String>& c)
         {
             for(int i=0;i<c.Count();i++){
                 Add(c[i]);
@@ -75,6 +75,65 @@ namespace System
                 copy.Add(m_vec[i]);
             }
             return copy;
+        }
+
+        // Trim the capacity to the number of items
+        void TrimToSize()
+        {
+            // no real implementation needed here yet
+        }
+
+        void Reverse()
+        {
+        }
+
+        void Sort()
+        {
+        }
+
+        void SetRange(int index,const ICollection& c)
+        {
+            static_cast<void>(index);
+            static_cast<void>(c);
+        }
+
+        void RemoveRange(int index,int count)
+        {
+            static_cast<void>(index);
+            static_cast<void>(count);
+        }
+
+        void RemoteAt(int index)
+        {
+            static_cast<void>(index);
+        }
+
+        void Remove(const Object &obj)
+        {
+            static_cast<void>(obj);
+        }
+
+        int IndexOf(const Object &obj)
+        {
+            static_cast<void>(obj);
+            return -1;
+        }
+        
+        bool Contains(const Object& obj)
+        {
+            static_cast<void>(obj);
+            return false;
+        }
+
+        void Insert(int index,const Object &obj)
+        {
+            static_cast<void>(obj);
+        }
+
+        void InsertRange(int index,const ICollection &c)
+        {
+            static_cast<void>(index);
+            static_cast<void>(c);
         }
     };
     }

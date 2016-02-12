@@ -18,7 +18,7 @@ namespace System
         namespace Generic
         {
             /// a generalized list class
-            template <class T> class List
+            template <class T> class List : public ICollection
             {
                 std::vector<T> m_vec;
 

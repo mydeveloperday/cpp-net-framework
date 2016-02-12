@@ -122,7 +122,7 @@ $(document).ready(function(){initNavTree('d2/db9/_array_list_8h_source.html','..
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">namespace </span>Collections</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html">ArrayList</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html">ArrayList</a> : <span class="keyword">public</span> <a class="code" href="../../da/d87/class_system_1_1_collections_1_1_i_collection.html">ICollection</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::vector&lt;Object&gt; m_vec;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
@@ -146,14 +146,14 @@ $(document).ready(function(){initNavTree('d2/db9/_array_list_8h_source.html','..
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            m_vec.push_back(item);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#a2eedec09185daa5f72f76cfaf3ddf2ca">   48</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#a2eedec09185daa5f72f76cfaf3ddf2ca">AddRange</a>(<a class="code" href="../../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html">List&lt;Object&gt;</a> c)</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#ae8d43b5626a06c23b42b4ce4a82b4ae3">   48</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#ae8d43b5626a06c23b42b4ce4a82b4ae3">AddRange</a>(<span class="keyword">const</span> <a class="code" href="../../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html">List&lt;Object&gt;</a>&amp; c)</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;c.<a class="code" href="../../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html#af3d16e4814cf84a2cf2060856588de72">Count</a>();i++){</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <a class="code" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#a0da692053185d47897de3ccbf47d9013">Add</a>(c[i]);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#a0ea10c69f452df3b4ff474fd27657e54">   56</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#a0ea10c69f452df3b4ff474fd27657e54">AddRange</a>(<a class="code" href="../../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html">List&lt;String&gt;</a> c)</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#ab21fe52dae9ff3134029b20e01c6bddf">   56</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#ab21fe52dae9ff3134029b20e01c6bddf">AddRange</a>(<span class="keyword">const</span> <a class="code" href="../../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html">List&lt;String&gt;</a>&amp; c)</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;c.<a class="code" href="../../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html#af3d16e4814cf84a2cf2060856588de72">Count</a>();i++){</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <a class="code" href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#a0da692053185d47897de3ccbf47d9013">Add</a>(c[i]);</div>
@@ -175,22 +175,82 @@ $(document).ready(function(){initNavTree('d2/db9/_array_list_8h_source.html','..
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">return</span> copy;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    };</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">using namespace </span>System;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">using namespace </span>System::Collections;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="comment">// Trim the capacity to the number of items</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">void</span> TrimToSize()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">// no real implementation needed here yet</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> Reverse()</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">void</span> Sort()</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">void</span> SetRange(<span class="keywordtype">int</span> index,<span class="keyword">const</span> <a class="code" href="../../da/d87/class_system_1_1_collections_1_1_i_collection.html">ICollection</a>&amp; c)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(index);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(c);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">void</span> RemoveRange(<span class="keywordtype">int</span> index,<span class="keywordtype">int</span> count)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(index);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(count);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">void</span> RemoteAt(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(index);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordtype">void</span> Remove(<span class="keyword">const</span> <a class="code" href="../../d5/df0/class_system_1_1_object.html">Object</a> &amp;obj)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(obj);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordtype">int</span> IndexOf(<span class="keyword">const</span> <a class="code" href="../../d5/df0/class_system_1_1_object.html">Object</a> &amp;obj)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(obj);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">bool</span> Contains(<span class="keyword">const</span> <a class="code" href="../../d5/df0/class_system_1_1_object.html">Object</a>&amp; obj)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(obj);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">void</span> Insert(<span class="keywordtype">int</span> index,<span class="keyword">const</span> <a class="code" href="../../d5/df0/class_system_1_1_object.html">Object</a> &amp;obj)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(obj);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordtype">void</span> InsertRange(<span class="keywordtype">int</span> index,<span class="keyword">const</span> <a class="code" href="../../da/d87/class_system_1_1_collections_1_1_i_collection.html">ICollection</a> &amp;c)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(index);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(c);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    };</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="keyword">using namespace </span>System;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keyword">using namespace </span>System::Collections;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_system_1_1_collections_1_1_array_list_html_ae8d43b5626a06c23b42b4ce4a82b4ae3"><div class="ttname"><a href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#ae8d43b5626a06c23b42b4ce4a82b4ae3">System::Collections::ArrayList::AddRange</a></div><div class="ttdeci">void AddRange(const List&lt; Object &gt; &amp;c)</div><div class="ttdoc">add a range of objects into the array </div><div class="ttdef"><b>Definition:</b> ArrayList.h:48</div></div>
 <div class="ttc" id="class_system_1_1_object_html"><div class="ttname"><a href="../../d5/df0/class_system_1_1_object.html">System::Object</a></div><div class="ttdoc">Object class. </div><div class="ttdef"><b>Definition:</b> Object.h:13</div></div>
+<div class="ttc" id="class_system_1_1_collections_1_1_array_list_html_ab21fe52dae9ff3134029b20e01c6bddf"><div class="ttname"><a href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#ab21fe52dae9ff3134029b20e01c6bddf">System::Collections::ArrayList::AddRange</a></div><div class="ttdeci">void AddRange(const List&lt; String &gt; &amp;c)</div><div class="ttdoc">add a range of objects into the array </div><div class="ttdef"><b>Definition:</b> ArrayList.h:56</div></div>
 <div class="ttc" id="class_system_1_1_collections_1_1_array_list_html_ac83721e82b9eddd48166fc23a166d1b7"><div class="ttname"><a href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#ac83721e82b9eddd48166fc23a166d1b7">System::Collections::ArrayList::operator[]</a></div><div class="ttdeci">const Object &amp; operator[](int index) const </div><div class="ttdoc">get the nth item from the array </div><div class="ttdef"><b>Definition:</b> ArrayList.h:36</div></div>
 <div class="ttc" id="class_system_1_1_collections_1_1_generic_1_1_list_html_af3d16e4814cf84a2cf2060856588de72"><div class="ttname"><a href="../../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html#af3d16e4814cf84a2cf2060856588de72">System::Collections::Generic::List::Count</a></div><div class="ttdeci">int Count() const </div><div class="ttdoc">the number of elements in the list </div><div class="ttdef"><b>Definition:</b> List.h:32</div></div>
 <div class="ttc" id="class_system_1_1_collections_1_1_array_list_html_a6e891964a37680c01e21dedac6ffe670"><div class="ttname"><a href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#a6e891964a37680c01e21dedac6ffe670">System::Collections::ArrayList::Length</a></div><div class="ttdeci">int Length() const </div><div class="ttdoc">get the length of the array </div><div class="ttdef"><b>Definition:</b> ArrayList.h:30</div></div>
-<div class="ttc" id="class_system_1_1_collections_1_1_array_list_html_a0ea10c69f452df3b4ff474fd27657e54"><div class="ttname"><a href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#a0ea10c69f452df3b4ff474fd27657e54">System::Collections::ArrayList::AddRange</a></div><div class="ttdeci">void AddRange(List&lt; String &gt; c)</div><div class="ttdoc">add a range of objects into the array </div><div class="ttdef"><b>Definition:</b> ArrayList.h:56</div></div>
+<div class="ttc" id="class_system_1_1_collections_1_1_i_collection_html"><div class="ttname"><a href="../../da/d87/class_system_1_1_collections_1_1_i_collection.html">System::Collections::ICollection</a></div><div class="ttdef"><b>Definition:</b> ICollection.h:10</div></div>
 <div class="ttc" id="class_system_1_1_collections_1_1_array_list_html_a23380c4e449270c687197e08b95461d7"><div class="ttname"><a href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#a23380c4e449270c687197e08b95461d7">System::Collections::ArrayList::Clone</a></div><div class="ttdeci">ArrayList Clone()</div><div class="ttdoc">Creates a shallow copy of the ArrayList. </div><div class="ttdef"><b>Definition:</b> ArrayList.h:70</div></div>
 <div class="ttc" id="class_system_1_1_collections_1_1_generic_1_1_list_html"><div class="ttname"><a href="../../de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html">System::Collections::Generic::List</a></div><div class="ttdoc">a generalized list class </div><div class="ttdef"><b>Definition:</b> List.h:21</div></div>
-<div class="ttc" id="class_system_1_1_collections_1_1_array_list_html_a2eedec09185daa5f72f76cfaf3ddf2ca"><div class="ttname"><a href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#a2eedec09185daa5f72f76cfaf3ddf2ca">System::Collections::ArrayList::AddRange</a></div><div class="ttdeci">void AddRange(List&lt; Object &gt; c)</div><div class="ttdoc">add a range of objects into the array </div><div class="ttdef"><b>Definition:</b> ArrayList.h:48</div></div>
 <div class="ttc" id="class_system_1_1_collections_1_1_array_list_html_a0da692053185d47897de3ccbf47d9013"><div class="ttname"><a href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#a0da692053185d47897de3ccbf47d9013">System::Collections::ArrayList::Add</a></div><div class="ttdeci">void Add(const Object &amp;item)</div><div class="ttdoc">add an item into the array </div><div class="ttdef"><b>Definition:</b> ArrayList.h:42</div></div>
 <div class="ttc" id="class_system_1_1_collections_1_1_array_list_html_ab81cb8f28fd97334698246b7f8ff0b12"><div class="ttname"><a href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html#ab81cb8f28fd97334698246b7f8ff0b12">System::Collections::ArrayList::ArrayList</a></div><div class="ttdeci">ArrayList()</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> ArrayList.h:25</div></div>
 <div class="ttc" id="class_system_1_1_collections_1_1_array_list_html"><div class="ttname"><a href="../../da/dfc/class_system_1_1_collections_1_1_array_list.html">System::Collections::ArrayList</a></div><div class="ttdoc">Array class. </div><div class="ttdef"><b>Definition:</b> ArrayList.h:19</div></div>

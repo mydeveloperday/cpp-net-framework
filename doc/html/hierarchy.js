@@ -1,7 +1,6 @@
 var hierarchy =
 [
     [ "Array< T >", "d1/d3e/class_system_1_1_array.html", null ],
-    [ "ArrayList", "da/dfc/class_system_1_1_collections_1_1_array_list.html", null ],
     [ "Char", "d1/de9/class_system_1_1_char.html", null ],
     [ "DateTime", "d8/dee/class_system_1_1_date_time.html", null ],
     [ "Dictionary< K, V >", "d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html", null ],
@@ -17,10 +16,13 @@ var hierarchy =
     [ "File", "de/df7/class_system_1_1_file.html", null ],
     [ "FileInfo", "dc/d0d/class_system_1_1_i_o_1_1_file_info.html", null ],
     [ "HashSet< K >", "d6/da9/class_system_1_1_collections_1_1_generic_1_1_hash_set.html", null ],
+    [ "ICollection", "da/d87/class_system_1_1_collections_1_1_i_collection.html", [
+      [ "List< System::Xml::XmlNode >", "de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html", null ],
+      [ "ArrayList", "da/dfc/class_system_1_1_collections_1_1_array_list.html", null ],
+      [ "List< T >", "de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html", null ]
+    ] ],
     [ "InitNet", "d6/d0c/class_system_1_1_init_net.html", null ],
     [ "Internals", "d6/dd6/class_system_1_1_compiler_1_1_internals.html", null ],
-    [ "List< T >", "de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html", null ],
-    [ "List< System::Xml::XmlNode >", "de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html", null ],
     [ "Math", "dd/d8b/class_system_1_1_math.html", null ],
     [ "Object", "d5/df0/class_system_1_1_object.html", [
       [ "String", "db/d0b/class_system_1_1_string.html", null ],

@@ -7,7 +7,8 @@ var annotated =
           [ "HashSet", "d6/da9/class_system_1_1_collections_1_1_generic_1_1_hash_set.html", "d6/da9/class_system_1_1_collections_1_1_generic_1_1_hash_set" ],
           [ "List", "de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html", "de/d52/class_system_1_1_collections_1_1_generic_1_1_list" ]
         ] ],
-        [ "ArrayList", "da/dfc/class_system_1_1_collections_1_1_array_list.html", "da/dfc/class_system_1_1_collections_1_1_array_list" ]
+        [ "ArrayList", "da/dfc/class_system_1_1_collections_1_1_array_list.html", "da/dfc/class_system_1_1_collections_1_1_array_list" ],
+        [ "ICollection", "da/d87/class_system_1_1_collections_1_1_i_collection.html", "da/d87/class_system_1_1_collections_1_1_i_collection" ]
       ] ],
       [ "Compiler", null, [
         [ "Internals", "d6/dd6/class_system_1_1_compiler_1_1_internals.html", null ]

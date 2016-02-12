@@ -118,12 +118,12 @@ $(document).ready(function(){initNavTree('d5/de4/_char_8h_source.html','../../')
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d1/de9/class_system_1_1_char.html#af8188ac5c33206444b07de504f56dc0f">   14</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/de9/class_system_1_1_char.html#af8188ac5c33206444b07de504f56dc0f">IsLetter</a>(<span class="keywordtype">char</span> ch)</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">return</span> isalpha(ch);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">return</span> isalpha(ch)?<span class="keyword">true</span>:<span class="keyword">false</span>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        }</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d1/de9/class_system_1_1_char.html#aa46e32d258d5e14b76d0cae96e899974">   20</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/de9/class_system_1_1_char.html#aa46e32d258d5e14b76d0cae96e899974">IsDigit</a>(<span class="keywordtype">char</span> ch)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">return</span> isdigit(ch);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">return</span> isdigit(ch)?<span class="keyword">true</span>:<span class="keyword">false</span>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d1/de9/class_system_1_1_char.html#a92c3498bf265ed0ae89d1f25e018a010">   26</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/de9/class_system_1_1_char.html#a92c3498bf265ed0ae89d1f25e018a010">IsLetterOrDigit</a>(<span class="keywordtype">char</span> ch)</div>
@@ -133,12 +133,12 @@ $(document).ready(function(){initNavTree('d5/de4/_char_8h_source.html','../../')
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d1/de9/class_system_1_1_char.html#ad0b1c48340dfddef2f553bc6b04aba89">   32</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/de9/class_system_1_1_char.html#ad0b1c48340dfddef2f553bc6b04aba89">IsWhiteSpace</a>(<span class="keywordtype">char</span> ch)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span> isspace(ch);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span> isspace(ch)?<span class="keyword">true</span>:<span class="keyword">false</span>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d1/de9/class_system_1_1_char.html#a4923fa8f31133593a9fa5a66ed0792c7">   38</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/de9/class_system_1_1_char.html#a4923fa8f31133593a9fa5a66ed0792c7">IsPunctuation</a>(<span class="keywordtype">char</span> ch)</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">return</span> ispunct(ch);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">return</span> ispunct(ch)?<span class="keyword">true</span>:<span class="keyword">false</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>

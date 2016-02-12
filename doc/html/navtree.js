@@ -23,7 +23,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"df/dcf/_null_ptr_8h_source.html"
+"df/d98/_exception_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

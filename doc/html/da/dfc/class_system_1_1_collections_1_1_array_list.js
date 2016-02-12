@@ -2,6 +2,8 @@ var class_system_1_1_collections_1_1_array_list =
 [
     [ "ArrayList", "da/dfc/class_system_1_1_collections_1_1_array_list.html#ab81cb8f28fd97334698246b7f8ff0b12", null ],
     [ "Add", "da/dfc/class_system_1_1_collections_1_1_array_list.html#a0da692053185d47897de3ccbf47d9013", null ],
+    [ "AddRange", "da/dfc/class_system_1_1_collections_1_1_array_list.html#a2eedec09185daa5f72f76cfaf3ddf2ca", null ],
+    [ "AddRange", "da/dfc/class_system_1_1_collections_1_1_array_list.html#a0ea10c69f452df3b4ff474fd27657e54", null ],
     [ "Clear", "da/dfc/class_system_1_1_collections_1_1_array_list.html#aa71d36872f416feaa853788a7a7a7ef8", null ],
     [ "Clone", "da/dfc/class_system_1_1_collections_1_1_array_list.html#a23380c4e449270c687197e08b95461d7", null ],
     [ "Length", "da/dfc/class_system_1_1_collections_1_1_array_list.html#a6e891964a37680c01e21dedac6ffe670", null ],

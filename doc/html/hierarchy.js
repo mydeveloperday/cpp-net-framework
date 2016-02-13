@@ -4,6 +4,7 @@ var hierarchy =
     [ "Char", "d1/de9/class_system_1_1_char.html", null ],
     [ "DateTime", "d8/dee/class_system_1_1_date_time.html", null ],
     [ "Dictionary< K, V >", "d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html", null ],
+    [ "Directory", "d1/d32/class_system_1_1_directory.html", null ],
     [ "Environment", "d0/da4/class_system_1_1_environment.html", null ],
     [ "exception", null, [
       [ "Exception", "d1/df8/class_system_1_1_exception.html", [

@@ -17,6 +17,7 @@ var annotated =
       [ "IO", null, [
         [ "FileInfo", "dc/d0d/class_system_1_1_i_o_1_1_file_info.html", "dc/d0d/class_system_1_1_i_o_1_1_file_info" ],
         [ "FileNotFoundException", "d5/db2/class_system_1_1_i_o_1_1_file_not_found_exception.html", "d5/db2/class_system_1_1_i_o_1_1_file_not_found_exception" ],
+        [ "FileSystemInfo", "d8/d14/class_system_1_1_i_o_1_1_file_system_info.html", "d8/d14/class_system_1_1_i_o_1_1_file_system_info" ],
         [ "StreamReader", "d9/dea/class_system_1_1_i_o_1_1_stream_reader.html", "d9/dea/class_system_1_1_i_o_1_1_stream_reader" ],
         [ "StreamWriter", "d7/d47/class_system_1_1_i_o_1_1_stream_writer.html", "d7/d47/class_system_1_1_i_o_1_1_stream_writer" ]
       ] ],

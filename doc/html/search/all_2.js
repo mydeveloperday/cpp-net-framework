@@ -5,7 +5,7 @@ var searchData=
   ['datetime',['DateTime',['../d8/dee/class_system_1_1_date_time.html#af37fb6744cb008595cb6e384bcd59b31',1,'System::DateTime::DateTime(int year, int month, int day)'],['../d8/dee/class_system_1_1_date_time.html#ab94ad208638c9fb83a247522f4db30ba',1,'System::DateTime::DateTime(int year, int month, int day, int hours, int minutes)'],['../d8/dee/class_system_1_1_date_time.html#aa81b8d1e752078b408f6994a2b52cd14',1,'System::DateTime::DateTime(const std::time_t &amp;t)']]],
   ['day',['Day',['../d8/dee/class_system_1_1_date_time.html#ada270b1b3bebaa4ffa3cf80b18f7637e',1,'System::DateTime']]],
   ['days',['Days',['../d7/de9/class_system_1_1_time_span.html#a3a3dcac25850ce04b755fa48c09f994d',1,'System::TimeSpan']]],
-  ['delete',['Delete',['../dc/d0d/class_system_1_1_i_o_1_1_file_info.html#a54f7479a0783d691dd06980380e8ff87',1,'System::IO::FileInfo']]],
+  ['delete',['Delete',['../dc/d0d/class_system_1_1_i_o_1_1_file_info.html#a54f7479a0783d691dd06980380e8ff87',1,'System::IO::FileInfo::Delete()'],['../d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#a54f7479a0783d691dd06980380e8ff87',1,'System::IO::FileSystemInfo::Delete()']]],
   ['dictionary',['Dictionary',['../d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html',1,'System::Collections::Generic']]],
   ['dictionary',['Dictionary',['../d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html#a63a73930843c12ff260c0d6b4d1f9d5b',1,'System::Collections::Generic::Dictionary']]],
   ['directory',['Directory',['../d1/d32/class_system_1_1_directory.html',1,'System']]],

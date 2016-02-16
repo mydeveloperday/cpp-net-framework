@@ -5,6 +5,7 @@ var searchData=
   ['filesysteminfo',['FileSystemInfo',['../d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#a6e66d07d29bc7b7d9d060e8b4c8af291',1,'System::IO::FileSystemInfo::FileSystemInfo()'],['../d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#af1b548863b5bfd327288e3356872ad45',1,'System::IO::FileSystemInfo::FileSystemInfo(const System::String &amp;s)']]],
   ['firstchild',['FirstChild',['../d7/d15/class_system_1_1_xml_1_1_xml_node.html#a2b2e2a70cad2b567103f1f6a4967aa1b',1,'System::Xml::XmlNode']]],
   ['floor',['Floor',['../dd/d8b/class_system_1_1_math.html#a954f1d716595f4fa813f559439fa7b7a',1,'System::Math']]],
+  ['format',['Format',['../db/d0b/class_system_1_1_string.html#a05194e628ea13517ca375f1fa638b880',1,'System::String::Format(const String &amp;fmt, const Object &amp;a)'],['../db/d0b/class_system_1_1_string.html#ad3059e9dc99462a031616da7dd3167bd',1,'System::String::Format(const char *fmt, const char *a)']]],
   ['fromdays',['FromDays',['../d7/de9/class_system_1_1_time_span.html#aee87ad1e679a537a4ac18ccfe603e605',1,'System::TimeSpan']]],
   ['fromseconds',['fromSeconds',['../d7/de9/class_system_1_1_time_span.html#aa99c7e731b3a03f01a0bb247be47a52c',1,'System::TimeSpan']]],
   ['fullname',['FullName',['../dc/d0d/class_system_1_1_i_o_1_1_file_info.html#a5337d8121f996ce99669cb57b2acd773',1,'System::IO::FileInfo::FullName()'],['../d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#a5337d8121f996ce99669cb57b2acd773',1,'System::IO::FileSystemInfo::FullName()']]]

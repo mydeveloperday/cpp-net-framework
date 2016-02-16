@@ -1,11 +1,16 @@
 var NAVTREEINDEX1 =
 {
+"dd/dec/class_system_1_1_string_builder.html":[1,0,0,18],
+"dd/dec/class_system_1_1_string_builder.html#a075c00b2768573fa23aeb2eb632013d6":[1,0,0,18,3],
+"dd/dec/class_system_1_1_string_builder.html#a11d3b6292826e11a80aaa61f5588d541":[1,0,0,18,7],
+"dd/dec/class_system_1_1_string_builder.html#a1d6db7bdf7da56cb3e4bcb16ac4c1e71":[1,0,0,18,4],
 "dd/dec/class_system_1_1_string_builder.html#a297dcdf57c6327687b567993a037c2f7":[1,0,0,18,1],
 "dd/dec/class_system_1_1_string_builder.html#a2c6df5bf08a0b2a3212bea769a3d721a":[1,0,0,18,0],
 "dd/dec/class_system_1_1_string_builder.html#a3cb5b764fed6b3a4e55af85552311fee":[1,0,0,18,2],
 "dd/dec/class_system_1_1_string_builder.html#a426904e54b7de9bc8c979cffa34c270f":[1,0,0,18,8],
-"dd/dec/class_system_1_1_string_builder.html#a502c333ec4f900fdfba43b8d0399b3c5":[1,0,0,18,9],
+"dd/dec/class_system_1_1_string_builder.html#a502c333ec4f900fdfba43b8d0399b3c5":[1,0,0,18,10],
 "dd/dec/class_system_1_1_string_builder.html#aa71d36872f416feaa853788a7a7a7ef8":[1,0,0,18,5],
+"dd/dec/class_system_1_1_string_builder.html#abf9cb98d5859802d6b90f01feda7b3ff":[1,0,0,18,9],
 "dd/dec/class_system_1_1_string_builder.html#ad2cc1673d4ad954556c5356c3ad51550":[1,0,0,18,6],
 "de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html":[1,0,0,0,0,2],
 "de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html#a17e6c90f14225bdac5c65ed915b0a2f6":[1,0,0,0,0,2,0],

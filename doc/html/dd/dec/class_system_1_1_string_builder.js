@@ -9,5 +9,6 @@ var class_system_1_1_string_builder =
     [ "Length", "dd/dec/class_system_1_1_string_builder.html#ad2cc1673d4ad954556c5356c3ad51550", null ],
     [ "MaxCapacity", "dd/dec/class_system_1_1_string_builder.html#a11d3b6292826e11a80aaa61f5588d541", null ],
     [ "operator[]", "dd/dec/class_system_1_1_string_builder.html#a426904e54b7de9bc8c979cffa34c270f", null ],
+    [ "ToString", "dd/dec/class_system_1_1_string_builder.html#abf9cb98d5859802d6b90f01feda7b3ff", null ],
     [ "ToString", "dd/dec/class_system_1_1_string_builder.html#a502c333ec4f900fdfba43b8d0399b3c5", null ]
 ];

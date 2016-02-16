@@ -16,7 +16,9 @@ var hierarchy =
     ] ],
     [ "File", "de/df7/class_system_1_1_file.html", null ],
     [ "FileInfo", "dc/d0d/class_system_1_1_i_o_1_1_file_info.html", null ],
-    [ "FileSystemInfo", "d8/d14/class_system_1_1_i_o_1_1_file_system_info.html", null ],
+    [ "FileSystemInfo", "d8/d14/class_system_1_1_i_o_1_1_file_system_info.html", [
+      [ "DirectoryInfo", "d6/de6/class_system_1_1_directory_info.html", null ]
+    ] ],
     [ "HashSet< K >", "d6/da9/class_system_1_1_collections_1_1_generic_1_1_hash_set.html", null ],
     [ "ICollection", "da/d87/class_system_1_1_collections_1_1_i_collection.html", [
       [ "List< System::Xml::XmlNode >", "de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html", null ],

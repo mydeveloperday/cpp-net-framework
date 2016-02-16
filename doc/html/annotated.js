@@ -30,6 +30,7 @@ var annotated =
       [ "Char", "d1/de9/class_system_1_1_char.html", null ],
       [ "DateTime", "d8/dee/class_system_1_1_date_time.html", "d8/dee/class_system_1_1_date_time" ],
       [ "Directory", "d1/d32/class_system_1_1_directory.html", null ],
+      [ "DirectoryInfo", "d6/de6/class_system_1_1_directory_info.html", "d6/de6/class_system_1_1_directory_info" ],
       [ "Environment", "d0/da4/class_system_1_1_environment.html", null ],
       [ "Exception", "d1/df8/class_system_1_1_exception.html", "d1/df8/class_system_1_1_exception" ],
       [ "File", "de/df7/class_system_1_1_file.html", null ],

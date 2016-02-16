@@ -3,6 +3,7 @@
 
 #include "System/String.h"
 #include "System/IO.h"
+#include "System/IO/FileSystemInfo.h"
 
 namespace System
 {
@@ -12,14 +13,26 @@ namespace System
         /// determine if the file exists
         static void CreateDirectory(const System::String& file)
         {
-            static_cast<void>(file);
+            mkdir(file.str().c_str(),
+                  S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
         }
 
         static void Delete(const System::String& file)
         {
-            static_cast<void>(file);
+            rmdir(file.str().c_str());
         }
     
+    };
+
+    class DirectoryInfo : public FileSystemInfo
+    {
+        public:
+        DirectoryInfo()
+        {}
+
+        DirectoryInfo(const System::String & dir):
+            FileSystemInfo(dir)
+        {}
     };
 }
 

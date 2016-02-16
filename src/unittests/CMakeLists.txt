@@ -49,6 +49,7 @@ add_executable(System_Test
 			   HashSet_Test.cxx
 			   StringBuilder_Test.cxx
 			   Xml_Test.cxx
+			   Directory_Test.cxx
               )
 
 # alter the link line of gcc to include coverage library

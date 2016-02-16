@@ -3,6 +3,7 @@ cmake_minimum_required (VERSION 2.6)
 SET(SOURCE
   System.cxx
   System/Object.cxx
+  System/String.cxx
   Path.cxx
   System/IO/FileInfo.cxx
   System/IO/StreamReader.cxx

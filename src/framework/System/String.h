@@ -286,7 +286,7 @@ namespace System
         }
 
         /// turn the string into a string
-        virtual String ToString()
+        virtual String ToString() const
         {
             return (*this);
         }
@@ -296,6 +296,17 @@ namespace System
         {
             m_str.clear();
         }
+
+        /// TODO change to variable argument
+        /// for now stick with naive implementation
+        /// format a string with parameterizd arguments
+        String Format(const String& fmt,const Object& a);
+        String Format(const String& fmt,const Object& a,const Object& b);
+
+        /// TODO change to variable argument
+        /// for now stick with naive implementation
+        String Format(const char* fmt,const char* a);
+        String Format(const char* fmt,const char* a,const char* b);
     };
 
     /// the plus operator for two strings

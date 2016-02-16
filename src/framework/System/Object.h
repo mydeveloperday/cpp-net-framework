@@ -24,7 +24,7 @@ namespace System
         }
 
         /// function to print this object
-        virtual String ToString();
+        virtual String ToString() const;
     };
 }
 

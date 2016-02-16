@@ -194,3 +194,12 @@ TEST(StringTest, Equals)
     EXPECT_TRUE(String("Hello").Equals("Hello", Ordinal));
     EXPECT_FALSE(String("Hello").Equals("hello", Ordinal));
 }
+
+TEST(StringTest, Format)
+{
+    String s;
+
+    s = s.Format("ABC{0}DEF","ABC");
+
+    EXPECT_EQ(String("ABCABCDEF"),String(s)) << "Wow!" << std::endl;
+}

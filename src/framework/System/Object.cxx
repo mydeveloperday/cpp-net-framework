@@ -5,7 +5,7 @@
 namespace System
 {
     /// basic to string operation of all base classes
-    String Object::ToString()
+    String Object::ToString() const
     {
         return String("Object");
     }

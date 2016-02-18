@@ -6,6 +6,7 @@ SET(SOURCE
   System/String.cxx
   Path.cxx
   System/IO/FileInfo.cxx
+  System/IO/FileSystemInfo.cxx
   System/IO/StreamReader.cxx
   System/IO/File.cxx
 )

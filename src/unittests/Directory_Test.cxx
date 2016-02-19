@@ -13,4 +13,6 @@ TEST(DirectoryTest, BasicFileOperations)
     EXPECT_TRUE(info.Exists());
     Directory::Delete("ABC");
     EXPECT_FALSE(info.Exists());
+
+    EXPECT_EQ(info.Name(),"ABC");
 }

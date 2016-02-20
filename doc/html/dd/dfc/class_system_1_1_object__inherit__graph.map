@@ -1,4 +1,7 @@
 <map id="Object" name="Object">
-<area shape="rect" id="node3" href="$db/d0b/class_system_1_1_string.html" title="A generalized string class. " alt="" coords="5,83,61,112"/>
-<area shape="rect" id="node5" href="$dd/dec/class_system_1_1_string_builder.html" title="A string builder class. " alt="" coords="85,83,181,112"/>
+<area shape="rect" id="node3" href="$d8/d14/class_system_1_1_i_o_1_1_file_system_info.html" title="A file information class. " alt="" coords="51,83,160,112"/>
+<area shape="rect" id="node9" href="$db/d0b/class_system_1_1_string.html" title="A generalized string class. " alt="" coords="184,83,240,112"/>
+<area shape="rect" id="node11" href="$dd/dec/class_system_1_1_string_builder.html" title="A string builder class. " alt="" coords="264,83,360,112"/>
+<area shape="rect" id="node5" href="$da/d77/class_system_1_1_i_o_1_1_directory_info.html" title="directory info class " alt="" coords="5,160,101,189"/>
+<area shape="rect" id="node7" href="$dc/d0d/class_system_1_1_i_o_1_1_file_info.html" title="A file information class. " alt="" coords="125,160,189,189"/>
 </map>

@@ -15,10 +15,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "File", "de/df7/class_system_1_1_file.html", null ],
-    [ "FileInfo", "dc/d0d/class_system_1_1_i_o_1_1_file_info.html", null ],
-    [ "FileSystemInfo", "d8/d14/class_system_1_1_i_o_1_1_file_system_info.html", [
-      [ "DirectoryInfo", "da/d77/class_system_1_1_i_o_1_1_directory_info.html", null ]
-    ] ],
     [ "HashSet< K >", "d6/da9/class_system_1_1_collections_1_1_generic_1_1_hash_set.html", null ],
     [ "ICollection", "da/d87/class_system_1_1_collections_1_1_i_collection.html", [
       [ "List< System::Xml::XmlNode >", "de/d52/class_system_1_1_collections_1_1_generic_1_1_list.html", null ],
@@ -29,6 +25,10 @@ var hierarchy =
     [ "Internals", "d6/dd6/class_system_1_1_compiler_1_1_internals.html", null ],
     [ "Math", "dd/d8b/class_system_1_1_math.html", null ],
     [ "Object", "d5/df0/class_system_1_1_object.html", [
+      [ "FileSystemInfo", "d8/d14/class_system_1_1_i_o_1_1_file_system_info.html", [
+        [ "DirectoryInfo", "da/d77/class_system_1_1_i_o_1_1_directory_info.html", null ],
+        [ "FileInfo", "dc/d0d/class_system_1_1_i_o_1_1_file_info.html", null ]
+      ] ],
       [ "String", "db/d0b/class_system_1_1_string.html", null ],
       [ "StringBuilder", "dd/dec/class_system_1_1_string_builder.html", null ]
     ] ],

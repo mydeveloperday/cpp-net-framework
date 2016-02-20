@@ -7,5 +7,6 @@ var class_system_1_1_i_o_1_1_file_system_info =
     [ "Exists", "d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#aa746a17c5bebccb81d72dccb29948ec4", null ],
     [ "Extension", "d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#a18f06b7fe985f3714579009a8d237248", null ],
     [ "FullName", "d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#a5337d8121f996ce99669cb57b2acd773", null ],
-    [ "Name", "d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#a86dbb32617b61eaaec42798f7eb1702e", null ]
+    [ "Name", "d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#a86dbb32617b61eaaec42798f7eb1702e", null ],
+    [ "ToString", "d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#a1060d162e62c44a1a83108962f47a579", null ]
 ];

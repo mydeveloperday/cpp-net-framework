@@ -8,5 +8,6 @@ var class_system_1_1_i_o_1_1_directory_info =
     [ "Extension", "da/d77/class_system_1_1_i_o_1_1_directory_info.html#a18f06b7fe985f3714579009a8d237248", null ],
     [ "FullName", "da/d77/class_system_1_1_i_o_1_1_directory_info.html#a5337d8121f996ce99669cb57b2acd773", null ],
     [ "GetFiles", "da/d77/class_system_1_1_i_o_1_1_directory_info.html#ac8b52cc8feb7f57e953edf1f6890d935", null ],
-    [ "Name", "da/d77/class_system_1_1_i_o_1_1_directory_info.html#a86dbb32617b61eaaec42798f7eb1702e", null ]
+    [ "Name", "da/d77/class_system_1_1_i_o_1_1_directory_info.html#a86dbb32617b61eaaec42798f7eb1702e", null ],
+    [ "ToString", "da/d77/class_system_1_1_i_o_1_1_directory_info.html#a1060d162e62c44a1a83108962f47a579", null ]
 ];

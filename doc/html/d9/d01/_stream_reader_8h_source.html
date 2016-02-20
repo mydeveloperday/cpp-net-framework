@@ -149,37 +149,49 @@ $(document).ready(function(){initNavTree('d9/d01/_stream_reader_8h_source.html',
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a> strOut = sIn.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a46497ad2ba5ded6e3665b23de628d294">Replace</a>(<span class="stringliteral">&quot;\r&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordflow">return</span> strOut;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a6e2d745cdb7a7b983f861ed6a9a541a7">   51</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a6e2d745cdb7a7b983f861ed6a9a541a7">Dispose</a>()</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ad13829de050922cb2bc2e5a3e0ca6f76">   51</a></span>&#160;            <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a> <a class="code" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ad13829de050922cb2bc2e5a3e0ca6f76">ReadToEnd</a>()</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">if</span> (!m_disposed) {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    (*m_fd).close();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#if !defined(SUPPORTS_CPLUSPLUS_11)</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor"></span>                    <span class="keyword">delete</span> m_fd;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor"></span>                    m_disposed = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> input;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">while</span> (!<a class="code" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ac4a73a8110c98fafb85639c98e9a3185">EndOfStream</a>()) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> s = <a class="code" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a9dc027c3c756f0644d2277878fba7acc">ReadLine</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    input += s;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    input += <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">return</span> input;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ac4a73a8110c98fafb85639c98e9a3185">   63</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ac4a73a8110c98fafb85639c98e9a3185">EndOfStream</a>()</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a6e2d745cdb7a7b983f861ed6a9a541a7">   63</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a6e2d745cdb7a7b983f861ed6a9a541a7">Dispose</a>()</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">return</span> !(*m_fd) || (*m_fd).eof();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        };</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">using namespace </span>System::IO;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">if</span> (!m_disposed) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    (*m_fd).close();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#if !defined(SUPPORTS_CPLUSPLUS_11)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor"></span>                    <span class="keyword">delete</span> m_fd;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor"></span>                    m_disposed = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ac4a73a8110c98fafb85639c98e9a3185">   75</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ac4a73a8110c98fafb85639c98e9a3185">EndOfStream</a>()</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">return</span> !(*m_fd) || (*m_fd).eof();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        };</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">using namespace </span>System::IO;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_system_1_1_string_html"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html">System::String</a></div><div class="ttdoc">A generalized string class. </div><div class="ttdef"><b>Definition:</b> String.h:21</div></div>
 <div class="ttc" id="class_system_1_1_i_o_1_1_stream_reader_html_ac43e1b291ad94a3c9da68c82af0f7224"><div class="ttname"><a href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ac43e1b291ad94a3c9da68c82af0f7224">System::IO::StreamReader::~StreamReader</a></div><div class="ttdeci">~StreamReader()</div><div class="ttdoc">destructor </div><div class="ttdef"><b>Definition:</b> StreamReader.h:34</div></div>
 <div class="ttc" id="class_system_1_1_i_o_1_1_stream_reader_html"><div class="ttname"><a href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html">System::IO::StreamReader</a></div><div class="ttdoc">a class for reading a file </div><div class="ttdef"><b>Definition:</b> StreamReader.h:18</div></div>
+<div class="ttc" id="class_system_1_1_i_o_1_1_stream_reader_html_ad13829de050922cb2bc2e5a3e0ca6f76"><div class="ttname"><a href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ad13829de050922cb2bc2e5a3e0ca6f76">System::IO::StreamReader::ReadToEnd</a></div><div class="ttdeci">System::String ReadToEnd()</div><div class="ttdoc">read the file all the way to the end of file </div><div class="ttdef"><b>Definition:</b> StreamReader.h:51</div></div>
 <div class="ttc" id="class_system_1_1_i_o_1_1_stream_reader_html_a9dc027c3c756f0644d2277878fba7acc"><div class="ttname"><a href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a9dc027c3c756f0644d2277878fba7acc">System::IO::StreamReader::ReadLine</a></div><div class="ttdeci">System::String ReadLine()</div><div class="ttdoc">read a line from the file </div><div class="ttdef"><b>Definition:</b> StreamReader.h:40</div></div>
 <div class="ttc" id="class_system_1_1_i_o_1_1_stream_reader_html_a2711dfe416913aeaafdfa87daef04d6f"><div class="ttname"><a href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a2711dfe416913aeaafdfa87daef04d6f">System::IO::StreamReader::StreamReader</a></div><div class="ttdeci">StreamReader(const System::String &amp;file)</div><div class="ttdoc">constructor </div><div class="ttdef"><b>Definition:</b> StreamReader.cxx:10</div></div>
-<div class="ttc" id="class_system_1_1_i_o_1_1_stream_reader_html_a6e2d745cdb7a7b983f861ed6a9a541a7"><div class="ttname"><a href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a6e2d745cdb7a7b983f861ed6a9a541a7">System::IO::StreamReader::Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdoc">dispose method for closing the file </div><div class="ttdef"><b>Definition:</b> StreamReader.h:51</div></div>
-<div class="ttc" id="class_system_1_1_i_o_1_1_stream_reader_html_ac4a73a8110c98fafb85639c98e9a3185"><div class="ttname"><a href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ac4a73a8110c98fafb85639c98e9a3185">System::IO::StreamReader::EndOfStream</a></div><div class="ttdeci">bool EndOfStream()</div><div class="ttdoc">is the stream at the end </div><div class="ttdef"><b>Definition:</b> StreamReader.h:63</div></div>
-<div class="ttc" id="class_system_1_1_string_html_a46497ad2ba5ded6e3665b23de628d294"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a46497ad2ba5ded6e3665b23de628d294">System::String::Replace</a></div><div class="ttdeci">String Replace(const String &amp;from, const String &amp;with)</div><div class="ttdoc">replace one string with another </div><div class="ttdef"><b>Definition:</b> String.h:229</div></div>
+<div class="ttc" id="class_system_1_1_i_o_1_1_stream_reader_html_a6e2d745cdb7a7b983f861ed6a9a541a7"><div class="ttname"><a href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a6e2d745cdb7a7b983f861ed6a9a541a7">System::IO::StreamReader::Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdoc">dispose method for closing the file </div><div class="ttdef"><b>Definition:</b> StreamReader.h:63</div></div>
+<div class="ttc" id="class_system_1_1_i_o_1_1_stream_reader_html_ac4a73a8110c98fafb85639c98e9a3185"><div class="ttname"><a href="../../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#ac4a73a8110c98fafb85639c98e9a3185">System::IO::StreamReader::EndOfStream</a></div><div class="ttdeci">bool EndOfStream()</div><div class="ttdoc">is the stream at the end </div><div class="ttdef"><b>Definition:</b> StreamReader.h:75</div></div>
+<div class="ttc" id="class_system_1_1_string_html_a46497ad2ba5ded6e3665b23de628d294"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a46497ad2ba5ded6e3665b23de628d294">System::String::Replace</a></div><div class="ttdeci">String Replace(const String &amp;from, const String &amp;with)</div><div class="ttdoc">replace one string with another </div><div class="ttdef"><b>Definition:</b> String.h:240</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

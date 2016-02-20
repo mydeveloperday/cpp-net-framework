@@ -8,5 +8,5 @@ var searchData=
   ['format',['Format',['../db/d0b/class_system_1_1_string.html#a05194e628ea13517ca375f1fa638b880',1,'System::String::Format(const String &amp;fmt, const Object &amp;a)'],['../db/d0b/class_system_1_1_string.html#ad3059e9dc99462a031616da7dd3167bd',1,'System::String::Format(const char *fmt, const char *a)']]],
   ['fromdays',['FromDays',['../d7/de9/class_system_1_1_time_span.html#aee87ad1e679a537a4ac18ccfe603e605',1,'System::TimeSpan']]],
   ['fromseconds',['fromSeconds',['../d7/de9/class_system_1_1_time_span.html#aa99c7e731b3a03f01a0bb247be47a52c',1,'System::TimeSpan']]],
-  ['fullname',['FullName',['../dc/d0d/class_system_1_1_i_o_1_1_file_info.html#a5337d8121f996ce99669cb57b2acd773',1,'System::IO::FileInfo::FullName()'],['../d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#a5337d8121f996ce99669cb57b2acd773',1,'System::IO::FileSystemInfo::FullName()']]]
+  ['fullname',['FullName',['../d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#a5337d8121f996ce99669cb57b2acd773',1,'System::IO::FileSystemInfo']]]
 ];

@@ -152,29 +152,47 @@ $(document).ready(function(){initNavTree('da/d7c/_stream_writer_8h_source.html',
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                (*m_fd) &lt;&lt; s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a6e2d745cdb7a7b983f861ed6a9a541a7">   54</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a6e2d745cdb7a7b983f861ed6a9a541a7">Dispose</a>()</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">if</span> (!m_disposed) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    (*m_fd).close();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#if !defined(SUPPORTS_CPLUSPLUS_11)</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor"></span>                    <span class="keyword">delete</span> m_fd;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor"></span>                    m_disposed = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        };</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">using namespace </span>System::IO;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_system_1_1_string_html_a1b9b8885b0880fc4ddf9a2c7d1ca3dc4"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">System::String::str</a></div><div class="ttdeci">std::string str() const </div><div class="ttdoc">get the std::string from the String (NOT .NET call) </div><div class="ttdef"><b>Definition:</b> String.h:44</div></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#af37bad5a25caf4907199999fb80d16ff">   55</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#af37bad5a25caf4907199999fb80d16ff">WriteLine</a>(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a>&amp; str,<span class="keyword">const</span> <a class="code" href="../../d5/df0/class_system_1_1_object.html">Object</a> &amp;a)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> s;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                s=s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a05194e628ea13517ca375f1fa638b880">Format</a>(str,a);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <a class="code" href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a38fd9059413bdcb18d9df2160ba70503">WriteLine</a>(s);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a1e1712c0ed8708f95e259533e8200298">   64</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a1e1712c0ed8708f95e259533e8200298">WriteLine</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *format,<span class="keyword">const</span> <a class="code" href="../../d5/df0/class_system_1_1_object.html">Object</a> &amp;a)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a> s;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                s=s.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a05194e628ea13517ca375f1fa638b880">Format</a>(<a class="code" href="../../db/d0b/class_system_1_1_string.html">String</a>(format),a);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <a class="code" href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a38fd9059413bdcb18d9df2160ba70503">WriteLine</a>(s);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a6e2d745cdb7a7b983f861ed6a9a541a7">   72</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a6e2d745cdb7a7b983f861ed6a9a541a7">Dispose</a>()</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="keywordflow">if</span> (!m_disposed) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    (*m_fd).close();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#if !defined(SUPPORTS_CPLUSPLUS_11)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor"></span>                    <span class="keyword">delete</span> m_fd;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor"></span>                    m_disposed = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        };</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">using namespace </span>System::IO;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_system_1_1_string_html_a1b9b8885b0880fc4ddf9a2c7d1ca3dc4"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">System::String::str</a></div><div class="ttdeci">std::string str() const </div><div class="ttdef"><b>Definition:</b> String.h:46</div></div>
 <div class="ttc" id="class_system_1_1_i_o_1_1_stream_writer_html_a4b28e0ea65b07b6a37a6e11be813f908"><div class="ttname"><a href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a4b28e0ea65b07b6a37a6e11be813f908">System::IO::StreamWriter::StreamWriter</a></div><div class="ttdeci">StreamWriter(const System::String &amp;file)</div><div class="ttdoc">constructor </div><div class="ttdef"><b>Definition:</b> StreamWriter.h:29</div></div>
 <div class="ttc" id="class_system_1_1_string_html"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html">System::String</a></div><div class="ttdoc">A generalized string class. </div><div class="ttdef"><b>Definition:</b> String.h:21</div></div>
+<div class="ttc" id="class_system_1_1_string_html_a05194e628ea13517ca375f1fa638b880"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a05194e628ea13517ca375f1fa638b880">System::String::Format</a></div><div class="ttdeci">String Format(const String &amp;fmt, const Object &amp;a)</div><div class="ttdef"><b>Definition:</b> String.cxx:4</div></div>
+<div class="ttc" id="class_system_1_1_object_html"><div class="ttname"><a href="../../d5/df0/class_system_1_1_object.html">System::Object</a></div><div class="ttdoc">Object class. </div><div class="ttdef"><b>Definition:</b> Object.h:13</div></div>
 <div class="ttc" id="class_system_1_1_i_o_1_1_stream_writer_html"><div class="ttname"><a href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html">System::IO::StreamWriter</a></div><div class="ttdoc">a class for writing out to a file </div><div class="ttdef"><b>Definition:</b> StreamWriter.h:17</div></div>
-<div class="ttc" id="class_system_1_1_i_o_1_1_stream_writer_html_a6e2d745cdb7a7b983f861ed6a9a541a7"><div class="ttname"><a href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a6e2d745cdb7a7b983f861ed6a9a541a7">System::IO::StreamWriter::Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdoc">call the dispose method </div><div class="ttdef"><b>Definition:</b> StreamWriter.h:54</div></div>
+<div class="ttc" id="class_system_1_1_i_o_1_1_stream_writer_html_a6e2d745cdb7a7b983f861ed6a9a541a7"><div class="ttname"><a href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a6e2d745cdb7a7b983f861ed6a9a541a7">System::IO::StreamWriter::Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdoc">call the dispose method </div><div class="ttdef"><b>Definition:</b> StreamWriter.h:72</div></div>
+<div class="ttc" id="class_system_1_1_i_o_1_1_stream_writer_html_a1e1712c0ed8708f95e259533e8200298"><div class="ttname"><a href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a1e1712c0ed8708f95e259533e8200298">System::IO::StreamWriter::WriteLine</a></div><div class="ttdeci">void WriteLine(const char *format, const Object &amp;a)</div><div class="ttdef"><b>Definition:</b> StreamWriter.h:64</div></div>
+<div class="ttc" id="class_system_1_1_i_o_1_1_stream_writer_html_af37bad5a25caf4907199999fb80d16ff"><div class="ttname"><a href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#af37bad5a25caf4907199999fb80d16ff">System::IO::StreamWriter::WriteLine</a></div><div class="ttdeci">void WriteLine(const System::String &amp;str, const Object &amp;a)</div><div class="ttdef"><b>Definition:</b> StreamWriter.h:55</div></div>
 <div class="ttc" id="class_system_1_1_i_o_1_1_stream_writer_html_a67b0062ee3854b4e51ad999949140c5a"><div class="ttname"><a href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a67b0062ee3854b4e51ad999949140c5a">System::IO::StreamWriter::~StreamWriter</a></div><div class="ttdeci">virtual ~StreamWriter()</div><div class="ttdoc">destructor </div><div class="ttdef"><b>Definition:</b> StreamWriter.h:42</div></div>
 <div class="ttc" id="class_system_1_1_i_o_1_1_stream_writer_html_a38fd9059413bdcb18d9df2160ba70503"><div class="ttname"><a href="../../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a38fd9059413bdcb18d9df2160ba70503">System::IO::StreamWriter::WriteLine</a></div><div class="ttdeci">void WriteLine(const System::String &amp;s)</div><div class="ttdoc">write a line to the file </div><div class="ttdef"><b>Definition:</b> StreamWriter.h:48</div></div>
 </div><!-- fragment --></div><!-- contents -->

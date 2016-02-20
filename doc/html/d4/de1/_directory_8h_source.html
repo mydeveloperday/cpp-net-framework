@@ -115,14 +115,13 @@ $(document).ready(function(){initNavTree('d4/de1/_directory_8h_source.html','../
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;System/Array.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;System/Collections/Generic.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;dirent.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>System</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">namespace </span>IO</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">class </span><a class="code" href="../../dc/d0d/class_system_1_1_i_o_1_1_file_info.html">FileInfo</a>;    </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>System</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">namespace </span>IO</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">class </span><a class="code" href="../../dc/d0d/class_system_1_1_i_o_1_1_file_info.html">FileInfo</a>;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        </div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d8/dcb/class_system_1_1_i_o_1_1_directory.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d8/dcb/class_system_1_1_i_o_1_1_directory.html">Directory</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
@@ -132,42 +131,45 @@ $(document).ready(function(){initNavTree('d4/de1/_directory_8h_source.html','../
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                  S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> Delete(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a>&amp; file)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            rmdir(file.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>().c_str());</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    };</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html">   36</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html">DirectoryInfo</a> : <span class="keyword">public</span> <a class="code" href="../../d8/d14/class_system_1_1_i_o_1_1_file_system_info.html">FileSystemInfo</a></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html">DirectoryInfo</a>()</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html">DirectoryInfo</a>(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a> &amp; dir):</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="../../d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#a6e66d07d29bc7b7d9d060e8b4c8af291">FileSystemInfo</a>(dir)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="../../d1/d3e/class_system_1_1_array.html">Array&lt;System::IO::FileInfo&gt;</a> GetFiles();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    };</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">using namespace </span>System;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">using namespace </span>System::IO;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_system_1_1_i_o_1_1_directory_info_html"><div class="ttname"><a href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html">System::IO::DirectoryInfo</a></div><div class="ttdef"><b>Definition:</b> Directory.h:36</div></div>
-<div class="ttc" id="class_system_1_1_string_html_a1b9b8885b0880fc4ddf9a2c7d1ca3dc4"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">System::String::str</a></div><div class="ttdeci">std::string str() const </div><div class="ttdoc">get the std::string from the String (NOT .NET call) </div><div class="ttdef"><b>Definition:</b> String.h:44</div></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d8/dcb/class_system_1_1_i_o_1_1_directory.html#a2e39974916fd98fbd2fb1bf000d680af">   30</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d8/dcb/class_system_1_1_i_o_1_1_directory.html#a2e39974916fd98fbd2fb1bf000d680af">Delete</a>(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a>&amp; file)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            rmdir(file.<a class="code" href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">str</a>().c_str());</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html">   38</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html">DirectoryInfo</a> : <span class="keyword">public</span> <a class="code" href="../../d8/d14/class_system_1_1_i_o_1_1_file_system_info.html">FileSystemInfo</a></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html#a7d77383497913ad96e82c16fb8243d4d">   42</a></span>&#160;        <a class="code" href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html#a7d77383497913ad96e82c16fb8243d4d">DirectoryInfo</a>()</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html#a9f814fe1e1cf785dd4b3c594c450c29c">   46</a></span>&#160;        <a class="code" href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html#a9f814fe1e1cf785dd4b3c594c450c29c">DirectoryInfo</a>(<span class="keyword">const</span> <a class="code" href="../../db/d0b/class_system_1_1_string.html">System::String</a> &amp; dir):</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="../../d8/d14/class_system_1_1_i_o_1_1_file_system_info.html">FileSystemInfo</a>(dir)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">// get the files in the directory</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="../../d1/d3e/class_system_1_1_array.html">Array&lt;System::IO::FileInfo&gt;</a> GetFiles();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    };</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">using namespace </span>System;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">using namespace </span>System::IO;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_system_1_1_i_o_1_1_directory_info_html"><div class="ttname"><a href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html">System::IO::DirectoryInfo</a></div><div class="ttdoc">directory info class </div><div class="ttdef"><b>Definition:</b> Directory.h:38</div></div>
+<div class="ttc" id="class_system_1_1_string_html_a1b9b8885b0880fc4ddf9a2c7d1ca3dc4"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html#a1b9b8885b0880fc4ddf9a2c7d1ca3dc4">System::String::str</a></div><div class="ttdeci">std::string str() const </div><div class="ttdef"><b>Definition:</b> String.h:46</div></div>
 <div class="ttc" id="class_system_1_1_string_html"><div class="ttname"><a href="../../db/d0b/class_system_1_1_string.html">System::String</a></div><div class="ttdoc">A generalized string class. </div><div class="ttdef"><b>Definition:</b> String.h:21</div></div>
-<div class="ttc" id="class_system_1_1_i_o_1_1_file_info_html"><div class="ttname"><a href="../../dc/d0d/class_system_1_1_i_o_1_1_file_info.html">System::IO::FileInfo</a></div><div class="ttdoc">A file information class. </div><div class="ttdef"><b>Definition:</b> FileInfo.h:17</div></div>
-<div class="ttc" id="class_system_1_1_i_o_1_1_directory_html"><div class="ttname"><a href="../../d8/dcb/class_system_1_1_i_o_1_1_directory.html">System::IO::Directory</a></div><div class="ttdef"><b>Definition:</b> Directory.h:19</div></div>
+<div class="ttc" id="class_system_1_1_i_o_1_1_directory_info_html_a9f814fe1e1cf785dd4b3c594c450c29c"><div class="ttname"><a href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html#a9f814fe1e1cf785dd4b3c594c450c29c">System::IO::DirectoryInfo::DirectoryInfo</a></div><div class="ttdeci">DirectoryInfo(const System::String &amp;dir)</div><div class="ttdoc">constructor </div><div class="ttdef"><b>Definition:</b> Directory.h:46</div></div>
+<div class="ttc" id="class_system_1_1_i_o_1_1_file_info_html"><div class="ttname"><a href="../../dc/d0d/class_system_1_1_i_o_1_1_file_info.html">System::IO::FileInfo</a></div><div class="ttdoc">A file information class. </div><div class="ttdef"><b>Definition:</b> FileInfo.h:18</div></div>
+<div class="ttc" id="class_system_1_1_i_o_1_1_directory_html"><div class="ttname"><a href="../../d8/dcb/class_system_1_1_i_o_1_1_directory.html">System::IO::Directory</a></div><div class="ttdoc">the directory class </div><div class="ttdef"><b>Definition:</b> Directory.h:19</div></div>
 <div class="ttc" id="class_system_1_1_array_html"><div class="ttname"><a href="../../d1/d3e/class_system_1_1_array.html">System::Array</a></div><div class="ttdoc">Array class. </div><div class="ttdef"><b>Definition:</b> Array.h:17</div></div>
-<div class="ttc" id="class_system_1_1_i_o_1_1_file_system_info_html_a6e66d07d29bc7b7d9d060e8b4c8af291"><div class="ttname"><a href="../../d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#a6e66d07d29bc7b7d9d060e8b4c8af291">System::IO::FileSystemInfo::FileSystemInfo</a></div><div class="ttdeci">FileSystemInfo()</div><div class="ttdoc">constructor </div><div class="ttdef"><b>Definition:</b> FileSystemInfo.h:23</div></div>
 <div class="ttc" id="class_system_1_1_i_o_1_1_directory_html_a421c00788c76f2160f51c57a252dcc07"><div class="ttname"><a href="../../d8/dcb/class_system_1_1_i_o_1_1_directory.html#a421c00788c76f2160f51c57a252dcc07">System::IO::Directory::CreateDirectory</a></div><div class="ttdeci">static void CreateDirectory(const System::String &amp;file)</div><div class="ttdoc">determine if the file exists </div><div class="ttdef"><b>Definition:</b> Directory.h:23</div></div>
 <div class="ttc" id="class_system_1_1_i_o_1_1_file_system_info_html"><div class="ttname"><a href="../../d8/d14/class_system_1_1_i_o_1_1_file_system_info.html">System::IO::FileSystemInfo</a></div><div class="ttdoc">A file information class. </div><div class="ttdef"><b>Definition:</b> FileSystemInfo.h:17</div></div>
+<div class="ttc" id="class_system_1_1_i_o_1_1_directory_info_html_a7d77383497913ad96e82c16fb8243d4d"><div class="ttname"><a href="../../da/d77/class_system_1_1_i_o_1_1_directory_info.html#a7d77383497913ad96e82c16fb8243d4d">System::IO::DirectoryInfo::DirectoryInfo</a></div><div class="ttdeci">DirectoryInfo()</div><div class="ttdoc">default constructor </div><div class="ttdef"><b>Definition:</b> Directory.h:42</div></div>
+<div class="ttc" id="class_system_1_1_i_o_1_1_directory_html_a2e39974916fd98fbd2fb1bf000d680af"><div class="ttname"><a href="../../d8/dcb/class_system_1_1_i_o_1_1_directory.html#a2e39974916fd98fbd2fb1bf000d680af">System::IO::Directory::Delete</a></div><div class="ttdeci">static void Delete(const System::String &amp;file)</div><div class="ttdoc">delete a named directory </div><div class="ttdef"><b>Definition:</b> Directory.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

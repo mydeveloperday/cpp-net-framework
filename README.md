@@ -11,6 +11,7 @@ An experimental .NET Framework for C++
   <img alt="Coverity Scan Build Status"
        src="https://scan.coverity.com/projects/7174/badge.svg"/>
 </a>
+[![Coverage Status](https://coveralls.io/repos/github/mydeveloperday/cpp-net-framework/badge.svg?branch=master)](https://coveralls.io/github/mydeveloperday/cpp-net-framework?branch=master)
 
 
 

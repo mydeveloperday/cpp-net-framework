@@ -46,6 +46,18 @@ namespace System
                 System::String strOut = sIn.Replace("\r", "");
                 return strOut;
             }
+            
+            /// read the file all the way to the end of file
+            System::String ReadToEnd()
+            {
+                String input;
+                while (!EndOfStream()) {
+                    String s = ReadLine();
+                    input += s;
+                    input += "\n";
+                }
+                return input;
+            }
 
             /// dispose method for closing the file
             void Dispose()

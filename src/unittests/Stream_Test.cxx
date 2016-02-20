@@ -53,3 +53,33 @@ TEST(StreamTest, NonExistantFiles)
         EXPECT_TRUE(true);
     }
 }
+
+TEST(StreamTest, ReadToEndTest)
+{
+    FileInfo info("totalFile.txt");
+    EXPECT_FALSE(info.Exists());
+
+    String pears="Pears";
+    StreamWriter sw(info.Name());
+    {
+        sw.WriteLine("Apples");
+        sw.WriteLine("Orangles");
+        sw.WriteLine("Any Fruit but not {0} because I don't like them ",pears);
+        sw.Dispose();
+    }
+
+    EXPECT_TRUE(info.Exists());
+
+    String input;
+    StreamReader sr(info.Name());
+    {
+        input = sr.ReadToEnd();
+        sr.Dispose();
+    }
+
+    EXPECT_TRUE(input.Contains("Pears"));
+
+    EXPECT_TRUE(info.Exists());
+    info.Delete();
+    EXPECT_FALSE(info.Exists());
+}

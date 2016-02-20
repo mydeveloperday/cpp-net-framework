@@ -17,6 +17,9 @@ TEST(DirectoryTest, BasicFileOperations)
     // I assume this is "." and ".."
     EXPECT_EQ(2,files.Length());
     
+    System::Console::WriteLine("First File [{0}]",files[0]);
+    System::Console::WriteLine("Second File [{0}]",files[1]);
+    
     Directory::Delete("ABC");
     EXPECT_FALSE(info.Exists());
 

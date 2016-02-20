@@ -49,6 +49,24 @@ namespace System
             {
                 (*m_fd) << s.str() << "\n";
             }
+            
+            /// write a line to the file with a {N} parameter files
+            /// TODO handle more than 1 parameter
+            void WriteLine(const System::String& str,const Object &a)
+            {
+                String s;
+                s=s.Format(str,a);
+                WriteLine(s);
+            }
+            
+            /// write a line to the file with a {N} parameter files
+            /// TODO handle more than 1 parameter
+            void WriteLine(const char *format,const Object &a)
+            {
+                String s;
+                s=s.Format(String(format),a);
+                WriteLine(s);
+            }
 
             /// call the dispose method
             void Dispose()

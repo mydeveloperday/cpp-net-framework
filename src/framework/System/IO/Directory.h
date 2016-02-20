@@ -8,7 +8,6 @@
 #include "System/Array.h"
 #include "System/Collections/Generic.h"
 
-#include <dirent.h>
 
 namespace System
 {
@@ -16,6 +15,7 @@ namespace System
     {
     class FileInfo;    
         
+    /// the directory class
     class Directory
     {
     public:
@@ -26,6 +26,7 @@ namespace System
                   S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
         }
 
+        /// delete a named directory
         static void Delete(const System::String& file)
         {
             rmdir(file.str().c_str());
@@ -33,16 +34,20 @@ namespace System
     
     };
 
+    /// directory info class
     class DirectoryInfo : public FileSystemInfo
     {
         public:
+        /// default constructor
         DirectoryInfo()
         {}
 
+        /// constructor
         DirectoryInfo(const System::String & dir):
             FileSystemInfo(dir)
         {}
         
+        // get the files in the directory
         Array<System::IO::FileInfo> GetFiles();
     };
     

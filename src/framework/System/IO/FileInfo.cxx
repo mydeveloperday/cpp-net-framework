@@ -1,8 +1,6 @@
 #include "FileInfo.h"
 
 FileInfo::FileInfo(const System::String& s)
-    : m_path(s)
+    : FileSystemInfo(s)
 {
-    String cwd = Environment::CurrentDirectory();
-    m_path = System::Path::Combine(cwd, s);
 }

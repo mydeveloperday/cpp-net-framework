@@ -14,7 +14,7 @@ namespace System
     namespace IO
     {
         /// A file information class
-        class FileSystemInfo
+        class FileSystemInfo : public Object
         {
             System::String m_path;
 
@@ -22,6 +22,11 @@ namespace System
             /// constructor
             FileSystemInfo()
             {
+            }
+            
+            virtual String ToString() const OVERRIDE
+            {
+                return FullName();
             }
 
             /// constructor within the current directory

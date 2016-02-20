@@ -32,6 +32,22 @@ namespace System
         {
             WriteLine(str.str().c_str());
         }
+        
+        /// function to support {0} arguments passing
+        static void WriteLine(const System::String& str,const Object &a)
+        {
+            String s;
+            s = s.Format(str,a);
+            WriteLine(s.str().c_str());
+        }
+        
+        /// function with const char * format
+        static void WriteLine(const char *str,const Object &a)
+        {
+            String s;
+            s = s.Format(str,a);
+            WriteLine(s.str().c_str());
+        }
 
         /// write function which does not print a new line
         static void Write(const char* str)

@@ -34,26 +34,37 @@ namespace System
         {
         }
 
-        /// constructor from std::string (NOT .NET API)
+        /// constructor from std::string 
+        /// (NOT .NET API)
         String(const std::string& strIn)
             : m_str(strIn)
         {
         }
 
-        /// get the std::string from the String (NOT .NET call)
+        /// get the std::string from the String 
+        /// (NOT .NET call)
         std::string str() const
         {
             return m_str;
         }
 
-        /// an std::string casting converter (NOT .NET call)
+        /// an std::string casting converter 
+        /// (NOT .NET call)
         const std::string operator()(std::string&) const
         {
             return str();
         }
 
-        /// an const char* casting converter (NOT .NET call)
+        /// an const char* casting converter
+        /// (NOT .NET call)
         const char* operator()(const char*) const
+        {
+            return str().c_str();
+        }
+        
+        /// prevent the need to go via stl::string
+        /// (NOT .NET call)
+        const char * c_str() const
         {
             return str().c_str();
         }
@@ -286,7 +297,7 @@ namespace System
         }
 
         /// turn the string into a string
-        virtual String ToString() const
+        virtual String ToString() const OVERRIDE
         {
             return (*this);
         }

@@ -44,4 +44,8 @@ TEST(DictionaryTests, Basic)
     EXPECT_TRUE(myDict.TryGetValue("You", myval));
 
     EXPECT_EQ(String("Apple"), myval);
+    
+    for(auto c : myDict){
+        System::Console::WriteLine(c.second);
+    }
 }

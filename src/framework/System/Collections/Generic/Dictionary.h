@@ -88,6 +88,16 @@ namespace System
                 {
                     m_map.erase(key);
                 }
+                
+                it_type begin()
+                {
+                    return m_map.begin();
+                }
+                
+                it_type end()
+                {
+                    return m_map.end();
+                }
             };
         }
     }

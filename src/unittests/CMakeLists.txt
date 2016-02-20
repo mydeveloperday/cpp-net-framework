@@ -43,13 +43,14 @@ add_executable(System_Test
                Math_Test.cxx
                Exception_Test.cxx
                Internals_Test.cxx
-               WebClient_Test.cxx
+               List_Test.cxx
                ArrayList_Test.cxx
 			   Dictionary_Test.cxx
 			   HashSet_Test.cxx
 			   StringBuilder_Test.cxx
 			   Xml_Test.cxx
 			   Directory_Test.cxx
+               WebClient_Test.cxx
               )
 
 # alter the link line of gcc to include coverage library

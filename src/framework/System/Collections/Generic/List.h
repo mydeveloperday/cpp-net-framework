@@ -21,6 +21,7 @@ namespace System
             template <class T> class List : public ICollection
             {
                 std::vector<T> m_vec;
+                
 
             public:
                 /// the constuctor
@@ -67,6 +68,32 @@ namespace System
                     }
                     
                     return array;
+                }
+                
+                /// add a range of objects into the array
+                void AddRange(const List<Object>& c)
+                {
+                    for(int i=0;i<c.Count();i++){
+                        Add(c[i]);
+                    }
+                }
+
+                /// add a range of objects into the array
+                void AddRange(const List<String>& c)
+                {
+                    for(int i=0;i<c.Count();i++){
+                        Add(c[i]);
+                    }
+                }
+                
+                typename std::vector<T>::iterator begin()
+                {
+                    return m_vec.begin();
+                }
+                
+                typename std::vector<T>::iterator end()
+                {
+                    return m_vec.end();
                 }
             };
         }

@@ -8,8 +8,8 @@ var searchData=
   ['delete',['Delete',['../dc/d0d/class_system_1_1_i_o_1_1_file_info.html#a54f7479a0783d691dd06980380e8ff87',1,'System::IO::FileInfo::Delete()'],['../d8/d14/class_system_1_1_i_o_1_1_file_system_info.html#a54f7479a0783d691dd06980380e8ff87',1,'System::IO::FileSystemInfo::Delete()']]],
   ['dictionary',['Dictionary',['../d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html#a63a73930843c12ff260c0d6b4d1f9d5b',1,'System::Collections::Generic::Dictionary']]],
   ['dictionary',['Dictionary',['../d3/df9/class_system_1_1_collections_1_1_generic_1_1_dictionary.html',1,'System::Collections::Generic']]],
-  ['directory',['Directory',['../d1/d32/class_system_1_1_directory.html',1,'System']]],
-  ['directoryinfo',['DirectoryInfo',['../d6/de6/class_system_1_1_directory_info.html',1,'System']]],
+  ['directory',['Directory',['../d8/dcb/class_system_1_1_i_o_1_1_directory.html',1,'System::IO']]],
+  ['directoryinfo',['DirectoryInfo',['../da/d77/class_system_1_1_i_o_1_1_directory_info.html',1,'System::IO']]],
   ['dispose',['Dispose',['../d9/dea/class_system_1_1_i_o_1_1_stream_reader.html#a6e2d745cdb7a7b983f861ed6a9a541a7',1,'System::IO::StreamReader::Dispose()'],['../d7/d47/class_system_1_1_i_o_1_1_stream_writer.html#a6e2d745cdb7a7b983f861ed6a9a541a7',1,'System::IO::StreamWriter::Dispose()']]],
   ['documentelement',['DocumentElement',['../d1/d48/class_system_1_1_xml_1_1_xml_document.html#a688c2ba9ec9a4c481f06c7b47198286b',1,'System::Xml::XmlDocument']]],
   ['downloadstring',['DownloadString',['../d5/d8c/class_system_1_1_web_client.html#abf0fb294d1cc128d24c2fe22bb269e25',1,'System::WebClient']]]

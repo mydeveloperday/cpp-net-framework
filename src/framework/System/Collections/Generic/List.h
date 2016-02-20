@@ -57,6 +57,17 @@ namespace System
                 {
                     m_vec.clear();
                 }
+                
+                Array<T> ToArray()
+                {
+                    Array<T> array;
+                    
+                    for(size_t i=0;i<m_vec.size();i++){
+                        array.Add((*this)[i]);
+                    }
+                    
+                    return array;
+                }
             };
         }
     }

@@ -9,6 +9,7 @@ SET(SOURCE
   System/IO/FileSystemInfo.cxx
   System/IO/StreamReader.cxx
   System/IO/File.cxx
+  System/IO/Directory.cxx
 )
 
 SET(HEADERS
@@ -20,6 +21,8 @@ SET(HEADERS
   System/StringBuilder.h
   System/IO.h
   System/IO/FileInfo.h
+  System/IO/FileSystemInfo.h
+  System/IO/Directory.h
   System/IO/StreamReader.h
   System/IO/StreamWriter.h
   System.h

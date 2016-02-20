@@ -4,9 +4,18 @@
 #include "System/String.h"
 #include "System/IO.h"
 #include "System/IO/FileSystemInfo.h"
+#include "System/IO/FileInfo.h"
+#include "System/Array.h"
+#include "System/Collections/Generic.h"
+
+#include <dirent.h>
 
 namespace System
 {
+    namespace IO
+    {
+    class FileInfo;    
+        
     class Directory
     {
     public:
@@ -33,9 +42,14 @@ namespace System
         DirectoryInfo(const System::String & dir):
             FileSystemInfo(dir)
         {}
+        
+        Array<System::IO::FileInfo> GetFiles();
     };
+    
+    }
 }
 
 using namespace System;
+using namespace System::IO;
 
 #endif

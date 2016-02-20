@@ -11,8 +11,15 @@ TEST(DirectoryTest, BasicFileOperations)
 
     DirectoryInfo info("ABC");
     EXPECT_TRUE(info.Exists());
+    
+    Array<FileInfo> files = info.GetFiles();
+    
+    // I assume this is "." and ".."
+    EXPECT_EQ(2,files.Length());
+    
     Directory::Delete("ABC");
     EXPECT_FALSE(info.Exists());
 
     EXPECT_EQ(info.Name(),"ABC");
+  
 }

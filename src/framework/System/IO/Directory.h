@@ -20,18 +20,11 @@ namespace System
     {
     public:
         /// determine if the file exists
-        static void CreateDirectory(const System::String& file)
-        {
-            mkdir(file.str().c_str(),
-                  S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
-        }
+        static void CreateDirectory(const System::String& file);
 
         /// delete a named directory
-        static void Delete(const System::String& file)
-        {
-            rmdir(file.str().c_str());
-        }
-    
+        static void Delete(const System::String& file);
+
     };
 
     /// directory info class

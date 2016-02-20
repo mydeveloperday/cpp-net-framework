@@ -44,3 +44,23 @@ Array<System::IO::FileInfo> System::IO::DirectoryInfo::GetFiles()
 #endif           
     return files.ToArray();
 }
+
+void Directory::CreateDirectory(const System::String& file)
+{
+#ifdef SUPPORT_DIRENT
+    mkdir(file.c_str(),
+            S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
+#else
+    ::CreateDirectory(file.c_str(),nullptr);
+#endif
+}
+
+/// delete a named directory
+void Directory::Delete(const System::String& file)
+{
+#ifdef SUPPORT_DIRENT
+    rmdir(file.c_str());
+#else
+    ::RemoveDirectory(file.c_str());
+#endif
+}

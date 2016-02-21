@@ -22,7 +22,6 @@ Array<System::IO::FileInfo> System::IO::DirectoryInfo::GetFiles()
     }  
 #else 
    WIN32_FIND_DATA ffd;
-   TCHAR szDir[MAX_PATH];
    HANDLE hFind = INVALID_HANDLE_VALUE;
    hFind = FindFirstFile(currentPath.c_str(), &ffd);
    

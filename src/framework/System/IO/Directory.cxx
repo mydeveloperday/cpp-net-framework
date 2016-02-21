@@ -47,6 +47,9 @@ Array<System::IO::FileInfo> System::IO::DirectoryInfo::GetFiles()
 
 void Directory::CreateDirectory(const System::String& file)
 {
+    if (file.Empty()){
+        return;
+    }
 #ifdef SUPPORT_DIRENT
     mkdir(file.c_str(),
             S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
@@ -58,6 +61,9 @@ void Directory::CreateDirectory(const System::String& file)
 /// delete a named directory
 void Directory::Delete(const System::String& file)
 {
+    if (file.Empty()){
+        return;
+    }
 #ifdef SUPPORT_DIRENT
     rmdir(file.c_str());
 #else

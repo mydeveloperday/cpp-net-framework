@@ -37,8 +37,10 @@ TEST(ListTest, Basic)
     myAL.AddRange(myList);
 
     EXPECT_EQ(3,myAL.Count());
-    
+
+#ifdef SUPPORTS_CXX_11    
     for(auto c : myAL){
         System::Console::WriteLine(c);
     }
+#endif
 }

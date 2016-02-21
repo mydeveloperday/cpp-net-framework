@@ -39,6 +39,8 @@ Array<System::IO::FileInfo> System::IO::DirectoryInfo::GetFiles()
       }
    }
    while (FindNextFile(hFind, &ffd) != 0);
+
+   FindClose(hFind);
    
 #endif           
     return files.ToArray();
